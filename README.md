@@ -1,14 +1,31 @@
-# Projet de Démonstration de la Conjecture de Syracuse (Collatz)
+# Projet de Démonstration de la Conjecture de Syracuse
 
-## Présentation du Projet
-Ce dépôt est dédié à la recherche mathématique fondamentale visant à démontrer la Conjecture de Syracuse (Collatz). L'approche adoptée repose sur un processus itératif d'intégration continue, visant à transcender les méthodes analytiques actuelles par l'introduction de nouvelles structures algébriques et d'espaces topologiques inédits. Le cadre de travail exige une formalisation stricte : chaque objet mathématique est rigoureusement typé, chaque axiome est défini, et toutes les démonstrations sont rédigées de manière explicite et exhaustive, étape par étape.
+## Objectif
+Démontrer la Conjecture de Syracuse (Collatz) en introduisant de nouvelles structures mathématiques et en appliquant une rigueur formelle absolue.
 
 ## Structure du Dépôt
-Le projet est organisé selon une arborescence rigoureuse :
-- `resolved/` : Répertoire destiné à accueillir la preuve finale ou les lemmes définitivement validés par un linter symbolique.
-- `inprogress/` : Répertoire contenant les tentatives d'arborescences théoriques actuelles et les impasses documentées.
-- `Syracuse_README.md` : Fichier racine identifiant la dernière sous-preuve ou impasse rencontrée, ainsi que l'historique chronologique strict des avancées.
-- `Syracuse_Tableau_de_bord.md` : Fichier listant les cadres théoriques explorés de manière exhaustive.
+Afin d'assurer un suivi clair et rigoureux des travaux, le dépôt est structuré ainsi :
+- `inprogress/` : Dossier dédié aux tentatives théoriques actuelles et axes de recherche en cours d'exploration.
+- `resolved/` : Dossier pour le stockage des preuves définitivement validées, lemmes intermédiaires rigoureusement démontrés et cadres solides.
+- `impasses/` : Dossier d'archivage des essais infructueux, erreurs et impasses théoriques. Conserver ces essais permet d'éviter la redondance dans la recherche.
 
-## Historique et Organisation des Tentatives
-Chaque essai théorique fait l'objet d'un suivi précis. Si un axe s'avère prometteur, il est formalisé par de nouveaux lemmes. S'il rencontre une contradiction logique incontournable, l'impasse est intégralement documentée et archivée sous la forme `inprogress/impasse_[NOM].md`. Ce système garantit une capitalisation continue sur l'existant, évitant de repartir de zéro, et isolant les approches infructueuses afin de focaliser les efforts sur l'initialisation de nouveaux axes mathématiques disruptifs.
+## Méthodologie et Rigueur
+Les preuves et rédactions mathématiques de ce dépôt respectent strictement trois règles :
+1. **Axiomatisation complète** des nouveaux objets introduits.
+2. **Typage rigoureux** de l'ensemble des variables, ensembles et fonctions.
+3. **Zéro ellipse mathématique** : toutes les étapes doivent être rédigées ligne par ligne, sans omettre d'étapes ni utiliser d'expressions telles que "il est trivial que".
+
+Le ton est strictement clinique et académique.
+
+## Cadres Théoriques Explorés
+- Approche par les entiers 2-adiques
+- Approche ergodique
+- Systèmes dynamiques complexes
+
+## Dernière sous-preuve / impasse
+*L'axe de Fibration Adélique est en cours.*
+*(Aucune impasse documentée pour l'instant)*
+
+## Historique des avancées
+- **[2023-10-27]** : Initialisation du dépôt.
+- **[2026-06-16]** : Création de l'Axe Fibration Adélique et Graphes de Flux d'Opérateurs Dyadiques. Résolution du Lemme 1. Statut : En cours.
