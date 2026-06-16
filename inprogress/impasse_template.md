@@ -1,22 +1,24 @@
 ---
 uuid: "syracuse-impasse-template"
-statut: "Impasse"
-branche_mathematique: "[À préciser]"
+statut: "Dead end"
+branche_mathematique: "[To be specified]"
 ---
 
-# Étude de la Conjecture de Syracuse via [NOM DE L'AXE OU DE L'OBJET INVENTÉ]
+*Read this in other languages: [Français](impasse_template.fr.md)*
 
-## 1. Définitions Axiomatiques & Cadre Algébrique
-[Présentation rigoureuse des définitions, des espaces de travail et des nouveaux objets mathématiques introduits. Typage chirurgical.]
+# Study of the Syracuse Conjecture via [NAME OF AXIS OR INVENTED OBJECT]
 
-## 2. Énoncé des Lemmes Intermédiaires
-[Formulation mathématique précise des propositions nécessaires pour avancer vers la preuve globale.]
+## 1. Axiomatic Definitions & Algebraic Framework
+[Rigorous presentation of the definitions, workspaces, and new mathematical objects introduced. Surgical typing.]
 
-## 3. Démonstrations Rigoureuses (Pas-à-Pas)
-[Développement intégral de la preuve du jour. Écriture de chaque ligne de calcul sans aucune ellipse.]
+## 2. Statement of Intermediate Lemmas
+[Precise mathematical formulation of the propositions necessary to advance towards the global proof.]
 
-## 4. Documentation de l'Impasse (Contradiction Logique)
-[Explication détaillée et formelle de la contradiction logique ou de la limitation structurelle qui empêche cet axe théorique d'aboutir. Démonstration de l'impossibilité de poursuivre.]
+## 3. Rigorous Demonstrations (Step-by-Step)
+[Full development of the daily proof. Writing of each calculation line without any ellipse.]
 
-## 5. Mise à jour de l'Historique (Anti-Duplication)
-[Mise à jour du fichier Syracuse_README.md avec le statut "Impasse" pour cet axe.]
+## 4. Documentation of the Dead End (Logical Contradiction)
+[Detailed and formal explanation of the logical contradiction or structural limitation that prevents this theoretical axis from succeeding. Demonstration of the impossibility to continue.]
+
+## 5. Advancement History Update (Anti-Duplication)
+[Update of the Syracuse_README.md file with the "Dead end" status for this axis.]
