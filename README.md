@@ -1,31 +1,33 @@
-# Projet de Démonstration de la Conjecture de Syracuse
+*Read this in other languages: [Français](README.fr.md)*
 
-## Objectif
-Démontrer la Conjecture de Syracuse (Collatz) en introduisant de nouvelles structures mathématiques et en appliquant une rigueur formelle absolue.
+# Syracuse Conjecture Proof Project
 
-## Structure du Dépôt
-Afin d'assurer un suivi clair et rigoureux des travaux, le dépôt est structuré ainsi :
-- `inprogress/` : Dossier dédié aux tentatives théoriques actuelles et axes de recherche en cours d'exploration.
-- `resolved/` : Dossier pour le stockage des preuves définitivement validées, lemmes intermédiaires rigoureusement démontrés et cadres solides.
-- `impasses/` : Dossier d'archivage des essais infructueux, erreurs et impasses théoriques. Conserver ces essais permet d'éviter la redondance dans la recherche.
+## Objective
+Demonstrate the Syracuse Conjecture (Collatz) by introducing new mathematical structures and applying absolute formal rigor.
 
-## Méthodologie et Rigueur
-Les preuves et rédactions mathématiques de ce dépôt respectent strictement trois règles :
-1. **Axiomatisation complète** des nouveaux objets introduits.
-2. **Typage rigoureux** de l'ensemble des variables, ensembles et fonctions.
-3. **Zéro ellipse mathématique** : toutes les étapes doivent être rédigées ligne par ligne, sans omettre d'étapes ni utiliser d'expressions telles que "il est trivial que".
+## Repository Structure
+In order to ensure clear and rigorous tracking of the work, the repository is structured as follows:
+- `inprogress/` : Folder dedicated to current theoretical attempts and research axes under exploration.
+- `resolved/` : Folder for storing definitively validated proofs, rigorously demonstrated intermediate lemmas, and solid frameworks.
+- `impasses/` : Archiving folder for unsuccessful trials, errors, and theoretical dead ends. Keeping these trials prevents redundancy in research.
 
-Le ton est strictement clinique et académique.
+## Methodology and Rigor
+The mathematical proofs and writings in this repository strictly respect three rules:
+1. **Complete axiomatization** of new objects introduced.
+2. **Rigorous typing** of all variables, sets, and functions.
+3. **Zero mathematical ellipse**: all steps must be written line by line, without omitting steps or using expressions such as "it is trivial that".
 
-## Cadres Théoriques Explorés
-- Approche par les entiers 2-adiques
-- Approche ergodique
-- Systèmes dynamiques complexes
+The tone is strictly clinical and academic.
 
-## Dernière sous-preuve / impasse
-*L'axe de Fibration Adélique est en cours.*
-*(Aucune impasse documentée pour l'instant)*
+## Theoretical Frameworks Explored
+- Approach via 2-adic integers
+- Ergodic approach
+- Complex dynamical systems
 
-## Historique des avancées
-- **[2023-10-27]** : Initialisation du dépôt.
-- **[2026-06-16]** : Création de l'Axe Fibration Adélique et Graphes de Flux d'Opérateurs Dyadiques. Résolution du Lemme 1. Statut : En cours.
+## Latest sub-proof / dead end
+*The Adelic Fibration axis is currently in progress.*
+*(No dead ends documented so far)*
+
+## Advancement History
+- **[2023-10-27]** : Repository initialization.
+- **[2026-06-16]** : Creation of the Adelic Fibration Axis and Dyadic Operator Flow Graphs. Resolution of Lemma 1. Status: In progress.

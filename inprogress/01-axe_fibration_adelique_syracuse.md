@@ -1,70 +1,72 @@
 ---
 uuid: "syracuse-axe-fibration-adelique"
-statut: "En cours"
-branche_mathematique: "Géométrie Algébrique Non-Archimédienne & Théorie des Graphes Opératoriels"
+statut: "In progress"
+branche_mathematique: "Non-Archimedean Algebraic Geometry & Operator Flow Graphs Theory"
 ---
 
-# Étude de la Conjecture de Syracuse via la Fibration Adélique et les Graphes de Flux d'Opérateurs Dyadiques
+*Read this in other languages: [Français](01-axe_fibration_adelique_syracuse.fr.md)*
 
-## 1. Définitions Axiomatiques & Cadre Algébrique
+# Study of the Syracuse Conjecture via Adelic Fibration and Dyadic Operator Flow Graphs
 
-Soit $\mathbb{A}_{\mathbb{Q}}$ l'anneau des adèles sur le corps des rationnels $\mathbb{Q}$. Nous introduisons l'espace topologique adélique fractionnaire restreint, noté $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, défini comme suit :
+## 1. Axiomatic Definitions & Algebraic Framework
+
+Let $\mathbb{A}_{\mathbb{Q}}$ be the ring of adeles over the field of rational numbers $\mathbb{Q}$. We introduce the restricted fractional adelic topological space, denoted $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, defined as follows:
 $$ \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} = \prod_{p \in \mathcal{P} \cup \{\infty\}}' \mathbb{Q}_p $$
-où $\mathcal{P}$ est l'ensemble des nombres premiers et le produit restreint s'effectue par rapport aux anneaux d'entiers $\mathbb{Z}_p$, en imposant une contrainte de valuation 2-adique stricte.
+where $\mathcal{P}$ is the set of prime numbers and the restricted product is performed with respect to the rings of integers $\mathbb{Z}_p$, by imposing a strict 2-adic valuation constraint.
 
-Nous définissons l'Algèbre de Graphes de Flux d'Opérateurs Dyadiques, notée $\mathcal{G}_{\mathbb{A}}$, comme un module sur l'anneau des entiers 2-adiques $\mathbb{Z}_2$, munie d'un ensemble de sommets $V \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ et d'un ensemble d'arêtes orientées $E$.
+We define the Dyadic Operator Flow Graph Algebra, denoted $\mathcal{G}_{\mathbb{A}}$, as a module over the ring of 2-adic integers $\mathbb{Z}_2$, equipped with a set of vertices $V \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ and a set of directed edges $E$.
 
-**Axiome 1 (Opérateur de Transition Adélique) :**
-L'opérateur de Collatz généralisé $\mathcal{T}_{\mathbb{A}} : \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \to \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ est défini par :
-Pour $x = (x_\infty, x_2, x_3, \dots) \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$,
+**Axiom 1 (Adelic Transition Operator):**
+The generalized Collatz operator $\mathcal{T}_{\mathbb{A}} : \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \to \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ is defined by:
+For $x = (x_\infty, x_2, x_3, \dots) \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$,
 $$ (\mathcal{T}_{\mathbb{A}}(x))_p = \begin{cases}
-\frac{x_p}{2} & \text{si } v_2(x_2) \ge 1 \\
-\frac{3x_p + 1}{2} & \text{si } v_2(x_2) = 0
+\frac{x_p}{2} & \text{if } v_2(x_2) \ge 1 \\
+\frac{3x_p + 1}{2} & \text{if } v_2(x_2) = 0
 \end{cases} $$
-où $v_2 : \mathbb{Q}_2 \to \mathbb{Z} \cup \{\infty\}$ est la valuation 2-adique usuelle.
+where $v_2 : \mathbb{Q}_2 \to \mathbb{Z} \cup \{\infty\}$ is the standard 2-adic valuation.
 
-**Axiome 2 (Fibration Dyadique) :**
-La fibration dyadique est un morphisme surjectif continu $\pi : \mathcal{G}_{\mathbb{A}} \to \mathbb{Z}_2$, tel que pour tout $v \in V$, la fibre $\pi^{-1}(\pi(v))$ est stable sous l'action locale de l'opérateur restreint $\mathcal{T}_{\mathbb{A}} \restriction_{\mathbb{Z}_2}$.
+**Axiom 2 (Dyadic Fibration):**
+The dyadic fibration is a continuous surjective morphism $\pi : \mathcal{G}_{\mathbb{A}} \to \mathbb{Z}_2$, such that for every $v \in V$, the fiber $\pi^{-1}(\pi(v))$ is stable under the local action of the restricted operator $\mathcal{T}_{\mathbb{A}} \restriction_{\mathbb{Z}_2}$.
 
-## 2. Énoncé des Lemmes Intermédiaires
+## 2. Statement of Intermediate Lemmas
 
-**Lemme 1 (Continuité Adélique de l'Opérateur) :**
-L'opérateur de Collatz généralisé $\mathcal{T}_{\mathbb{A}}$ est uniformément continu sur l'espace topologique adélique fractionnaire restreint $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ muni de sa topologie produit restreinte usuelle.
+**Lemma 1 (Adelic Continuity of the Operator):**
+The generalized Collatz operator $\mathcal{T}_{\mathbb{A}}$ is uniformly continuous on the restricted fractional adelic topological space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ equipped with its standard restricted product topology.
 
-**Lemme 2 (Contraction Normique dans la Fibration Dyadique) :**
-Pour tout sommet $v \in V \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, si $v_2(v_2) = 0$, alors la valuation 2-adique de l'image stricte vérifie une inégalité de contraction stricte sur les fibres : il existe un entier $k \ge 1$ tel que $\pi(\mathcal{T}_{\mathbb{A}}^k(v))$ possède une norme adélique strictement inférieure à la norme adélique de $\pi(v)$.
+**Lemma 2 (Norm Contraction in the Dyadic Fibration):**
+For every vertex $v \in V \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, if $v_2(v_2) = 0$, then the 2-adic valuation of the strict image satisfies a strict contraction inequality on the fibers: there exists an integer $k \ge 1$ such that $\pi(\mathcal{T}_{\mathbb{A}}^k(v))$ has an adelic norm strictly less than the adelic norm of $\pi(v)$.
 
-## 3. Démonstrations Rigoureuses (Pas-à-Pas)
+## 3. Rigorous Demonstrations (Step-by-Step)
 
-### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
+### Demonstration of Lemma 1 (Adelic Continuity of the Operator)
 
-Soit $x, y \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. Nous devons montrer que pour tout voisinage ouvert $U$ de $\mathcal{T}_{\mathbb{A}}(x)$ dans $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, il existe un voisinage ouvert $V$ de $x$ tel que $\mathcal{T}_{\mathbb{A}}(V) \subset U$.
+Let $x, y \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. We must show that for any open neighborhood $U$ of $\mathcal{T}_{\mathbb{A}}(x)$ in $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, there exists an open neighborhood $V$ of $x$ such that $\mathcal{T}_{\mathbb{A}}(V) \subset U$.
 
-Soit $\epsilon > 0$. Un voisinage de base dans la topologie adélique est déterminé par un ensemble fini de places $S \subset \mathcal{P} \cup \{\infty\}$ contenant $\infty$.
-Pour $p \notin S$, nous avons $x_p \in \mathbb{Z}_p$. L'opérateur $\mathcal{T}_{\mathbb{A}}$ sur la composante $p$-adique est une application affine dont les coefficients sont dans $\mathbb{Z}[1/2]$.
+Let $\epsilon > 0$. A base neighborhood in the adelic topology is determined by a finite set of places $S \subset \mathcal{P} \cup \{\infty\}$ containing $\infty$.
+For $p \notin S$, we have $x_p \in \mathbb{Z}_p$. The operator $\mathcal{T}_{\mathbb{A}}$ on the $p$-adic component is an affine map whose coefficients are in $\mathbb{Z}[1/2]$.
 
-Considérons les deux cas disjoints dictés par la valuation 2-adique :
+Let us consider the two disjoint cases dictated by the 2-adic valuation:
 
-**Cas 1 : $v_2(x_2) \ge 1$.**
-Dans ce cas, l'opérateur est la multiplication par $1/2$.
-Soit $V$ le voisinage de $x$ défini par les conditions :
+**Case 1: $v_2(x_2) \ge 1$.**
+In this case, the operator is multiplication by $1/2$.
+Let $V$ be the neighborhood of $x$ defined by the conditions:
 - $v_2(y_2) \ge 1$
-- $|x_p - y_p|_p < \delta_p$ pour un choix approprié de $\delta_p > 0$ et $p \in S$.
-Pour tout $y \in V$, $(\mathcal{T}_{\mathbb{A}}(y))_p = \frac{y_p}{2}$.
-La distance est : $|\frac{x_p}{2} - \frac{y_p}{2}|_p = |1/2|_p \cdot |x_p - y_p|_p$.
-Comme $|1/2|_p$ est borné (et constant par rapport à $x, y$), la continuité locale est assurée.
+- $|x_p - y_p|_p < \delta_p$ for an appropriate choice of $\delta_p > 0$ and $p \in S$.
+For all $y \in V$, $(\mathcal{T}_{\mathbb{A}}(y))_p = \frac{y_p}{2}$.
+The distance is: $|\frac{x_p}{2} - \frac{y_p}{2}|_p = |1/2|_p \cdot |x_p - y_p|_p$.
+Since $|1/2|_p$ is bounded (and constant with respect to $x, y$), local continuity is ensured.
 
-**Cas 2 : $v_2(x_2) = 0$.**
-Dans ce cas, l'opérateur est $z \mapsto \frac{3z + 1}{2}$.
-Soit $V$ le voisinage de $x$ défini par les conditions :
+**Case 2: $v_2(x_2) = 0$.**
+In this case, the operator is $z \mapsto \frac{3z + 1}{2}$.
+Let $V$ be the neighborhood of $x$ defined by the conditions:
 - $v_2(y_2) = 0$
-- $|x_p - y_p|_p < \delta'_p$ pour un choix approprié de $\delta'_p > 0$ et $p \in S$.
-Pour tout $y \in V$, $(\mathcal{T}_{\mathbb{A}}(y))_p = \frac{3y_p + 1}{2}$.
-La distance est : $|\frac{3x_p + 1}{2} - \frac{3y_p + 1}{2}|_p = |\frac{3}{2}(x_p - y_p)|_p = |\frac{3}{2}|_p \cdot |x_p - y_p|_p$.
-À nouveau, le facteur multiplicatif $|\frac{3}{2}|_p$ étant borné pour chaque place $p$, il est possible de choisir $\delta'_p$ tel que l'image de $V$ soit contenue dans $U$.
+- $|x_p - y_p|_p < \delta'_p$ for an appropriate choice of $\delta'_p > 0$ and $p \in S$.
+For all $y \in V$, $(\mathcal{T}_{\mathbb{A}}(y))_p = \frac{3y_p + 1}{2}$.
+The distance is: $|\frac{3x_p + 1}{2} - \frac{3y_p + 1}{2}|_p = |\frac{3}{2}(x_p - y_p)|_p = |\frac{3}{2}|_p \cdot |x_p - y_p|_p$.
+Again, the multiplicative factor $|\frac{3}{2}|_p$ being bounded for each place $p$, it is possible to choose $\delta'_p$ such that the image of $V$ is contained in $U$.
 
-Les conditions de valuation 2-adique ($v_2(z) \ge 1$ et $v_2(z) = 0$) définissent des ensembles ouverts et disjoints dans $\mathbb{Q}_2$. Ainsi, la discontinuité apparente due à la bifurcation de la fonction est isolée par la topologie du corps 2-adique.
-Ceci achève la démonstration du Lemme 1.
+The 2-adic valuation conditions ($v_2(z) \ge 1$ and $v_2(z) = 0$) define open and disjoint sets in $\mathbb{Q}_2$. Thus, the apparent discontinuity due to the bifurcation of the function is isolated by the topology of the 2-adic field.
+This completes the demonstration of Lemma 1.
 
-## 4. Mise à jour de l'Historique (Anti-Duplication)
-*(Cette section est traitée dans Syracuse_README.md)*
+## 4. Advancement History Update (Anti-Duplication)
+*(This section is covered in Syracuse_README.md)*
