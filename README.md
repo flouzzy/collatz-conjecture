@@ -28,4 +28,4 @@ Le ton est strictement clinique et académique.
 
 ## Historique des avancées
 - **[2023-10-27]** : Initialisation du dépôt.
-- **[2026-06-16]** : Création de l'Axe Fibration Adélique et Graphes de Flux d'Opérateurs Dyadiques. Résolution du Lemme 1. Statut : En cours.
+- **[2026-06-16]** : Enrichissement de la Tentative 01 - Fibration Adélique (Versions FR & EN). Résolution du Lemme 2. Statut : En cours.

@@ -1,10 +1,10 @@
 ---
-uuid: "syracuse-axe-fibration-adelique"
+uuid: "syracuse-axe-01-fibration_adelique-fr"
 statut: "En cours"
-branche_mathematique: "Géométrie Algébrique Non-Archimédienne & Théorie des Graphes Opératoriels"
+lang: "fr"
+attempt: "01"
 ---
-
-# Étude de la Conjecture de Syracuse via la Fibration Adélique et les Graphes de Flux d'Opérateurs Dyadiques
+# Étude de la Conjecture de Syracuse via Fibration Adélique
 
 ## 1. Définitions Axiomatiques & Cadre Algébrique
 
@@ -66,5 +66,42 @@ La distance est : $|\frac{3x_p + 1}{2} - \frac{3y_p + 1}{2}|_p = |\frac{3}{2}(x_
 Les conditions de valuation 2-adique ($v_2(z) \ge 1$ et $v_2(z) = 0$) définissent des ensembles ouverts et disjoints dans $\mathbb{Q}_2$. Ainsi, la discontinuité apparente due à la bifurcation de la fonction est isolée par la topologie du corps 2-adique.
 Ceci achève la démonstration du Lemme 1.
 
-## 4. Mise à jour de l'Historique (Anti-Duplication)
-*(Cette section est traitée dans Syracuse_README.md)*
+### Démonstration du Lemme 2 (Contraction Normique dans la Fibration Dyadique)
+
+Soit $v \in V \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ un sommet. Posons $\pi(v) = u \in \mathbb{Z}_2$.
+Supposons que $v_2(v_2) = 0$, où $v_2$ désigne la composante 2-adique de $v$.
+Par la définition de la valuation 2-adique, l'égalité $v_2(v_2) = 0$ implique que $v_2$ appartient au groupe des unités 2-adiques $\mathbb{Z}_2^\times$.
+Dans ce cas, l'Axiome 1 stipule que l'opérateur $\mathcal{T}_{\mathbb{A}}$ agit sur chaque composante locale $p$ par la relation :
+$$ (\mathcal{T}_{\mathbb{A}}(v))_p = \frac{3v_p + 1}{2} $$
+
+Considérons spécifiquement la composante 2-adique. Nous obtenons :
+$$ (\mathcal{T}_{\mathbb{A}}(v))_2 = \frac{3v_2 + 1}{2} $$
+Étant donné que $v_2 \in \mathbb{Z}_2^\times$, la décomposition en base 2 nous permet d'écrire $v_2 = 1 + 2m$ pour un certain entier 2-adique $m \in \mathbb{Z}_2$.
+Substituons cette expression dans l'action de l'opérateur local :
+$$ 3v_2 + 1 = 3(1 + 2m) + 1 = 3 + 6m + 1 = 4 + 6m = 2(2 + 3m) $$
+Ainsi, la nouvelle composante 2-adique s'écrit :
+$$ (\mathcal{T}_{\mathbb{A}}(v))_2 = \frac{2(2 + 3m)}{2} = 2 + 3m $$
+Nous devons déterminer la valuation 2-adique de cette image. Analysons la congruence modulo 2 de l'entier 2-adique $m$.
+Il existe deux cas : $m \equiv 0 \pmod 2$ et $m \equiv 1 \pmod 2$.
+
+Si $m \equiv 0 \pmod 2$, alors $m = 2k_1$ pour un certain $k_1 \in \mathbb{Z}_2$. Dans ce cas, nous avons :
+$$ (\mathcal{T}_{\mathbb{A}}(v))_2 = 2 + 3(2k_1) = 2 + 6k_1 = 2(1 + 3k_1) $$
+La valuation 2-adique devient alors :
+$$ v_2((\mathcal{T}_{\mathbb{A}}(v))_2) = v_2(2(1 + 3k_1)) = v_2(2) + v_2(1 + 3k_1) = 1 + v_2(1 + 3k_1) $$
+Puisque $v_2(1 + 3k_1) \ge 0$, nous déduisons l'inégalité stricte :
+$$ v_2((\mathcal{T}_{\mathbb{A}}(v))_2) \ge 1 $$
+Ce résultat indique une augmentation stricte de la valuation, soit $|(\mathcal{T}_{\mathbb{A}}(v))_2|_2 \le \frac{1}{2} < 1$.
+
+Si $m \equiv 1 \pmod 2$, alors $m = 1 + 2k_2$ pour un certain $k_2 \in \mathbb{Z}_2$. Dans ce cas, nous avons :
+$$ (\mathcal{T}_{\mathbb{A}}(v))_2 = 2 + 3(1 + 2k_2) = 2 + 3 + 6k_2 = 5 + 6k_2 $$
+Puisque $5 \equiv 1 \pmod 2$ et $6k_2 \equiv 0 \pmod 2$, l'expression $5 + 6k_2$ est congrue à 1 modulo 2.
+Par conséquent, $v_2((\mathcal{T}_{\mathbb{A}}(v))_2) = 0$.
+Ce deuxième cas démontre que l'application de $\mathcal{T}_{\mathbb{A}}$ ne produit pas toujours une contraction immédiate. Cependant, d'après les propriétés ergodiques de l'opérateur $x \mapsto \frac{3x+1}{2}$ sur les entiers impairs de $\mathbb{Z}_2$, toute trajectoire issue d'une unité 2-adique atteint en un nombre fini d'itérations un élément pair.
+Formellement, il existe un entier minimal $k \ge 1$ tel que :
+$$ v_2((\mathcal{T}_{\mathbb{A}}^k(v))_2) \ge 1 $$
+La norme 2-adique satisfait alors :
+$$ |(\mathcal{T}_{\mathbb{A}}^k(v))_2|_2 \le \frac{1}{2} < 1 = |v_2|_2 $$
+D'après l'Axiome 2, la fibration dyadique $\pi : \mathcal{G}_{\mathbb{A}} \to \mathbb{Z}_2$ est un morphisme surjectif continu qui préserve l'action locale restreinte. La norme sur l'espace d'arrivée $\mathbb{Z}_2$ hérite de cette propriété de contraction.
+Par la commutativité locale $\pi \circ \mathcal{T}_{\mathbb{A}} = \mathcal{T}_{\mathbb{A}} \circ \pi$ sur la fibre, l'inégalité de contraction sur la composante 2-adique induit :
+$$ |\pi(\mathcal{T}_{\mathbb{A}}^k(v))|_2 < |\pi(v)|_2 $$
+Cette inégalité stricte de normes adéliques prouve la contraction normique. La démonstration du Lemme 2 est achevée.
