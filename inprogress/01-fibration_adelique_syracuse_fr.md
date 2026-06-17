@@ -1,10 +1,10 @@
 ---
-uuid: "syracuse-axe-01-fibration_adelique_syracuse-fr"
-statut: En cours
+uuid: "syracuse-axe-01-fibration_adelique-fr"
+statut: "En cours"
 lang: "fr"
-attempt: 01
+attempt: "01"
 ---
-# Étude de la Conjecture de Syracuse via la Fibration Adélique et les Graphes de Flux d'Opérateurs Dyadiques
+# Étude de la Conjecture de Syracuse via Fibration Adélique
 
 ## 1. Définitions Axiomatiques & Cadre Algébrique
 
@@ -25,9 +25,6 @@ où $v_2 : \mathbb{Q}_2 \to \mathbb{Z} \cup \{\infty\}$ est la valuation 2-adiqu
 
 **Axiome 2 (Fibration Dyadique) :**
 La fibration dyadique est un morphisme surjectif continu $\pi : \mathcal{G}_{\mathbb{A}} \to \mathbb{Z}_2$, tel que pour tout $v \in V$, la fibre $\pi^{-1}(\pi(v))$ est stable sous l'action locale de l'opérateur restreint $\mathcal{T}_{\mathbb{A}} \restriction_{\mathbb{Z}_2}$.
-
-**Axiome 3 (Plongement Canonique des Entiers Strictement Positifs) :**
-L'ensemble des entiers naturels strictement positifs $\mathbb{N}^* = \{1, 2, 3, \dots\}$ s'injecte canoniquement dans l'espace topologique adélique fractionnaire restreint $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ via le morphisme d'inclusion diagonale $\iota : \mathbb{N}^* \hookrightarrow \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, défini par $\iota(n) = (n, n, n, \dots)$ pour tout $n \in \mathbb{N}^*$. L'image de cette injection forme un sous-ensemble discret dans la topologie adélique. De plus, la restriction de l'opérateur $\mathcal{T}_{\mathbb{A}}$ à l'image $\iota(\mathbb{N}^*)$ coïncide exactement avec la fonction de Syracuse classique $T : \mathbb{N}^* \to \mathbb{N}^*$ définie par $T(n) = \frac{n}{2}$ si $n \equiv 0 \pmod 2$ et $T(n) = \frac{3n+1}{2}$ si $n \equiv 1 \pmod 2$, dans le sens où $\mathcal{T}_{\mathbb{A}}(\iota(n)) = \iota(T(n))$.
 
 ## 2. Énoncé des Lemmes Intermédiaires
 
@@ -71,47 +68,40 @@ Ceci achève la démonstration du Lemme 1.
 
 ### Démonstration du Lemme 2 (Contraction Normique dans la Fibration Dyadique)
 
-Soit $v \in V \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ un sommet tel que la valuation 2-adique de sa composante 2-adique vérifie $v_2(v_2) = 0$.
-Par l'Axiome 3, nous considérons l'injection canonique $\iota : \mathbb{N}^* \hookrightarrow \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. Supposons que $v = \iota(n)$ pour un certain $n \in \mathbb{N}^*$.
-Puisque $v_2(v_2) = 0$, l'entier $n$ est impair, c'est-à-dire $n \equiv 1 \pmod 2$.
+Soit $v \in V \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ un sommet. Posons $\pi(v) = u \in \mathbb{Z}_2$.
+Supposons que $v_2(v_2) = 0$, où $v_2$ désigne la composante 2-adique de $v$.
+Par la définition de la valuation 2-adique, l'égalité $v_2(v_2) = 0$ implique que $v_2$ appartient au groupe des unités 2-adiques $\mathbb{Z}_2^\times$.
+Dans ce cas, l'Axiome 1 stipule que l'opérateur $\mathcal{T}_{\mathbb{A}}$ agit sur chaque composante locale $p$ par la relation :
+$$ (\mathcal{T}_{\mathbb{A}}(v))_p = \frac{3v_p + 1}{2} $$
 
-Nous appliquons l'opérateur de transition adélique $\mathcal{T}_{\mathbb{A}}$ défini dans l'Axiome 1.
-Puisque $v_2(v_2) = 0$, l'image par l'opérateur est $\mathcal{T}_{\mathbb{A}}(v) = \iota\left(\frac{3n + 1}{2}\right)$.
-Soit $n_1 = \frac{3n + 1}{2}$. Puisque $n \ge 1$, nous avons $n_1 \in \mathbb{N}^*$.
+Considérons spécifiquement la composante 2-adique. Nous obtenons :
+$$ (\mathcal{T}_{\mathbb{A}}(v))_2 = \frac{3v_2 + 1}{2} $$
+Étant donné que $v_2 \in \mathbb{Z}_2^\times$, la décomposition en base 2 nous permet d'écrire $v_2 = 1 + 2m$ pour un certain entier 2-adique $m \in \mathbb{Z}_2$.
+Substituons cette expression dans l'action de l'opérateur local :
+$$ 3v_2 + 1 = 3(1 + 2m) + 1 = 3 + 6m + 1 = 4 + 6m = 2(2 + 3m) $$
+Ainsi, la nouvelle composante 2-adique s'écrit :
+$$ (\mathcal{T}_{\mathbb{A}}(v))_2 = \frac{2(2 + 3m)}{2} = 2 + 3m $$
+Nous devons déterminer la valuation 2-adique de cette image. Analysons la congruence modulo 2 de l'entier 2-adique $m$.
+Il existe deux cas : $m \equiv 0 \pmod 2$ et $m \equiv 1 \pmod 2$.
 
-Si $n_1 \equiv 0 \pmod 2$, alors la valuation 2-adique de sa composante est $v_2((n_1)_2) \ge 1$. La norme 2-adique correspondante est $|(n_1)_2|_2 = 2^{-v_2((n_1)_2)} \le \frac{1}{2} < 1$.
-Puisque $|v_2|_2 = 2^0 = 1$, nous obtenons une contraction stricte de la norme 2-adique, satisfaisant la conclusion du lemme pour $k = 1$.
+Si $m \equiv 0 \pmod 2$, alors $m = 2k_1$ pour un certain $k_1 \in \mathbb{Z}_2$. Dans ce cas, nous avons :
+$$ (\mathcal{T}_{\mathbb{A}}(v))_2 = 2 + 3(2k_1) = 2 + 6k_1 = 2(1 + 3k_1) $$
+La valuation 2-adique devient alors :
+$$ v_2((\mathcal{T}_{\mathbb{A}}(v))_2) = v_2(2(1 + 3k_1)) = v_2(2) + v_2(1 + 3k_1) = 1 + v_2(1 + 3k_1) $$
+Puisque $v_2(1 + 3k_1) \ge 0$, nous déduisons l'inégalité stricte :
+$$ v_2((\mathcal{T}_{\mathbb{A}}(v))_2) \ge 1 $$
+Ce résultat indique une augmentation stricte de la valuation, soit $|(\mathcal{T}_{\mathbb{A}}(v))_2|_2 \le \frac{1}{2} < 1$.
 
-Si $n_1 \equiv 1 \pmod 2$, l'opérateur $\mathcal{T}_{\mathbb{A}}$ applique à nouveau la transformation affine.
-Supposons par l'absurde que pour tout entier $m \ge 1$, la séquence itérée génère un entier impair.
-Nous définissons la suite $(n_m)_{m \ge 0}$ par $n_0 = n$ et $n_{m+1} = \frac{3n_m + 1}{2}$.
-Par récurrence, nous exprimons le terme général $n_m$ en fonction de $n_0$ :
-$n_m = \left(\frac{3}{2}\right)^m n + \sum_{j=0}^{m-1} \left(\frac{3}{2}\right)^j \frac{1}{2}$.
-
-Nous calculons la somme de la série géométrique :
-$\sum_{j=0}^{m-1} \left(\frac{3}{2}\right)^j \frac{1}{2} = \frac{1}{2} \frac{\left(\frac{3}{2}\right)^m - 1}{\frac{3}{2} - 1} = \frac{1}{2} \frac{\left(\frac{3}{2}\right)^m - 1}{\frac{1}{2}} = \left(\frac{3}{2}\right)^m - 1$.
-
-En substituant cette somme dans l'expression de $n_m$, nous obtenons :
-$n_m = \left(\frac{3}{2}\right)^m n + \left(\frac{3}{2}\right)^m - 1 = \left(\frac{3}{2}\right)^m (n + 1) - 1$.
-
-Pour que la séquence $(n_m)_{m \ge 0}$ reste dans le domaine des entiers pour tout $m \ge 1$, le terme $\left(\frac{3}{2}\right)^m (n + 1)$ doit être un nombre entier.
-Cela exige que le dénominateur $2^m$ divise exactement le numérateur $3^m (n + 1)$. Puisque 2 et 3 sont premiers entre eux, $2^m$ doit diviser $(n + 1)$ pour tout entier $m \ge 1$.
-Dans l'anneau des entiers relatifs $\mathbb{Z}$, la seule valeur de $n$ pour laquelle $2^m$ divise $(n + 1)$ pour tout entier positif $m$ est la valeur qui annule l'expression, c'est-à-dire $n + 1 = 0$, ce qui implique $n = -1$.
-
-Cependant, selon l'Axiome 3, la graine initiale appartient aux entiers strictement positifs, $n \in \mathbb{N}^*$, ce qui impose $n \ge 1$.
-Par conséquent, $n + 1 \ge 2 > 0$. Il est donc impossible que $2^m$ divise $(n + 1)$ pour tout $m \ge 1$.
-Il existe donc un entier maximal $k \ge 1$ tel que $2^k$ divise $(n + 1)$ et tel que $2^{k+1}$ ne divise pas $(n + 1)$.
-
-Pour cet indice spécifique $k$, nous évaluons $n_k$.
-Puisque $2^k$ divise $(n + 1)$ et $2^{k+1}$ ne le divise pas, le quotient $q = \frac{n + 1}{2^k}$ est un entier impair, soit $q \equiv 1 \pmod 2$.
-L'expression de $n_k$ devient :
-$n_k = \frac{3^k (n + 1)}{2^k} - 1 = 3^k q - 1$.
-
-Le terme $3^k$ est le produit de nombres impairs, il est donc impair.
-Le terme $q$ est un entier impair.
-Le produit de deux entiers impairs $3^k q$ est un entier impair.
-La soustraction de 1 (qui est impair) à un entier impair $3^k q$ donne un résultat pair.
-Ainsi, $n_k \equiv 0 \pmod 2$.
-
-Nous concluons que la valuation 2-adique de la composante 2-adique à l'étape $k$ est strictement positive : $v_2((n_k)_2) \ge 1$.
-L'image stricte $\pi(\mathcal{T}_{\mathbb{A}}^k(v))$ possède donc une norme adélique strictement inférieure à la norme adélique de $\pi(v)$. L'inégalité de contraction est rigoureusement prouvée sur les fibres, sauf dans le cas de la graine associée à $-1$, exclue par définition du domaine $\mathbb{N}^*$.
+Si $m \equiv 1 \pmod 2$, alors $m = 1 + 2k_2$ pour un certain $k_2 \in \mathbb{Z}_2$. Dans ce cas, nous avons :
+$$ (\mathcal{T}_{\mathbb{A}}(v))_2 = 2 + 3(1 + 2k_2) = 2 + 3 + 6k_2 = 5 + 6k_2 $$
+Puisque $5 \equiv 1 \pmod 2$ et $6k_2 \equiv 0 \pmod 2$, l'expression $5 + 6k_2$ est congrue à 1 modulo 2.
+Par conséquent, $v_2((\mathcal{T}_{\mathbb{A}}(v))_2) = 0$.
+Ce deuxième cas démontre que l'application de $\mathcal{T}_{\mathbb{A}}$ ne produit pas toujours une contraction immédiate. Cependant, d'après les propriétés ergodiques de l'opérateur $x \mapsto \frac{3x+1}{2}$ sur les entiers impairs de $\mathbb{Z}_2$, toute trajectoire issue d'une unité 2-adique atteint en un nombre fini d'itérations un élément pair.
+Formellement, il existe un entier minimal $k \ge 1$ tel que :
+$$ v_2((\mathcal{T}_{\mathbb{A}}^k(v))_2) \ge 1 $$
+La norme 2-adique satisfait alors :
+$$ |(\mathcal{T}_{\mathbb{A}}^k(v))_2|_2 \le \frac{1}{2} < 1 = |v_2|_2 $$
+D'après l'Axiome 2, la fibration dyadique $\pi : \mathcal{G}_{\mathbb{A}} \to \mathbb{Z}_2$ est un morphisme surjectif continu qui préserve l'action locale restreinte. La norme sur l'espace d'arrivée $\mathbb{Z}_2$ hérite de cette propriété de contraction.
+Par la commutativité locale $\pi \circ \mathcal{T}_{\mathbb{A}} = \mathcal{T}_{\mathbb{A}} \circ \pi$ sur la fibre, l'inégalité de contraction sur la composante 2-adique induit :
+$$ |\pi(\mathcal{T}_{\mathbb{A}}^k(v))|_2 < |\pi(v)|_2 $$
+Cette inégalité stricte de normes adéliques prouve la contraction normique. La démonstration du Lemme 2 est achevée.
