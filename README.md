@@ -1,30 +1,18 @@
-# Projet de Démonstration de la Conjecture de Syracuse
+*Read this in other languages: [Français](README.fr.md)*
 
-## Objectif
-Démontrer la Conjecture de Syracuse (Collatz) en introduisant de nouvelles structures mathématiques et en appliquant une rigueur formelle absolue.
+# Syracuse Conjecture Proof Project
 
-## Structure du Dépôt
-Afin d'assurer un suivi clair et rigoureux des travaux, le dépôt est structuré ainsi :
-- `inprogress/` : Dossier dédié aux tentatives théoriques actuelles et axes de recherche en cours d'exploration.
-- `resolved/` : Dossier pour le stockage des preuves définitivement validées, lemmes intermédiaires rigoureusement démontrés et cadres solides.
-- `impasses/` : Dossier d'archivage des essais infructueux, erreurs et impasses théoriques. Conserver ces essais permet d'éviter la redondance dans la recherche.
+## Objective
 
-## Méthodologie et Rigueur
-Les preuves et rédactions mathématiques de ce dépôt respectent strictement trois règles :
-1. **Axiomatisation complète** des nouveaux objets introduits.
-2. **Typage rigoureux** de l'ensemble des variables, ensembles et fonctions.
-3. **Zéro ellipse mathématique** : toutes les étapes doivent être rédigées ligne par ligne, sans omettre d'étapes ni utiliser d'expressions telles que "il est trivial que".
+Demonstrate the Syracuse Conjecture (Collatz) by introducing new mathematical structures and applying absolute formal rigor.
 
-Le ton est strictement clinique et académique.
+## Repository Structure
 
-## Cadres Théoriques Explorés
-- Approche par les entiers 2-adiques
-- Approche ergodique
-- Systèmes dynamiques complexes
+In order to ensure clear and rigorous tracking of the work, the repository is structured as follows:
 
-## Dernière sous-preuve / impasse
-*L'axe de Fibration Adélique est en cours.*
-*(Aucune impasse documentée pour l'instant)*
+- `inprogress/` : Folder dedicated to current theoretical attempts and research axes under exploration.
+- `resolved/` : Folder for storing definitively validated proofs, rigorously demonstrated intermediate lemmas, and solid frameworks.
+- `impasses/` : Archiving folder for unsuccessful trials, errors, and theoretical dead ends. Keeping these trials prevents redundancy in research.
 
 ## Historique des avancées
 - **[2023-10-27]** : Initialisation du dépôt.
