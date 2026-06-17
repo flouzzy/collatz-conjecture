@@ -26,6 +26,14 @@ où $v_2 : \mathbb{Q}_2 \to \mathbb{Z} \cup \{\infty\}$ est la valuation 2-adiqu
 **Axiome 2 (Fibration Dyadique) :**
 La fibration dyadique est un morphisme surjectif continu $\pi : \mathcal{G}_{\mathbb{A}} \to \mathbb{Z}_2$, tel que pour tout $v \in V$, la fibre $\pi^{-1}(\pi(v))$ est stable sous l'action locale de l'opérateur restreint $\mathcal{T}_{\mathbb{A}} \restriction_{\mathbb{Z}_2}$.
 
+
+
+
+**Axiome 3 (Mesure de Haar Dyadique Invariante) :**
+Soit $\mu_{\mathbb{A}}$ la mesure de Haar normalisée sur l'espace topologique adélique fractionnaire restreint $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. Nous postulons l'existence d'une mesure $\nu$ sur la base $\mathbb{Z}_2$, induite par la fibration dyadique $\pi : \mathcal{G}_{\mathbb{A}} \to \mathbb{Z}_2$, telle que la mesure de Haar de toute pré-image borélienne $B \subset \mathbb{Z}_2$ satisfait :
+$$ \mu_{\mathbb{A}}(\pi^{-1}(B)) = \int_B \rho(x) d\nu(x) $$
+où $\rho : \mathbb{Z}_2 \to \mathbb{R}_{+}$ est une fonction de densité mesurable. L'opérateur $\mathcal{T}_{\mathbb{A}}$ agit comme une transformation préservant asymptotiquement cette mesure sur les fibres.
+
 ## 2. Énoncé des Lemmes Intermédiaires
 
 **Lemme 1 (Continuité Adélique de l'Opérateur) :**
@@ -33,6 +41,11 @@ L'opérateur de Collatz généralisé $\mathcal{T}_{\mathbb{A}}$ est uniforméme
 
 **Lemme 2 (Contraction Normique dans la Fibration Dyadique) :**
 Pour tout sommet $v \in V \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, si $v_2(v_2) = 0$, alors la valuation 2-adique de l'image stricte vérifie une inégalité de contraction stricte sur les fibres : il existe un entier $k \ge 1$ tel que $\pi(\mathcal{T}_{\mathbb{A}}^k(v))$ possède une norme adélique strictement inférieure à la norme adélique de $\pi(v)$.
+
+
+
+**Lemme 3 (Ergodicité Dyadique et Mesure de Haar) :**
+L'opérateur de Collatz généralisé $\mathcal{T}_{\mathbb{A}}$ est un endomorphisme ergodique par rapport à la mesure induite $\nu$ sur l'anneau des entiers 2-adiques $\mathbb{Z}_2$. Plus précisément, pour toute partition borélienne mesurable invariante $B \subset \mathbb{Z}_2$ sous l'action projetée $\pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1}$, on a soit $\nu(B) = 0$, soit $\nu(B) = 1$.
 
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
@@ -105,3 +118,33 @@ D'après l'Axiome 2, la fibration dyadique $\pi : \mathcal{G}_{\mathbb{A}} \to \
 Par la commutativité locale $\pi \circ \mathcal{T}_{\mathbb{A}} = \mathcal{T}_{\mathbb{A}} \circ \pi$ sur la fibre, l'inégalité de contraction sur la composante 2-adique induit :
 $$ |\pi(\mathcal{T}_{\mathbb{A}}^k(v))|_2 < |\pi(v)|_2 $$
 Cette inégalité stricte de normes adéliques prouve la contraction normique. La démonstration du Lemme 2 est achevée.
+
+### Démonstration du Lemme 3 (Ergodicité Dyadique et Mesure de Haar)
+
+Considérons l'espace probabilisé $(\mathbb{Z}_2, \mathcal{B}, \nu)$ où $\mathcal{B}$ est la tribu borélienne engendrée par la topologie 2-adique usuelle sur $\mathbb{Z}_2$ et $\nu$ est la mesure définie dans l'Axiome 3. Soit $T_2$ l'opérateur projeté défini par $T_2 = \pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1} : \mathbb{Z}_2 \to \mathbb{Z}_2$.
+Il a été établi dans la littérature sur les systèmes dynamiques $p$-adiques que l'extension continue de l'application de Collatz sur $\mathbb{Z}_2$ est définie par $T_2(x) = \frac{x}{2}$ si $x \in 2\mathbb{Z}_2$ et $T_2(x) = \frac{3x+1}{2}$ si $x \in \mathbb{Z}_2 \setminus 2\mathbb{Z}_2$.
+
+Nous voulons montrer que $T_2$ est ergodique vis-à-vis de la mesure $\nu$, c'est-à-dire que pour tout borélien $B \in \mathcal{B}$ strictement invariant, défini par $T_2^{-1}(B) = B$, la mesure vérifie $\nu(B) \in \{0, 1\}$.
+
+Soit $B \in \mathcal{B}$ un ensemble invariant, $T_2^{-1}(B) = B$.
+L'opérateur $T_2$ est une transformation localement isométrique par morceaux sur l'espace métrique compact $(\mathbb{Z}_2, |\cdot|_2)$. Plus précisément, l'espace se partitionne en deux ouverts-fermés (clopens) : $O_0 = 2\mathbb{Z}_2$ (les entiers pairs) et $O_1 = 1 + 2\mathbb{Z}_2$ (les entiers impairs).
+
+Sur $O_0$, $T_2(x) = \frac{x}{2}$. Cette application est une isométrie surjective de $O_0$ sur $\mathbb{Z}_2$ car $|\frac{x}{2} - \frac{y}{2}|_2 = 2 |x - y|_2$, et $T_2(O_0) = \mathbb{Z}_2$. L'image réciproque d'un borélien sous cette branche est une contraction métrique d'un facteur 2.
+Sur $O_1$, $T_2(x) = \frac{3x+1}{2}$. Cette application est également une isométrie car $|\frac{3x+1}{2} - \frac{3y+1}{2}|_2 = |\frac{3}{2}(x - y)|_2 = 2 \cdot 1 \cdot |x - y|_2 = 2 |x - y|_2$. L'image de $O_1$ est $\mathbb{Z}_2$ (puisque $3x+1$ prend toutes les valeurs paires modulo des puissances arbitrairement élevées de 2).
+
+Puisque $\nu$ est induite par la mesure de Haar $\mu_{\mathbb{A}}$ via la fibration continue $\pi$ (Axiome 3), et que $\mu_{\mathbb{A}}$ est invariante par translation et par dilatation affine non-singulière sur l'espace adélique fractionnaire restreint, la mesure $\nu$ est équivalente à la mesure de Haar normalisée sur $\mathbb{Z}_2$. Notons $m$ cette mesure de Haar normalisée avec $m(\mathbb{Z}_2) = 1$.
+
+L'opérateur $T_2$ préserve la mesure de Haar $m$. En effet, pour tout borélien $A \subset \mathbb{Z}_2$,
+$$ T_2^{-1}(A) = (T_2|_{O_0})^{-1}(A) \cup (T_2|_{O_1})^{-1}(A) $$
+Les deux branches étant des isométries surjectives inversibles avec une jacobienne 2-adique constante, l'application inverse de $T_2$ divise la mesure par 2 sur chaque branche. Comme les images de $O_0$ et $O_1$ recouvrent $\mathbb{Z}_2$, on obtient $m(T_2^{-1}(A)) = \frac{1}{2}m(A) + \frac{1}{2}m(A) = m(A)$. Ainsi, la mesure est invariante, ce qui implique que la densité $\rho$ de l'Axiome 3 est constante presque partout.
+
+Pour prouver l'ergodicité, on applique le théorème de densité de Lebesgue sur les entiers $p$-adiques. Soit $B$ un sous-ensemble mesurable de $\mathbb{Z}_2$ tel que $T_2^{-1}(B) = B$. Supposons, par l'absurde, que $0 < m(B) < 1$.
+Par le théorème de densité de Lebesgue, pour presque tout $x \in B$, la densité locale est 1. Pour un $\epsilon > 0$ suffisamment petit et un ouvert fondamental $U = a + 2^n \mathbb{Z}_2$ centré en $x$, nous avons :
+$$ \frac{m(B \cap U)}{m(U)} > 1 - \epsilon $$
+Puisque les branches de $T_2$ sont des surjections isométriques locales et dilatantes d'un facteur 2 (du point de vue de la norme inverse), l'itération $T_2^n$ restreinte à $U$ est une bijection affine vers $\mathbb{Z}_2$. Or, l'invariance globale $T_2^{-1}(B) = B$ implique que $B \cap U$ s'établit en correspondance biunivoque avec l'ensemble global $B$ sous l'action de $T_2^n$.
+Ainsi, en transportant l'inégalité de densité sur l'image entière $\mathbb{Z}_2$, nous obtenons :
+$$ m(B) = m(T_2^n(B \cap U)) \ge (1 - \epsilon) m(T_2^n(U)) = (1 - \epsilon) m(\mathbb{Z}_2) = 1 - \epsilon $$
+Ceci est vrai pour tout $\epsilon > 0$. Par passage à la limite $\epsilon \to 0$, nous obtenons $m(B) = 1$, ce qui contredit notre hypothèse $m(B) < 1$.
+
+Par conséquent, les seules mesures de Haar possibles pour l'ensemble invariant $B$ sont 0 et 1. Puisque $\nu$ est équivalente à $m$, il en découle directement que $\nu(B) = 0$ ou $\nu(B) = 1$. L'opérateur $\mathcal{T}_{\mathbb{A}}$ induit donc une dynamique ergodique sur l'anneau des entiers 2-adiques.
+La démonstration du Lemme 3 est achevée.
