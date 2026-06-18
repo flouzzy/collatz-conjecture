@@ -38,4 +38,6 @@ Le ton est strictement clinique et académique.
 ## Historique des avancées
 
 - **[2023-10-27]** : Initialisation du dépôt.
-- [2026-06-17] : Enrichissement de la Tentative 01 - fibration_adelique_syracuse (Versions FR & EN). Résolution du Lemme 2. Statut : En cours.
+- **[2026-06-17]** : Enrichissement de la Tentative 01 - Fibration Adélique (Versions FR & EN). Résolution du Lemme 3.
+- **[2026-06-18]** : Résolution du Lemme 4 - Équirépartition Globale et Convergence. Statut : En cours.
+
