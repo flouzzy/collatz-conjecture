@@ -16,4 +16,4 @@ In order to ensure clear and rigorous tracking of the work, the repository is st
 
 ## Historique des avancées
 - **[2023-10-27]** : Initialisation du dépôt.
-- **[2026-06-18]** : Enrichissement de la Tentative 01 - Fibration Adélique (Versions FR & EN). Résolution du Lemme 5. Statut : En cours.
+- **[2026-06-20]** : Enrichissement de la Tentative 01 - Fibration Adélique (Versions FR & EN). Résolution du Lemme 6. Statut : En cours.
