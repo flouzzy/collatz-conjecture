@@ -34,6 +34,11 @@ Soit $\mu_{\mathbb{A}}$ la mesure de Haar normalisée sur l'espace topologique a
 $$ \mu_{\mathbb{A}}(\pi^{-1}(B)) = \int_B \rho(x) d\nu(x) $$
 où $\rho : \mathbb{Z}_2 \to \mathbb{R}_{+}$ est une fonction de densité mesurable. L'opérateur $\mathcal{T}_{\mathbb{A}}$ agit comme une transformation préservant asymptotiquement cette mesure sur les fibres.
 
+**Axiome 4 (Hauteur de Weil Exponentielle) :**
+Nous définissons une fonction de hauteur globale exponentielle $H_{\mathcal{W}} : \mathcal{G}_{\mathbb{A}} \to \mathbb{R}_{+}$ qui synthétise la dynamique locale sur toutes les places de $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. Pour un sommet $v \in V \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, la hauteur est donnée par le produit eulérien régularisé :
+$$ H_{\mathcal{W}}(v) = \prod_{p \in \mathcal{P} \cup \{\infty\}} \max(1, |v_p|_p)^{\omega_p} $$
+où $\omega_p$ sont des poids spectraux avec $\omega_2 = \frac{\log 3}{\log 2}$ et $\omega_p = 1$ pour $p \neq 2$. Par construction de la fibration, l'action locale restreinte assure que la hauteur satisfait une inégalité asymptotique sous l'action de $\mathcal{T}_{\mathbb{A}}$.
+
 ## 2. Énoncé des Lemmes Intermédiaires
 
 **Lemme 1 (Continuité Adélique de l'Opérateur) :**

@@ -33,6 +33,11 @@ Let $\mu_{\mathbb{A}}$ be the normalized Haar measure on the restricted fraction
 $$ \mu_{\mathbb{A}}(\pi^{-1}(B)) = \int_B \rho(x) d\nu(x) $$
 where $\rho : \mathbb{Z}_2 \to \mathbb{R}_{+}$ is a measurable density function. The operator $\mathcal{T}_{\mathbb{A}}$ acts as a transformation that asymptotically preserves this measure on the fibers.
 
+**Axiom 4 (Exponential Weil Height):**
+We define a global exponential height function $H_{\mathcal{W}} : \mathcal{G}_{\mathbb{A}} \to \mathbb{R}_{+}$ that synthesizes the local dynamics across all places of $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. For a vertex $v \in V \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, the height is given by the regularized Euler product:
+$$ H_{\mathcal{W}}(v) = \prod_{p \in \mathcal{P} \cup \{\infty\}} \max(1, |v_p|_p)^{\omega_p} $$
+where $\omega_p$ are spectral weights with $\omega_2 = \frac{\log 3}{\log 2}$ and $\omega_p = 1$ for $p \neq 2$. By construction of the fibration, the restricted local action ensures that the height satisfies an asymptotic inequality under the action of $\mathcal{T}_{\mathbb{A}}$.
+
 ## 2. Statement of Intermediate Lemmas
 
 **Lemma 1 (Adelic Continuity of the Operator):**
