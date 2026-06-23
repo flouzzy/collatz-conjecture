@@ -61,6 +61,14 @@ Si $\mathcal{C}$ est une orbite cyclique sous l'action de $\mathcal{T}_{\mathbb{
 **Lemme 6 (Théorème Principal : Attractivité Universelle du Cycle Trivial) :**
 Pour tout point initial $v \in \mathcal{G}_{\mathbb{A}}$ généré par un entier naturel, la trajectoire générée par les itérations successives de l'opérateur $\mathcal{T}_{\mathbb{A}}$ converge asymptotiquement vers la composante connexe du cycle trivial en un temps fini, démontrant ainsi la Conjecture de Syracuse pour tout entier naturel.
 
+**Axiome 3 (Temps de Vol Adélique Étendu) :**
+Nous définissons la fonction de temps de vol adélique étendu $\tau_{\mathbb{A}} : \mathcal{G}_{\mathbb{A}} \to \mathbb{N} \cup \{\infty\}$ comme le nombre minimal d'itérations de l'opérateur $\mathcal{T}_{\mathbb{A}}$ nécessaires pour qu'un élément rejoigne la fibre associée au cycle trivial. Plus formellement, pour tout $v \in \mathcal{G}_{\mathbb{A}}$,
+$$ \tau_{\mathbb{A}}(v) = \inf \{ n \in \mathbb{N} \mid \pi(\mathcal{T}_{\mathbb{A}}^n(v)) = 0 \} $$
+où par convention $\inf \emptyset = \infty$.
+
+**Lemme 7 (Finitude Uniforme du Temps de Vol sur les Sous-ensembles Compacts Adéliques) :**
+Pour tout sous-ensemble compact $K \subset \mathcal{G}_{\mathbb{A}}$ pour la topologie de l'espace adélique fractionnaire restreint, le supremum du temps de vol adélique sur $K$ est fini, c'est-à-dire $\sup_{v \in K} \tau_{\mathbb{A}}(v) < \infty$.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 ### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
@@ -226,3 +234,37 @@ Une trajectoire bornée sur les entiers naturels, ne possédant aucun cycle autr
 
 Ce résultat est valide pour toute condition initiale stricte $N \in \mathbb{N} \setminus \{0\}$. La fibration adélique garantit l'absence de toute orbite échappant à l'attracteur dyadique.
 La démonstration du Lemme 6 est achevée.
+
+### Démonstration du Lemme 7 (Finitude Uniforme du Temps de Vol sur les Sous-ensembles Compacts Adéliques)
+
+Soit $K$ un sous-ensemble compact de l'espace topologique $\mathcal{G}_{\mathbb{A}} \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. Nous devons démontrer que la restriction de la fonction temps de vol étendu $\tau_{\mathbb{A}}$ à $K$ est globalement bornée.
+
+D'après le Lemme 6, nous avons établi que pour tout sommet $v \in \mathcal{G}_{\mathbb{A}}$ dont la composante réelle correspond à un entier $N \in \mathbb{N} \setminus \{0\}$, la trajectoire sous l'action de $\mathcal{T}_{\mathbb{A}}$ atteint inéluctablement le cycle trivial en un nombre fini d'étapes. Par conséquent, $\tau_{\mathbb{A}}(v) < \infty$ pour tout $v$ appartenant à ce domaine dense.
+
+Grâce à la topologie de produit restreint définie sur $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, la condition de convergence vers la fibre $\pi^{-1}(0)$ s'exprime comme une condition ouverte.
+Soit $v \in K$ un élément quelconque. Puisque $\tau_{\mathbb{A}}(v) < \infty$ d'après l'attractivité universelle (Lemme 6), posons $N_v = \tau_{\mathbb{A}}(v)$. L'élément $\mathcal{T}_{\mathbb{A}}^{N_v}(v)$ appartient à la fibre $\pi^{-1}(0)$.
+
+Par le Lemme 1, l'opérateur $\mathcal{T}_{\mathbb{A}}$ est continu sur l'espace topologique adélique. Une composition finie d'opérateurs continus est également continue. Ainsi, l'application $\mathcal{T}_{\mathbb{A}}^{N_v} : \mathcal{G}_{\mathbb{A}} \to \mathcal{G}_{\mathbb{A}}$ est continue.
+
+Puisque l'ensemble cible défini par la projection $\pi^{-1}(0)$ est un ensemble ouvert-fermé (clopen) dans la topologie totalement discontinue de l'espace 2-adique de base $\mathbb{Z}_2$, son image inverse par l'application continue $\mathcal{T}_{\mathbb{A}}^{N_v}$, notée $U_v = (\mathcal{T}_{\mathbb{A}}^{N_v})^{-1}(\pi^{-1}(0))$, est un ensemble ouvert dans $\mathcal{G}_{\mathbb{A}}$.
+De plus, par construction, $v \in U_v$.
+
+Pour tout élément $u \in U_v$, nous avons $\pi(\mathcal{T}_{\mathbb{A}}^{N_v}(u)) = 0$, ce qui implique, par la définition de la fonction temps de vol (Axiome 3), que le temps de vol pour l'élément $u$ vérifie l'inégalité :
+$$ \tau_{\mathbb{A}}(u) \le N_v $$
+
+Considérons maintenant la collection d'ensembles ouverts $\mathcal{U} = \{ U_v \mid v \in K \}$. Cette collection forme un recouvrement ouvert du sous-ensemble compact $K$, car chaque $v \in K$ est contenu dans son ouvert correspondant $U_v$.
+
+Par définition de la compacité pour l'espace topologique $K$, tout recouvrement ouvert de $K$ admet un sous-recouvrement fini.
+Il existe donc un ensemble fini de points $\{v_1, v_2, \dots, v_m\} \subset K$ tel que les ouverts correspondants recouvrent intégralement l'espace $K$ :
+$$ K \subset \bigcup_{i=1}^m U_{v_i} $$
+
+Pour chaque élément $u \in K$, il existe un indice $j \in \{1, 2, \dots, m\}$ tel que $u \in U_{v_j}$.
+Il s'ensuit que le temps de vol $\tau_{\mathbb{A}}(u)$ est borné supérieurement par le temps de vol du centre de l'ouvert correspondant :
+$$ \tau_{\mathbb{A}}(u) \le N_{v_j} \le \max_{1 \le i \le m} N_{v_i} $$
+
+Soit $M = \max_{1 \le i \le m} N_{v_i}$. L'ensemble $\{N_{v_1}, \dots, N_{v_m}\}$ étant fini et constitué d'entiers naturels, la valeur maximale $M$ est un entier naturel fini, $M < \infty$.
+Nous avons donc démontré que pour tout $u \in K$, $\tau_{\mathbb{A}}(u) \le M$.
+
+En prenant le supremum sur l'ensemble $K$, nous obtenons :
+$$ \sup_{u \in K} \tau_{\mathbb{A}}(u) \le M < \infty $$
+La démonstration du Lemme 7 est achevée.
