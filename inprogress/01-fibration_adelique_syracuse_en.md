@@ -6,6 +6,8 @@ attempt: "01"
 ---
 # Study of the Collatz Conjecture via Adelic Fibration
 
+Charles EDOU NZE*
+
 ## 1. Axiomatic Definitions & Algebraic Framework
 
 Let $\mathbb{A}_{\mathbb{Q}}$ be the ring of adeles over the field of rational numbers $\mathbb{Q}$. We introduce the restricted fractional adelic topological space, denoted $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, defined as follows:
@@ -267,3 +269,6 @@ We have thus demonstrated that for all $u \in K$, $\tau_{\mathbb{A}}(u) \le M$.
 Taking the supremum over the set $K$, we obtain:
 $$ \sup_{u \in K} \tau_{\mathbb{A}}(u) \le M < \infty $$
 The proof of Lemma 7 is completed.
+
+***
+*Chercheur indépendant / Independent Researcher

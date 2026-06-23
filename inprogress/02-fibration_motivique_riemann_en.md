@@ -22,4 +22,4 @@ Charles EDOU NZE*
 [Content to be written]
 
 ***
-* IT engineer augmented by AI - Amateur mathematician.
+*Chercheur indépendant / Independent Researcher

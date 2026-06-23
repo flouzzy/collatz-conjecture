@@ -6,6 +6,8 @@ attempt: "01"
 ---
 # Étude de la Conjecture de Syracuse via Fibration Adélique
 
+Charles EDOU NZE*
+
 ## 1. Définitions Axiomatiques & Cadre Algébrique
 
 Soit $\mathbb{A}_{\mathbb{Q}}$ l'anneau des adèles sur le corps des rationnels $\mathbb{Q}$. Nous introduisons l'espace topologique adélique fractionnaire restreint, noté $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, défini comme suit :
@@ -268,3 +270,6 @@ Nous avons donc démontré que pour tout $u \in K$, $\tau_{\mathbb{A}}(u) \le M$
 En prenant le supremum sur l'ensemble $K$, nous obtenons :
 $$ \sup_{u \in K} \tau_{\mathbb{A}}(u) \le M < \infty $$
 La démonstration du Lemme 7 est achevée.
+
+***
+*Chercheur indépendant / Independent Researcher
