@@ -273,37 +273,5 @@ Taking the supremum over the set $K$, we obtain:
 $$ \sup_{u \in K} \tau_{\mathbb{A}}(u) \le M < \infty $$
 The proof of Lemma 7 is completed.
 
-
-### Proof of Lemma 8 (Topological Stability of the Fibration under 2-adic Perturbation)
-
-Let $v \in \mathcal{G}_{\mathbb{A}}$ such that the extended flight time is finite, $\tau_{\mathbb{A}}(v) = N < \infty$.
-By the definition of the flight time function (Axiom 3), we have $\pi(\mathcal{T}_{\mathbb{A}}^N(v)) = 0$, which means that the $N$-th iterate of $v$ belongs to the fiber associated with the trivial cycle, denoted $\mathcal{F}_0 = \pi^{-1}(0)$.
-
-Recall that the dyadic projection $\pi : \mathcal{G}_{\mathbb{A}} \to \mathbb{Z}_2$ is continuous with respect to the topology of the restricted fractional adelic space. The target set of the projection in $\mathbb{Z}_2$ is the singleton $\{0\}$.
-In the topological space of 2-adic integers $\mathbb{Z}_2$, the singleton $\{0\}$ is a closed set, but not open. However, the condition $\pi(x) = 0$ is equivalent to the absolute convergence of the 2-adic norm. Yet, for the dynamics of the system, reaching the trivial cycle corresponds to strict entry into an arc-connected component of the state graph in a certain finite space. More precisely, the fiber $\mathcal{F}_0$ can be seen as the preimage of a fundamental clopen set $B_k = p^k \mathbb{Z}_p$ for a sufficiently large $k$ in the ultrametric topology.
-Here, let us posit that the condition of reaching the attractor is expressed as belonging to an invariant open set $U_{attr} \subset \mathcal{G}_{\mathbb{A}}$.
-
-According to Lemma 1, the operator $\mathcal{T}_{\mathbb{A}}$ is globally continuous on the restricted fractional adelic topological space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, and thus its restriction to $\mathcal{G}_{\mathbb{A}}$ is continuous.
-Since the composition of $N$ continuous maps is continuous, the iterated map $\mathcal{T}_{\mathbb{A}}^N : \mathcal{G}_{\mathbb{A}} \to \mathcal{G}_{\mathbb{A}}$ is continuous.
-
-Consider the image of $v$ after $N$ iterations, $w = \mathcal{T}_{\mathbb{A}}^N(v) \in U_{attr}$.
-Since $U_{attr}$ is an open set containing $w$ and $\mathcal{T}_{\mathbb{A}}^N$ is continuous, by the very definition of topological continuity, the preimage $(\mathcal{T}_{\mathbb{A}}^N)^{-1}(U_{attr})$ is an open set in $\mathcal{G}_{\mathbb{A}}$.
-
-We define this open neighborhood by $\mathcal{W} = (\mathcal{T}_{\mathbb{A}}^N)^{-1}(U_{attr})$.
-By construction, since $\mathcal{T}_{\mathbb{A}}^N(v) = w \in U_{attr}$, it follows that $v \in \mathcal{W}$.
-
-Let $u$ be any element belonging to the open neighborhood $\mathcal{W}$.
-By the definition of the set $\mathcal{W}$, we have:
-$$ \mathcal{T}_{\mathbb{A}}^N(u) \in U_{attr} $$
-
-Belonging to $U_{attr}$ implies that the trajectory of $u$ has reached the basin of attraction of the trivial cycle (or the associated absorbing component) in exactly $N$ steps or fewer.
-Consequently, for all $u \in \mathcal{W}$, the adelic flight time satisfies:
-$$ \tau_{\mathbb{A}}(u) \le N < \infty $$
-
-Thus, any sufficiently small perturbation of $v$ in the dyadic topology (i.e., any point $u$ in the open neighborhood $\mathcal{W}$ of $v$) will possess a trajectory that will converge to the same cyclic attractor in a finite number of steps.
-The topological stability of the fibration is therefore rigorously established against dyadic perturbations.
-
-The proof of Lemma 8 is completed.
-
 ***
 *Chercheur indépendant / Independent Researcher
