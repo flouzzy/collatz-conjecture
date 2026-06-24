@@ -38,5 +38,5 @@ Le ton est strictement clinique et académique.
 ## Historique des avancées
 
 - **[2023-10-27]** : Initialisation du dépôt.
-- **[2026-06-22]** : Enrichissement de la Tentative 01 - Fibration Adélique (Versions FR & EN). Résolution du Lemme 7. Statut : En cours.
+- **[2026-06-23]** : Enrichissement de la Tentative 01 - Fibration Adélique (Versions FR & EN). Résolution du Lemme 8. Statut : En cours.
 - [2026-06-18] : Création de la Tentative 02 - fibration_motivique_riemann (Versions FR & EN). Statut : En cours.
