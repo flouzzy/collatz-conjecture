@@ -69,6 +69,9 @@ where by convention $\inf \emptyset = \infty$.
 **Lemma 7 (Uniform Finitude of Flight Time on Compact Adelic Subsets):**
 For any compact subset $K \subset \mathcal{G}_{\mathbb{A}}$ with respect to the topology of the restricted fractional adelic space, the supremum of the adelic flight time on $K$ is finite, that is, $\sup_{v \in K} \tau_{\mathbb{A}}(v) < \infty$.
 
+**Lemma 8 (Topological Stability of the Fibration under 2-adic Perturbation):**
+Let $v \in \mathcal{G}_{\mathbb{A}}$ be a point such that $\tau_{\mathbb{A}}(v) < \infty$. There exists an open neighborhood $\mathcal{W} \subset \mathcal{G}_{\mathbb{A}}$ containing $v$ such that, for all $u \in \mathcal{W}$, the trajectory of $u$ under the operator $\mathcal{T}_{\mathbb{A}}$ reaches the same cyclic attractor in a finite number of steps, guaranteeing the global topological stability of the orbits with respect to infinitesimal dyadic perturbations.
+
 ## 3. Rigorous Proofs (Step-by-Step)
 
 ### Proof of Lemma 1 (Adelic Continuity of the Operator)

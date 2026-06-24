@@ -71,6 +71,10 @@ où par convention $\inf \emptyset = \infty$.
 **Lemme 7 (Finitude Uniforme du Temps de Vol sur les Sous-ensembles Compacts Adéliques) :**
 Pour tout sous-ensemble compact $K \subset \mathcal{G}_{\mathbb{A}}$ pour la topologie de l'espace adélique fractionnaire restreint, le supremum du temps de vol adélique sur $K$ est fini, c'est-à-dire $\sup_{v \in K} \tau_{\mathbb{A}}(v) < \infty$.
 
+
+**Lemme 8 (Stabilité Topologique de la Fibration sous Perturbation 2-adique) :**
+Soit $v \in \mathcal{G}_{\mathbb{A}}$ un point tel que $\tau_{\mathbb{A}}(v) < \infty$. Il existe un voisinage ouvert $\mathcal{W} \subset \mathcal{G}_{\mathbb{A}}$ contenant $v$ tel que, pour tout $u \in \mathcal{W}$, la trajectoire de $u$ sous l'opérateur $\mathcal{T}_{\mathbb{A}}$ rejoint le même attracteur cyclique en un nombre fini d'étapes, garantissant la stabilité topologique globale des orbites vis-à-vis des perturbations dyadiques infinitésimales.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 ### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
