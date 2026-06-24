@@ -22,4 +22,4 @@ Charles EDOU NZE*
 [Contenu à rédiger]
 
 ***
-* ingénieur informatique augmenté par l’IA - Mathématicien amateur.
+*Chercheur indépendant / Independent Researcher
