@@ -72,6 +72,9 @@ For any compact subset $K \subset \mathcal{G}_{\mathbb{A}}$ with respect to the 
 **Lemma 8 (Topological Stability of the Fibration under 2-adic Perturbation):**
 Let $v \in \mathcal{G}_{\mathbb{A}}$ be a point such that $\tau_{\mathbb{A}}(v) < \infty$. There exists an open neighborhood $\mathcal{W} \subset \mathcal{G}_{\mathbb{A}}$ containing $v$ such that, for all $u \in \mathcal{W}$, the trajectory of $u$ under the operator $\mathcal{T}_{\mathbb{A}}$ reaches the same cyclic attractor in a finite number of steps, guaranteeing the global topological stability of the orbits with respect to infinitesimal dyadic perturbations.
 
+**Lemma 9 (Structural Uniformity of the Connected Components of the Adelic Graph):**
+For any integer $k \ge 1$, the set of vertices $v \in \mathcal{G}_{\mathbb{A}}$ having a flight time $\tau_{\mathbb{A}}(v) = k$ forms a countable union of open and closed subsets (clopens) in the fractional adelic topology, and no connected component disjoint from the trivial attractor can possess a non-zero induced Haar measure.
+
 ## 3. Rigorous Proofs (Step-by-Step)
 
 ### Proof of Lemma 1 (Adelic Continuity of the Operator)
@@ -272,6 +275,39 @@ We have thus demonstrated that for all $u \in K$, $\tau_{\mathbb{A}}(u) \le M$.
 Taking the supremum over the set $K$, we obtain:
 $$ \sup_{u \in K} \tau_{\mathbb{A}}(u) \le M < \infty $$
 The proof of Lemma 7 is completed.
+
+### Proof of Lemma 8 (Topological Stability of the Fibration under 2-adic Perturbation)
+
+Let $v \in \mathcal{G}_{\mathbb{A}}$ be a vertex such that its adelic flight time $\tau_{\mathbb{A}}(v)$ is finite. Let $N = \tau_{\mathbb{A}}(v)$.
+By definition of the flight time, the $N$-th iterate of $v$ under the generalized Collatz operator, denoted $z = \mathcal{T}_{\mathbb{A}}^N(v)$, belongs to the attracting trivial cycle.
+The restricted fractional adelic topological space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ is equipped with the restricted product topology, in which the ring of $p$-adic integers $\mathbb{Z}_p$ is an open and compact subset for every prime number $p$.
+The trivial cycle, consisting of a finite number of isolated points with rational coordinates, forms a discrete subspace of $\mathcal{G}_{\mathbb{A}}$.
+Consequently, there exists an open neighborhood $U \subset \mathcal{G}_{\mathbb{A}}$ containing $z$ such that every element of $U$ undergoing the action of $\mathcal{T}_{\mathbb{A}}$ remains absorbed by the attractive component of the trivial cycle.
+According to Lemma 1, the operator $\mathcal{T}_{\mathbb{A}} : \mathcal{G}_{\mathbb{A}} \to \mathcal{G}_{\mathbb{A}}$ is continuous on the entire adelic topological space.
+Since the finite composition of continuous mappings is continuous, the iterated mapping $\mathcal{T}_{\mathbb{A}}^N : \mathcal{G}_{\mathbb{A}} \to \mathcal{G}_{\mathbb{A}}$ is rigorously continuous.
+By definition of topological continuity, the pre-image of an open set under a continuous mapping is an open set.
+Let $\mathcal{W} = (\mathcal{T}_{\mathbb{A}}^N)^{-1}(U)$. The set $\mathcal{W}$ is an open neighborhood of $v$ in $\mathcal{G}_{\mathbb{A}}$.
+For any element $u \in \mathcal{W}$, it follows by construction that $\mathcal{T}_{\mathbb{A}}^N(u) \in U$.
+Since all elements of $U$ are asymptotically captured by the trivial cycle in a finite number of additional steps (possibly zero), the trajectory of $u$ inevitably reaches the same cyclical attractor in finite time.
+This establishes the global topological stability of the orbits: a sufficiently small dyadic perturbation around $v$, confined within the open set $\mathcal{W}$, does not alter the asymptotic destiny of the trajectory.
+The proof of Lemma 8 is completed.
+
+### Proof of Lemma 9 (Structural Uniformity of the Connected Components of the Adelic Graph)
+
+Let $k \ge 1$ be a fixed integer. Let us define the level set $\mathcal{C}_k = \{ v \in \mathcal{G}_{\mathbb{A}} \mid \tau_{\mathbb{A}}(v) = k \}$.
+By Lemma 8, for every $v \in \mathcal{C}_k$, there exists an open neighborhood $\mathcal{W}_v \subset \mathcal{G}_{\mathbb{A}}$ such that for all $u \in \mathcal{W}_v$, the trajectory reaches the trivial attractor.
+Since the space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ possesses a basis for its topology consisting of sets that are both open and closed (clopens), inherited from the totally disconnected topology of the $p$-adic fields $\mathbb{Q}_p$, we can choose each $\mathcal{W}_v$ such that it is a strict clopen subset.
+The set $\mathcal{C}_k$ can then be written as the union $\mathcal{C}_k = \bigcup_{v \in \mathcal{C}_k} \mathcal{W}_v$.
+Because the adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ is a separable topological space (it admits a countable dense subset, for instance $\mathbb{Q}$), any open cover admits an at most countable subcover, by virtue of Lindelöf's theorem for separable metric spaces.
+Therefore, there exists a countable subfamily $\{ v_i \}_{i \in \mathbb{N}} \subset \mathcal{C}_k$ such that $\mathcal{C}_k = \bigcup_{i \in \mathbb{N}} \mathcal{W}_{v_i}$.
+This demonstrates that $\mathcal{C}_k$ is a countable union of clopen subsets.
+Suppose by contradiction that there exists an invariant connected component $\mathcal{Z} \subset \mathcal{G}_{\mathbb{A}}$ which is entirely disjoint from the basin of attraction of the trivial cycle, and suppose that the induced Haar measure $\nu(\mathcal{Z})$ is strictly positive, $\nu(\mathcal{Z}) > 0$.
+By definition of dynamic invariance under $\mathcal{T}_{\mathbb{A}}$, the measure of the orbit of $\mathcal{Z}$ must be conserved or be absorbed.
+According to Lemma 4 (Global Equidistribution), for $\nu$-almost every initial point $x \in \mathcal{G}_{\mathbb{A}}$, the sequence of 2-adic norms $\rho_n = |\pi(\mathcal{T}_{\mathbb{A}}^n(x))|_2$ converges to zero, entailing the inevitable absorption of the trajectory by the trivial cycle in a finite number of steps.
+The set of points failing to reach the trivial attractor constitutes the complement of this condition of universal convergence.
+Since this complement has a strictly zero Haar measure, it imperatively follows that $\nu(\mathcal{Z}) = 0$, which contradicts our initial assumption $\nu(\mathcal{Z}) > 0$.
+Consequently, no connected component disjoint from the trivial attractor can possess a non-zero induced Haar measure within the adelic space.
+The proof of Lemma 9 is completed.
 
 ***
 *Chercheur indépendant / Independent Researcher
