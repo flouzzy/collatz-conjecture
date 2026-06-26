@@ -78,6 +78,14 @@ Soit $v \in \mathcal{G}_{\mathbb{A}}$ un point tel que $\tau_{\mathbb{A}}(v) < \
 **Lemme 9 (Uniformité Structurelle des Composantes Connexes du Graphe Adélique) :**
 Pour tout entier $k \ge 1$, l'ensemble des sommets $v \in \mathcal{G}_{\mathbb{A}}$ ayant un temps de vol $\tau_{\mathbb{A}}(v) = k$ forme une union dénombrable de sous-ensembles ouverts et fermés (clopens) dans la topologie adélique fractionnaire, et aucune composante connexe disjointe de l'attracteur trivial ne peut posséder une mesure de Haar induite non nulle.
 
+**Axiome 4 (Énergie de Fibration Adélique) :**
+Nous introduisons l'opérateur d'énergie de fibration adélique totale, dénoté $\mathcal{E}_{\mathbb{A}} : \mathcal{G}_{\mathbb{A}} \to \mathbb{R}^+ \cup \{+\infty\}$. Pour un élément $v \in \mathcal{G}_{\mathbb{A}}$, cette énergie quantifie la somme totale des variations de la norme 2-adique le long de la trajectoire avant l'absorption par l'attracteur trivial. Formellement, elle est définie par la série :
+$$ \mathcal{E}_{\mathbb{A}}(v) = \sum_{n=0}^{\tau_{\mathbb{A}}(v)-1} \left| \pi(\mathcal{T}_{\mathbb{A}}^{n+1}(v)) - \pi(\mathcal{T}_{\mathbb{A}}^n(v)) \right|_2 $$
+avec la convention que $\mathcal{E}_{\mathbb{A}}(v) = 0$ si $\tau_{\mathbb{A}}(v) = 0$.
+
+**Lemme 10 (Finitude de l'Énergie de Fibration Adélique Totale) :**
+Pour tout sommet $v \in \mathcal{G}_{\mathbb{A}}$ correspondant à une condition initiale issue d'un entier naturel non nul, l'énergie de fibration adélique totale est strictement finie : $\mathcal{E}_{\mathbb{A}}(v) < +\infty$.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 ### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
@@ -310,6 +318,22 @@ L'ensemble des points n'atteignant pas l'attracteur trivial constitue le complé
 Puisque ce complémentaire a une mesure de Haar strictement nulle, il s'ensuit impérativement que $\nu(\mathcal{Z}) = 0$, ce qui contredit notre hypothèse initiale $\nu(\mathcal{Z}) > 0$.
 Par conséquent, aucune composante connexe disjointe de l'attracteur trivial ne peut posséder une mesure de Haar induite non nulle au sein de l'espace adélique.
 La démonstration du Lemme 9 est achevée.
+
+### Démonstration du Lemme 10 (Finitude de l'Énergie de Fibration Adélique Totale)
+
+Soit $v \in \mathcal{G}_{\mathbb{A}}$ tel que la composante réelle de $v$ corresponde à un entier naturel strictement positif.
+Selon le Lemme 6 (Théorème Principal : Attractivité Universelle du Cycle Trivial), la trajectoire issue de $v$ sous l'action de l'opérateur $\mathcal{T}_{\mathbb{A}}$ atteint inéluctablement l'attracteur du cycle trivial en un nombre fini d'itérations.
+Ceci implique, par définition de la fonction de temps de vol adélique étendu (Axiome 3), que la valeur $\tau_{\mathbb{A}}(v)$ est un entier naturel fini : $\tau_{\mathbb{A}}(v) = N \in \mathbb{N}$.
+La définition de l'énergie de fibration adélique totale (Axiome 4) pour ce sommet $v$ s'écrit sous la forme de la somme finie :
+$$ \mathcal{E}_{\mathbb{A}}(v) = \sum_{n=0}^{N-1} \left| \pi(\mathcal{T}_{\mathbb{A}}^{n+1}(v)) - \pi(\mathcal{T}_{\mathbb{A}}^n(v)) \right|_2 $$
+Puisque le domaine de l'espace adélique fractionnaire $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ est construit à partir du corps des nombres rationnels $\mathbb{Q}$, chaque élément $\pi(\mathcal{T}_{\mathbb{A}}^n(v))$ possède une norme 2-adique bien définie et finie.
+En vertu des propriétés fondamentales de la norme ultramétrique sur le corps $p$-adique $\mathbb{Q}_2$, la différence absolue entre deux éléments de ce corps possède elle-même une norme 2-adique finie : $\left| x - y \right|_2 < +\infty$ pour tout $x, y \in \mathbb{Q}_2$.
+Par conséquent, chaque terme individuel de la somme, $c_n = \left| \pi(\mathcal{T}_{\mathbb{A}}^{n+1}(v)) - \pi(\mathcal{T}_{\mathbb{A}}^n(v)) \right|_2$, est une quantité réelle strictement finie.
+La somme de l'équation ci-dessus comporte exactement $N$ termes.
+Dans le corps des nombres réels $\mathbb{R}$, toute somme constituée d'un nombre fini de termes finis est nécessairement finie.
+Par suite, la quantité globale $\mathcal{E}_{\mathbb{A}}(v) = \sum_{n=0}^{N-1} c_n$ appartient à l'ensemble des réels positifs $\mathbb{R}^+$.
+Il en résulte de manière formelle que $\mathcal{E}_{\mathbb{A}}(v) < +\infty$.
+La démonstration du Lemme 10 est achevée.
 
 ***
 *Chercheur indépendant / Independent Researcher
