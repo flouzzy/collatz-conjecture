@@ -86,6 +86,9 @@ avec la convention que $\mathcal{E}_{\mathbb{A}}(v) = 0$ si $\tau_{\mathbb{A}}(v
 **Lemme 10 (Finitude de l'Énergie de Fibration Adélique Totale) :**
 Pour tout sommet $v \in \mathcal{G}_{\mathbb{A}}$ correspondant à une condition initiale issue d'un entier naturel non nul, l'énergie de fibration adélique totale est strictement finie : $\mathcal{E}_{\mathbb{A}}(v) < +\infty$.
 
+**Lemme 11 (Invariance de la Mesure Borélienne sous Poussée en Avant Dyadique) :**
+Soit $\mathcal{B}(\mathbb{Z}_2)$ la tribu borélienne sur l'anneau des entiers 2-adiques $\mathbb{Z}_2$. Soit $\nu$ la mesure de Haar induite sur $\mathbb{Z}_2$ définie selon l'Axiome 3. La mesure $\nu$ est strictement invariante sous l'action de l'opérateur projeté $\mathcal{T}_2 = \pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1}$, au sens où pour tout ensemble mesurable $B \in \mathcal{B}(\mathbb{Z}_2)$, on a $\nu(\mathcal{T}_2^{-1}(B)) = \nu(B)$.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 ### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
@@ -334,6 +337,25 @@ Dans le corps des nombres réels $\mathbb{R}$, toute somme constituée d'un nomb
 Par suite, la quantité globale $\mathcal{E}_{\mathbb{A}}(v) = \sum_{n=0}^{N-1} c_n$ appartient à l'ensemble des réels positifs $\mathbb{R}^+$.
 Il en résulte de manière formelle que $\mathcal{E}_{\mathbb{A}}(v) < +\infty$.
 La démonstration du Lemme 10 est achevée.
+
+### Démonstration du Lemme 11 (Invariance de la Mesure Borélienne sous Poussée en Avant Dyadique)
+
+Considérons l'anneau des entiers 2-adiques $\mathbb{Z}_2$ muni de la mesure de Haar normalisée $\nu$, telle que $\nu(\mathbb{Z}_2) = 1$. La topologie de $\mathbb{Z}_2$ est engendrée par les cylindres de la forme $a + 2^k \mathbb{Z}_2$, où $a \in \mathbb{Z}$ et $k \in \mathbb{N}$. Les ensembles de Borel $\mathcal{B}(\mathbb{Z}_2)$ forment la tribu engendrée par ces ouverts-fermés (clopens).
+Pour démontrer l'invariance de la mesure $\nu$ sous l'opérateur projeté $\mathcal{T}_2 = \pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1}$, il suffit, par le théorème de Carathéodory sur l'extension des mesures, de vérifier cette invariance sur une base de la topologie. L'espace $\mathbb{Z}_2$ se partitionne naturellement en deux sous-ensembles mesurables fondamentaux selon la parité : $O_0 = 2\mathbb{Z}_2$ (les entiers 2-adiques pairs) et $O_1 = 1 + 2\mathbb{Z}_2$ (les entiers 2-adiques impairs).
+D'après l'Axiome 1, l'action locale de $\mathcal{T}_2$ sur $\mathbb{Z}_2$ s'exprime par :
+$$ \mathcal{T}_2(x) = \begin{cases} \frac{x}{2} & \text{si } x \in O_0 \\ \frac{3x + 1}{2} & \text{si } x \in O_1 \end{cases} $$
+L'application $\phi_0 : O_0 \to \mathbb{Z}_2$ définie par $\phi_0(x) = \frac{x}{2}$ est une bijection affine. Son inverse est $\phi_0^{-1}(y) = 2y$.
+De même, l'application $\phi_1 : O_1 \to \mathbb{Z}_2$ définie par $\phi_1(x) = \frac{3x + 1}{2}$ est également une bijection affine de $O_1$ sur $\mathbb{Z}_2$, dont l'inverse est $\phi_1^{-1}(y) = \frac{2y - 1}{3}$. Cette inversion est bien définie dans $\mathbb{Z}_2$ car $3$ est une unité dans l'anneau $\mathbb{Z}_2$ (sa valuation 2-adique est nulle).
+Soit $B$ un cylindre arbitraire de $\mathbb{Z}_2$. La pré-image de $B$ sous l'action globale $\mathcal{T}_2$ est la réunion disjointe des pré-images sous les restrictions :
+$$ \mathcal{T}_2^{-1}(B) = \phi_0^{-1}(B) \sqcup \phi_1^{-1}(B) $$
+Calculons la mesure de chaque composante. Puisque $\phi_0^{-1}(y) = 2y$, l'application $\phi_0^{-1}$ contracte l'espace d'un facteur 2 selon la norme 2-adique. Par conséquent, pour tout sous-ensemble mesurable $B$, la mesure de Haar de son image par la multiplication par $2$ est modifiée par la valeur absolue 2-adique du facteur multiplicatif : $\nu(2B) = |2|_2 \cdot \nu(B) = \frac{1}{2} \nu(B)$. Ainsi, $\nu(\phi_0^{-1}(B)) = \frac{1}{2} \nu(B)$.
+Pour la seconde composante, l'application $\phi_1^{-1}(y) = \frac{2y - 1}{3}$ est une composition d'une multiplication par $\frac{2}{3}$ et d'une translation par $-\frac{1}{3}$. La translation est une isométrie pour la norme ultramétrique et préserve la mesure de Haar. Le facteur multiplicatif est $\frac{2}{3}$. La valeur absolue 2-adique de ce facteur est $\left| \frac{2}{3} \right|_2 = \frac{|2|_2}{|3|_2} = \frac{1/2}{1} = \frac{1}{2}$. Par conséquent, l'application modifie la mesure de Haar par un facteur de $\frac{1}{2}$, d'où $\nu(\phi_1^{-1}(B)) = \frac{1}{2} \nu(B)$.
+Puisque les deux pré-images sont disjointes (elles résident dans des classes de congruence distinctes modulo 2, soit $O_0$ et $O_1$), la mesure de la pré-image totale est la somme des mesures des pré-images partielles :
+$$ \nu(\mathcal{T}_2^{-1}(B)) = \nu(\phi_0^{-1}(B)) + \nu(\phi_1^{-1}(B)) = \frac{1}{2} \nu(B) + \frac{1}{2} \nu(B) = \nu(B) $$
+L'égalité $\nu(\mathcal{T}_2^{-1}(B)) = \nu(B)$ est vraie pour tout cylindre de la base topologique.
+Par le théorème d'extension usuel pour les mesures boréliennes régulières, cette invariance s'étend de manière unique à toute la tribu de Borel $\mathcal{B}(\mathbb{Z}_2)$.
+La mesure $\nu$ est donc strictement invariante sous l'opérateur de poussée en avant dyadique induit par $\mathcal{T}_2$.
+La démonstration du Lemme 11 est achevée.
 
 ***
 *Chercheur indépendant / Independent Researcher
