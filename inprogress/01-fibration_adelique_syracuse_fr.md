@@ -86,6 +86,9 @@ avec la convention que $\mathcal{E}_{\mathbb{A}}(v) = 0$ si $\tau_{\mathbb{A}}(v
 **Lemme 10 (Finitude de l'Énergie de Fibration Adélique Totale) :**
 Pour tout sommet $v \in \mathcal{G}_{\mathbb{A}}$ correspondant à une condition initiale issue d'un entier naturel non nul, l'énergie de fibration adélique totale est strictement finie : $\mathcal{E}_{\mathbb{A}}(v) < +\infty$.
 
+**Lemme 11 (Borne Supérieure Universelle de l'Énergie de Fibration Adélique) :**
+Il existe une constante réelle $\Lambda \in \mathbb{R}^+$ telle que pour tout sommet $v \in \mathcal{G}_{\mathbb{A}}$ correspondant à un entier naturel strictement positif, l'énergie de fibration adélique totale vérifie l'inégalité $\mathcal{E}_{\mathbb{A}}(v) \leq \Lambda \cdot \tau_{\mathbb{A}}(v)$.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 ### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
@@ -334,6 +337,30 @@ Dans le corps des nombres réels $\mathbb{R}$, toute somme constituée d'un nomb
 Par suite, la quantité globale $\mathcal{E}_{\mathbb{A}}(v) = \sum_{n=0}^{N-1} c_n$ appartient à l'ensemble des réels positifs $\mathbb{R}^+$.
 Il en résulte de manière formelle que $\mathcal{E}_{\mathbb{A}}(v) < +\infty$.
 La démonstration du Lemme 10 est achevée.
+
+### Démonstration du Lemme 11 (Borne Supérieure Universelle de l'Énergie de Fibration Adélique)
+
+Soit $v \in \mathcal{G}_{\mathbb{A}}$ tel que la composante réelle de $v$ corresponde à un entier naturel strictement positif.
+Selon le Lemme 6 (Théorème Principal : Attractivité Universelle du Cycle Trivial), la valeur $\tau_{\mathbb{A}}(v)$ est un entier naturel fini, notons-la $N = \tau_{\mathbb{A}}(v)$.
+Par la définition de l'Axiome 4, l'énergie de fibration adélique totale est donnée par la somme :
+$$ \mathcal{E}_{\mathbb{A}}(v) = \sum_{n=0}^{N-1} \left| \pi(\mathcal{T}_{\mathbb{A}}^{n+1}(v)) - \pi(\mathcal{T}_{\mathbb{A}}^n(v)) \right|_2 $$
+Examinons l'expression de la différence $\Delta_n(v) = \pi(\mathcal{T}_{\mathbb{A}}^{n+1}(v)) - \pi(\mathcal{T}_{\mathbb{A}}^n(v))$ dans le corps $p$-adique $\mathbb{Q}_2$.
+L'opérateur de Collatz généralisé $\mathcal{T}_{\mathbb{A}}$ agit sur l'anneau des entiers 2-adiques $\mathbb{Z}_2$ comme une fonction affine par morceaux.
+Pour tout élément $x \in \mathbb{Z}_2$, si $x \equiv 0 \pmod 2$, alors $\mathcal{T}_{\mathbb{A}}(x) = \frac{x}{2}$. La différence est $\mathcal{T}_{\mathbb{A}}(x) - x = -\frac{x}{2}$. La norme 2-adique de cette différence est $\left| -\frac{x}{2} \right|_2 = \left| x \right|_2 \cdot \left| \frac{1}{2} \right|_2 = \left| x \right|_2 \cdot 2$.
+Puisque $x \in \mathbb{Z}_2$, sa norme 2-adique vérifie $\left| x \right|_2 \leq 1$. Par conséquent, dans ce cas, $\left| \mathcal{T}_{\mathbb{A}}(x) - x \right|_2 \leq 2$.
+Si $x \equiv 1 \pmod 2$, alors $\mathcal{T}_{\mathbb{A}}(x) = \frac{3x + 1}{2}$. La différence est $\mathcal{T}_{\mathbb{A}}(x) - x = \frac{3x + 1 - 2x}{2} = \frac{x + 1}{2}$.
+La norme 2-adique de cette différence est $\left| \frac{x + 1}{2} \right|_2 = \left| x + 1 \right|_2 \cdot \left| \frac{1}{2} \right|_2 = \left| x + 1 \right|_2 \cdot 2$.
+Puisque $x \in \mathbb{Z}_2$ et $1 \in \mathbb{Z}_2$, la somme $x + 1$ appartient à $\mathbb{Z}_2$, ce qui implique $\left| x + 1 \right|_2 \leq 1$. Par conséquent, dans ce second cas également, $\left| \mathcal{T}_{\mathbb{A}}(x) - x \right|_2 \leq 2$.
+Ainsi, pour tout élément $x \in \mathbb{Z}_2$ de la trajectoire, la distance entre deux itérations successives dans la topologie 2-adique est globalement bornée par une constante $\Lambda = 2$.
+En appliquant cette borne uniforme à chaque terme de la somme définissant l'énergie de fibration adélique totale, nous obtenons :
+$$ \mathcal{E}_{\mathbb{A}}(v) \leq \sum_{n=0}^{N-1} 2 $$
+La somme comporte exactement $N$ termes, tous majorés par la constante $2$.
+En factorisant, l'inégalité devient :
+$$ \mathcal{E}_{\mathbb{A}}(v) \leq 2 \cdot N $$
+En substituant $N$ par sa définition $N = \tau_{\mathbb{A}}(v)$ et en posant $\Lambda = 2$, on obtient l'inégalité stricte finale :
+$$ \mathcal{E}_{\mathbb{A}}(v) \leq \Lambda \cdot \tau_{\mathbb{A}}(v) $$
+Cette majoration est indépendante du sommet initial $v$, établissant ainsi l'existence d'une borne supérieure universelle de l'énergie de fibration adélique linéaire par rapport au temps de vol adélique.
+La démonstration du Lemme 11 est achevée.
 
 ***
 *Chercheur indépendant / Independent Researcher
