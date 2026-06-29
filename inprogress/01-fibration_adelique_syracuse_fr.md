@@ -86,6 +86,14 @@ avec la convention que $\mathcal{E}_{\mathbb{A}}(v) = 0$ si $\tau_{\mathbb{A}}(v
 **Lemme 10 (Finitude de l'Énergie de Fibration Adélique Totale) :**
 Pour tout sommet $v \in \mathcal{G}_{\mathbb{A}}$ correspondant à une condition initiale issue d'un entier naturel non nul, l'énergie de fibration adélique totale est strictement finie : $\mathcal{E}_{\mathbb{A}}(v) < +\infty$.
 
+**Axiome 5 (Entropie Topologique de Fibration Adélique) :**
+Soit $\mathcal{C}$ un sous-ensemble compact de $\mathcal{G}_{\mathbb{A}}$. Nous définissons l'entropie topologique de fibration sur $\mathcal{C}$, notée $h_{top}(\mathcal{T}_{\mathbb{A}}, \mathcal{C})$, comme la mesure asymptotique de la complexité des trajectoires sous l'action de $\mathcal{T}_{\mathbb{A}}$. Formellement, elle est définie par la limite :
+$$ h_{top}(\mathcal{T}_{\mathbb{A}}, \mathcal{C}) = \lim_{\epsilon \to 0} \limsup_{n \to \infty} \frac{1}{n} \log N(n, \epsilon, \mathcal{C}) $$
+où $N(n, \epsilon, \mathcal{C})$ représente le nombre minimal d'ensembles $(n, \epsilon)$-séparés nécessaires pour recouvrir les segments d'orbites de longueur $n$ des éléments de $\mathcal{C}$ dans la métrique ultramétrique adélique induite.
+
+**Lemme 11 (Annulation de l'Entropie Topologique de Fibration Adélique) :**
+Pour tout sous-ensemble compact $K \subset \mathcal{G}_{\mathbb{A}}$ tel que tout élément de $K$ correspond à une condition initiale issue d'un entier naturel non nul, l'entropie topologique de fibration adélique est strictement nulle : $h_{top}(\mathcal{T}_{\mathbb{A}}, K) = 0$.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 ### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
@@ -334,6 +342,30 @@ Dans le corps des nombres réels $\mathbb{R}$, toute somme constituée d'un nomb
 Par suite, la quantité globale $\mathcal{E}_{\mathbb{A}}(v) = \sum_{n=0}^{N-1} c_n$ appartient à l'ensemble des réels positifs $\mathbb{R}^+$.
 Il en résulte de manière formelle que $\mathcal{E}_{\mathbb{A}}(v) < +\infty$.
 La démonstration du Lemme 10 est achevée.
+
+### Démonstration du Lemme 11 (Annulation de l'Entropie Topologique de Fibration Adélique)
+
+Soit $K \subset \mathcal{G}_{\mathbb{A}}$ un sous-ensemble compact où chaque élément correspond à une condition initiale entière strictement positive.
+Selon le Lemme 7 (Finitude Uniforme du Temps de Vol sur les Sous-ensembles Compacts Adéliques), il existe un entier fini $M \in \mathbb{N}$ tel que pour tout $u \in K$, le temps de vol adélique est borné supérieurement par $M$ : $\sup_{u \in K} \tau_{\mathbb{A}}(u) \le M < \infty$.
+Cela signifie que pour tout $u \in K$, la trajectoire de $u$ sous l'action de l'opérateur $\mathcal{T}_{\mathbb{A}}$ atteint l'attracteur du cycle trivial en au plus $M$ itérations.
+Par définition, l'attracteur du cycle trivial est un sous-ensemble fini et invariant de l'espace $\mathcal{G}_{\mathbb{A}}$, noté $A = \{a_1, a_2, \dots, a_c\}$.
+Pour tout $n \ge M$ et pour tout $u \in K$, l'itéré $n$-ième $\mathcal{T}_{\mathbb{A}}^n(u)$ appartient à l'attracteur fini $A$.
+L'entropie topologique $h_{top}(\mathcal{T}_{\mathbb{A}}, K)$ mesure le taux de croissance asymptotique du nombre minimal d'ensembles $(n, \epsilon)$-séparés, noté $N(n, \epsilon, K)$.
+Puisque toutes les trajectoires issues de $K$ sont absorbées par le cycle trivial en au plus $M$ étapes, le nombre d'orbites distinctes de longueur $n$ (pour $n > M$) générées par les éléments de $K$ ne peut pas croître indéfiniment avec $n$.
+Plus précisément, les segments d'orbite de longueur $n$ pour $n > M$ sont entièrement déterminés par leur préfixe de longueur $M$ et la périodicité du cycle trivial.
+Soit $\epsilon > 0$ un réel strictement positif fixé. Puisque l'opérateur $\mathcal{T}_{\mathbb{A}}$ est continu (Lemme 1) et que l'attracteur $A$ est un ensemble fini, il existe une borne supérieure uniforme sur la complexité des orbites.
+Le nombre d'ensembles $(n, \epsilon)$-séparés $N(n, \epsilon, K)$ est majoré par une constante $C_\epsilon > 0$ indépendante de $n$ pour tout $n > M$.
+Ainsi, l'inégalité $N(n, \epsilon, K) \le C_\epsilon$ est satisfaite pour tout $n > M$.
+En appliquant le logarithme naturel, nous obtenons $\log N(n, \epsilon, K) \le \log C_\epsilon$.
+En divisant cette inéquation par $n$, nous avons $\frac{1}{n} \log N(n, \epsilon, K) \le \frac{1}{n} \log C_\epsilon$.
+En prenant la limite supérieure lorsque $n$ tend vers l'infini, la constante $\log C_\epsilon$ étant finie, le terme de droite converge vers zéro :
+$$ \limsup_{n \to \infty} \frac{1}{n} \log N(n, \epsilon, K) \le \limsup_{n \to \infty} \frac{\log C_\epsilon}{n} = 0 $$
+Puisque le nombre d'ensembles de recouvrement $N(n, \epsilon, K)$ est un entier naturel non nul (soit $\ge 1$), son logarithme est positif ou nul.
+Il en résulte l'égalité stricte : $\limsup_{n \to \infty} \frac{1}{n} \log N(n, \epsilon, K) = 0$.
+Cette limite étant invariante et nulle pour tout $\epsilon > 0$, la limite lorsque $\epsilon$ tend vers zéro est également nulle :
+$$ h_{top}(\mathcal{T}_{\mathbb{A}}, K) = \lim_{\epsilon \to 0} 0 = 0 $$
+Nous concluons de manière formelle que l'entropie topologique de fibration adélique sur l'ensemble compact $K$ est strictement nulle.
+La démonstration du Lemme 11 est achevée.
 
 ***
 *Chercheur indépendant / Independent Researcher
