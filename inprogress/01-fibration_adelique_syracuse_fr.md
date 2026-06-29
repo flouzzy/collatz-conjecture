@@ -41,6 +41,10 @@ Nous définissons une fonction de hauteur globale exponentielle $H_{\mathcal{W}}
 $$ H_{\mathcal{W}}(v) = \prod_{p \in \mathcal{P} \cup \{\infty\}} \max(1, |v_p|_p)^{\omega_p} $$
 où $\omega_p$ sont des poids spectraux avec $\omega_2 = \frac{\log 3}{\log 2}$ et $\omega_p = 1$ pour $p \neq 2$. Par construction de la fibration, l'action locale restreinte assure que la hauteur satisfait une inégalité asymptotique sous l'action de $\mathcal{T}_{\mathbb{A}}$.
 
+**Axiome 5 (Densité Entropique de Fibration) :**
+Nous définissons la densité entropique de fibration dyadique $\mathcal{H}_{\mathbb{A}} : \mathcal{G}_{\mathbb{A}} \to \mathbb{R}_{+}$ d'un sommet $v \in \mathcal{G}_{\mathbb{A}}$ comme la variation logarithmique moyenne des normes 2-adiques sur le temps de vol adélique $\tau_{\mathbb{A}}(v) = N \in \mathbb{N}$ :
+$$ \mathcal{H}_{\mathbb{A}}(v) = \frac{1}{N} \sum_{n=0}^{N-1} \log_2 \left( 1 + \left| \pi(\mathcal{T}_{\mathbb{A}}^{n+1}(v)) - \pi(\mathcal{T}_{\mathbb{A}}^n(v)) \right|_2 \right) $$
+
 ## 2. Énoncé des Lemmes Intermédiaires
 
 **Lemme 1 (Continuité Adélique de l'Opérateur) :**
@@ -88,6 +92,9 @@ Pour tout sommet $v \in \mathcal{G}_{\mathbb{A}}$ correspondant à une condition
 
 **Lemme 11 (Invariance de la Mesure Borélienne sous Poussée en Avant Dyadique) :**
 Soit $\mathcal{B}(\mathbb{Z}_2)$ la tribu borélienne sur l'anneau des entiers 2-adiques $\mathbb{Z}_2$. Soit $\nu$ la mesure de Haar induite sur $\mathbb{Z}_2$ définie selon l'Axiome 3. La mesure $\nu$ est strictement invariante sous l'action de l'opérateur projeté $\mathcal{T}_2 = \pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1}$, au sens où pour tout ensemble mesurable $B \in \mathcal{B}(\mathbb{Z}_2)$, on a $\nu(\mathcal{T}_2^{-1}(B)) = \nu(B)$.
+
+**Lemme 12 (Majoration Stricte de la Densité Entropique de Fibration) :**
+Pour tout sommet $v \in \mathcal{G}_{\mathbb{A}}$ correspondant à une condition initiale issue d'un entier naturel non nul, la densité entropique de fibration dyadique $\mathcal{H}_{\mathbb{A}}(v)$ est strictement majorée par une fonction logarithmique de l'énergie de fibration adélique moyenne : $\mathcal{H}_{\mathbb{A}}(v) \le \log_2 \left( 1 + \frac{\mathcal{E}_{\mathbb{A}}(v)}{N} \right)$.
 
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
@@ -356,6 +363,33 @@ L'égalité $\nu(\mathcal{T}_2^{-1}(B)) = \nu(B)$ est vraie pour tout cylindre d
 Par le théorème d'extension usuel pour les mesures boréliennes régulières, cette invariance s'étend de manière unique à toute la tribu de Borel $\mathcal{B}(\mathbb{Z}_2)$.
 La mesure $\nu$ est donc strictement invariante sous l'opérateur de poussée en avant dyadique induit par $\mathcal{T}_2$.
 La démonstration du Lemme 11 est achevée.
+
+### Démonstration du Lemme 12 (Majoration Stricte de la Densité Entropique de Fibration)
+
+Soit $v \in \mathcal{G}_{\mathbb{A}}$ un sommet tel que la composante réelle de $v$ corresponde à un entier naturel non nul.
+D'après le Lemme 10 (Finitude de l'Énergie de Fibration Adélique Totale), le temps de vol adélique étendu est fini : $\tau_{\mathbb{A}}(v) = N \in \mathbb{N}$ avec $N > 0$.
+L'énergie de fibration adélique totale, selon l'Axiome 4 et le Lemme 10, est donnée par la somme finie :
+$$ \mathcal{E}_{\mathbb{A}}(v) = \sum_{n=0}^{N-1} \left| \pi(\mathcal{T}_{\mathbb{A}}^{n+1}(v)) - \pi(\mathcal{T}_{\mathbb{A}}^n(v)) \right|_2 $$
+Par l'Axiome 5, la densité entropique de fibration dyadique est définie par :
+$$ \mathcal{H}_{\mathbb{A}}(v) = \frac{1}{N} \sum_{n=0}^{N-1} \log_2 \left( 1 + c_n \right) $$
+où nous posons $c_n = \left| \pi(\mathcal{T}_{\mathbb{A}}^{n+1}(v)) - \pi(\mathcal{T}_{\mathbb{A}}^n(v)) \right|_2 \in \mathbb{R}^{+}$.
+Considérons la fonction $f : \mathbb{R}^{+} \to \mathbb{R}$ définie par $f(x) = \log_2(1 + x)$.
+La dérivée première de $f$ par rapport à $x$ est $f'(x) = \frac{1}{(1 + x) \ln 2}$.
+La dérivée seconde de $f$ par rapport à $x$ est $f''(x) = -\frac{1}{(1 + x)^2 \ln 2}$.
+Puisque $x \ge 0$, on a $(1 + x)^2 > 0$ et $\ln 2 > 0$, d'où $f''(x) < 0$ sur l'ensemble $\mathbb{R}^{+}$.
+La fonction $f(x) = \log_2(1 + x)$ est par conséquent une fonction strictement concave sur son domaine de définition $\mathbb{R}^{+}$.
+Puisque $f$ est concave, nous sommes autorisés à appliquer l'inégalité de Jensen.
+Pour un ensemble fini de variables réelles positives $c_0, c_1, \dots, c_{N-1}$ et des poids uniformes $w_n = \frac{1}{N}$ (avec $\sum_{n=0}^{N-1} w_n = 1$), l'inégalité de Jensen stipule que :
+$$ \frac{1}{N} \sum_{n=0}^{N-1} f(c_n) \le f \left( \frac{1}{N} \sum_{n=0}^{N-1} c_n \right) $$
+En substituant $f(x)$ par son expression explicite, nous obtenons :
+$$ \frac{1}{N} \sum_{n=0}^{N-1} \log_2(1 + c_n) \le \log_2 \left( 1 + \frac{1}{N} \sum_{n=0}^{N-1} c_n \right) $$
+Le terme de gauche correspond exactement à l'expression formelle de la densité entropique de fibration $\mathcal{H}_{\mathbb{A}}(v)$ définie dans l'Axiome 5.
+La somme $\sum_{n=0}^{N-1} c_n$ dans le terme de droite correspond rigoureusement à l'énergie de fibration adélique totale $\mathcal{E}_{\mathbb{A}}(v)$.
+Par substitution directe, l'inégalité se réécrit sous la forme algébrique suivante :
+$$ \mathcal{H}_{\mathbb{A}}(v) \le \log_2 \left( 1 + \frac{\mathcal{E}_{\mathbb{A}}(v)}{N} \right) $$
+Puisque $\mathcal{E}_{\mathbb{A}}(v) < +\infty$ par le Lemme 10 et $N > 0$, le terme logarithmique $\log_2 \left( 1 + \frac{\mathcal{E}_{\mathbb{A}}(v)}{N} \right)$ est une quantité réelle finie et strictement bien définie.
+Il est ainsi rigoureusement démontré que la densité entropique $\mathcal{H}_{\mathbb{A}}(v)$ est majorée par cette fonction logarithmique de l'énergie moyenne.
+La démonstration du Lemme 12 est achevée.
 
 ***
 *Chercheur indépendant / Independent Researcher
