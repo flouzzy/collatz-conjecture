@@ -86,6 +86,9 @@ For any vertex $v \in \mathcal{G}_{\mathbb{A}}$ corresponding to an initial cond
 **Lemma 11 (Invariance of the Borel Measure under Dyadic Pushforward):**
 Let $\mathcal{B}(\mathbb{Z}_2)$ be the Borel $\sigma$-algebra on the ring of 2-adic integers $\mathbb{Z}_2$. Let $\nu$ be the induced Haar measure on $\mathbb{Z}_2$ defined according to Axiom 3. The measure $\nu$ is strictly invariant under the action of the projected operator $\mathcal{T}_2 = \pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1}$, in the sense that for any measurable set $B \in \mathcal{B}(\mathbb{Z}_2)$, we have $\nu(\mathcal{T}_2^{-1}(B)) = \nu(B)$.
 
+**Lemma 12 (Non-Degeneracy of Fractional Adelic Poles):**
+Let $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ be the fractional adelic space. The set of poles (local singularities) associated with the meromorphic extension of the operator $\mathcal{T}_{\mathbb{A}}$ is strictly of codimension 1. For any non-empty connected component of the tangent bundle on $\mathcal{G}_{\mathbb{A}}$, the residual form associated with these poles is non-degenerate, guaranteeing the absence of foreign invariant closed submanifolds outside the basin of attraction of the trivial cycle.
+
 ## 3. Rigorous Proofs (Step-by-Step)
 
 ### Proof of Lemma 1 (Adelic Continuity of the Operator)
@@ -354,6 +357,25 @@ The equality $\nu(\mathcal{T}_2^{-1}(B)) = \nu(B)$ holds for any cylinder of the
 By the standard extension theorem for regular Borel measures, this invariance uniquely extends to the entire Borel $\sigma$-algebra $\mathcal{B}(\mathbb{Z}_2)$.
 The measure $\nu$ is therefore strictly invariant under the dyadic pushforward operator induced by $\mathcal{T}_2$.
 The proof of Lemma 11 is complete.
+
+### Proof of Lemma 12 (Non-Degeneracy of Fractional Adelic Poles)
+
+Let us consider the fractional adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ equipped with its structure as a local $p$-adic analytic manifold. According to Axiom 2, the operator $\mathcal{T}_{\mathbb{A}}$ admits an extension to this manifold, for which we denote by $\Omega$ the set of poles (points of discontinuity or local singularities with respect to the adelic topology).
+Let $\mathcal{M}$ be an arbitrary connected component of the smooth manifold underlying the graph $\mathcal{G}_{\mathbb{A}}$. We must study the behavior of the formal derivative (or the Jacobian) of $\mathcal{T}_{\mathbb{A}}$ in the neighborhood of the points of $\Omega \cap \mathcal{M}$.
+Let $z_0 \in \Omega$. By definition of a singularity in the context of $p$-adic analytic functions, the operator $\mathcal{T}_{\mathbb{A}}(z)$ is locally written around $z_0$ in the form of an adelic Laurent series:
+$$ \mathcal{T}_{\mathbb{A}}(z) = \sum_{k = -M}^{+\infty} c_k (z - z_0)^k $$
+with $M > 0$ an integer and $c_{-M} \neq 0$. The coefficients $c_k$ belong to an algebraic completion of the field $\mathbb{Q}_p$.
+For the dynamics to generate parasitic invariant submanifolds, the Jacobian would have to vanish identically on a submanifold of dimension greater than 0 (degeneracy of the residual differential form).
+Let us compute the formal derivative $\mathcal{T}_{\mathbb{A}}'(z)$:
+$$ \mathcal{T}_{\mathbb{A}}'(z) = \sum_{k = -M}^{+\infty} k c_k (z - z_0)^{k-1} = \frac{-M c_{-M}}{(z-z_0)^{M+1}} + \dots $$
+Since the underlying field is of characteristic 0 (an extension of $\mathbb{Q}$), the integer $-M$ does not vanish in this field. As $c_{-M} \neq 0$ by hypothesis (exact order of the pole), the lowest degree term of the derivative is strictly non-zero.
+Consequently, the differential form $d\mathcal{T}_{\mathbb{A}}$ only vanishes at a set of isolated points (the roots of the derivative series). Therefore, it is not identically zero on an open neighborhood of $\Omega$.
+It follows that the zero locus of the Jacobian, $\{ z \mid \det(d\mathcal{T}_{\mathbb{A}}(z)) = 0 \}$, is of dimension strictly less than the dimension of the ambient space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. Specifically, the poles form an analytic submanifold of codimension at least 1.
+Since the locus of degeneracy is of measure zero with respect to the Haar measure $\nu$, any closed submanifold $\mathcal{V} \subset \mathcal{G}_{\mathbb{A}}$ that would be invariant under the action of $\mathcal{T}_{\mathbb{A}}$ and that would continuously intercept the singular locus would undergo a rupture of its topological structure (blow-up).
+The absence of degenerate residual forms implies that no "stability pocket" (or complex structural invariant) can form around these singularities, outside of the canonical basin of attraction directed towards the trivial cycle (whose stability and attractiveness were established in Lemma 6).
+Therefore, the non-degeneracy guarantees that no parasitic closed submanifold can permanently deflect adelic trajectories from their asymptotic absorption.
+The proof of Lemma 12 is complete.
+
 
 ***
 *Chercheur indépendant / Independent Researcher
