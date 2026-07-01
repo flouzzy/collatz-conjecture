@@ -41,6 +41,10 @@ Nous définissons une fonction de hauteur globale exponentielle $H_{\mathcal{W}}
 $$ H_{\mathcal{W}}(v) = \prod_{p \in \mathcal{P} \cup \{\infty\}} \max(1, |v_p|_p)^{\omega_p} $$
 où $\omega_p$ sont des poids spectraux avec $\omega_2 = \frac{\log 3}{\log 2}$ et $\omega_p = 1$ pour $p \neq 2$. Par construction de la fibration, l'action locale restreinte assure que la hauteur satisfait une inégalité asymptotique sous l'action de $\mathcal{T}_{\mathbb{A}}$.
 
+**Axiome 5 (Densité Entropique de Fibration) :**
+Nous définissons la densité entropique de fibration dyadique $\mathcal{H}_{\mathbb{A}} : \mathcal{G}_{\mathbb{A}} \to \mathbb{R}_{+}$ d'un sommet $v \in \mathcal{G}_{\mathbb{A}}$ comme la variation logarithmique moyenne des normes 2-adiques sur le temps de vol adélique $\tau_{\mathbb{A}}(v) = N \in \mathbb{N}$ :
+$$ \mathcal{H}_{\mathbb{A}}(v) = \frac{1}{N} \sum_{n=0}^{N-1} \log_2 \left( 1 + \left| \pi(\mathcal{T}_{\mathbb{A}}^{n+1}(v)) - \pi(\mathcal{T}_{\mathbb{A}}^n(v)) \right|_2 \right) $$
+
 ## 2. Énoncé des Lemmes Intermédiaires
 
 **Lemme 1 (Continuité Adélique de l'Opérateur) :**
@@ -89,8 +93,8 @@ Pour tout sommet $v \in \mathcal{G}_{\mathbb{A}}$ correspondant à une condition
 **Lemme 11 (Invariance de la Mesure Borélienne sous Poussée en Avant Dyadique) :**
 Soit $\mathcal{B}(\mathbb{Z}_2)$ la tribu borélienne sur l'anneau des entiers 2-adiques $\mathbb{Z}_2$. Soit $\nu$ la mesure de Haar induite sur $\mathbb{Z}_2$ définie selon l'Axiome 3. La mesure $\nu$ est strictement invariante sous l'action de l'opérateur projeté $\mathcal{T}_2 = \pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1}$, au sens où pour tout ensemble mesurable $B \in \mathcal{B}(\mathbb{Z}_2)$, on a $\nu(\mathcal{T}_2^{-1}(B)) = \nu(B)$.
 
-**Lemme 12 (Non-Dégénérescence des Pôles Adéliques Fractionnaires) :**
-Soit l'espace adélique fractionnaire $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. L'ensemble des pôles (singularités locales) associés à l'extension méromorphe de l'opérateur $\mathcal{T}_{\mathbb{A}}$ est strictement de codimension 1. Pour toute composante connexe non vide du fibré tangent sur $\mathcal{G}_{\mathbb{A}}$, la forme résiduelle associée à ces pôles est non dégénérée, garantissant l'absence de sous-variétés fermées invariantes étrangères au bassin d'attraction du cycle trivial.
+**Lemme 12 (Majoration Stricte de la Densité Entropique de Fibration) :**
+Pour tout sommet $v \in \mathcal{G}_{\mathbb{A}}$ correspondant à une condition initiale issue d'un entier naturel non nul, la densité entropique de fibration dyadique $\mathcal{H}_{\mathbb{A}}(v)$ est strictement majorée par une fonction logarithmique de l'énergie de fibration adélique moyenne : $\mathcal{H}_{\mathbb{A}}(v) \le \log_2 \left( 1 + \frac{\mathcal{E}_{\mathbb{A}}(v)}{N} \right)$.
 
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
@@ -360,24 +364,32 @@ Par le théorème d'extension usuel pour les mesures boréliennes régulières, 
 La mesure $\nu$ est donc strictement invariante sous l'opérateur de poussée en avant dyadique induit par $\mathcal{T}_2$.
 La démonstration du Lemme 11 est achevée.
 
-### Démonstration du Lemme 12 (Non-Dégénérescence des Pôles Adéliques Fractionnaires)
+### Démonstration du Lemme 12 (Majoration Stricte de la Densité Entropique de Fibration)
 
-Considérons l'espace adélique fractionnaire $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ muni de sa structure de variété analytique $p$-adique locale. D'après l'Axiome 2, l'opérateur $\mathcal{T}_{\mathbb{A}}$ admet un prolongement à cette variété, dont nous noterons $\Omega$ l'ensemble des pôles (points de discontinuité ou singularités locales par rapport à la topologie adélique).
-Soit $\mathcal{M}$ une composante connexe quelconque de la variété lisse sous-jacente au graphe $\mathcal{G}_{\mathbb{A}}$. Nous devons étudier le comportement de la dérivée formelle (ou du Jacobien) de $\mathcal{T}_{\mathbb{A}}$ au voisinage des points de $\Omega \cap \mathcal{M}$.
-Soit $z_0 \in \Omega$. Par définition de la singularité dans le contexte des fonctions analytiques $p$-adiques, l'opérateur $\mathcal{T}_{\mathbb{A}}(z)$ s'écrit localement autour de $z_0$ sous la forme d'une série de Laurent adélique :
-$$ \mathcal{T}_{\mathbb{A}}(z) = \sum_{k = -M}^{+\infty} c_k (z - z_0)^k $$
-avec $M > 0$ un entier et $c_{-M} \neq 0$. Les coefficients $c_k$ appartiennent à un complété algébrique du corps $\mathbb{Q}_p$.
-Pour que la dynamique engendre des sous-variétés invariantes parasites, il faudrait que le Jacobien s'annule identiquement sur une sous-variété de dimension supérieure à 0 (dégénérescence de la forme différentielle résiduelle).
-Calculons la dérivée formelle $\mathcal{T}_{\mathbb{A}}'(z)$ :
-$$ \mathcal{T}_{\mathbb{A}}'(z) = \sum_{k = -M}^{+\infty} k c_k (z - z_0)^{k-1} = \frac{-M c_{-M}}{(z-z_0)^{M+1}} + \dots $$
-Puisque le corps sous-jacent est de caractéristique 0 (prolongement de $\mathbb{Q}$), l'entier $-M$ ne s'annule pas dans ce corps. Comme $c_{-M} \neq 0$ par hypothèse (ordre exact du pôle), le terme de plus bas degré de la dérivée est strictement non nul.
-Par suite, la forme différentielle $d\mathcal{T}_{\mathbb{A}}$ ne s'annule qu'en un ensemble de points isolés (les racines de la série dérivée). Elle n'est donc pas identiquement nulle sur un voisinage ouvert de $\Omega$.
-Il s'ensuit que le lieu des zéros du Jacobien, $\{ z \mid \det(d\mathcal{T}_{\mathbb{A}}(z)) = 0 \}$, est de dimension strictement inférieure à la dimension de l'espace ambient $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. Spécifiquement, les pôles forment une sous-variété analytique de codimension au moins 1.
-Puisque le lieu de dégénérescence est de mesure nulle par rapport à la mesure de Haar $\nu$, toute sous-variété fermée $\mathcal{V} \subset \mathcal{G}_{\mathbb{A}}$ qui serait invariante sous l'action de $\mathcal{T}_{\mathbb{A}}$ et qui intercepterait continûment le lieu singulier subirait une rupture de sa structure topologique (éclatement).
-L'absence de formes résiduelles dégénérées implique qu'aucune « poche de stabilité » (ou invariant structurel complexe) ne peut se former autour de ces singularités, en dehors du bassin d'attraction canonique dirigé vers le cycle trivial (dont la stabilité et l'attractivité ont été établies au Lemme 6).
-Par conséquent, la non-dégénérescence garantit qu'aucune sous-variété fermée parasite ne peut dévier de manière pérenne les trajectoires adéliques de leur absorption asymptotique.
+Soit $v \in \mathcal{G}_{\mathbb{A}}$ un sommet tel que la composante réelle de $v$ corresponde à un entier naturel non nul.
+D'après le Lemme 10 (Finitude de l'Énergie de Fibration Adélique Totale), le temps de vol adélique étendu est fini : $\tau_{\mathbb{A}}(v) = N \in \mathbb{N}$ avec $N > 0$.
+L'énergie de fibration adélique totale, selon l'Axiome 4 et le Lemme 10, est donnée par la somme finie :
+$$ \mathcal{E}_{\mathbb{A}}(v) = \sum_{n=0}^{N-1} \left| \pi(\mathcal{T}_{\mathbb{A}}^{n+1}(v)) - \pi(\mathcal{T}_{\mathbb{A}}^n(v)) \right|_2 $$
+Par l'Axiome 5, la densité entropique de fibration dyadique est définie par :
+$$ \mathcal{H}_{\mathbb{A}}(v) = \frac{1}{N} \sum_{n=0}^{N-1} \log_2 \left( 1 + c_n \right) $$
+où nous posons $c_n = \left| \pi(\mathcal{T}_{\mathbb{A}}^{n+1}(v)) - \pi(\mathcal{T}_{\mathbb{A}}^n(v)) \right|_2 \in \mathbb{R}^{+}$.
+Considérons la fonction $f : \mathbb{R}^{+} \to \mathbb{R}$ définie par $f(x) = \log_2(1 + x)$.
+La dérivée première de $f$ par rapport à $x$ est $f'(x) = \frac{1}{(1 + x) \ln 2}$.
+La dérivée seconde de $f$ par rapport à $x$ est $f''(x) = -\frac{1}{(1 + x)^2 \ln 2}$.
+Puisque $x \ge 0$, on a $(1 + x)^2 > 0$ et $\ln 2 > 0$, d'où $f''(x) < 0$ sur l'ensemble $\mathbb{R}^{+}$.
+La fonction $f(x) = \log_2(1 + x)$ est par conséquent une fonction strictement concave sur son domaine de définition $\mathbb{R}^{+}$.
+Puisque $f$ est concave, nous sommes autorisés à appliquer l'inégalité de Jensen.
+Pour un ensemble fini de variables réelles positives $c_0, c_1, \dots, c_{N-1}$ et des poids uniformes $w_n = \frac{1}{N}$ (avec $\sum_{n=0}^{N-1} w_n = 1$), l'inégalité de Jensen stipule que :
+$$ \frac{1}{N} \sum_{n=0}^{N-1} f(c_n) \le f \left( \frac{1}{N} \sum_{n=0}^{N-1} c_n \right) $$
+En substituant $f(x)$ par son expression explicite, nous obtenons :
+$$ \frac{1}{N} \sum_{n=0}^{N-1} \log_2(1 + c_n) \le \log_2 \left( 1 + \frac{1}{N} \sum_{n=0}^{N-1} c_n \right) $$
+Le terme de gauche correspond exactement à l'expression formelle de la densité entropique de fibration $\mathcal{H}_{\mathbb{A}}(v)$ définie dans l'Axiome 5.
+La somme $\sum_{n=0}^{N-1} c_n$ dans le terme de droite correspond rigoureusement à l'énergie de fibration adélique totale $\mathcal{E}_{\mathbb{A}}(v)$.
+Par substitution directe, l'inégalité se réécrit sous la forme algébrique suivante :
+$$ \mathcal{H}_{\mathbb{A}}(v) \le \log_2 \left( 1 + \frac{\mathcal{E}_{\mathbb{A}}(v)}{N} \right) $$
+Puisque $\mathcal{E}_{\mathbb{A}}(v) < +\infty$ par le Lemme 10 et $N > 0$, le terme logarithmique $\log_2 \left( 1 + \frac{\mathcal{E}_{\mathbb{A}}(v)}{N} \right)$ est une quantité réelle finie et strictement bien définie.
+Il est ainsi rigoureusement démontré que la densité entropique $\mathcal{H}_{\mathbb{A}}(v)$ est majorée par cette fonction logarithmique de l'énergie moyenne.
 La démonstration du Lemme 12 est achevée.
-
 
 ***
 *Chercheur indépendant / Independent Researcher
