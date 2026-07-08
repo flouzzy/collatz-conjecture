@@ -1,4 +1,3 @@
-import pytest
 from dummy_src import calculate_fibration
 
 def test_calculate_fibration_even():
