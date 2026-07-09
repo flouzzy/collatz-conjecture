@@ -593,5 +593,28 @@ By strict transitivity, we obtain $\mu_{\mathbb{A}}(\mathcal{T}_{\mathbb{A}}^n(K
 This demonstrates that the adelic operator maps any compact subset of positive measure of the basin of attraction into a neighborhood of the attractor of strictly lesser measure in finite time.
 The proof of Lemma 19 is rigorously completed.
 
+### Proof of Lemma 20 (Uniform Finiteness of the Reaching Time on Compact Sets)
+
+Let $K \subset \mathcal{B}_{triv}$ be a compact subset of the trivial basin of attraction in the restricted adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+We must demonstrate the existence of a global integer $N_K \in \mathbb{N}$ such that for every element $x \in K$, the iterate $\mathcal{T}_{\mathbb{A}}^{N_K}(x)$ strictly belongs to the trivial attractor $\mathcal{A}_{triv}$.
+By definition of the basin of attraction $\mathcal{B}_{triv}$, for every point $x \in K$, there exists a finite integer $n_x \in \mathbb{N}$ such that $\mathcal{T}_{\mathbb{A}}^{n_x}(x) \in \mathcal{A}_{triv}$.
+According to Lemma 8, which establishes local topological stability, the action of the operator $\mathcal{T}_{\mathbb{A}}$ is locally constant. Consequently, for each point $x \in K$, there exists an open neighborhood $V_x$ of $x$ in $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ such that for any element $y \in V_x$, we have the strict equality $\mathcal{T}_{\mathbb{A}}^{n_x}(y) = \mathcal{T}_{\mathbb{A}}^{n_x}(x)$.
+Since $\mathcal{T}_{\mathbb{A}}^{n_x}(x) \in \mathcal{A}_{triv}$, it follows that for any $y \in V_x$, the inclusion $\mathcal{T}_{\mathbb{A}}^{n_x}(y) \in \mathcal{A}_{triv}$ is rigorously verified. In other words, $\mathcal{T}_{\mathbb{A}}^{n_x}(V_x) \subset \mathcal{A}_{triv}$.
+Let us consider the collection of all these open neighborhoods, indexed by the elements of $K$: $\mathcal{U} = \{V_x\}_{x \in K}$.
+Since each $x \in K$ belongs to its own neighborhood $V_x$, we have the inclusion $K \subset \bigcup_{x \in K} V_x$. Thus, the family of sets $\mathcal{U}$ constitutes an open cover of the subset $K$.
+Since $K$ is compact by hypothesis, the Heine-Borel theorem states that it is possible to extract a finite subcover from $\mathcal{U}$.
+Consequently, there exists a finite set of points $\{x_1, x_2, \dots, x_m\} \subset K$ such that $K \subset \bigcup_{i=1}^m V_{x_i}$.
+Let us define $N_K = \max \{n_{x_1}, n_{x_2}, \dots, n_{x_m}\}$.
+Let $y \in K$ be an arbitrary element.
+Since the sub-family $\{V_{x_i}\}_{i=1}^m$ covers $K$, there exists at least one index $j \in \{1, \dots, m\}$ such that $y \in V_{x_j}$.
+For this index $j$, we have the inclusion $\mathcal{T}_{\mathbb{A}}^{n_{x_j}}(y) \in \mathcal{A}_{triv}$.
+The trivial attractor $\mathcal{A}_{triv}$ is, by definition, a cyclic invariant component under the action of $\mathcal{T}_{\mathbb{A}}$. This implies that the image of the attractor by the operator is exactly the attractor: $\mathcal{T}_{\mathbb{A}}(\mathcal{A}_{triv}) = \mathcal{A}_{triv}$.
+Since $N_K \geq n_{x_j}$, the iterate of order $N_K$ can be written as an operator composition: $\mathcal{T}_{\mathbb{A}}^{N_K}(y) = \mathcal{T}_{\mathbb{A}}^{N_K - n_{x_j}}(\mathcal{T}_{\mathbb{A}}^{n_{x_j}}(y))$.
+Since $\mathcal{T}_{\mathbb{A}}^{n_{x_j}}(y) \in \mathcal{A}_{triv}$ and the attractor is stable, any additional iteration keeps the point within the attractor.
+It follows that $\mathcal{T}_{\mathbb{A}}^{N_K}(y) \in \mathcal{A}_{triv}$.
+Since the choice of $y \in K$ is arbitrary, this property is valid for all elements of the compact set $K$.
+This rigorously demonstrates that there is a uniformly bounded reaching time for any compact subset of the basin of attraction.
+The proof of Lemma 20 is completed.
+
 ***
 *Chercheur indépendant / Independent Researcher

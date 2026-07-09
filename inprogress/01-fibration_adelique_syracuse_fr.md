@@ -594,5 +594,28 @@ Par transitivité stricte, nous obtenons $\mu_{\mathbb{A}}(\mathcal{T}_{\mathbb{
 Ceci démontre que l'opérateur adélique applique tout sous-ensemble compact de mesure positive du bassin d'attraction dans un voisinage de l'attracteur de mesure strictement inférieure en temps fini.
 La démonstration du Lemme 19 est rigoureusement achevée.
 
+### Démonstration du Lemme 20 (Finitude Uniforme du Temps d'Atteinte sur les Compacts)
+
+Soit $K \subset \mathcal{B}_{triv}$ un sous-ensemble compact du bassin d'attraction trivial dans l'espace adélique restreint $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+Nous devons démontrer l'existence d'un entier global $N_K \in \mathbb{N}$ tel que pour tout élément $x \in K$, l'itéré $\mathcal{T}_{\mathbb{A}}^{N_K}(x)$ appartienne strictement à l'attracteur trivial $\mathcal{A}_{triv}$.
+Par définition du bassin d'attraction $\mathcal{B}_{triv}$, pour tout point $x \in K$, il existe un entier fini $n_x \in \mathbb{N}$ tel que $\mathcal{T}_{\mathbb{A}}^{n_x}(x) \in \mathcal{A}_{triv}$.
+D'après le Lemme 8, qui établit la stabilité topologique locale, l'action de l'opérateur $\mathcal{T}_{\mathbb{A}}$ est localement constante. Par conséquent, pour chaque point $x \in K$, il existe un voisinage ouvert $V_x$ de $x$ dans $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ tel que pour tout élément $y \in V_x$, on a l'égalité stricte $\mathcal{T}_{\mathbb{A}}^{n_x}(y) = \mathcal{T}_{\mathbb{A}}^{n_x}(x)$.
+Puisque $\mathcal{T}_{\mathbb{A}}^{n_x}(x) \in \mathcal{A}_{triv}$, il s'ensuit que pour tout $y \in V_x$, l'inclusion $\mathcal{T}_{\mathbb{A}}^{n_x}(y) \in \mathcal{A}_{triv}$ est rigoureusement vérifiée. En d'autres termes, $\mathcal{T}_{\mathbb{A}}^{n_x}(V_x) \subset \mathcal{A}_{triv}$.
+Considérons la collection de tous ces voisinages ouverts, indexée par les éléments de $K$ : $\mathcal{U} = \{V_x\}_{x \in K}$.
+Puisque chaque $x \in K$ appartient à son propre voisinage $V_x$, on a l'inclusion $K \subset \bigcup_{x \in K} V_x$. Ainsi, la famille d'ensembles $\mathcal{U}$ constitue un recouvrement ouvert du sous-ensemble $K$.
+Puisque $K$ est compact par hypothèse, le théorème de Borel-Lebesgue stipule qu'il est possible d'extraire de $\mathcal{U}$ un sous-recouvrement fini.
+Par conséquent, il existe un ensemble fini de points $\{x_1, x_2, \dots, x_m\} \subset K$ tel que $K \subset \bigcup_{i=1}^m V_{x_i}$.
+Posons $N_K = \max \{n_{x_1}, n_{x_2}, \dots, n_{x_m}\}$.
+Soit un élément arbitraire $y \in K$.
+Puisque la sous-famille $\{V_{x_i}\}_{i=1}^m$ recouvre $K$, il existe au moins un indice $j \in \{1, \dots, m\}$ tel que $y \in V_{x_j}$.
+Pour cet indice $j$, nous avons l'inclusion $\mathcal{T}_{\mathbb{A}}^{n_{x_j}}(y) \in \mathcal{A}_{triv}$.
+L'attracteur trivial $\mathcal{A}_{triv}$ est, par définition, une composante cyclique invariante sous l'action de $\mathcal{T}_{\mathbb{A}}$. Cela implique que l'image de l'attracteur par l'opérateur est exactement l'attracteur : $\mathcal{T}_{\mathbb{A}}(\mathcal{A}_{triv}) = \mathcal{A}_{triv}$.
+Puisque $N_K \geq n_{x_j}$, l'itéré d'ordre $N_K$ peut s'écrire comme une composition d'opérateurs : $\mathcal{T}_{\mathbb{A}}^{N_K}(y) = \mathcal{T}_{\mathbb{A}}^{N_K - n_{x_j}}(\mathcal{T}_{\mathbb{A}}^{n_{x_j}}(y))$.
+Comme $\mathcal{T}_{\mathbb{A}}^{n_{x_j}}(y) \in \mathcal{A}_{triv}$ et que l'attracteur est stable, toute itération supplémentaire maintient le point au sein de l'attracteur.
+Il s'ensuit que $\mathcal{T}_{\mathbb{A}}^{N_K}(y) \in \mathcal{A}_{triv}$.
+Puisque le choix de $y \in K$ est arbitraire, cette propriété est valide pour tous les éléments du compact $K$.
+Ceci démontre rigoureusement qu'il existe un temps d'atteinte uniformément borné pour tout sous-ensemble compact du bassin d'attraction.
+La démonstration du Lemme 20 est achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher

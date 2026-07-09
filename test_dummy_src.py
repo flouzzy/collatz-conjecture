@@ -1,3 +1,4 @@
+import pytest
 from dummy_src import calculate_fibration
 
 @pytest.mark.parametrize("x, expected", [
@@ -14,6 +15,9 @@ from dummy_src import calculate_fibration
 
     # Zero case
     (0, 0),
+])
+def test_calculate_fibration(x, expected):
+    assert calculate_fibration(x) == expected
 
 def test_calculate_fibration_negative():
     assert calculate_fibration(-1) == -1  # (-3+1)//2 = -1

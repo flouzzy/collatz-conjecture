@@ -16,4 +16,4 @@ In order to ensure clear and rigorous tracking of the work, the repository is st
 
 ## Historique des avancées
 - **[2023-10-27]** : Initialisation du dépôt.
-- **[2026-07-08]** : Enrichissement de la Tentative 01 - fibration_adelique_syracuse (Versions FR & EN). Résolution du Lemme 19. Statut : En cours.
+- **[2026-07-09]** : Enrichissement de la Tentative 01 - fibration_adelique_syracuse (Versions FR & EN). Résolution du Lemme 20. Statut : En cours.
