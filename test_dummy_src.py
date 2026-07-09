@@ -1,19 +1,19 @@
-import pytest
 from dummy_src import calculate_fibration
 
-def test_calculate_fibration_even():
-    assert calculate_fibration(2) == 1
-    assert calculate_fibration(10) == 5
-    assert calculate_fibration(4) == 2
+@pytest.mark.parametrize("x, expected", [
+    # Even cases
+    (2, 1),
+    (4, 2),
+    (10, 5),
 
-def test_calculate_fibration_odd():
-    assert calculate_fibration(1) == 2
-    assert calculate_fibration(3) == 5
-    assert calculate_fibration(5) == 8
-    assert calculate_fibration(7) == 11
+    # Odd cases
+    (1, 2),
+    (3, 5),
+    (5, 8),
+    (7, 11),
 
-def test_calculate_fibration_zero():
-    assert calculate_fibration(0) == 0
+    # Zero case
+    (0, 0),
 
 def test_calculate_fibration_negative():
     assert calculate_fibration(-1) == -1  # (-3+1)//2 = -1

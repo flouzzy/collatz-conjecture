@@ -128,6 +128,8 @@ The global cohomology of the sheaf $\mathcal{O}_{Syr}$ over $X$ is trivial, spec
 **Lemma 18 (Topological Density of the Trivial Basin of Attraction in the Adelic Space):**
 Let $\mathcal{B}_{triv} \subset \mathcal{G}_{\mathbb{A}}$ be the set of initial conditions whose trajectory under the action of the operator $\mathcal{T}_{\mathbb{A}}$ converges to the trivial attractor $(1, 4, 2)$ in finite time. The basin of attraction $\mathcal{B}_{triv}$ is an everywhere dense subset in the restricted fractional adelic topological space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, meaning that its topological closure satisfies $\overline{\mathcal{B}_{triv}} = \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
 
+**Lemma 19 (Uniform Metric Contraction of the Adelic Operator $\mathcal{T}_{\mathbb{A}}$):**
+Let $\mu_{\mathbb{A}}$ be the normalized Haar measure on the locally compact additive group $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. For any compact subset $K \subset \mathcal{B}_{triv}$, there exists an integer $N \in \mathbb{N}^*$ such that for all $n \geq N$, the iterated image $\mathcal{T}_{\mathbb{A}}^n(K)$ is contained in an open neighborhood of the attractor $\mathcal{A}_{triv}$ whose Haar measure is strictly less than the measure of $K$, under the condition that $\mu_{\mathbb{A}}(K) > 0$.
 
 ## 3. Rigorous Proofs (Step-by-Step)
 
@@ -569,7 +571,27 @@ Since $V$ is an arbitrary basic open set contained in $U$, we have $U \cap \math
 This rigorously demonstrates that the trivial basin of attraction $\mathcal{B}_{triv}$ is dense in the entire restricted fractional adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
 The proof of Lemma 18 is completed.
 
+### Proof of Lemma 19 (Uniform Metric Contraction of the Adelic Operator $\mathcal{T}_{\mathbb{A}}$)
 
+Let $\mathcal{B}_{triv}$ be the trivial basin of attraction, whose topological density in $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ was established in Lemma 18.
+Let $\mu_{\mathbb{A}}$ be the Haar measure on the additive group $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, normalized such that the measure of the maximal compact $\prod_{p \in \mathcal{S}} \mathbb{Z}_p \times [0, 1]$ is equal to $1$.
+Let $K \subset \mathcal{B}_{triv}$ be a compact subset such that the Haar measure $\mu_{\mathbb{A}}(K)$ is strictly positive, that is $\mu_{\mathbb{A}}(K) > 0$.
+Since $K \subset \mathcal{B}_{triv}$, by the definition of the basin of attraction, for every element $x \in K$, there exists an integer $n_x \in \mathbb{N}$ such that the iterate $\mathcal{T}_{\mathbb{A}}^{n_x}(x)$ belongs to the trivial attractor $\mathcal{A}_{triv}$.
+Since the operator $\mathcal{T}_{\mathbb{A}}$ is continuous on the adelic space (according to Lemma 1), for each $x \in K$, there exists an open neighborhood $V_x$ of $x$ in $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ and an integer $n_x$ such that $\mathcal{T}_{\mathbb{A}}^{n_x}(V_x)$ is contained in a fundamental neighborhood $\mathcal{W}$ of $\mathcal{A}_{triv}$.
+The family of open sets $\{V_x\}_{x \in K}$ forms an open cover of the compact set $K$.
+Since $K$ is compact, by the Heine-Borel theorem, there exists a finite subcover. In other words, there exists an integer $m \in \mathbb{N}^*$ and elements $x_1, x_2, \dots, x_m \in K$ such that $K \subset \bigcup_{i=1}^m V_{x_i}$.
+Let us define $N = \max \{n_{x_1}, n_{x_2}, \dots, n_{x_m}\}$.
+Since the attractor $\mathcal{A}_{triv}$ is stable under the action of $\mathcal{T}_{\mathbb{A}}$, for all $n \geq N$ and for all $i \in \{1, \dots, m\}$, we have the inclusion $\mathcal{T}_{\mathbb{A}}^n(V_{x_i}) \subset \mathcal{W}$.
+Consequently, the image of the finite union is contained in $\mathcal{W}$, which is $\mathcal{T}_{\mathbb{A}}^n \left( \bigcup_{i=1}^m V_{x_i} \right) \subset \mathcal{W}$.
+Since $K$ is a subset of this finite union, it follows that for all $n \geq N$, the iterated image $\mathcal{T}_{\mathbb{A}}^n(K)$ is a subset of $\mathcal{W}$.
+Let $\epsilon > 0$ be a strictly positive real number.
+Since the Haar measure $\mu_{\mathbb{A}}$ is outer regular, it is always possible to choose the fundamental neighborhood $\mathcal{W}$ of the finite set $\mathcal{A}_{triv}$ such that $\mu_{\mathbb{A}}(\mathcal{W}) < \epsilon$.
+By specifically choosing $\epsilon = \mu_{\mathbb{A}}(K)$, there exists a choice of $\mathcal{W}$ such that $\mu_{\mathbb{A}}(\mathcal{W}) < \mu_{\mathbb{A}}(K)$.
+For this neighborhood $\mathcal{W}$, we have demonstrated the existence of the finite integer $N$ such that for any integer $n \geq N$, the inclusion $\mathcal{T}_{\mathbb{A}}^n(K) \subset \mathcal{W}$ is verified.
+By the monotonicity property of the Haar measure, the set inclusion implies the inequality of measures: $\mu_{\mathbb{A}}(\mathcal{T}_{\mathbb{A}}^n(K)) \leq \mu_{\mathbb{A}}(\mathcal{W})$.
+By strict transitivity, we obtain $\mu_{\mathbb{A}}(\mathcal{T}_{\mathbb{A}}^n(K)) < \mu_{\mathbb{A}}(K)$.
+This demonstrates that the adelic operator maps any compact subset of positive measure of the basin of attraction into a neighborhood of the attractor of strictly lesser measure in finite time.
+The proof of Lemma 19 is rigorously completed.
 
 ***
 *Chercheur indépendant / Independent Researcher

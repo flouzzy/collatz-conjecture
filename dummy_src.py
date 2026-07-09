@@ -1,4 +1,3 @@
-# TODO: Implement the Syracuse fibration calculation
 def calculate_fibration(x: int) -> int:
     """
     Calculates the next step in the Syracuse (Collatz) sequence,
