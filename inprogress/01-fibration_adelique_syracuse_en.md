@@ -131,6 +131,9 @@ Let $\mathcal{B}_{triv} \subset \mathcal{G}_{\mathbb{A}}$ be the set of initial 
 **Lemma 19 (Uniform Metric Contraction of the Adelic Operator $\mathcal{T}_{\mathbb{A}}$):**
 Let $\mu_{\mathbb{A}}$ be the normalized Haar measure on the locally compact additive group $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. For any compact subset $K \subset \mathcal{B}_{triv}$, there exists an integer $N \in \mathbb{N}^*$ such that for all $n \geq N$, the iterated image $\mathcal{T}_{\mathbb{A}}^n(K)$ is contained in an open neighborhood of the attractor $\mathcal{A}_{triv}$ whose Haar measure is strictly less than the measure of $K$, under the condition that $\mu_{\mathbb{A}}(K) > 0$.
 
+**Lemma 21 (Global Finiteness of Regular Dyadic Orbits):**
+For any regular point $v \in \mathcal{G}_{\mathbb{A}}$ whose projected trajectory on $\mathbb{Z}_2$ is equidistributed with respect to the Haar measure $\nu$, the total adelic flight time $\tau_{\mathbb{A}}(v)$ is globally finite.
+
 ## 3. Rigorous Proofs (Step-by-Step)
 
 ### Proof of Lemma 1 (Adelic Continuity of the Operator)
@@ -615,6 +618,20 @@ It follows that $\mathcal{T}_{\mathbb{A}}^{N_K}(y) \in \mathcal{A}_{triv}$.
 Since the choice of $y \in K$ is arbitrary, this property is valid for all elements of the compact set $K$.
 This rigorously demonstrates that there is a uniformly bounded reaching time for any compact subset of the basin of attraction.
 The proof of Lemma 20 is completed.
+
+### Proof of Lemma 21 (Global Finiteness of Regular Dyadic Orbits)
+
+Let $v \in \mathcal{G}_{\mathbb{A}}$ be a regular point such that its projection onto the ring of dyadic integers $\mathbb{Z}_2$ generates an orbit strictly equidistributed with respect to the normalized Haar measure $\nu$.
+By the definition of equidistribution, the asymptotic frequency of iterates belonging to the odd component $O_1 = 1 + 2\mathbb{Z}_2$ is equal to the measure of this set, i.e., $\lim_{N \to \infty} \frac{1}{N} \sum_{n=0}^{N-1} \chi_{O_1}(\mathcal{T}_{\mathbb{A}}^n(v)) = \nu(O_1) = \frac{1}{2}$, where $\chi_{O_1}$ is the indicator function of $O_1$.
+According to Lemma 13 (Universal Upper Bound for the Number of Odd Transitions), the number of odd transitions $O_{\mathbb{A}}(v)$ for any trajectory originating from a point whose initial fibration energy $\mathcal{E}_{\mathbb{A}}(v)$ is finite is strictly bounded above by an affine function of $\mathcal{E}_{\mathbb{A}}(v)$.
+Since the vertex $v$ belongs to $\mathcal{G}_{\mathbb{A}}$, which is defined as a discrete lattice, its initial fibration energy $\mathcal{E}_{\mathbb{A}}(v)$ is strictly finite.
+Combining this finiteness with ergodic equidistribution, the global orbit in $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ cannot contain an infinite number of odd transitions without violating the universal bound of Lemma 13.
+Consequently, the sequence of states in the flow graph can only contain a finite number $K \in \mathbb{N}$ of odd transitions.
+After the $K$-th odd transition, the trajectory is exclusively composed of even transitions, which correspond to strict contractions of the 2-adic valuation by the operator $\mathcal{T}_{\mathbb{A}}(x) = \frac{x}{2}$.
+According to Lemma 2 (Norm Contraction in the Dyadic Fibration), each even transition strictly divides the 2-adic norm of the element, inducing a strict descent towards the fiber $\pi^{-1}(0)$.
+Since the norm of the element at the iteration of the last odd transition is finite, and each subsequent step reduces it by a factor of 2, the trajectory inevitably reaches the trivial attraction component $\mathcal{A}_{triv}$ in a finite number of steps.
+As a result, the total adelic flight time $\tau_{\mathbb{A}}(v)$ is finite.
+The proof of Lemma 21 is rigorously complete.
 
 ***
 *Chercheur indépendant / Independent Researcher

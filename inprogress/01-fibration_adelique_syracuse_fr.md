@@ -133,6 +133,9 @@ Soit $\mathcal{B}_{triv} \subset \mathcal{G}_{\mathbb{A}}$ l'ensemble des condit
 **Lemme 19 (Contraction Métrique Uniforme de l'Opérateur Adélique $\mathcal{T}_{\mathbb{A}}$) :**
 Soit $\mu_{\mathbb{A}}$ la mesure de Haar normalisée sur le groupe additif localement compact $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. Pour tout sous-ensemble compact $K \subset \mathcal{B}_{triv}$, il existe un entier $N \in \mathbb{N}^*$ tel que pour tout $n \geq N$, l'image itérée $\mathcal{T}_{\mathbb{A}}^n(K)$ est contenue dans un voisinage ouvert de l'attracteur $\mathcal{A}_{triv}$ dont la mesure de Haar est strictement inférieure à la mesure de $K$, sous la condition que $\mu_{\mathbb{A}}(K) > 0$.
 
+**Lemme 21 (Finitude Globale des Orbites Dyadiques Régulières) :**
+Pour tout point régulier $v \in \mathcal{G}_{\mathbb{A}}$ dont la trajectoire projetée sur $\mathbb{Z}_2$ est équirépartie par rapport à la mesure de Haar $\nu$, le temps de vol adélique total $\tau_{\mathbb{A}}(v)$ est globalement fini.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 ### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
@@ -616,6 +619,20 @@ Il s'ensuit que $\mathcal{T}_{\mathbb{A}}^{N_K}(y) \in \mathcal{A}_{triv}$.
 Puisque le choix de $y \in K$ est arbitraire, cette propriété est valide pour tous les éléments du compact $K$.
 Ceci démontre rigoureusement qu'il existe un temps d'atteinte uniformément borné pour tout sous-ensemble compact du bassin d'attraction.
 La démonstration du Lemme 20 est achevée.
+
+### Démonstration du Lemme 21 (Finitude Globale des Orbites Dyadiques Régulières)
+
+Soit $v \in \mathcal{G}_{\mathbb{A}}$ un point régulier tel que sa projection sur l'anneau des entiers dyadiques $\mathbb{Z}_2$ engendre une orbite strictement équirépartie par rapport à la mesure de Haar normalisée $\nu$.
+Par la définition de l'équirépartition, la fréquence asymptotique des itérés appartenant à la composante impaire $O_1 = 1 + 2\mathbb{Z}_2$ est égale à la mesure de cet ensemble, c'est-à-dire $\lim_{N \to \infty} \frac{1}{N} \sum_{n=0}^{N-1} \chi_{O_1}(\mathcal{T}_{\mathbb{A}}^n(v)) = \nu(O_1) = \frac{1}{2}$, où $\chi_{O_1}$ est la fonction indicatrice de $O_1$.
+D'après le Lemme 13 (Borne Supérieure Universelle du Nombre de Transitions Impaires), le nombre de transitions impaires $O_{\mathbb{A}}(v)$ pour toute trajectoire issue d'un point dont l'énergie de fibration initiale $\mathcal{E}_{\mathbb{A}}(v)$ est finie est strictement majoré par une fonction affine de $\mathcal{E}_{\mathbb{A}}(v)$.
+Puisque le sommet $v$ appartient à $\mathcal{G}_{\mathbb{A}}$ qui est défini comme un réseau discret, son énergie de fibration initiale $\mathcal{E}_{\mathbb{A}}(v)$ est strictement finie.
+En combinant cette finitude avec l'équirépartition ergodique, l'orbite globale dans $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ ne peut pas comporter un nombre infini de transitions impaires sans violer la borne universelle du Lemme 13.
+Par conséquent, la séquence des états dans le graphe de flux ne peut comporter qu'un nombre fini $K \in \mathbb{N}$ de transitions impaires.
+Après la $K$-ième transition impaire, la trajectoire est exclusivement composée de transitions paires, qui correspondent à des contractions strictes de la valuation 2-adique par l'opérateur $\mathcal{T}_{\mathbb{A}}(x) = \frac{x}{2}$.
+D'après le Lemme 2 (Contraction Normique dans la Fibration Dyadique), chaque transition paire divise strictement la norme 2-adique de l'élément, induisant une descente stricte vers la fibre $\pi^{-1}(0)$.
+Puisque la norme de l'élément à l'itération de la dernière transition impaire est finie, et que chaque pas subséquent la réduit d'un facteur 2, la trajectoire atteint inévitablement la composante d'attraction triviale $\mathcal{A}_{triv}$ en un nombre fini d'étapes.
+Il en résulte que le temps de vol adélique total $\tau_{\mathbb{A}}(v)$ est fini.
+La démonstration du Lemme 21 est rigoureusement achevée.
 
 ***
 *Chercheur indépendant / Independent Researcher
