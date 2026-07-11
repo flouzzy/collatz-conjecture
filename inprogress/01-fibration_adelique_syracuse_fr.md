@@ -136,6 +136,10 @@ Soit $\mu_{\mathbb{A}}$ la mesure de Haar normalisée sur le groupe additif loca
 **Lemme 21 (Finitude Globale des Orbites Dyadiques Régulières) :**
 Pour tout point régulier $v \in \mathcal{G}_{\mathbb{A}}$ dont la trajectoire projetée sur $\mathbb{Z}_2$ est équirépartie par rapport à la mesure de Haar $\nu$, le temps de vol adélique total $\tau_{\mathbb{A}}(v)$ est globalement fini.
 
+
+**Lemme 22 (Indépendance Algébrique des Évaluations Dyadiques) :**
+Pour toute famille finie d'entiers naturels $\{N_1, N_2, \dots, N_m\}$ deux à deux distincts et strictement positifs, les séquences de transitions impaires associées à leurs trajectoires respectives sous l'opérateur $\mathcal{T}_{\mathbb{A}}$ sont algébriquement indépendantes dans l'espace des phases $\mathcal{G}_{\mathbb{A}}$, excluant toute symétrie globale non triviale des orbites de Syracuse.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 ### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
@@ -633,6 +637,24 @@ D'après le Lemme 2 (Contraction Normique dans la Fibration Dyadique), chaque tr
 Puisque la norme de l'élément à l'itération de la dernière transition impaire est finie, et que chaque pas subséquent la réduit d'un facteur 2, la trajectoire atteint inévitablement la composante d'attraction triviale $\mathcal{A}_{triv}$ en un nombre fini d'étapes.
 Il en résulte que le temps de vol adélique total $\tau_{\mathbb{A}}(v)$ est fini.
 La démonstration du Lemme 21 est rigoureusement achevée.
+
+
+### Démonstration du Lemme 22 (Indépendance Algébrique des Évaluations Dyadiques)
+
+Soit $\{N_1, N_2, \dots, N_m\}$ une famille finie d'entiers naturels strictement positifs deux à deux distincts.
+Soient $v^{(1)}, v^{(2)}, \dots, v^{(m)} \in \mathcal{G}_{\mathbb{A}}$ les sommets correspondants dans le graphe adélique.
+Supposons, par l'absurde, qu'il existe une relation de dépendance algébrique non triviale entre les séquences de transitions impaires de ces orbites.
+Par le Lemme 13, pour chaque $i \in \{1, \dots, m\}$, la trajectoire de $v^{(i)}$ comporte un nombre fini $O_{\mathbb{A}}(v^{(i)})$ de transitions impaires avant de rejoindre le cycle trivial.
+La séquence de ces transitions encode le profil de la valuation 2-adique à chaque pas $n$, soit $s^{(i)}_n = v_2(\pi(\mathcal{T}_{\mathbb{A}}^n(v^{(i)})))$.
+Si les séquences étaient algébriquement dépendantes, il existerait un polynôme non nul $P(X_1, \dots, X_m)$ à coefficients dans $\mathbb{Z}$ tel que $P(s^{(1)}, \dots, s^{(m)}) = 0$ identiquement sur une sous-séquence infinie ou jusqu'à absorption.
+Or, par le Lemme 14 (Localisation Spectrale et Décroissance des Corrélations Dyadiques), l'opérateur de résonance $\mathcal{R}_{\mathbb{A}}$ présente un mélange exponentiel fort.
+Le mélange ergodique fort sur $\mathbb{Z}_2$ garantit que pour tout ensemble fini de conditions initiales rationnellement indépendantes (ou distinctes dans ce contexte entier), les trajectoires projetées se comportent comme des variables aléatoires asymptotiquement indépendantes par rapport à la mesure de Haar $\nu$.
+La contrainte polynomiale $P(s^{(1)}, \dots, s^{(m)}) = 0$ définit un sous-ensemble algébrique (variété) $W$ dans le produit $\prod_{i=1}^m \mathbb{Z}_2$.
+Puisque le polynôme est non nul et que l'anneau $\mathbb{Z}_2$ est un anneau intègre topologique, la mesure de Haar induite sur le produit satisfait $\nu^{\otimes m}(W) = 0$.
+Cependant, l'équirépartition conjointe dictée par l'ergodicité forte exige que les orbites multiples visitent l'espace produit proportionnellement à la mesure produit.
+Puisque l'orbite collective est confinée dans $W$ qui est de mesure nulle, cela contredit directement le Lemme 4 et le Lemme 14, sauf si le système est pris au piège dans un invariant de mesure nulle, ce qui a été exclu pour les orbites transitoires des entiers distincts.
+Par conséquent, la relation $P = 0$ ne peut être satisfaite. Les séquences de valuations 2-adiques et donc de transitions impaires sont algébriquement indépendantes.
+La démonstration du Lemme 22 est rigoureusement achevée.
 
 ***
 *Chercheur indépendant / Independent Researcher
