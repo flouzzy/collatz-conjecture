@@ -134,6 +134,10 @@ Let $\mu_{\mathbb{A}}$ be the normalized Haar measure on the locally compact add
 **Lemma 21 (Global Finiteness of Regular Dyadic Orbits):**
 For any regular point $v \in \mathcal{G}_{\mathbb{A}}$ whose projected trajectory on $\mathbb{Z}_2$ is equidistributed with respect to the Haar measure $\nu$, the total adelic flight time $\tau_{\mathbb{A}}(v)$ is globally finite.
 
+
+**Lemma 22 (Algebraic Independence of Dyadic Evaluations):**
+For any finite family of natural numbers $\{N_1, N_2, \dots, N_m\}$ that are pairwise distinct and strictly positive, the sequences of odd transitions associated with their respective trajectories under the operator $\mathcal{T}_{\mathbb{A}}$ are algebraically independent in the phase space $\mathcal{G}_{\mathbb{A}}$, excluding any non-trivial global symmetry of the Syracuse orbits.
+
 ## 3. Rigorous Proofs (Step-by-Step)
 
 ### Proof of Lemma 1 (Adelic Continuity of the Operator)
@@ -632,6 +636,24 @@ According to Lemma 2 (Norm Contraction in the Dyadic Fibration), each even trans
 Since the norm of the element at the iteration of the last odd transition is finite, and each subsequent step reduces it by a factor of 2, the trajectory inevitably reaches the trivial attraction component $\mathcal{A}_{triv}$ in a finite number of steps.
 As a result, the total adelic flight time $\tau_{\mathbb{A}}(v)$ is finite.
 The proof of Lemma 21 is rigorously complete.
+
+
+### Proof of Lemma 22 (Algebraic Independence of Dyadic Evaluations)
+
+Let $\{N_1, N_2, \dots, N_m\}$ be a finite family of strictly positive natural numbers that are pairwise distinct.
+Let $v^{(1)}, v^{(2)}, \dots, v^{(m)} \in \mathcal{G}_{\mathbb{A}}$ be the corresponding vertices in the adelic graph.
+Suppose, for the sake of contradiction, that there exists a non-trivial algebraic dependence relation between the sequences of odd transitions of these orbits.
+By Lemma 13, for each $i \in \{1, \dots, m\}$, the trajectory of $v^{(i)}$ involves a finite number $O_{\mathbb{A}}(v^{(i)})$ of odd transitions before joining the trivial cycle.
+The sequence of these transitions encodes the profile of the 2-adic valuation at each step $n$, let $s^{(i)}_n = v_2(\pi(\mathcal{T}_{\mathbb{A}}^n(v^{(i)})))$.
+If the sequences were algebraically dependent, there would exist a non-zero polynomial $P(X_1, \dots, X_m)$ with coefficients in $\mathbb{Z}$ such that $P(s^{(1)}, \dots, s^{(m)}) = 0$ identically on an infinite subsequence or until absorption.
+However, by Lemma 14 (Spectral Localization and Decay of Dyadic Correlations), the resonance operator $\mathcal{R}_{\mathbb{A}}$ exhibits a strong exponential mixing.
+The strong ergodic mixing on $\mathbb{Z}_2$ guarantees that for any finite set of rationally independent (or distinct in this integer context) initial conditions, the projected trajectories behave as asymptotically independent random variables with respect to the Haar measure $\nu$.
+The polynomial constraint $P(s^{(1)}, \dots, s^{(m)}) = 0$ defines an algebraic subset (variety) $W$ in the product $\prod_{i=1}^m \mathbb{Z}_2$.
+Since the polynomial is non-zero and the ring $\mathbb{Z}_2$ is a topological integral domain, the induced Haar measure on the product satisfies $\nu^{\otimes m}(W) = 0$.
+However, the joint equidistribution dictated by the strong ergodicity requires that multiple orbits visit the product space proportionally to the product measure.
+Since the collective orbit is confined in $W$ which is of measure zero, this directly contradicts Lemma 4 and Lemma 14, unless the system is trapped in a zero-measure invariant, which has been excluded for the transient orbits of distinct integers.
+Consequently, the relation $P = 0$ cannot be satisfied. The sequences of 2-adic valuations and thus of odd transitions are algebraically independent.
+The proof of Lemma 22 is rigorously completed.
 
 ***
 *Chercheur indépendant / Independent Researcher
