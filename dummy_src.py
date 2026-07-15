@@ -1,3 +1,5 @@
+MAX_LIMIT = 10**1000
+
 def calculate_fibration(x: int) -> int:
     """
     Calculates the next step in the Syracuse (Collatz) sequence,
