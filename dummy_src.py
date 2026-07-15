@@ -6,7 +6,7 @@ def calculate_fibration(x: int) -> int:
     if not isinstance(x, int) or isinstance(x, bool):
         raise TypeError("Input must be an integer")
 
-    if x % 2 == 0:
-        return x // 2
+    if (x & 1) == 0:
+        return x >> 1
     else:
-        return (3 * x + 1) // 2
+        return (3 * x + 1) >> 1
