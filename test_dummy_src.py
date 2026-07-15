@@ -1,3 +1,4 @@
+import sys
 import pytest
 from dummy_src import calculate_fibration
 
@@ -15,6 +16,12 @@ from dummy_src import calculate_fibration
 
     # Zero case
     (0, 0),
+
+    # Large cases
+    (sys.maxsize - 1, (sys.maxsize - 1) // 2),
+    (sys.maxsize, (3 * sys.maxsize + 1) // 2),
+    (10**20, (10**20) // 2),
+    (10**20 + 1, (3 * (10**20 + 1) + 1) // 2),
 ])
 def test_calculate_fibration(x, expected):
     assert calculate_fibration(x) == expected
@@ -25,16 +32,13 @@ def test_calculate_fibration_negative():
     assert calculate_fibration(-3) == -4  # (-9+1)//2 = -4
     assert calculate_fibration(-5) == -7  # (-15+1)//2 = -7
 
-def test_calculate_fibration_invalid_types():
-    with pytest.raises(TypeError, match="Input must be an integer"):
-        calculate_fibration(1.5)
-
-    with pytest.raises(TypeError, match="Input must be an integer"):
-        calculate_fibration("1")
-
-    with pytest.raises(TypeError, match="Input must be an integer"):
-        calculate_fibration(True)
-
+@pytest.mark.parametrize("invalid_input", [
+    1.5,
+    "1",
+    True,
+    None,
+])
+def test_calculate_fibration_invalid_types(invalid_input):
     with pytest.raises(TypeError, match="Input must be an integer"):
         calculate_fibration(None)
 
