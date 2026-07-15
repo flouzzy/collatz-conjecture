@@ -1,3 +1,6 @@
+from functools import lru_cache
+
+@lru_cache(maxsize=None)
 def calculate_fibration(x: int) -> int:
     """
     Calculates the next step in the Syracuse (Collatz) sequence,
