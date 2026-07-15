@@ -25,15 +25,12 @@ def test_calculate_fibration_negative():
     assert calculate_fibration(-3) == -4  # (-9+1)//2 = -4
     assert calculate_fibration(-5) == -7  # (-15+1)//2 = -7
 
-def test_calculate_fibration_invalid_types():
+@pytest.mark.parametrize("invalid_input", [
+    1.5,
+    "1",
+    True,
+    None,
+])
+def test_calculate_fibration_invalid_types(invalid_input):
     with pytest.raises(TypeError, match="Input must be an integer"):
-        calculate_fibration(1.5)
-
-    with pytest.raises(TypeError, match="Input must be an integer"):
-        calculate_fibration("1")
-
-    with pytest.raises(TypeError, match="Input must be an integer"):
-        calculate_fibration(True)
-
-    with pytest.raises(TypeError, match="Input must be an integer"):
-        calculate_fibration(None)
+        calculate_fibration(invalid_input)
