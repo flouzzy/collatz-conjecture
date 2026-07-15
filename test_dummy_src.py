@@ -37,3 +37,8 @@ def test_calculate_fibration_invalid_types():
 
     with pytest.raises(TypeError, match="Input must be an integer"):
         calculate_fibration(None)
+
+def test_calculate_fibration_exceeds_limit():
+    from dummy_src import MAX_LIMIT
+    with pytest.raises(ValueError, match="Input exceeds maximum limit"):
+        calculate_fibration(MAX_LIMIT + 1)
