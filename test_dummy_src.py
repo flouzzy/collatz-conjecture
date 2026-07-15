@@ -1,3 +1,4 @@
+import sys
 import pytest
 from dummy_src import calculate_fibration
 
@@ -15,6 +16,12 @@ from dummy_src import calculate_fibration
 
     # Zero case
     (0, 0),
+
+    # Large cases
+    (sys.maxsize - 1, (sys.maxsize - 1) // 2),
+    (sys.maxsize, (3 * sys.maxsize + 1) // 2),
+    (10**20, (10**20) // 2),
+    (10**20 + 1, (3 * (10**20 + 1) + 1) // 2),
 ])
 def test_calculate_fibration(x, expected):
     assert calculate_fibration(x) == expected
