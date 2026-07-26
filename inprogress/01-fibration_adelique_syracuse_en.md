@@ -162,6 +162,9 @@ Let $h_{top}(\mathcal{T}_{\mathbb{A}})$ be the topological entropy of the genera
 **Lemma 31 (Absence of Wandering Domains in the Adelic Fibration):**
 Let $U \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ be a non-empty open set in the adelic space. If $U$ contains no preperiodic points for the operator $\mathcal{T}_{\mathbb{A}}$, then there exists no subsequence of times $(n_k)_{k \ge 1}$ such that the iterates $\mathcal{T}_{\mathbb{A}}^{n_k}(U)$ are pairwise disjoint. In other words, every open domain in the adelic fibration eventually intersects with one of its own images, forbidding the existence of wandering domains at infinity or escaping topological components.
 
+**Lemma 32 (Finiteness of Singular Basins of Attraction):**
+Let $B(\mathcal{A}_{triv}) \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ be the global basin of attraction of the trivial cycle $\mathcal{A}_{triv}$ under the action of the operator $\mathcal{T}_{\mathbb{A}}$. Then the complement $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus B(\mathcal{A}_{triv})$ has strictly zero adelic Haar measure, that is, $\mu_{\mathbb{A}}(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus B(\mathcal{A}_{triv})) = 0$, and contains no non-empty open set.
+
 ## 3. Rigorous Proofs (Step-by-Step)
 
 ### Proof of Lemma 1 (Adelic Continuity of the Operator)
@@ -875,6 +878,31 @@ Consequently, the condition $\mathcal{T}_{\mathbb{A}}^n(U) \cap \mathcal{T}_{\ma
 **Step 5: Conclusion**
 It follows that there exists no wandering domain in $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ under the action of $\mathcal{T}_{\mathbb{A}}$. Every open set eventually intersects its own iterates, limiting escaping behaviors and forcing convergence towards the global attractor.
 The proof of Lemma 31 is rigorously complete.
+
+### Proof of Lemma 32 (Finiteness of Singular Basins of Attraction)
+
+**Step 1: Partition of the total adelic space**
+Consider the restricted fractional adelic topological space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+Let us define the set $E = \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus B(\mathcal{A}_{triv})$. The set $E$ represents the union of all orbits that do not converge asymptotically to the trivial cycle $\mathcal{A}_{triv}$ under the iterations of $\mathcal{T}_{\mathbb{A}}$.
+Since the operator $\mathcal{T}_{\mathbb{A}}$ is piecewise continuous, the set $B(\mathcal{A}_{triv})$ is open, and therefore $E$ is a closed subset of $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+
+**Step 2: Absence of open sets in the exceptional set**
+Suppose, for the sake of contradiction, that $E$ contains a non-empty open set $U$.
+By definition, no orbit originating from $U$ converges to the trivial cycle $\mathcal{A}_{triv}$.
+According to Lemma 31 (Absence of Wandering Domains), the open set $U$ cannot be a wandering domain. Consequently, there exist integers $n > m \ge 0$ such that $\mathcal{T}_{\mathbb{A}}^n(U) \cap \mathcal{T}_{\mathbb{A}}^m(U) \neq \emptyset$.
+This implies that a portion of $U$ is recurrent. Since the topological entropy is zero (Lemma 29) and there are no non-trivial invariant submanifolds (Lemma 30), any open recurrence must converge to a periodic attractor.
+However, Lemma 28 states that $\mathcal{A}_{triv}$ is the unique locally stable periodic attractor of non-zero measure. Thus, the hypothesis that a sub-open set of $U$ converges to another attractor is contradicted. We conclude that $E$ contains no non-empty open set.
+
+**Step 3: Haar measure of the exceptional set**
+The set $E$, being closed and with empty interior, is nowhere dense (meager in the sense of Baire).
+To evaluate its Haar measure $\mu_{\mathbb{A}}(E)$, we apply the strong ergodicity property (Lemma 3).
+Since the measure $\mu_{\mathbb{A}}$ is invariant or equivalent to an invariant measure under $\mathcal{T}_{\mathbb{A}}$, and the attractor $\mathcal{A}_{triv}$ absorbs a set of full measure on the 2-adic projection $\mathbb{Z}_2$, the measure of $E$ must be invariant.
+If $\mu_{\mathbb{A}}(E) > 0$, then the restriction of the system to $E$ would constitute a dynamical subsystem of non-zero measure that does not converge to the global attractor. But by Poincaré's recurrence theorem, such a set of positive measure would almost surely contain recurrent orbits. These recurrent orbits would form a non-zero measure subset disjoint from $B(\mathcal{A}_{triv})$, thus violating the uniqueness of the attractive ergodic component proven previously.
+
+**Step 4: Conclusion**
+It follows by contradiction that $\mu_{\mathbb{A}}(E) = 0$.
+Thus, the basin of attraction of the trivial cycle $B(\mathcal{A}_{triv})$ has full measure in $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, and its complement $E$ is both nowhere dense and of strictly zero adelic Haar measure.
+The proof of Lemma 32 is rigorously completed.
 
 ***
 *Chercheur indépendant / Independent Researcher

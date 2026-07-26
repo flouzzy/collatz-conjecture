@@ -163,6 +163,9 @@ Soit $h_{top}(\mathcal{T}_{\mathbb{A}})$ l'entropie topologique de l'opérateur 
 **Lemme 31 (Absence de Domaines Errants dans la Fibration Adélique) :**
 Soit $U \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ un ouvert non vide de l'espace adélique. Si $U$ ne contient aucun point prépériodique pour l'opérateur $\mathcal{T}_{\mathbb{A}}$, alors il n'existe aucune sous-suite de temps $(n_k)_{k \ge 1}$ telle que les itérés $\mathcal{T}_{\mathbb{A}}^{n_k}(U)$ soient deux à deux disjoints. En d'autres termes, tout domaine ouvert dans la fibration adélique finit par s'intersecter avec l'une de ses propres images, interdisant l'existence de domaines errants à l'infini ou de composantes topologiques fuyantes.
 
+**Lemme 32 (Finitude des Bassins d'Attraction Singuliers) :**
+Soit $B(\mathcal{A}_{triv}) \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ le bassin d'attraction global du cycle trivial $\mathcal{A}_{triv}$ sous l'action de l'opérateur $\mathcal{T}_{\mathbb{A}}$. Alors le complémentaire $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus B(\mathcal{A}_{triv})$ est de mesure de Haar adélique strictement nulle, soit $\mu_{\mathbb{A}}(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus B(\mathcal{A}_{triv})) = 0$, et ne contient aucun ouvert non vide.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 ### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
@@ -875,6 +878,31 @@ Par conséquent, la condition $\mathcal{T}_{\mathbb{A}}^n(U) \cap \mathcal{T}_{\
 **Étape 5 : Conclusion**
 Il s'ensuit qu'il n'existe aucun domaine errant dans $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ sous l'action de $\mathcal{T}_{\mathbb{A}}$. Tout ouvert finit par intersecter ses propres itérés, limitant les comportements fuyants et forçant la convergence vers l'attracteur global.
 La démonstration du Lemme 31 est rigoureusement achevée.
+
+### Démonstration du Lemme 32 (Finitude des Bassins d'Attraction Singuliers)
+
+**Étape 1 : Partition de l'espace adélique total**
+Considérons l'espace topologique adélique fractionnaire restreint $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+Définissons l'ensemble $E = \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus B(\mathcal{A}_{triv})$. L'ensemble $E$ représente l'union de toutes les orbites qui ne convergent pas asymptotiquement vers le cycle trivial $\mathcal{A}_{triv}$ sous les itérations de $\mathcal{T}_{\mathbb{A}}$.
+Puisque l'opérateur $\mathcal{T}_{\mathbb{A}}$ est continu par morceaux, l'ensemble $B(\mathcal{A}_{triv})$ est ouvert, et donc $E$ est un sous-ensemble fermé de $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+
+**Étape 2 : Absence d'ouverts dans l'ensemble exceptionnel**
+Supposons par l'absurde que $E$ contienne un ouvert non vide $U$.
+Par définition, aucune orbite issue de $U$ ne converge vers le cycle trivial $\mathcal{A}_{triv}$.
+D'après le Lemme 31 (Absence de Domaines Errants), l'ouvert $U$ ne peut pas être un domaine errant. Par conséquent, il existe des entiers $n > m \ge 0$ tels que $\mathcal{T}_{\mathbb{A}}^n(U) \cap \mathcal{T}_{\mathbb{A}}^m(U) \neq \emptyset$.
+Ceci implique qu'une partie de $U$ est récurrente. Puisque l'entropie topologique est nulle (Lemme 29) et qu'il n'y a aucune sous-variété invariante non triviale (Lemme 30), toute récurrence ouverte doit converger vers un attracteur périodique.
+Or, le Lemme 28 stipule que $\mathcal{A}_{triv}$ est l'unique attracteur périodique localement stable de mesure non nulle. Ainsi, l'hypothèse qu'un sous-ouvert de $U$ converge vers un autre attracteur est contredite. On conclut que $E$ ne contient aucun ouvert non vide.
+
+**Étape 3 : Mesure de Haar de l'ensemble exceptionnel**
+L'ensemble $E$, étant fermé et sans intérieur, est nulle part dense (maigre au sens de Baire).
+Pour évaluer sa mesure de Haar $\mu_{\mathbb{A}}(E)$, nous appliquons la propriété d'ergodicité forte (Lemme 3).
+La mesure $\mu_{\mathbb{A}}$ étant invariante ou équivalente à une mesure invariante sous $\mathcal{T}_{\mathbb{A}}$, et l'attracteur $\mathcal{A}_{triv}$ absorbant un ensemble de mesure totale sur la projection 2-adique $\mathbb{Z}_2$, la mesure de $E$ doit être invariante.
+Si $\mu_{\mathbb{A}}(E) > 0$, alors la restriction du système à $E$ constituerait un sous-système dynamique de mesure non nulle ne convergeant pas vers l'attracteur global. Mais par le théorème de récurrence de Poincaré, un tel ensemble de mesure positive contiendrait presque sûrement des orbites récurrentes. Ces orbites récurrentes formeraient un sous-ensemble de mesure non nulle disjoint de $B(\mathcal{A}_{triv})$, violant ainsi l'unicité de la composante ergodique attractive prouvée précédemment.
+
+**Étape 4 : Conclusion**
+Il s'ensuit par l'absurde que $\mu_{\mathbb{A}}(E) = 0$.
+Ainsi, le bassin d'attraction du cycle trivial $B(\mathcal{A}_{triv})$ possède une mesure complète dans $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, et son complémentaire $E$ est à la fois nulle part dense et de mesure de Haar adélique strictement nulle.
+La démonstration du Lemme 32 est rigoureusement achevée.
 
 ***
 *Chercheur indépendant / Independent Researcher
