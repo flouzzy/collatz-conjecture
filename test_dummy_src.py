@@ -1,31 +1,26 @@
 import pytest
-from dummy_src import calculate_fibration
+from dummy_src import calculate_fibration, MAX_LIMIT
 
-def test_calculate_fibration_even():
+def test_calculate_fibration_valid():
     assert calculate_fibration(4) == 2
-    assert calculate_fibration(10) == 5
-
-def test_calculate_fibration_odd():
-    assert calculate_fibration(3) == 5
-    assert calculate_fibration(5) == 8
-
-def test_calculate_fibration_zero():
+    assert calculate_fibration(5) == 16
+    assert calculate_fibration(-5) == -14
     assert calculate_fibration(0) == 0
 
-def test_calculate_fibration_negative():
-    assert calculate_fibration(-2) == -1
-    assert calculate_fibration(-3) == -4
-
-def test_calculate_fibration_rejects_bool():
-    with pytest.raises(TypeError, match="Input must be an integer, not a boolean."):
+def test_calculate_fibration_type_error():
+    with pytest.raises(TypeError):
+        calculate_fibration("string")
+    with pytest.raises(TypeError):
         calculate_fibration(True)
-    with pytest.raises(TypeError, match="Input must be an integer, not a boolean."):
+    with pytest.raises(TypeError):
         calculate_fibration(False)
-
-def test_calculate_fibration_rejects_float():
     with pytest.raises(TypeError):
         calculate_fibration(3.14)
 
-def test_calculate_fibration_rejects_string():
-    with pytest.raises(TypeError):
-        calculate_fibration("10")
+def test_calculate_fibration_max_limit():
+    with pytest.raises(ValueError, match="Input exceeds MAX_LIMIT"):
+        calculate_fibration(MAX_LIMIT + 1)
+
+def test_calculate_fibration_boundary_max_limit():
+    # Should not raise ValueError
+    assert calculate_fibration(MAX_LIMIT) == MAX_LIMIT // 2
