@@ -1,6 +1,12 @@
-def calculate_fibration(x):
-    if isinstance(x, bool) or not isinstance(x, int):
-        raise TypeError("Input must be an integer")
-    if x > 100:
-        raise ValueError("Exceeds limit")
-    return x * 2
+def collatz_step(x):
+    """
+    Computes the next step in the Collatz sequence.
+    """
+
+    if not isinstance(x, int) or isinstance(x, bool):
+        raise TypeError("x must be an integer and not a boolean")
+
+    if (x & 1) == 0:
+        return x >> 1
+    else:
+        return (3 * x + 1) >> 1
