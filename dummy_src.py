@@ -7,10 +7,11 @@ def calculate_fibration(x: int) -> int:
     """
     if not isinstance(x, int) or isinstance(x, bool):
         raise TypeError("Input must be an integer")
+
     if abs(x) > MAX_LIMIT:
         raise ValueError(f"Input exceeds maximum limit of {MAX_LIMIT}")
 
-    if x % 2 == 0:
+    if (x & 1) == 0:
         return x // 2
     else:
         return 3 * x + 1
