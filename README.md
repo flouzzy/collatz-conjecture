@@ -16,4 +16,4 @@ In order to ensure clear and rigorous tracking of the work, the repository is st
 
 ## Historique des avancées
 - **[2023-10-27]** : Initialisation du dépôt.
-- [2026-08-02] : Enrichment of Attempt 01 - fibration_adelique_syracuse (FR & EN Versions). Resolution of Lemma 37. Status: In progress.
+- [2026-08-01] : Enrichment of Attempt 01 - fibration_adelique_syracuse (FR & EN Versions). Resolution of Lemma 37. Status: In progress.
