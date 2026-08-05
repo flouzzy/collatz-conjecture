@@ -1,33 +1,38 @@
 import pytest
 from dummy_src import calculate_fibration, MAX_LIMIT
 
-def test_calculate_fibration_valid():
-    assert calculate_fibration(4) == 2
-    assert calculate_fibration(5) == 16
-    assert calculate_fibration(0) == 0
-    assert calculate_fibration(-4) == -2
-    assert calculate_fibration(-5) == -14
+@pytest.mark.parametrize("n, expected", [
+    (4, 2),
+    (5, 16),
+    (0, 0),
+    (-4, -2),
+    (-5, -14),
+])
+def test_calculate_fibration_valid(n, expected):
+    assert calculate_fibration(n) == expected
 
-def test_calculate_fibration_type_error():
+@pytest.mark.parametrize("invalid_input", [
+    1.5,
+    "10",
+    True,
+    False,
+])
+def test_calculate_fibration_type_error(invalid_input):
     with pytest.raises(TypeError, match="Input must be an integer"):
-        calculate_fibration(1.5)
+        calculate_fibration(invalid_input)
 
-    with pytest.raises(TypeError, match="Input must be an integer"):
-        calculate_fibration("10")
-
-    with pytest.raises(TypeError, match="Input must be an integer"):
-        calculate_fibration(True)
-
-    with pytest.raises(TypeError, match="Input must be an integer"):
-        calculate_fibration(False)
-
-def test_calculate_fibration_value_error():
+@pytest.mark.parametrize("exceeding_input", [
+    MAX_LIMIT + 1,
+    -(MAX_LIMIT + 1),
+])
+def test_calculate_fibration_value_error(exceeding_input):
     with pytest.raises(ValueError, match="Input exceeds maximum limit"):
-        calculate_fibration(MAX_LIMIT + 1)
+        calculate_fibration(exceeding_input)
 
-    with pytest.raises(ValueError, match="Input exceeds maximum limit"):
-        calculate_fibration(-(MAX_LIMIT + 1))
-
+@pytest.mark.parametrize("boundary_input", [
+    MAX_LIMIT,
+    -MAX_LIMIT,
+])
+def test_calculate_fibration_boundary(boundary_input):
     # Boundary tests
-    calculate_fibration(MAX_LIMIT) # Should not raise
-    calculate_fibration(-MAX_LIMIT) # Should not raise
+    calculate_fibration(boundary_input) # Should not raise
