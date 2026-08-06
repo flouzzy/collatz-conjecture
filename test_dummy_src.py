@@ -50,5 +50,12 @@ def test_calculate_fibration_invalid_types(invalid_input):
     with pytest.raises(TypeError, match="Input must be an integer"):
         calculate_fibration(invalid_input)
 
-def test_calculate_fibration_valid():
-    assert calculate_fibration(2) == 4
+@pytest.mark.parametrize("input_val, expected", [
+    (2, 1),
+    (0, 0),
+    (-2, -1),
+    (-1, -2),
+    (1, 4),
+])
+def test_calculate_fibration_valid(input_val, expected):
+    assert calculate_fibration(input_val) == expected
