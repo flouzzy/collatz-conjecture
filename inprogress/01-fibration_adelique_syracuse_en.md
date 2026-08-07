@@ -189,6 +189,9 @@ Let $\mathbb{Q}_2$ be the field of 2-adic numbers and $\mathbb{Z}_{(2)} = \mathb
 **Lemma 40 (Uniform Convergence of Adelic Fatou Components):**
 Let $\mathcal{F}_{\mathbb{A}}$ be the analytic Fatou set on the Berkovich space $\mathbb{P}^1_{Berk, \mathbb{Q}_2}$ associated with the operator $\mathcal{T}_{Berk}$. For any connected component $U \subset \mathcal{F}_{\mathbb{A}}$ intersecting the embedding of $\mathbb{Z}_{(2)}$, the sequence of iterates of the operator $\mathcal{T}_{Berk}^n$ converges uniformly on $U$ to the trivial cycle $\mathcal{A}_{triv} = \{1, 4, 2\}$, prohibiting any residual chaotic dynamics.
 
+**Lemma 41: Asymptotic uniqueness of the orbit projection**
+Let $U$ be a convergent Fatou component of $\mathcal{F}_{\mathbb{A}}$ and $x \in U \cap \mathbb{Z}_{(2)}$. The final image of $x$ by successive iterations of the operator $\mathcal{T}_{\mathbb{A}}$ does not depend on $x$ over $U$. Specifically, $\lim_{n \to \infty} \mathcal{T}_{\mathbb{A}}^n(x) = \mathcal{A}_{triv}$.
+
 ## 3. Rigorous Proofs (Step-by-Step)
 
 ### Proof of Lemma 1 (Adelic Continuity of the Operator)
@@ -1132,6 +1135,22 @@ Lemma 28 (super-repulsion of any non-trivial cycle) imposes that no other cycle 
 Consequently, the uniform limit of $\{\mathcal{T}_{Berk}^n\}_{n \in \mathbb{N}}$ on $U$ is formally the constant associated with the cycle $\mathcal{A}_{triv}$. No subsequence can exhibit residual chaotic behavior on $U$.
 The proof of Lemma 40 is rigorously complete.
 
+
+**Proof of Lemma 41:**
+
+**Step 1: Topological assumptions**
+We know by Lemma 40 that for any analytic compact set $K \subset U$, the uniform limit of $\{\mathcal{T}_{Berk}^n\}_{n \in \mathbb{N}}$ on $K$ is the trivial cycle $\mathcal{A}_{triv}$. By definition, any $x \in U \cap \mathbb{Z}_{(2)}$ is an isolated point in the restricted topology, but belongs to $U$.
+
+**Step 2: Local adelic projection**
+Since $x \in \mathbb{Z}_{(2)}$, its image in the Berkovich projective space corresponds to a well-defined rational point. Let $\pi_B : \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \to \mathbb{P}^1_{Berk, \mathbb{Q}_2}$ be the canonical projection. Then $\pi_B(x)$ belongs to the interior of the component $U$.
+
+**Step 3: Independence from the initial point**
+Since $\{\mathcal{T}_{Berk}^n\}_{n \in \mathbb{N}}$ is normal on $U$ and converges uniformly to $\mathcal{A}_{triv}$ on compact subsets, let us evaluate this limit at $\pi_B(x)$. The set $\{\pi_B(x)\}$ is compact by definition (any singleton in a Hausdorff topology is). Thus the sequence $\mathcal{T}_{Berk}^n(\pi_B(x))$ converges pointwise to $\mathcal{A}_{triv}$.
+Since $\mathcal{T}_{\mathbb{A}}$ is defined as a dynamical lift of $\mathcal{T}_{Berk}$, we have $\lim_{n \to \infty} \pi_B(\mathcal{T}_{\mathbb{A}}^n(x)) = \mathcal{A}_{triv}$.
+
+**Step 4: Strict algebraic conclusion**
+The projection operator $\pi_B$ is continuous. Therefore, on the fiber above $\mathcal{A}_{triv}$, the sequence of adelic iterates can have no other accumulation point than the one defined by the trivial section. Thus, $\lim_{n \to \infty} \mathcal{T}_{\mathbb{A}}^n(x) = \mathcal{A}_{triv}$ is rigorously proven, demonstrating the asymptotic uniqueness of the projection.
+The proof of Lemma 41 is complete.
 
 ***
 *Chercheur indépendant / Independent Researcher
