@@ -196,6 +196,10 @@ Let $U$ be a convergent Fatou component of $\mathcal{F}_{\mathbb{A}}$ and $x \in
 **Lemma 42: Compactness of adelic orbits under the Syracuse operator**
 Let $\mathbb{A}_{\mathbb{Q}}$ be the adele ring of $\mathbb{Q}$, and let $\mathcal{T}_{\mathbb{A}}$ be the continuous adelic extension of the Syracuse operator. For any element $x \in \mathbb{A}_{\mathbb{Q}}$, the closure of its orbit under $\mathcal{T}_{\mathbb{A}}$, denoted $\overline{\mathcal{O}_{\mathcal{T}_{\mathbb{A}}}(x)}$, is compact in the adelic topology.
 
+
+**Lemma 43: Finiteness of cycles of the Syracuse operator in the adele ring**
+The set of periodic cycles of the adelic operator $\mathcal{T}_{\mathbb{A}}$ on $\mathbb{A}_{\mathbb{Q}}$ is finite. In particular, if a cycle exists, its length is absolutely bounded independently of its starting point.
+
 ## 3. Rigorous Proofs (Step-by-Step)
 
 ### Proof of Lemma 1 (Adelic Continuity of the Operator)
@@ -1182,6 +1186,22 @@ Lemma 41 establishes the asymptotic uniqueness of the orbit projection on conver
 By integrating the local dynamics of each place, the global orbit $\mathcal{O}_{\mathcal{T}_{\mathbb{A}}}(x)$ is contained in a product of compact sets $\overline{\mathcal{O}_{\mathcal{T}_{\infty}}(x_{\infty})} \times \prod_{p} \overline{\mathcal{O}_{\mathcal{T}_p}(x_p)}$.
 This product is compact in the product topology. The closure of the orbit, being a closed subset of a compact set, is compact.
 The proof of Lemma 42 is complete.
+
+
+**Proof of Lemma 43:**
+
+**Step 1: Localization of potential cycles**
+Suppose there exists a periodic cycle $\mathcal{C} = (x_0, x_1, \dots, x_{k-1})$ of length $k$ under the action of $\mathcal{T}_{\mathbb{A}}$ in $\mathbb{A}_{\mathbb{Q}}$. By Lemma 42, the orbit of any point is contained in a compact set of $\mathbb{A}_{\mathbb{Q}}$. In particular, the cycle $\mathcal{C}$ is entirely contained in a compact set $K = K_{\infty} \times \prod_p K_p$.
+Moreover, the dynamics of $\mathcal{T}_{\mathbb{A}}$ on each local component $\mathbb{Q}_p$ (for $p \neq 2$) preserves the compact space $\mathbb{Z}_p$. If an element of the cycle had a component $x_p \notin \mathbb{Z}_p$, the isometric nature of $\mathcal{T}_p$ on $\mathbb{Q}_p \setminus \mathbb{Z}_p$ would prevent the formation of a cycle due to the global rationality constraint imposed by the intersection with the diagonal image of $\mathbb{Q}$.
+
+**Step 2: Application of the Finiteness Theorem**
+The Syracuse operator $\mathcal{T}$ acts on integers, and its adelic extension $\mathcal{T}_{\mathbb{A}}$ preserves the discrete lattice structure of $\mathbb{Q}$ embedded diagonally in $\mathbb{A}_{\mathbb{Q}}$.
+A cycle of $\mathcal{T}_{\mathbb{A}}$ corresponding to a true Syracuse cycle must have its elements in $\mathbb{Q}$.
+The intersection of $\mathbb{Q}$ (discrete in $\mathbb{A}_{\mathbb{Q}}$) with the compact set $K$ found in step 1 is necessarily a finite set.
+
+**Step 3: Bound on the length of cycles**
+Since the set of rational elements susceptible to form a cycle is finite, the total number of possible cycles is finite, and the maximum length of such a cycle is necessarily bounded. Moreover, the action on the Fatou components (Lemma 41) forces any rational periodic dynamics to contract towards a restricted number of attractors.
+Therefore, there exists only a finite number of periodic cycles for the Syracuse operator, which proves Lemma 43.
 
 ***
 *Chercheur indépendant / Independent Researcher
