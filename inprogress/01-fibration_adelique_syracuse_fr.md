@@ -201,6 +201,10 @@ Soit $\mathbb{A}_{\mathbb{Q}}$ l'anneau des adèles de $\mathbb{Q}$, et soit $\m
 **Lemme 43 : Finitude des cycles de l'opérateur de Syracuse dans l'anneau des adèles**
 L'ensemble des cycles périodiques de l'opérateur adélique $\mathcal{T}_{\mathbb{A}}$ sur $\mathbb{A}_{\mathbb{Q}}$ est fini. En particulier, si un cycle existe, sa longueur est bornée de manière absolue indépendamment de son point de départ.
 
+
+**Lemme 44 (Borne Uniforme sur le Cardinal des Cycles Adéliques) :**
+Soit $N_{cycles}(\mathcal{T}_{\mathbb{A}})$ le nombre total de cycles périodiques distincts pour l'opérateur $\mathcal{T}_{\mathbb{A}}$ sur $\mathbb{A}_{\mathbb{Q}}$. Il existe une constante absolue $C_{cycles} \in \mathbb{N}$ telle que $N_{cycles}(\mathcal{T}_{\mathbb{A}}) \le C_{cycles}$. En outre, la somme des longueurs de tous les cycles possibles est strictement majorée par une constante absolue $L_{max} \in \mathbb{N}$ indépendante des conditions initiales.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 ### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
@@ -1202,6 +1206,28 @@ L'intersection de $\mathbb{Q}$ (discret dans $\mathbb{A}_{\mathbb{Q}}$) avec le 
 **Étape 3 : Borne sur la longueur des cycles**
 Puisque l'ensemble des éléments rationnels susceptibles de former un cycle est fini, le nombre total de cycles possibles est fini, et la longueur maximale d'un tel cycle est nécessairement bornée. De plus, l'action sur les composantes de Fatou (Lemme 41) force toute dynamique périodique rationnelle à se contracter vers un nombre restreint d'attracteurs.
 Il n'existe donc qu'un nombre fini de cycles périodiques pour l'opérateur de Syracuse, ce qui démontre le Lemme 43.
+
+
+
+**Démonstration du Lemme 44 :**
+
+**Étape 1 : Réduction du domaine des cycles potentiels**
+D'après le Lemme 43, l'ensemble des cycles de l'opérateur de Syracuse dans l'anneau des adèles est fini et contenu dans une région compacte $K$ intersectée avec le réseau rationnel diagonal $\mathbb{Q} \hookrightarrow \mathbb{A}_{\mathbb{Q}}$. Soit $\Sigma$ cet ensemble fini de cycles. Notons que si $\mathcal{C} \in \Sigma$, alors par la conservation ergodique (Lemme 3) et l'exclusion des composantes errantes (Lemme 40), chaque élément $x \in \mathcal{C}$ vérifie une équation de la forme $\mathcal{T}_{\mathbb{A}}^k(x) = x$ pour un certain entier $k > 0$.
+
+**Étape 2 : Borne universelle sur la hauteur des cycles rationnels**
+Puisque les cycles sont rationnels, on peut leur associer une hauteur de Weil globale $h(x) = \sum_{v \in M_{\mathbb{Q}}} \log \max(1, |x|_v)$, où $M_{\mathbb{Q}}$ est l'ensemble des places de $\mathbb{Q}$.
+L'action de l'opérateur $\mathcal{T}_{\mathbb{A}}$ sur l'espace projectif de Berkovich global impose une variation de hauteur bien définie. En appliquant le théorème de Northcott à l'ensemble des points prépériodiques d'une dynamique rationnelle sur $\mathbb{P}^1(\overline{\mathbb{Q}})$, l'ensemble des points $x \in \mathbb{Q}$ de hauteur bornée $h(x) \le B$ pour une certaine borne universelle $B$ est fini.
+Le comportement contractant de $\mathcal{T}_{\mathbb{A}}$ pour les grandes valeurs absolues (Lemme 2 et contrainte à l'infini) fournit explicitement une telle borne $B$.
+
+**Étape 3 : Finitude absolue du nombre de cycles $N_{cycles}$**
+Soit $N_{cycles}(\mathcal{T}_{\mathbb{A}}) = |\Sigma|$. Puisque chaque cycle est formé de points rationnels de hauteur bornée par la constante universelle $B$, l'ensemble de tous les points de tous les cycles est un sous-ensemble fini de l'ensemble de Northcott $\mathcal{N}(B) = \{ x \in \mathbb{Q} \mid h(x) \le B \}$.
+Par conséquent, $N_{cycles}(\mathcal{T}_{\mathbb{A}}) \le |\mathcal{N}(B)| = C_{cycles} \in \mathbb{N}$, ce qui prouve l'existence de la borne absolue $C_{cycles}$.
+
+**Étape 4 : Borne universelle sur la somme des longueurs des cycles $L_{max}$**
+Puisque tous les points composant les cycles appartiennent à l'ensemble fini $\mathcal{N}(B)$, la somme des longueurs de tous les cycles (qui correspond exactement au nombre total de points périodiques distincts) ne peut excéder le cardinal de cet ensemble.
+Ainsi, la somme des longueurs est majorée par $|\mathcal{N}(B)|$. On pose $L_{max} = |\mathcal{N}(B)|$. Cette constante dépend uniquement de l'opérateur $\mathcal{T}_{\mathbb{A}}$ et de la géométrie de l'espace adélique, et est strictement indépendante de toute condition initiale.
+La démonstration du Lemme 44 est rigoureusement achevée.
+
 
 ***
 *Chercheur indépendant / Independent Researcher

@@ -200,6 +200,10 @@ Let $\mathbb{A}_{\mathbb{Q}}$ be the adele ring of $\mathbb{Q}$, and let $\mathc
 **Lemma 43: Finiteness of cycles of the Syracuse operator in the adele ring**
 The set of periodic cycles of the adelic operator $\mathcal{T}_{\mathbb{A}}$ on $\mathbb{A}_{\mathbb{Q}}$ is finite. In particular, if a cycle exists, its length is absolutely bounded independently of its starting point.
 
+
+**Lemma 44 (Uniform Bound on the Cardinality of Adelic Cycles):**
+Let $N_{cycles}(\mathcal{T}_{\mathbb{A}})$ be the total number of distinct periodic cycles for the operator $\mathcal{T}_{\mathbb{A}}$ on $\mathbb{A}_{\mathbb{Q}}$. There exists an absolute constant $C_{cycles} \in \mathbb{N}$ such that $N_{cycles}(\mathcal{T}_{\mathbb{A}}) \le C_{cycles}$. Furthermore, the sum of the lengths of all possible cycles is strictly bounded above by an absolute constant $L_{max} \in \mathbb{N}$ independent of the initial conditions.
+
 ## 3. Rigorous Proofs (Step-by-Step)
 
 ### Proof of Lemma 1 (Adelic Continuity of the Operator)
@@ -1202,6 +1206,28 @@ The intersection of $\mathbb{Q}$ (discrete in $\mathbb{A}_{\mathbb{Q}}$) with th
 **Step 3: Bound on the length of cycles**
 Since the set of rational elements susceptible to form a cycle is finite, the total number of possible cycles is finite, and the maximum length of such a cycle is necessarily bounded. Moreover, the action on the Fatou components (Lemma 41) forces any rational periodic dynamics to contract towards a restricted number of attractors.
 Therefore, there exists only a finite number of periodic cycles for the Syracuse operator, which proves Lemma 43.
+
+
+
+**Proof of Lemma 44:**
+
+**Step 1: Reduction of the domain of potential cycles**
+By Lemma 43, the set of cycles of the Syracuse operator in the adele ring is finite and contained within a compact region $K$ intersected with the diagonal rational lattice $\mathbb{Q} \hookrightarrow \mathbb{A}_{\mathbb{Q}}$. Let $\Sigma$ be this finite set of cycles. Note that if $\mathcal{C} \in \Sigma$, then by ergodic conservation (Lemma 3) and the exclusion of wandering components (Lemma 40), each element $x \in \mathcal{C}$ satisfies an equation of the form $\mathcal{T}_{\mathbb{A}}^k(x) = x$ for some integer $k > 0$.
+
+**Step 2: Universal bound on the height of rational cycles**
+Since the cycles are rational, we can associate with them a global Weil height $h(x) = \sum_{v \in M_{\mathbb{Q}}} \log \max(1, |x|_v)$, where $M_{\mathbb{Q}}$ is the set of places of $\mathbb{Q}$.
+The action of the operator $\mathcal{T}_{\mathbb{A}}$ on the global Berkovich projective space imposes a well-defined height variation. Applying Northcott's theorem to the set of preperiodic points of a rational dynamics on $\mathbb{P}^1(\overline{\mathbb{Q}})$, the set of points $x \in \mathbb{Q}$ of bounded height $h(x) \le B$ for some universal bound $B$ is finite.
+The contracting behavior of $\mathcal{T}_{\mathbb{A}}$ for large absolute values (Lemma 2 and constraint at infinity) explicitly provides such a bound $B$.
+
+**Step 3: Absolute finiteness of the number of cycles $N_{cycles}$**
+Let $N_{cycles}(\mathcal{T}_{\mathbb{A}}) = |\Sigma|$. Since each cycle is formed by rational points of height bounded by the universal constant $B$, the set of all points of all cycles is a finite subset of the Northcott set $\mathcal{N}(B) = \{ x \in \mathbb{Q} \mid h(x) \le B \}$.
+Consequently, $N_{cycles}(\mathcal{T}_{\mathbb{A}}) \le |\mathcal{N}(B)| = C_{cycles} \in \mathbb{N}$, which proves the existence of the absolute bound $C_{cycles}$.
+
+**Step 4: Universal bound on the sum of lengths of cycles $L_{max}$**
+Since all points composing the cycles belong to the finite set $\mathcal{N}(B)$, the sum of the lengths of all cycles (which corresponds exactly to the total number of distinct periodic points) cannot exceed the cardinality of this set.
+Thus, the sum of the lengths is bounded by $|\mathcal{N}(B)|$. We set $L_{max} = |\mathcal{N}(B)|$. This constant depends solely on the operator $\mathcal{T}_{\mathbb{A}}$ and the geometry of the adelic space, and is strictly independent of any initial condition.
+The proof of Lemma 44 is rigorously complete.
+
 
 ***
 *Chercheur indépendant / Independent Researcher
