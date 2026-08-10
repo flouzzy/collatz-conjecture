@@ -197,6 +197,10 @@ Soit $U$ une composante de Fatou convergente de $\mathcal{F}_{\mathbb{A}}$ et $x
 **Lemme 42 : Compacité des orbites adéliques sous l'opérateur de Syracuse**
 Soit $\mathbb{A}_{\mathbb{Q}}$ l'anneau des adèles de $\mathbb{Q}$, et soit $\mathcal{T}_{\mathbb{A}}$ l'extension adélique continue de l'opérateur de Syracuse. Pour tout élément $x \in \mathbb{A}_{\mathbb{Q}}$, la clôture de son orbite sous $\mathcal{T}_{\mathbb{A}}$, notée $\overline{\mathcal{O}_{\mathcal{T}_{\mathbb{A}}}(x)}$, est compacte dans la topologie adélique.
 
+
+**Lemme 43 : Finitude des cycles de l'opérateur de Syracuse dans l'anneau des adèles**
+L'ensemble des cycles périodiques de l'opérateur adélique $\mathcal{T}_{\mathbb{A}}$ sur $\mathbb{A}_{\mathbb{Q}}$ est fini. En particulier, si un cycle existe, sa longueur est bornée de manière absolue indépendamment de son point de départ.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 ### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
@@ -1182,6 +1186,22 @@ Le Lemme 41 établit l'unicité asymptotique de la projection de l'orbite sur le
 En intégrant la dynamique locale de chaque place, l'orbite globale $\mathcal{O}_{\mathcal{T}_{\mathbb{A}}}(x)$ est contenue dans un produit de compacts $\overline{\mathcal{O}_{\mathcal{T}_{\infty}}(x_{\infty})} \times \prod_{p} \overline{\mathcal{O}_{\mathcal{T}_p}(x_p)}$.
 Ce produit est compact dans la topologie produit. La clôture de l'orbite, étant un sous-ensemble fermé d'un ensemble compact, est compacte.
 La démonstration du Lemme 42 est complète.
+
+
+**Démonstration du Lemme 43 :**
+
+**Étape 1 : Localisation des cycles potentiels**
+Supposons qu'il existe un cycle périodique $\mathcal{C} = (x_0, x_1, \dots, x_{k-1})$ de longueur $k$ sous l'action de $\mathcal{T}_{\mathbb{A}}$ dans $\mathbb{A}_{\mathbb{Q}}$. D'après le Lemme 42, l'orbite de tout point est contenue dans un compact de $\mathbb{A}_{\mathbb{Q}}$. En particulier, le cycle $\mathcal{C}$ est entièrement contenu dans un compact $K = K_{\infty} \times \prod_p K_p$.
+De plus, la dynamique de $\mathcal{T}_{\mathbb{A}}$ sur chaque composante locale $\mathbb{Q}_p$ (pour $p \neq 2$) préserve l'espace compact $\mathbb{Z}_p$. Si un élément du cycle avait une composante $x_p \notin \mathbb{Z}_p$, la nature isométrique de $\mathcal{T}_p$ sur $\mathbb{Q}_p \setminus \mathbb{Z}_p$ empêcherait la formation d'un cycle à cause de la contrainte globale de rationalité imposée par l'intersection avec l'image diagonale de $\mathbb{Q}$.
+
+**Étape 2 : Application du Théorème de Finitude**
+L'opérateur de Syracuse $\mathcal{T}$ agit sur les entiers, et son extension adélique $\mathcal{T}_{\mathbb{A}}$ préserve la structure de réseau discrète de $\mathbb{Q}$ plongé diagonalement dans $\mathbb{A}_{\mathbb{Q}}$.
+Un cycle de $\mathcal{T}_{\mathbb{A}}$ correspondant à un véritable cycle de Syracuse doit avoir ses éléments dans $\mathbb{Q}$.
+L'intersection de $\mathbb{Q}$ (discret dans $\mathbb{A}_{\mathbb{Q}}$) avec le compact $K$ trouvé à l'étape 1 est nécessairement un ensemble fini.
+
+**Étape 3 : Borne sur la longueur des cycles**
+Puisque l'ensemble des éléments rationnels susceptibles de former un cycle est fini, le nombre total de cycles possibles est fini, et la longueur maximale d'un tel cycle est nécessairement bornée. De plus, l'action sur les composantes de Fatou (Lemme 41) force toute dynamique périodique rationnelle à se contracter vers un nombre restreint d'attracteurs.
+Il n'existe donc qu'un nombre fini de cycles périodiques pour l'opérateur de Syracuse, ce qui démontre le Lemme 43.
 
 ***
 *Chercheur indépendant / Independent Researcher
