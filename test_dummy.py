@@ -16,6 +16,7 @@ def test_calculate_fibration_valid(n, expected):
     "10",
     True,
     False,
+    None,
 ])
 def test_calculate_fibration_type_error(invalid_input):
     with pytest.raises(TypeError, match="Input must be an integer"):
