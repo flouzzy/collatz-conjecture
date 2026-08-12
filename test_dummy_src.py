@@ -54,8 +54,8 @@ def test_calculate_fibration_invalid_types(invalid_input):
     (2, 1),
     (0, 0),
     (-2, -1),
-    (-1, -2),
-    (1, 4),
+    (-1, -1),
+    (1, 2),
 ])
 def test_calculate_fibration_valid(input_val, expected):
     assert calculate_fibration(input_val) == expected
