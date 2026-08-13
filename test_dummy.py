@@ -29,10 +29,10 @@ def test_calculate_fibration_value_error(exceeding_input):
     with pytest.raises(ValueError, match="Input exceeds maximum limit"):
         calculate_fibration(exceeding_input)
 
-@pytest.mark.parametrize("boundary_input", [
-    MAX_LIMIT,
-    -MAX_LIMIT,
+@pytest.mark.parametrize("boundary_input, expected", [
+    (MAX_LIMIT, 500000),
+    (-MAX_LIMIT, -500000),
 ])
-def test_calculate_fibration_boundary(boundary_input):
+def test_calculate_fibration_boundary(boundary_input, expected):
     # Boundary tests
-    calculate_fibration(boundary_input) # Should not raise
+    assert calculate_fibration(boundary_input) == expected
