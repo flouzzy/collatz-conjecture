@@ -15,7 +15,7 @@ def calculate_fibration(x: int) -> int:
     if abs(x) > MAX_LIMIT:
         raise ValueError("Input exceeds maximum limit")
 
-    if x % 2 == 0:
-        return x // 2
+    if (x & 1) == 0:
+        return x >> 1
     else:
         return 3 * x + 1
