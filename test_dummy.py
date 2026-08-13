@@ -7,6 +7,10 @@ from dummy_src import calculate_fibration, MAX_LIMIT
     (0, 0),
     (-4, -2),
     (-5, -14),
+    (1, 4),
+    (2, 1),
+    (-1, -2),
+    (-2, -1),
 ])
 def test_calculate_fibration_valid(n, expected):
     assert calculate_fibration(n) == expected
