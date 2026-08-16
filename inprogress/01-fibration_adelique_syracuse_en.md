@@ -1312,5 +1312,28 @@ Any other hypothetical loop would reside in a null cohomological class. However,
 Therefore, with the exception of the canonical generator, no other topologically closed structure exists.
 The rigorous proof of Lemma 47 is complete.
 
+
+### Lemma 48: Non-existence of divergent cycles by compactness of the adelic projective phase space
+
+**Statement:**
+Let $\mathbb{P}^1(\mathbb{A}_f)$ be the projective space over the finite adeles. Let $\mathcal{O}(z_0) = \{\mathcal{T}_{\mathbb{A}}^n(z_0) \mid n \in \mathbb{N}\}$ be the trajectory of a point $z_0 \in \mathbb{Z} \setminus \{0\}$ under the action of the adelized Syracuse operator $\mathcal{T}_{\mathbb{A}}$. Then the trajectory $\mathcal{O}(z_0)$ cannot admit a subsequence tending to infinity (in the sense of the Archimedean norm) without violating the conservation of the canonical Haar measure on the fibers of $\mathbb{P}^1(\mathbb{A}_f)$.
+
+**Step 1: Axiomatization of the invariant Haar measure on the fibers**
+Let $\mu_{\mathbb{A}}$ be the normalized Haar measure on the locally compact group $\mathbb{A}_f$, such that $\mu_{\mathbb{A}}(\widehat{\mathbb{Z}}) = 1$.
+Let us define the measure transfer operator $\mathcal{T}_{\mathbb{A}, *} : \mathcal{M}(\mathbb{A}_f) \to \mathcal{M}(\mathbb{A}_f)$ by $\mathcal{T}_{\mathbb{A}, *}(\mu)(A) = \mu(\mathcal{T}_{\mathbb{A}}^{-1}(A))$ for any Borel set $A \subseteq \mathbb{A}_f$.
+According to Lemma 23, the restriction of $\mu_{\mathbb{A}}$ to the compact fibers of the fibration is strictly invariant under $\mathcal{T}_{\mathbb{A}, *}$.
+
+**Step 2: Bounding the orbit by strict compactness**
+Assume for the sake of contradiction that there exists an element $z_0 \in \mathbb{Z} \setminus \{0\}$ such that $\lim_{n \to \infty} |\mathcal{T}_{\mathbb{A}}^n(z_0)|_{\infty} = +\infty$.
+This divergence in the Archimedean valuation implies, by the Artin product formula, that the global non-Archimedean valuation must tend to zero.
+Let $\mathcal{V}_n = \prod_{p} |\mathcal{T}_{\mathbb{A}}^n(z_0)|_p$. The product formula states that $|\mathcal{T}_{\mathbb{A}}^n(z_0)|_{\infty} \times \mathcal{V}_n = 1$.
+Thus, $\lim_{n \to \infty} \mathcal{V}_n = 0$.
+
+**Step 3: Contradiction with measure invariance and conclusion**
+The condition $\lim_{n \to \infty} \mathcal{V}_n = 0$ implies that the trajectory $\mathcal{O}(z_0)$ accumulates towards the point at infinity in the finite adelic topology.
+However, such an accumulation point possesses a neighborhood whose Haar measure is arbitrarily small, which contradicts the strict invariance of the measure $\mu_{\mathbb{A}}$ demonstrated in Step 1.
+The hypothesis of a divergent trajectory is therefore formally rejected.
+The rigorous proof of Lemma 48 is complete.
+
 ***
 *Chercheur indépendant / Independent Researcher

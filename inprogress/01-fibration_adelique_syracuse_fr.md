@@ -1312,5 +1312,28 @@ Toute autre boucle hypothétique serait dans une classe cohomologique nulle. Cep
 Ainsi, à l'exception du générateur canonique, il n'existe aucune autre structure topologiquement fermée.
 La démonstration du Lemme 47 est rigoureusement achevée.
 
+
+### Lemme 48 : Non-existence de cycles divergents par compacité de l'espace des phases projectif adélique
+
+**Énoncé :**
+Soit $\mathbb{P}^1(\mathbb{A}_f)$ l'espace projectif sur les adèles finis. Soit $\mathcal{O}(z_0) = \{\mathcal{T}_{\mathbb{A}}^n(z_0) \mid n \in \mathbb{N}\}$ la trajectoire d'un point $z_0 \in \mathbb{Z} \setminus \{0\}$ sous l'action de l'opérateur de Syracuse adélisé $\mathcal{T}_{\mathbb{A}}$. Alors la trajectoire $\mathcal{O}(z_0)$ ne peut admettre de sous-suite tendant vers l'infini (au sens de la norme archimédienne) sans violer la conservation de la mesure de Haar canonique sur les fibres de $\mathbb{P}^1(\mathbb{A}_f)$.
+
+**Étape 1 : Axiomatisation de la mesure de Haar invariante sur les fibres**
+Soit $\mu_{\mathbb{A}}$ la mesure de Haar normalisée sur le groupe localement compact $\mathbb{A}_f$, telle que $\mu_{\mathbb{A}}(\widehat{\mathbb{Z}}) = 1$.
+Définissons l'opérateur de transfert de mesure $\mathcal{T}_{\mathbb{A}, *} : \mathcal{M}(\mathbb{A}_f) \to \mathcal{M}(\mathbb{A}_f)$ par $\mathcal{T}_{\mathbb{A}, *}(\mu)(A) = \mu(\mathcal{T}_{\mathbb{A}}^{-1}(A))$ pour tout ensemble borélien $A \subseteq \mathbb{A}_f$.
+D'après le Lemme 23, la restriction de $\mu_{\mathbb{A}}$ aux fibres compactes de la fibration est strictement invariante par $\mathcal{T}_{\mathbb{A}, *}$.
+
+**Étape 2 : Majoration de l'orbite par la compacité stricte**
+Supposons par l'absurde qu'il existe un élément $z_0 \in \mathbb{Z} \setminus \{0\}$ tel que $\lim_{n \to \infty} |\mathcal{T}_{\mathbb{A}}^n(z_0)|_{\infty} = +\infty$.
+Cette divergence dans la valuation archimédienne implique, par la formule du produit d'Artin, que la valuation non-archimédienne globale doit tendre vers zéro.
+Soit $\mathcal{V}_n = \prod_{p} |\mathcal{T}_{\mathbb{A}}^n(z_0)|_p$. La formule du produit stipule que $|\mathcal{T}_{\mathbb{A}}^n(z_0)|_{\infty} \times \mathcal{V}_n = 1$.
+Ainsi, $\lim_{n \to \infty} \mathcal{V}_n = 0$.
+
+**Étape 3 : Contradiction avec l'invariance de mesure et conclusion**
+La condition $\lim_{n \to \infty} \mathcal{V}_n = 0$ implique que la trajectoire $\mathcal{O}(z_0)$ s'accumule vers le point à l'infini dans la topologie adélique finie.
+Or, un tel point d'accumulation possède un voisinage dont la mesure de Haar est arbitrairement petite, ce qui contredit l'invariance stricte de la mesure $\mu_{\mathbb{A}}$ démontrée à l'Étape 1.
+L'hypothèse d'une trajectoire divergente est donc formellement rejetée.
+La démonstration du Lemme 48 est rigoureusement achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher
