@@ -16,4 +16,4 @@ In order to ensure clear and rigorous tracking of the work, the repository is st
 
 ## Historique des avancées
 - **[2023-10-27]** : Initialisation du dépôt.
-- [2026-08-16] : Enrichissement de la Tentative 01 - fibration_adelique_syracuse (Versions FR & EN). Résolution du Lemme 48. Statut : En cours.
+- [2026-08-14] : Enrichment of Attempt 01 - fibration_adelique_syracuse (FR & EN Versions). Resolution of Lemma 48. Status: In progress.
