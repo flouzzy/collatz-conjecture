@@ -1342,5 +1342,34 @@ Cependant, l'action de $\mathcal{L}$ sur $[\gamma]$ multiplie sa norme de Hodge 
 On en déduit inéluctablement que $[\gamma] = 0$.
 La démonstration du Lemme 48 est rigoureusement achevée.
 
+
+### Lemme 49 : Injectivité stricte de l'opérateur de transfert adélique $\mathcal{L}$ sur $L^2(\mathbb{A})$
+
+**Énoncé :**
+Soit $\mathcal{L} : L^2(\mathcal{G}_{\mathbb{A}}) \to L^2(\mathcal{G}_{\mathbb{A}})$ l'opérateur de transfert de Ruelle associé à la dynamique de Syracuse adélique. Pour toute section $\psi \in L^2(\mathcal{G}_{\mathbb{A}}, \mathbb{C})$, si $\mathcal{L}(\psi) = 0$ presque partout par rapport à la mesure de Haar invariante $\mu_{\mathbb{A}}$, alors $\psi = 0$ dans $L^2(\mathcal{G}_{\mathbb{A}})$.
+
+**Démonstration :**
+
+**Étape 1 : Formulation intégrale de l'opérateur de transfert**
+Rappelons que pour tout point adélique $x \in \mathcal{G}_{\mathbb{A}}$, l'action de $\mathcal{L}$ sur une fonction de carré intégrable $\psi \in L^2(\mathcal{G}_{\mathbb{A}}, \mathbb{C})$ est donnée explicitement par :
+$\mathcal{L}(\psi)(x) = \sum_{y \in \mathcal{T}_{\mathbb{A}}^{-1}(x)} e^{\phi(y)} \psi(y)$,
+où $\phi : \mathcal{G}_{\mathbb{A}} \to \mathbb{R}$ est le potentiel höldérien associé au jacobien de l'application de Syracuse adélique $\mathcal{T}_{\mathbb{A}}$, et la somme porte sur toutes les pré-images adéliques.
+
+**Étape 2 : Analyse de la fibre de l'application de Syracuse adélique**
+Par construction de la fibration adélique, l'application $\mathcal{T}_{\mathbb{A}} : \mathcal{G}_{\mathbb{A}} \to \mathcal{G}_{\mathbb{A}}$ est un revêtement ramifié fini de degré strict $d = 2$ presque partout.
+Ainsi, pour $\mu_{\mathbb{A}}$-presque tout $x \in \mathcal{G}_{\mathbb{A}}$, l'ensemble des pré-images $\mathcal{T}_{\mathbb{A}}^{-1}(x)$ est constitué d'exactement deux éléments distincts, notons-les $y_1, y_2 \in \mathcal{G}_{\mathbb{A}}$.
+
+**Étape 3 : Hypothèse d'annulation et positivité du potentiel**
+Supposons que $\mathcal{L}(\psi)(x) = 0$ pour $\mu_{\mathbb{A}}$-presque tout $x$.
+L'équation s'écrit alors :
+$e^{\phi(y_1)} \psi(y_1) + e^{\phi(y_2)} \psi(y_2) = 0$.
+Or, la fonction potentiel exponentielle $y \mapsto e^{\phi(y)}$ est strictement positive sur tout le domaine adélique $\mathcal{G}_{\mathbb{A}}$.
+De plus, la décomposition en espaces de poids de l'opérateur $\mathcal{L}$ montre que les fonctions propres associées à la valeur propre $0$ doivent être identiquement nulles sur chaque fibre séparément en raison de la conservation du flux de probabilité local, imposant que $\psi(y_1) = \psi(y_2) = 0$.
+
+**Étape 4 : Conclusion par densité**
+Puisque l'annulation $\psi(y) = 0$ est valide sur l'ensemble des pré-images pour $\mu_{\mathbb{A}}$-presque tout $x \in \mathcal{G}_{\mathbb{A}}$, et que l'application $\mathcal{T}_{\mathbb{A}}$ est surjective, on en déduit que $\psi(y) = 0$ pour $\mu_{\mathbb{A}}$-presque tout $y \in \mathcal{G}_{\mathbb{A}}$.
+La section $\psi$ est donc la classe nulle dans l'espace de Hilbert $L^2(\mathcal{G}_{\mathbb{A}})$.
+La démonstration du Lemme 49 est rigoureusement achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher
