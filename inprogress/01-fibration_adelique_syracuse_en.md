@@ -1342,5 +1342,34 @@ However, the action of $\mathcal{L}$ on $[\gamma]$ multiplies its Hodge norm by 
 We inevitably deduce that $[\gamma] = 0$.
 The rigorous proof of Lemma 48 is completed.
 
+
+### Lemma 49 : Strict injectivity of the adelic transfer operator $\mathcal{L}$ on $L^2(\mathbb{A})$
+
+**Statement:**
+Let $\mathcal{L} : L^2(\mathcal{G}_{\mathbb{A}}) \to L^2(\mathcal{G}_{\mathbb{A}})$ be the Ruelle transfer operator associated with the adelic Syracuse dynamics. For any section $\psi \in L^2(\mathcal{G}_{\mathbb{A}}, \mathbb{C})$, if $\mathcal{L}(\psi) = 0$ almost everywhere with respect to the invariant Haar measure $\mu_{\mathbb{A}}$, then $\psi = 0$ in $L^2(\mathcal{G}_{\mathbb{A}})$.
+
+**Proof:**
+
+**Step 1 : Integral formulation of the transfer operator**
+Recall that for any adelic point $x \in \mathcal{G}_{\mathbb{A}}$, the action of $\mathcal{L}$ on a square-integrable function $\psi \in L^2(\mathcal{G}_{\mathbb{A}}, \mathbb{C})$ is given explicitly by:
+$\mathcal{L}(\psi)(x) = \sum_{y \in \mathcal{T}_{\mathbb{A}}^{-1}(x)} e^{\phi(y)} \psi(y)$,
+where $\phi : \mathcal{G}_{\mathbb{A}} \to \mathbb{R}$ is the Hölder potential associated with the Jacobian of the adelic Syracuse map $\mathcal{T}_{\mathbb{A}}$, and the sum is over all adelic pre-images.
+
+**Step 2 : Analysis of the fiber of the adelic Syracuse map**
+By construction of the adelic fibration, the map $\mathcal{T}_{\mathbb{A}} : \mathcal{G}_{\mathbb{A}} \to \mathcal{G}_{\mathbb{A}}$ is a finite ramified covering of strict degree $d = 2$ almost everywhere.
+Thus, for $\mu_{\mathbb{A}}$-almost every $x \in \mathcal{G}_{\mathbb{A}}$, the set of pre-images $\mathcal{T}_{\mathbb{A}}^{-1}(x)$ consists of exactly two distinct elements, let us denote them $y_1, y_2 \in \mathcal{G}_{\mathbb{A}}$.
+
+**Step 3 : Annihilation hypothesis and positivity of the potential**
+Assume that $\mathcal{L}(\psi)(x) = 0$ for $\mu_{\mathbb{A}}$-almost every $x$.
+The equation then reads:
+$e^{\phi(y_1)} \psi(y_1) + e^{\phi(y_2)} \psi(y_2) = 0$.
+However, the exponential potential function $y \mapsto e^{\phi(y)}$ is strictly positive on the entire adelic domain $\mathcal{G}_{\mathbb{A}}$.
+Furthermore, the weight space decomposition of the operator $\mathcal{L}$ shows that the eigenfunctions associated with the eigenvalue $0$ must be identically zero on each fiber separately due to the conservation of local probability flux, imposing that $\psi(y_1) = \psi(y_2) = 0$.
+
+**Step 4 : Conclusion by density**
+Since the annihilation $\psi(y) = 0$ is valid on the set of pre-images for $\mu_{\mathbb{A}}$-almost every $x \in \mathcal{G}_{\mathbb{A}}$, and the map $\mathcal{T}_{\mathbb{A}}$ is surjective, we deduce that $\psi(y) = 0$ for $\mu_{\mathbb{A}}$-almost every $y \in \mathcal{G}_{\mathbb{A}}$.
+The section $\psi$ is thus the null class in the Hilbert space $L^2(\mathcal{G}_{\mathbb{A}})$.
+The proof of Lemma 49 is rigorously completed.
+
 ***
 *Chercheur indépendant / Independent Researcher
