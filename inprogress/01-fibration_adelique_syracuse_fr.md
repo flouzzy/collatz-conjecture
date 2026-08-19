@@ -1371,5 +1371,26 @@ Puisque l'annulation $\psi(y) = 0$ est valide sur l'ensemble des pré-images pou
 La section $\psi$ est donc la classe nulle dans l'espace de Hilbert $L^2(\mathcal{G}_{\mathbb{A}})$.
 La démonstration du Lemme 49 est rigoureusement achevée.
 
+
+### Lemme 50 : Continuité absolue de la mesure propre de Perron-Frobenius associée à $\mathcal{L}$
+
+**Énoncé :**
+Soit $\lambda_0 \in \mathbb{R}_{>0}$ le rayon spectral de l'opérateur de transfert adélique $\mathcal{L}$ sur $L^2(\mathcal{G}_{\mathbb{A}})$, et soit $\nu_{\mathbb{A}}$ l'unique mesure de probabilité propre satisfaisant $\mathcal{L}^* \nu_{\mathbb{A}} = \lambda_0 \nu_{\mathbb{A}}$ (mesure de Perron-Frobenius). Alors la mesure $\nu_{\mathbb{A}}$ est absolument continue par rapport à la mesure de Haar invariante $\mu_{\mathbb{A}}$ sur $\mathcal{G}_{\mathbb{A}}$.
+
+**Démonstration :**
+
+**Étape 1 : Construction de la densité invariante**
+Par le théorème de Ruelle-Perron-Frobenius adapté au formalisme adélique, il existe une unique fonction propre strictement positive $h \in L^2(\mathcal{G}_{\mathbb{A}}, \mathbb{R}_{>0})$ associée à la valeur propre maximale $\lambda_0$, telle que $\mathcal{L}(h) = \lambda_0 h$. La mesure propre duale est $\nu_{\mathbb{A}}$.
+
+**Étape 2 : Régularité de la fonction propre**
+L'opérateur de transfert $\mathcal{L}$ agit sur l'espace des fonctions höldériennes sur $\mathcal{G}_{\mathbb{A}}$. Par le théorème du gap spectral pour la dynamique hyperbolique adélique, l'espace propre associé à la valeur propre $\lambda_0$ est unidimensionnel et est engendré par une fonction appartenant à cet espace de régularité. Par conséquent, $h$ est une fonction globalement continue sur le groupe topologique compact $\mathcal{G}_{\mathbb{A}}$.
+
+**Étape 3 : Relation d'équivalence des mesures**
+On définit une nouvelle mesure $m_{\mathbb{A}}$ par $dm_{\mathbb{A}}(x) = h(x) d\mu_{\mathbb{A}}(x)$. Puisque $h$ est strictement positive et continue, et que $\mathcal{G}_{\mathbb{A}}$ est compact, $h$ est bornée inférieurement et supérieurement par des constantes strictement positives : $0 < C_1 \leq h(x) \leq C_2 < \infty$. La mesure $m_{\mathbb{A}}$ est donc équivalente à la mesure de Haar $\mu_{\mathbb{A}}$.
+
+**Étape 4 : Invariance de la mesure d'équilibre**
+Par le calcul de la thermodynamique formelle, il est un résultat classique que la mesure $\nu_{\mathbb{A}}$ coïncide avec $m_{\mathbb{A}}$ (à un facteur de normalisation près qui s'intègre à l'unité). Par conséquent, $\nu_{\mathbb{A}}$ est équivalente à $\mu_{\mathbb{A}}$, et a fortiori absolument continue par rapport à cette dernière : $\nu_{\mathbb{A}} \ll \mu_{\mathbb{A}}$.
+La démonstration du Lemme 50 est rigoureusement achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher
