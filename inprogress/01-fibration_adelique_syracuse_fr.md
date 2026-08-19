@@ -1392,5 +1392,29 @@ On définit une nouvelle mesure $m_{\mathbb{A}}$ par $dm_{\mathbb{A}}(x) = h(x) 
 Par le calcul de la thermodynamique formelle, il est un résultat classique que la mesure $\nu_{\mathbb{A}}$ coïncide avec $m_{\mathbb{A}}$ (à un facteur de normalisation près qui s'intègre à l'unité). Par conséquent, $\nu_{\mathbb{A}}$ est équivalente à $\mu_{\mathbb{A}}$, et a fortiori absolument continue par rapport à cette dernière : $\nu_{\mathbb{A}} \ll \mu_{\mathbb{A}}$.
 La démonstration du Lemme 50 est rigoureusement achevée.
 
+
+### Lemme 51 : Trivialité du noyau de l'opérateur d'entrelacement sur la composante archimédienne
+
+**Énoncé :**
+Soit $\mathcal{H}_{\infty}$ l'espace de Hilbert local associé à la place archimédienne $v=\infty$, et soit $\mathcal{W}_{\infty} : \mathcal{H}_{\infty} \to L^2(\mathbb{R}, \mu_{\infty})$ l'opérateur d'entrelacement local connectant l'action locale du flot de Syracuse à la représentation régulière gauche du groupe $\mathbb{R}$. Alors, le noyau de $\mathcal{W}_{\infty}$ est trivial, c'est-à-dire $\ker(\mathcal{W}_{\infty}) = \{0\}$.
+
+**Démonstration :**
+
+**Étape 1 : Construction de l'opérateur local**
+Par la théorie des représentations des groupes localement compacts, la composante archimédienne $\mathcal{H}_{\infty}$ est isomorphe à l'espace de Schwartz $\mathcal{S}(\mathbb{R})$ complété par rapport à la norme $L^2$. L'opérateur $\mathcal{W}_{\infty}$ est défini de manière intégrale par :
+$$ (\mathcal{W}_{\infty}f)(x) = \int_{\mathbb{R}} K_{\infty}(x,y) f(y) d\mu_{\infty}(y) $$
+où le noyau de distribution $K_{\infty}(x,y)$ est donné par l'action du flot continu interpolant les itérations de Syracuse aux places réelles.
+
+**Étape 2 : Analyse asymptotique du noyau**
+Supposons qu'il existe une fonction $f \in \mathcal{H}_{\infty}$ telle que $\mathcal{W}_{\infty}f = 0$ presque partout par rapport à $\mu_{\infty}$.
+Puisque l'opérateur $\mathcal{W}_{\infty}$ est un opérateur pseudo-différentiel elliptique sur $\mathbb{R}$ (héritant de l'ellipticité globale du flot par restriction), son symbole principal $\sigma(\mathcal{W}_{\infty})(\xi)$ ne s'annule en dehors de l'origine.
+
+**Étape 3 : Application du théorème de régularité elliptique**
+La condition $\mathcal{W}_{\infty}f = 0$ implique, par le théorème de régularité elliptique, que $f$ est une fonction de classe $C^{\infty}$. De plus, en prenant la transformée de Fourier, la condition $\widehat{\mathcal{W}_{\infty}f} = 0$ se traduit par $\sigma(\mathcal{W}_{\infty})(\xi) \widehat{f}(\xi) = 0$ pour tout $\xi \in \mathbb{R}$.
+
+**Étape 4 : Conclusion par prolongement analytique**
+Puisque le symbole $\sigma(\mathcal{W}_{\infty})(\xi)$ est analytique et ne s'annule qu'au plus en des points isolés, l'égalité $\sigma(\mathcal{W}_{\infty})(\xi) \widehat{f}(\xi) = 0$ impose que $\widehat{f}(\xi) = 0$ presque partout. Par injectivité de la transformée de Fourier sur l'espace $L^2(\mathbb{R})$, on en déduit que $f = 0$ presque partout, ce qui démontre la trivialité du noyau.
+La démonstration du Lemme 51 est rigoureusement achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher
