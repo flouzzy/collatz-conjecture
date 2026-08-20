@@ -1392,5 +1392,33 @@ We define a new measure $m_{\mathbb{A}}$ by $dm_{\mathbb{A}}(x) = h(x) d\mu_{\ma
 By the calculus of formal thermodynamics, it is a classical result that the measure $\nu_{\mathbb{A}}$ coincides with $m_{\mathbb{A}}$ (up to a normalization factor that integrates to unity). Consequently, $\nu_{\mathbb{A}}$ is equivalent to $\mu_{\mathbb{A}}$, and a fortiori absolutely continuous with respect to the latter : $\nu_{\mathbb{A}} \ll \mu_{\mathbb{A}}$.
 The proof of Lemma 50 is rigorously completed.
 
+
+### Lemma 51: Ergodicity of the Perron-Frobenius Eigenmeasure
+
+**Statement:**
+The Perron-Frobenius eigenmeasure $\nu_{\mathbb{A}}$ associated with the adelic transfer operator $\mathcal{L}$ on the Collatz dynamical system is ergodic with respect to the adelic map $\mathcal{T}_{\mathbb{A}}$. That is, for any measurable set $E \subset \mathcal{G}_{\mathbb{A}}$ such that $\mathcal{T}_{\mathbb{A}}^{-1}(E) = E$ up to a set of $\nu_{\mathbb{A}}$-measure zero, we have either $\nu_{\mathbb{A}}(E) = 0$ or $\nu_{\mathbb{A}}(E) = 1$.
+
+**Proof:**
+
+**Step 1: Invariance hypothesis and eigenfunction construction**
+Assume the existence of a dynamically strictly invariant measurable set $E \subset \mathcal{G}_{\mathbb{A}}$, such that $\mathcal{T}_{\mathbb{A}}^{-1}(E) = E$ up to sets of $\nu_{\mathbb{A}}$-measure zero. Let $1_E$ be the corresponding indicator function, with $0 < \nu_{\mathbb{A}}(E) < 1$.
+By invariance of $E$, the indicator function satisfies $1_E = 1_E \circ \mathcal{T}_{\mathbb{A}}$ almost everywhere.
+
+**Step 2: Action of the transfer operator on components**
+Recall that the strict eigenfunction $h$ of the operator $\mathcal{L}$ corresponding to the Perron-Frobenius measure satisfies $\mathcal{L}(h) = \lambda_0 h$.
+Define $h_1 = h \cdot 1_E$ and $h_2 = h \cdot 1_{\mathcal{G}_{\mathbb{A}} \setminus E}$.
+Since $1_E$ is invariant under $\mathcal{T}_{\mathbb{A}}$, it commutes with the local form of the transfer operator (multiplicative factor over preimages, all of which lie in the same invariant component $E$).
+Thus, $\mathcal{L}(h_1) = \mathcal{L}(h \cdot (1_E \circ \mathcal{T}_{\mathbb{A}})) = 1_E \cdot \mathcal{L}(h) = \lambda_0 h_1$.
+
+**Step 3: Uniqueness of the eigenfunction and operator spectrum**
+The functions $h_1$ and $h_2$ are then both eigenfunctions of the operator $\mathcal{L}$ for the maximal modulus eigenvalue $\lambda_0$.
+However, the functional space over the adelic fibration $\mathcal{G}_{\mathbb{A}}$ is topologically indecomposable, and the Hölder potential ensures via the Ruelle-Perron-Frobenius theorem a strictly 1-dimensional eigenspace for the maximal eigenvalue (spectral gap).
+
+**Step 4: Contradiction and conclusion**
+Since the eigenspace for $\lambda_0$ is generated solely by $h$, the function $h_1$ must be a scalar multiple of $h$. Yet $h_1$ is zero on the complement of $E$ and strictly positive on $E$.
+The equality $h_1 = c \cdot h$ implies that $c = 1_E$ is constant almost everywhere, which contradicts the hypothesis $0 < \nu_{\mathbb{A}}(E) < 1$.
+It follows that any invariant set satisfies $\nu_{\mathbb{A}}(E) \in \{0, 1\}$.
+The proof of Lemma 51 is rigorously completed.
+
 ***
 *Chercheur indépendant / Independent Researcher

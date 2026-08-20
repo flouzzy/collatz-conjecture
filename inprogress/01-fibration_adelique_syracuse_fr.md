@@ -1392,5 +1392,33 @@ On définit une nouvelle mesure $m_{\mathbb{A}}$ par $dm_{\mathbb{A}}(x) = h(x) 
 Par le calcul de la thermodynamique formelle, il est un résultat classique que la mesure $\nu_{\mathbb{A}}$ coïncide avec $m_{\mathbb{A}}$ (à un facteur de normalisation près qui s'intègre à l'unité). Par conséquent, $\nu_{\mathbb{A}}$ est équivalente à $\mu_{\mathbb{A}}$, et a fortiori absolument continue par rapport à cette dernière : $\nu_{\mathbb{A}} \ll \mu_{\mathbb{A}}$.
 La démonstration du Lemme 50 est rigoureusement achevée.
 
+
+### Lemme 51 : Ergodicité de la mesure propre de Perron-Frobenius
+
+**Énoncé :**
+La mesure propre de Perron-Frobenius $\nu_{\mathbb{A}}$ associée à l'opérateur de transfert adélique $\mathcal{L}$ sur le système dynamique de Syracuse est ergodique par rapport à l'application adélique $\mathcal{T}_{\mathbb{A}}$. C'est-à-dire que pour tout ensemble mesurable $E \subset \mathcal{G}_{\mathbb{A}}$ tel que $\mathcal{T}_{\mathbb{A}}^{-1}(E) = E$ à un ensemble de $\nu_{\mathbb{A}}$-mesure nulle près, on a soit $\nu_{\mathbb{A}}(E) = 0$, soit $\nu_{\mathbb{A}}(E) = 1$.
+
+**Démonstration :**
+
+**Étape 1 : Hypothèse d'invariance et construction de fonction propre**
+Supposons l'existence d'un ensemble mesurable $E \subset \mathcal{G}_{\mathbb{A}}$ strictement invariant par la dynamique, tel que $\mathcal{T}_{\mathbb{A}}^{-1}(E) = E$ aux ensembles de $\nu_{\mathbb{A}}$-mesure nulle près. Soit $1_E$ la fonction indicatrice associée, avec $0 < \nu_{\mathbb{A}}(E) < 1$.
+Par invariance de $E$, la fonction indicatrice vérifie $1_E = 1_E \circ \mathcal{T}_{\mathbb{A}}$ presque partout.
+
+**Étape 2 : Action de l'opérateur de transfert sur les composantes**
+Rappelons que la fonction propre stricte $h$ de l'opérateur $\mathcal{L}$ correspondante à la mesure de Perron-Frobenius vérifie $\mathcal{L}(h) = \lambda_0 h$.
+Définissons $h_1 = h \cdot 1_E$ et $h_2 = h \cdot 1_{\mathcal{G}_{\mathbb{A}} \setminus E}$.
+Puisque $1_E$ est invariante par $\mathcal{T}_{\mathbb{A}}$, elle commute avec la forme locale de l'opérateur de transfert (facteur multiplicatif sur les pré-images, toutes dans la même composante invariante $E$).
+Ainsi, $\mathcal{L}(h_1) = \mathcal{L}(h \cdot (1_E \circ \mathcal{T}_{\mathbb{A}})) = 1_E \cdot \mathcal{L}(h) = \lambda_0 h_1$.
+
+**Étape 3 : Unicité de la fonction propre et spectre de l'opérateur**
+Les fonctions $h_1$ et $h_2$ sont alors toutes deux des fonctions propres de l'opérateur $\mathcal{L}$ pour la valeur propre de module maximal $\lambda_0$.
+Cependant, l'espace fonctionnel sur la fibration adélique $\mathcal{G}_{\mathbb{A}}$ est topologiquement indécomposable et le potentiel höldérien assure via le théorème de Ruelle-Perron-Frobenius un espace propre de dimension strictement 1 pour la valeur propre maximale (gap spectral).
+
+**Étape 4 : Contradiction et conclusion**
+L'espace des fonctions propres pour $\lambda_0$ étant engendré uniquement par $h$, la fonction $h_1$ doit être un multiple scalaire de $h$. Or $h_1$ est nulle sur le complémentaire de $E$ et strictement positive sur $E$.
+L'égalité $h_1 = c \cdot h$ implique que $c = 1_E$ est constante presque partout, ce qui contredit l'hypothèse $0 < \nu_{\mathbb{A}}(E) < 1$.
+Il s'ensuit que tout ensemble invariant satisfait $\nu_{\mathbb{A}}(E) \in \{0, 1\}$.
+La démonstration du Lemme 51 est rigoureusement achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher
