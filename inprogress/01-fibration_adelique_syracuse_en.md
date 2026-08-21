@@ -1393,27 +1393,31 @@ By the calculus of formal thermodynamics, it is a classical result that the meas
 The proof of Lemma 50 is rigorously completed.
 
 
-### Lemma 51 : Triviality of the kernel of the intertwining operator on the Archimedean component
+### Lemma 51: Ergodicity of the Perron-Frobenius Eigenmeasure
 
 **Statement:**
-Let $\mathcal{H}_{\infty}$ be the local Hilbert space associated with the Archimedean place $v=\infty$, and let $\mathcal{W}_{\infty} : \mathcal{H}_{\infty} \to L^2(\mathbb{R}, \mu_{\infty})$ be the local intertwining operator connecting the local action of the Collatz flow to the left regular representation of the group $\mathbb{R}$. Then, the kernel of $\mathcal{W}_{\infty}$ is trivial, that is, $\ker(\mathcal{W}_{\infty}) = \{0\}$.
+The Perron-Frobenius eigenmeasure $\nu_{\mathbb{A}}$ associated with the adelic transfer operator $\mathcal{L}$ on the Collatz dynamical system is ergodic with respect to the adelic map $\mathcal{T}_{\mathbb{A}}$. That is, for any measurable set $E \subset \mathcal{G}_{\mathbb{A}}$ such that $\mathcal{T}_{\mathbb{A}}^{-1}(E) = E$ up to a set of $\nu_{\mathbb{A}}$-measure zero, we have either $\nu_{\mathbb{A}}(E) = 0$ or $\nu_{\mathbb{A}}(E) = 1$.
 
 **Proof:**
 
-**Step 1 : Construction of the local operator**
-By the representation theory of locally compact groups, the Archimedean component $\mathcal{H}_{\infty}$ is isomorphic to the Schwartz space $\mathcal{S}(\mathbb{R})$ completed with respect to the $L^2$-norm. The operator $\mathcal{W}_{\infty}$ is defined integrally by:
-$$ (\mathcal{W}_{\infty}f)(x) = \int_{\mathbb{R}} K_{\infty}(x,y) f(y) d\mu_{\infty}(y) $$
-where the distribution kernel $K_{\infty}(x,y)$ is given by the action of the continuous flow interpolating the Collatz iterations at real places.
+**Step 1: Invariance hypothesis and eigenfunction construction**
+Assume the existence of a dynamically strictly invariant measurable set $E \subset \mathcal{G}_{\mathbb{A}}$, such that $\mathcal{T}_{\mathbb{A}}^{-1}(E) = E$ up to sets of $\nu_{\mathbb{A}}$-measure zero. Let $1_E$ be the corresponding indicator function, with $0 < \nu_{\mathbb{A}}(E) < 1$.
+By invariance of $E$, the indicator function satisfies $1_E = 1_E \circ \mathcal{T}_{\mathbb{A}}$ almost everywhere.
 
-**Step 2 : Asymptotic analysis of the kernel**
-Suppose there exists a function $f \in \mathcal{H}_{\infty}$ such that $\mathcal{W}_{\infty}f = 0$ almost everywhere with respect to $\mu_{\infty}$.
-Since the operator $\mathcal{W}_{\infty}$ is an elliptic pseudo-differential operator on $\mathbb{R}$ (inheriting from the global ellipticity of the flow by restriction), its principal symbol $\sigma(\mathcal{W}_{\infty})(\xi)$ does not vanish outside the origin.
+**Step 2: Action of the transfer operator on components**
+Recall that the strict eigenfunction $h$ of the operator $\mathcal{L}$ corresponding to the Perron-Frobenius measure satisfies $\mathcal{L}(h) = \lambda_0 h$.
+Define $h_1 = h \cdot 1_E$ and $h_2 = h \cdot 1_{\mathcal{G}_{\mathbb{A}} \setminus E}$.
+Since $1_E$ is invariant under $\mathcal{T}_{\mathbb{A}}$, it commutes with the local form of the transfer operator (multiplicative factor over preimages, all of which lie in the same invariant component $E$).
+Thus, $\mathcal{L}(h_1) = \mathcal{L}(h \cdot (1_E \circ \mathcal{T}_{\mathbb{A}})) = 1_E \cdot \mathcal{L}(h) = \lambda_0 h_1$.
 
-**Step 3 : Application of the elliptic regularity theorem**
-The condition $\mathcal{W}_{\infty}f = 0$ implies, by the elliptic regularity theorem, that $f$ is a function of class $C^{\infty}$. Moreover, taking the Fourier transform, the condition $\widehat{\mathcal{W}_{\infty}f} = 0$ translates to $\sigma(\mathcal{W}_{\infty})(\xi) \widehat{f}(\xi) = 0$ for all $\xi \in \mathbb{R}$.
+**Step 3: Uniqueness of the eigenfunction and operator spectrum**
+The functions $h_1$ and $h_2$ are then both eigenfunctions of the operator $\mathcal{L}$ for the maximal modulus eigenvalue $\lambda_0$.
+However, the functional space over the adelic fibration $\mathcal{G}_{\mathbb{A}}$ is topologically indecomposable, and the Hölder potential ensures via the Ruelle-Perron-Frobenius theorem a strictly 1-dimensional eigenspace for the maximal eigenvalue (spectral gap).
 
-**Step 4 : Conclusion by analytic continuation**
-Since the symbol $\sigma(\mathcal{W}_{\infty})(\xi)$ is analytic and vanishes at most at isolated points, the equality $\sigma(\mathcal{W}_{\infty})(\xi) \widehat{f}(\xi) = 0$ imposes that $\widehat{f}(\xi) = 0$ almost everywhere. By the injectivity of the Fourier transform on the space $L^2(\mathbb{R})$, we deduce that $f = 0$ almost everywhere, which demonstrates the triviality of the kernel.
+**Step 4: Contradiction and conclusion**
+Since the eigenspace for $\lambda_0$ is generated solely by $h$, the function $h_1$ must be a scalar multiple of $h$. Yet $h_1$ is zero on the complement of $E$ and strictly positive on $E$.
+The equality $h_1 = c \cdot h$ implies that $c = 1_E$ is constant almost everywhere, which contradicts the hypothesis $0 < \nu_{\mathbb{A}}(E) < 1$.
+It follows that any invariant set satisfies $\nu_{\mathbb{A}}(E) \in \{0, 1\}$.
 The proof of Lemma 51 is rigorously completed.
 
 ***

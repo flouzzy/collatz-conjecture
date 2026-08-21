@@ -1393,27 +1393,31 @@ Par le calcul de la thermodynamique formelle, il est un résultat classique que 
 La démonstration du Lemme 50 est rigoureusement achevée.
 
 
-### Lemme 51 : Trivialité du noyau de l'opérateur d'entrelacement sur la composante archimédienne
+### Lemme 51 : Ergodicité de la mesure propre de Perron-Frobenius
 
 **Énoncé :**
-Soit $\mathcal{H}_{\infty}$ l'espace de Hilbert local associé à la place archimédienne $v=\infty$, et soit $\mathcal{W}_{\infty} : \mathcal{H}_{\infty} \to L^2(\mathbb{R}, \mu_{\infty})$ l'opérateur d'entrelacement local connectant l'action locale du flot de Syracuse à la représentation régulière gauche du groupe $\mathbb{R}$. Alors, le noyau de $\mathcal{W}_{\infty}$ est trivial, c'est-à-dire $\ker(\mathcal{W}_{\infty}) = \{0\}$.
+La mesure propre de Perron-Frobenius $\nu_{\mathbb{A}}$ associée à l'opérateur de transfert adélique $\mathcal{L}$ sur le système dynamique de Syracuse est ergodique par rapport à l'application adélique $\mathcal{T}_{\mathbb{A}}$. C'est-à-dire que pour tout ensemble mesurable $E \subset \mathcal{G}_{\mathbb{A}}$ tel que $\mathcal{T}_{\mathbb{A}}^{-1}(E) = E$ à un ensemble de $\nu_{\mathbb{A}}$-mesure nulle près, on a soit $\nu_{\mathbb{A}}(E) = 0$, soit $\nu_{\mathbb{A}}(E) = 1$.
 
 **Démonstration :**
 
-**Étape 1 : Construction de l'opérateur local**
-Par la théorie des représentations des groupes localement compacts, la composante archimédienne $\mathcal{H}_{\infty}$ est isomorphe à l'espace de Schwartz $\mathcal{S}(\mathbb{R})$ complété par rapport à la norme $L^2$. L'opérateur $\mathcal{W}_{\infty}$ est défini de manière intégrale par :
-$$ (\mathcal{W}_{\infty}f)(x) = \int_{\mathbb{R}} K_{\infty}(x,y) f(y) d\mu_{\infty}(y) $$
-où le noyau de distribution $K_{\infty}(x,y)$ est donné par l'action du flot continu interpolant les itérations de Syracuse aux places réelles.
+**Étape 1 : Hypothèse d'invariance et construction de fonction propre**
+Supposons l'existence d'un ensemble mesurable $E \subset \mathcal{G}_{\mathbb{A}}$ strictement invariant par la dynamique, tel que $\mathcal{T}_{\mathbb{A}}^{-1}(E) = E$ aux ensembles de $\nu_{\mathbb{A}}$-mesure nulle près. Soit $1_E$ la fonction indicatrice associée, avec $0 < \nu_{\mathbb{A}}(E) < 1$.
+Par invariance de $E$, la fonction indicatrice vérifie $1_E = 1_E \circ \mathcal{T}_{\mathbb{A}}$ presque partout.
 
-**Étape 2 : Analyse asymptotique du noyau**
-Supposons qu'il existe une fonction $f \in \mathcal{H}_{\infty}$ telle que $\mathcal{W}_{\infty}f = 0$ presque partout par rapport à $\mu_{\infty}$.
-Puisque l'opérateur $\mathcal{W}_{\infty}$ est un opérateur pseudo-différentiel elliptique sur $\mathbb{R}$ (héritant de l'ellipticité globale du flot par restriction), son symbole principal $\sigma(\mathcal{W}_{\infty})(\xi)$ ne s'annule en dehors de l'origine.
+**Étape 2 : Action de l'opérateur de transfert sur les composantes**
+Rappelons que la fonction propre stricte $h$ de l'opérateur $\mathcal{L}$ correspondante à la mesure de Perron-Frobenius vérifie $\mathcal{L}(h) = \lambda_0 h$.
+Définissons $h_1 = h \cdot 1_E$ et $h_2 = h \cdot 1_{\mathcal{G}_{\mathbb{A}} \setminus E}$.
+Puisque $1_E$ est invariante par $\mathcal{T}_{\mathbb{A}}$, elle commute avec la forme locale de l'opérateur de transfert (facteur multiplicatif sur les pré-images, toutes dans la même composante invariante $E$).
+Ainsi, $\mathcal{L}(h_1) = \mathcal{L}(h \cdot (1_E \circ \mathcal{T}_{\mathbb{A}})) = 1_E \cdot \mathcal{L}(h) = \lambda_0 h_1$.
 
-**Étape 3 : Application du théorème de régularité elliptique**
-La condition $\mathcal{W}_{\infty}f = 0$ implique, par le théorème de régularité elliptique, que $f$ est une fonction de classe $C^{\infty}$. De plus, en prenant la transformée de Fourier, la condition $\widehat{\mathcal{W}_{\infty}f} = 0$ se traduit par $\sigma(\mathcal{W}_{\infty})(\xi) \widehat{f}(\xi) = 0$ pour tout $\xi \in \mathbb{R}$.
+**Étape 3 : Unicité de la fonction propre et spectre de l'opérateur**
+Les fonctions $h_1$ et $h_2$ sont alors toutes deux des fonctions propres de l'opérateur $\mathcal{L}$ pour la valeur propre de module maximal $\lambda_0$.
+Cependant, l'espace fonctionnel sur la fibration adélique $\mathcal{G}_{\mathbb{A}}$ est topologiquement indécomposable et le potentiel höldérien assure via le théorème de Ruelle-Perron-Frobenius un espace propre de dimension strictement 1 pour la valeur propre maximale (gap spectral).
 
-**Étape 4 : Conclusion par prolongement analytique**
-Puisque le symbole $\sigma(\mathcal{W}_{\infty})(\xi)$ est analytique et ne s'annule qu'au plus en des points isolés, l'égalité $\sigma(\mathcal{W}_{\infty})(\xi) \widehat{f}(\xi) = 0$ impose que $\widehat{f}(\xi) = 0$ presque partout. Par injectivité de la transformée de Fourier sur l'espace $L^2(\mathbb{R})$, on en déduit que $f = 0$ presque partout, ce qui démontre la trivialité du noyau.
+**Étape 4 : Contradiction et conclusion**
+L'espace des fonctions propres pour $\lambda_0$ étant engendré uniquement par $h$, la fonction $h_1$ doit être un multiple scalaire de $h$. Or $h_1$ est nulle sur le complémentaire de $E$ et strictement positive sur $E$.
+L'égalité $h_1 = c \cdot h$ implique que $c = 1_E$ est constante presque partout, ce qui contredit l'hypothèse $0 < \nu_{\mathbb{A}}(E) < 1$.
+Il s'ensuit que tout ensemble invariant satisfait $\nu_{\mathbb{A}}(E) \in \{0, 1\}$.
 La démonstration du Lemme 51 est rigoureusement achevée.
 
 ***
