@@ -1420,5 +1420,27 @@ The equality $h_1 = c \cdot h$ implies that $c = 1_E$ is constant almost everywh
 It follows that any invariant set satisfies $\nu_{\mathbb{A}}(E) \in \{0, 1\}$.
 The proof of Lemma 51 is rigorously completed.
 
+
+**Lemma 52 (Invariance by restriction of adelic domain) :**
+Let $E \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ be a measurable set that is invariantly stable under the operator $\mathcal{T}_{\mathbb{A}}$, such that $\mathcal{T}_{\mathbb{A}}(E) \subset E$.
+Then, any subalgebra $\mathcal{H}_E$ of measurable functions supported on $E$ is stable under the action of the transfer operator $\mathcal{L}$.
+
+**Proof:**
+**Step 1 : Definition of the restricted algebra**
+Let $\mathcal{H}_E$ be the space of measurable functions $f : \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \to \mathbb{R}$ such that $f(x) = 0$ for almost every $x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus E$.
+For any $f \in \mathcal{H}_E$, the transfer operator $\mathcal{L}$ acts as:
+$$ \mathcal{L}(f)(x) = \sum_{y \in \mathcal{T}_{\mathbb{A}}^{-1}(x)} \exp(\phi(y)) f(y) $$
+where $\phi$ is the potential of the operator.
+
+**Step 2 : Evaluation on the complement**
+For $x \notin E$, if $y \in \mathcal{T}_{\mathbb{A}}^{-1}(x)$, then $\mathcal{T}_{\mathbb{A}}(y) = x \notin E$.
+Since $\mathcal{T}_{\mathbb{A}}(E) \subset E$, this implies that $y \notin E$.
+Since $f \in \mathcal{H}_E$, it follows that $f(y) = 0$ for almost every such $y$.
+
+**Step 3 : Conclusion on the image by the operator**
+Thus, for almost every $x \notin E$, the sum over the pre-images only contains zero terms.
+Therefore, $\mathcal{L}(f)(x) = 0$ almost everywhere on $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus E$.
+This proves that $\mathcal{L}(f) \in \mathcal{H}_E$, which concludes the proof.
+
 ***
 *Chercheur indépendant / Independent Researcher

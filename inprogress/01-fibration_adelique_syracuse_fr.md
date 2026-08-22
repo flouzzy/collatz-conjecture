@@ -1420,5 +1420,27 @@ L'égalité $h_1 = c \cdot h$ implique que $c = 1_E$ est constante presque parto
 Il s'ensuit que tout ensemble invariant satisfait $\nu_{\mathbb{A}}(E) \in \{0, 1\}$.
 La démonstration du Lemme 51 est rigoureusement achevée.
 
+
+**Lemme 52 (Invariance par restriction de domaine adélique) :**
+Soit $E \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ un ensemble mesurable et invariablement stable sous l'opérateur $\mathcal{T}_{\mathbb{A}}$, tel que $\mathcal{T}_{\mathbb{A}}(E) \subset E$.
+Alors, toute sous-algèbre $\mathcal{H}_E$ de fonctions mesurables supportées sur $E$ est stable par l'action de l'opérateur de transfert $\mathcal{L}$.
+
+**Démonstration :**
+**Étape 1 : Définition de l'algèbre restreinte**
+Soit $\mathcal{H}_E$ l'espace des fonctions $f : \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \to \mathbb{R}$ mesurables telles que $f(x) = 0$ pour presque tout $x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus E$.
+Pour toute $f \in \mathcal{H}_E$, l'opérateur de transfert $\mathcal{L}$ agit selon :
+$$ \mathcal{L}(f)(x) = \sum_{y \in \mathcal{T}_{\mathbb{A}}^{-1}(x)} \exp(\phi(y)) f(y) $$
+où $\phi$ est le potentiel de l'opérateur.
+
+**Étape 2 : Évaluation sur le complémentaire**
+Pour $x \notin E$, si $y \in \mathcal{T}_{\mathbb{A}}^{-1}(x)$, alors $\mathcal{T}_{\mathbb{A}}(y) = x \notin E$.
+Comme $\mathcal{T}_{\mathbb{A}}(E) \subset E$, cela implique que $y \notin E$.
+Puisque $f \in \mathcal{H}_E$, il s'ensuit que $f(y) = 0$ pour presque tout tel $y$.
+
+**Étape 3 : Conclusion sur l'image par l'opérateur**
+Ainsi, pour presque tout $x \notin E$, la somme sur les pré-images ne comporte que des termes nuls.
+Par conséquent, $\mathcal{L}(f)(x) = 0$ presque partout sur $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus E$.
+Ceci prouve que $\mathcal{L}(f) \in \mathcal{H}_E$, ce qui conclut la démonstration.
+
 ***
 *Chercheur indépendant / Independent Researcher
