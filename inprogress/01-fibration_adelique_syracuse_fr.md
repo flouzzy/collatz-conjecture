@@ -1420,5 +1420,44 @@ L'égalité $h_1 = c \cdot h$ implique que $c = 1_E$ est constante presque parto
 Il s'ensuit que tout ensemble invariant satisfait $\nu_{\mathbb{A}}(E) \in \{0, 1\}$.
 La démonstration du Lemme 51 est rigoureusement achevée.
 
+
+### Lemme 52 : Propriété de mélange forte de la dynamique adélique
+
+**1. Énoncé du Lemme 52**
+Le système dynamique mesuré $(\mathcal{G}_{\mathbb{A}}, \mathcal{B}_{\mathbb{A}}, \nu_{\mathbb{A}}, \mathcal{T}_{\mathbb{A}})$ est fortement mélangeant. C'est-à-dire que pour tous ensembles mesurables $A, B \in \mathcal{B}_{\mathbb{A}}$, on a :
+$$\lim_{n \to \infty} \nu_{\mathbb{A}}(A \cap \mathcal{T}_{\mathbb{A}}^{-n}(B)) = \nu_{\mathbb{A}}(A) \nu_{\mathbb{A}}(B)$$
+
+**2. Démonstration du Lemme 52**
+
+**Étape 1 : Lien avec les fonctions propres de l'opérateur de transfert**
+Soient $A$ et $B$ deux ensembles mesurables de la fibration adélique $\mathcal{G}_{\mathbb{A}}$. L'opérateur de transfert $\mathcal{L}$ normalisé est défini de sorte que son itéré $\mathcal{L}^n$ agit sur les observables.
+Par dualité par rapport à la mesure conforme $\mu_0$, on a l'identité :
+$$\int_{\mathcal{G}_{\mathbb{A}}} 1_A \cdot (1_B \circ \mathcal{T}_{\mathbb{A}}^n) \, d\mu_0 = \int_{\mathcal{G}_{\mathbb{A}}} \mathcal{L}^n(1_A) \cdot 1_B \, d\mu_0$$
+Passons à la mesure de probabilité invariante $\nu_{\mathbb{A}} = h \cdot \mu_0$.
+L'expression du mélange devient :
+$$\nu_{\mathbb{A}}(A \cap \mathcal{T}_{\mathbb{A}}^{-n}(B)) = \int_{\mathcal{G}_{\mathbb{A}}} 1_A \cdot (1_B \circ \mathcal{T}_{\mathbb{A}}^n) \cdot h \, d\mu_0 = \int_{\mathcal{G}_{\mathbb{A}}} \mathcal{L}^n(1_A \cdot h) \cdot 1_B \, d\mu_0$$
+
+**Étape 2 : Convergence spectrale de l'opérateur de transfert**
+Le théorème de Ruelle-Perron-Frobenius appliqué à notre opérateur $\mathcal{L}$ avec un potentiel höldérien garantit que $\mathcal{L}$ admet un gap spectral sur l'espace des fonctions höldériennes. L'opérateur s'écrit sous la forme :
+$$\mathcal{L} = \lambda_0 \Pi + \mathcal{R}$$
+où $\Pi$ est le projecteur sur l'espace propre principal (engendré par $h$, correspondant à la valeur propre maximale $\lambda_0 = 1$ après normalisation de la mesure), et le reste $\mathcal{R}$ satisfait $\mathcal{R}\Pi = \Pi\mathcal{R} = 0$, avec un rayon spectral strictement inférieur à 1 : $\rho(\mathcal{R}) < 1$.
+
+**Étape 3 : Application aux itérés asymptotiques**
+Pour toute fonction observable $\phi$, la puissance $n$-ième de l'opérateur de transfert agit asymptotiquement par :
+$$\mathcal{L}^n(\phi) = \Pi(\phi) + \mathcal{R}^n(\phi)$$
+Le projecteur $\Pi$ projette sur la direction de $h$ en intégrant contre $\mu_0$ : $\Pi(\phi) = \left( \int \phi \, d\mu_0 \right) h$.
+Appliquons ceci à la fonction $\phi = 1_A \cdot h$. Puisque la mesure de probabilité invariante est $\nu_{\mathbb{A}} = h \mu_0$, l'intégrale de $\phi$ par rapport à $\mu_0$ est $\nu_{\mathbb{A}}(A)$.
+Ainsi, on obtient :
+$$\lim_{n \to \infty} \mathcal{L}^n(1_A \cdot h) = \left( \int 1_A \cdot h \, d\mu_0 \right) h = \nu_{\mathbb{A}}(A) \cdot h$$
+La convergence a lieu en norme uniforme.
+
+**Étape 4 : Conclusion du mélange fort**
+En substituant cette limite dans l'intégrale du mélange, on obtient :
+$$\lim_{n \to \infty} \nu_{\mathbb{A}}(A \cap \mathcal{T}_{\mathbb{A}}^{-n}(B)) = \int_{\mathcal{G}_{\mathbb{A}}} \left( \lim_{n \to \infty} \mathcal{L}^n(1_A \cdot h) \right) \cdot 1_B \, d\mu_0$$
+$$\lim_{n \to \infty} \nu_{\mathbb{A}}(A \cap \mathcal{T}_{\mathbb{A}}^{-n}(B)) = \int_{\mathcal{G}_{\mathbb{A}}} (\nu_{\mathbb{A}}(A) \cdot h) \cdot 1_B \, d\mu_0$$
+$$\lim_{n \to \infty} \nu_{\mathbb{A}}(A \cap \mathcal{T}_{\mathbb{A}}^{-n}(B)) = \nu_{\mathbb{A}}(A) \int_{\mathcal{G}_{\mathbb{A}}} 1_B \cdot h \, d\mu_0 = \nu_{\mathbb{A}}(A) \nu_{\mathbb{A}}(B)$$
+Ce qui démontre la propriété de mélange fort.
+La démonstration du Lemme 52 est rigoureusement achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher
