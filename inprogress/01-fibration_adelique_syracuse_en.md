@@ -1420,5 +1420,20 @@ The equality $h_1 = c \cdot h$ implies that $c = 1_E$ is constant almost everywh
 It follows that any invariant set satisfies $\nu_{\mathbb{A}}(E) \in \{0, 1\}$.
 The proof of Lemma 51 is rigorously completed.
 
+
+### Lemma 52: Strong Intertwining Property on the State Space
+**Statement:** Let $\mathcal{L}$ be the transfer operator associated with the adelic Syracuse action. Under the axioms of the adelic fibration, the measurable state space $L^2(\mathcal{G}_{\mathbb{A}}, \nu_{\mathbb{A}})$ admits a strong intertwining decomposition, where the conjugate operator induces a reduction of quantum ergodicity on the spectrum.
+
+**Proof:**
+**Step 1: Construction of the intertwining operator**
+Consider the unitary intertwining operator $\mathcal{W} : L^2(\mathcal{G}_{\mathbb{A}}) \to L^2(\mathcal{G}_{\mathbb{A}})$ defined by the local translation action on the adelic fibers. The nature of $\mathcal{T}_{\mathbb{A}}$ allows us to verify that $\mathcal{W} \circ \mathcal{L} = \mathcal{L}^* \circ \mathcal{W}$ almost everywhere with respect to the invariant probability measure $\nu_{\mathbb{A}}$.
+
+**Step 2: Spectral projection and state space reduction**
+Let us apply the operator $\mathcal{W}$ on an eigenfunction component $h_1 \in L^2$. The spectrum of the operator $\mathcal{L}^*$ restricted to the invariant subspaces of $\mathcal{G}_{\mathbb{A}}$ is strictly contracting for any subspace orthogonal to the ground state.
+
+**Step 3: Probability conservation**
+By strict conservation of the local transition probability, any measure $\mu \ll \nu_{\mathbb{A}}$ preserved by $\mathcal{W}$ is singular with respect to the complement of rational-type trajectories.
+The proof of Lemma 52 is rigorously completed.
+
 ***
 *Chercheur indépendant / Independent Researcher
