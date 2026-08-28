@@ -1,10 +1,8 @@
-# Syracuse / Collatz Conjecture
+*Read this in other languages: [Français](README.fr.md)*
 
-[![Lean 4 Verified](https://img.shields.io/badge/Lean_4-100%25_Verified-10b981?style=flat-square&logo=lean)](https://github.com/flouzzy/collatz-conjecture/actions)
-[![Live Platform](https://img.shields.io/badge/Interactive_Platform-maths--proofs.pages.dev-emerald?style=flat-square)](https://maths-proofs.pages.dev)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+# Syracuse Conjecture Proof Project
 
-This repository documents the deterministic dynamical study of the accelerated $3x+1$ Syracuse operator:
+## Objective
 
 Demonstrate the Syracuse Conjecture (Collatz) by introducing new mathematical structures and applying absolute formal rigor.
 
