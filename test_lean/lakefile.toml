@@ -1,0 +1,10 @@
+name = "collatz_lean_pkg"
+version = "0.1.0"
+defaultTargets = ["collatz_lean_pkg"]
+
+[[lean_lib]]
+name = "CollatzLeanPkg"
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
