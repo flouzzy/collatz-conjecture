@@ -1421,34 +1421,26 @@ Il s'ensuit que tout ensemble invariant satisfait $\nu_{\mathbb{A}}(E) \in \{0, 
 La démonstration du Lemme 51 est rigoureusement achevée.
 
 
-### Lemme 52 : Trivialité du noyau de l'opérateur de cobord sur le fibré adélique
-
-**Énoncé :**
-Soit $\mathcal{G}_{\mathbb{A}}$ le groupoïde adélique associé au système de Syracuse et $\mathcal{L}$ l'opérateur de transfert. Pour toute fonction mesurable $f : \mathcal{G}_{\mathbb{A}} \to \mathbb{R}$ admettant un moment d'ordre deux fini par rapport à la mesure de Perron-Frobenius $\nu_{\mathbb{A}}$, si $f \circ \mathcal{T}_{\mathbb{A}} - f = 0$ $\nu_{\mathbb{A}}$-presque partout, alors $f$ est $\nu_{\mathbb{A}}$-presque partout égale à une constante.
+**Lemme 52 (Invariance par restriction de domaine adélique) :**
+Soit $E \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ un ensemble mesurable et invariablement stable sous l'opérateur $\mathcal{T}_{\mathbb{A}}$, tel que $\mathcal{T}_{\mathbb{A}}(E) \subset E$.
+Alors, toute sous-algèbre $\mathcal{H}_E$ de fonctions mesurables supportées sur $E$ est stable par l'action de l'opérateur de transfert $\mathcal{L}$.
 
 **Démonstration :**
+**Étape 1 : Définition de l'algèbre restreinte**
+Soit $\mathcal{H}_E$ l'espace des fonctions $f : \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \to \mathbb{R}$ mesurables telles que $f(x) = 0$ pour presque tout $x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus E$.
+Pour toute $f \in \mathcal{H}_E$, l'opérateur de transfert $\mathcal{L}$ agit selon :
+$$ \mathcal{L}(f)(x) = \sum_{y \in \mathcal{T}_{\mathbb{A}}^{-1}(x)} \exp(\phi(y)) f(y) $$
+où $\phi$ est le potentiel de l'opérateur.
 
-**Étape 1 : Formulation dans l'espace fonctionnel $L^2(\nu_{\mathbb{A}})$**
-Supposons qu'il existe une fonction $f \in L^2(\nu_{\mathbb{A}})$ telle que $f \circ \mathcal{T}_{\mathbb{A}} - f = 0$ presque partout par rapport à la mesure $\nu_{\mathbb{A}}$.
-Cette équation se réécrit comme $f \circ \mathcal{T}_{\mathbb{A}} = f$ $\nu_{\mathbb{A}}$-presque partout.
+**Étape 2 : Évaluation sur le complémentaire**
+Pour $x \notin E$, si $y \in \mathcal{T}_{\mathbb{A}}^{-1}(x)$, alors $\mathcal{T}_{\mathbb{A}}(y) = x \notin E$.
+Comme $\mathcal{T}_{\mathbb{A}}(E) \subset E$, cela implique que $y \notin E$.
+Puisque $f \in \mathcal{H}_E$, il s'ensuit que $f(y) = 0$ pour presque tout tel $y$.
 
-**Étape 2 : Invariance globale de la fonction $f$**
-Pour tout réel $c \in \mathbb{R}$, considérons l'ensemble de niveau $E_c = \{ x \in \mathcal{G}_{\mathbb{A}} \mid f(x) \leq c \}$.
-L'équation $f \circ \mathcal{T}_{\mathbb{A}} = f$ garantit que pour tout $c$, on a $\mathcal{T}_{\mathbb{A}}^{-1}(E_c) = E_c$ modulo un ensemble de mesure $\nu_{\mathbb{A}}$ nulle.
-Ainsi, chaque ensemble $E_c$ est strictement invariant sous l'action de l'opérateur de dynamique adélique $\mathcal{T}_{\mathbb{A}}$.
-
-**Étape 3 : Application de l'ergodicité de la mesure**
-En vertu du Lemme 51, la mesure de Perron-Frobenius $\nu_{\mathbb{A}}$ est strictement ergodique pour l'opérateur $\mathcal{T}_{\mathbb{A}}$.
-L'ergodicité impose que pour tout ensemble mesurable invariant $E \subseteq \mathcal{G}_{\mathbb{A}}$, la mesure vérifie $\nu_{\mathbb{A}}(E) \in \{0, 1\}$.
-Appliquons ce résultat aux ensembles de niveau $E_c$ : pour chaque $c \in \mathbb{R}$, $\nu_{\mathbb{A}}(E_c)$ vaut soit $0$, soit $1$.
-
-**Étape 4 : Détermination de la constance**
-La fonction $\phi : \mathbb{R} \to \{0, 1\}$ définie par $\phi(c) = \nu_{\mathbb{A}}(E_c)$ est une fonction croissante (puisque $c_1 < c_2 \implies E_{c_1} \subseteq E_{c_2}$), continue à droite.
-Puisque $f \in L^2(\nu_{\mathbb{A}})$, $f$ est finie presque partout, d'où $\lim_{c \to -\infty} \phi(c) = 0$ et $\lim_{c \to +\infty} \phi(c) = 1$.
-Il existe par conséquent un unique réel $c_0 = \inf \{ c \in \mathbb{R} \mid \phi(c) = 1 \}$.
-Pour tout $\epsilon > 0$, $\nu_{\mathbb{A}}(f \leq c_0 - \epsilon) = 0$ et $\nu_{\mathbb{A}}(f \leq c_0) = 1$, ce qui impose que $f(x) = c_0$ pour $\nu_{\mathbb{A}}$-presque tout $x$.
-Le noyau de l'opérateur de cobord (les solutions de $f \circ \mathcal{T}_{\mathbb{A}} - f = 0$) est donc réduit aux constantes.
-La démonstration du Lemme 52 est rigoureusement achevée.
+**Étape 3 : Conclusion sur l'image par l'opérateur**
+Ainsi, pour presque tout $x \notin E$, la somme sur les pré-images ne comporte que des termes nuls.
+Par conséquent, $\mathcal{L}(f)(x) = 0$ presque partout sur $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus E$.
+Ceci prouve que $\mathcal{L}(f) \in \mathcal{H}_E$, ce qui conclut la démonstration.
 
 ***
 *Chercheur indépendant / Independent Researcher

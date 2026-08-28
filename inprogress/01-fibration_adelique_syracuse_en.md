@@ -1421,34 +1421,26 @@ It follows that any invariant set satisfies $\nu_{\mathbb{A}}(E) \in \{0, 1\}$.
 The proof of Lemma 51 is rigorously completed.
 
 
-### Lemma 52: Triviality of the coboundary operator kernel on the adelic fibration
-
-**Statement:**
-Let $\mathcal{G}_{\mathbb{A}}$ be the adelic groupoid associated with the Syracuse system and $\mathcal{L}$ the transfer operator. For any measurable function $f : \mathcal{G}_{\mathbb{A}} \to \mathbb{R}$ admitting a finite second moment with respect to the Perron-Frobenius measure $\nu_{\mathbb{A}}$, if $f \circ \mathcal{T}_{\mathbb{A}} - f = 0$ $\nu_{\mathbb{A}}$-almost everywhere, then $f$ is $\nu_{\mathbb{A}}$-almost everywhere equal to a constant.
+**Lemma 52 (Invariance by restriction of adelic domain) :**
+Let $E \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ be a measurable set that is invariantly stable under the operator $\mathcal{T}_{\mathbb{A}}$, such that $\mathcal{T}_{\mathbb{A}}(E) \subset E$.
+Then, any subalgebra $\mathcal{H}_E$ of measurable functions supported on $E$ is stable under the action of the transfer operator $\mathcal{L}$.
 
 **Proof:**
+**Step 1 : Definition of the restricted algebra**
+Let $\mathcal{H}_E$ be the space of measurable functions $f : \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \to \mathbb{R}$ such that $f(x) = 0$ for almost every $x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus E$.
+For any $f \in \mathcal{H}_E$, the transfer operator $\mathcal{L}$ acts as:
+$$ \mathcal{L}(f)(x) = \sum_{y \in \mathcal{T}_{\mathbb{A}}^{-1}(x)} \exp(\phi(y)) f(y) $$
+where $\phi$ is the potential of the operator.
 
-**Step 1: Formulation in the functional space $L^2(\nu_{\mathbb{A}})$**
-Suppose there exists a function $f \in L^2(\nu_{\mathbb{A}})$ such that $f \circ \mathcal{T}_{\mathbb{A}} - f = 0$ almost everywhere with respect to the measure $\nu_{\mathbb{A}}$.
-This equation rewrites as $f \circ \mathcal{T}_{\mathbb{A}} = f$ $\nu_{\mathbb{A}}$-almost everywhere.
+**Step 2 : Evaluation on the complement**
+For $x \notin E$, if $y \in \mathcal{T}_{\mathbb{A}}^{-1}(x)$, then $\mathcal{T}_{\mathbb{A}}(y) = x \notin E$.
+Since $\mathcal{T}_{\mathbb{A}}(E) \subset E$, this implies that $y \notin E$.
+Since $f \in \mathcal{H}_E$, it follows that $f(y) = 0$ for almost every such $y$.
 
-**Step 2: Global invariance of the function $f$**
-For any real number $c \in \mathbb{R}$, consider the level set $E_c = \{ x \in \mathcal{G}_{\mathbb{A}} \mid f(x) \leq c \}$.
-The equation $f \circ \mathcal{T}_{\mathbb{A}} = f$ guarantees that for all $c$, we have $\mathcal{T}_{\mathbb{A}}^{-1}(E_c) = E_c$ modulo a set of $\nu_{\mathbb{A}}$-measure zero.
-Thus, each set $E_c$ is strictly invariant under the action of the adelic dynamic operator $\mathcal{T}_{\mathbb{A}}$.
-
-**Step 3: Application of the ergodicity of the measure**
-By virtue of Lemma 51, the Perron-Frobenius measure $\nu_{\mathbb{A}}$ is strictly ergodic for the operator $\mathcal{T}_{\mathbb{A}}$.
-Ergodicity imposes that for any measurable invariant set $E \subseteq \mathcal{G}_{\mathbb{A}}$, the measure satisfies $\nu_{\mathbb{A}}(E) \in \{0, 1\}$.
-We apply this result to the level sets $E_c$: for each $c \in \mathbb{R}$, $\nu_{\mathbb{A}}(E_c)$ is either $0$ or $1$.
-
-**Step 4: Determination of constancy**
-The function $\phi : \mathbb{R} \to \{0, 1\}$ defined by $\phi(c) = \nu_{\mathbb{A}}(E_c)$ is a non-decreasing function (since $c_1 < c_2 \implies E_{c_1} \subseteq E_{c_2}$), right-continuous.
-Since $f \in L^2(\nu_{\mathbb{A}})$, $f$ is finite almost everywhere, hence $\lim_{c \to -\infty} \phi(c) = 0$ and $\lim_{c \to +\infty} \phi(c) = 1$.
-There therefore exists a unique real number $c_0 = \inf \{ c \in \mathbb{R} \mid \phi(c) = 1 \}$.
-For all $\epsilon > 0$, $\nu_{\mathbb{A}}(f \leq c_0 - \epsilon) = 0$ and $\nu_{\mathbb{A}}(f \leq c_0) = 1$, which imposes that $f(x) = c_0$ for $\nu_{\mathbb{A}}$-almost all $x$.
-The kernel of the coboundary operator (the solutions to $f \circ \mathcal{T}_{\mathbb{A}} - f = 0$) is thus restricted to constants.
-The proof of Lemma 52 is rigorously completed.
+**Step 3 : Conclusion on the image by the operator**
+Thus, for almost every $x \notin E$, the sum over the pre-images only contains zero terms.
+Therefore, $\mathcal{L}(f)(x) = 0$ almost everywhere on $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus E$.
+This proves that $\mathcal{L}(f) \in \mathcal{H}_E$, which concludes the proof.
 
 ***
 *Chercheur indépendant / Independent Researcher
