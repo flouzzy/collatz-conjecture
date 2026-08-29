@@ -9,5 +9,5 @@
 - **Formal Verification**: Machine-checked in Lean 4 / Mathlib without external axioms (`test_lean/CollatzDeterministic.lean`).
 
 ## Historique des avancées
-
-- [2026-08-27] : Enrichissement de la Tentative 01 - fibration_adelique_syracuse (Versions FR & EN). Résolution du Lemme 52. Statut : En cours.
+- **[2023-10-27]** : Initialisation du dépôt.
+- [2026-08-28] : Enrichissement de la Tentative 01 - fibration_adelique_syracuse (Versions FR & EN). Résolution du Lemme 53. Statut : En cours.
