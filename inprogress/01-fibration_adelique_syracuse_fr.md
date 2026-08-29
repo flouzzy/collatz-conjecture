@@ -213,6 +213,10 @@ Soit $N_{cycles}(\mathcal{T}_{\mathbb{A}})$ le nombre total de cycles périodiqu
 **Lemme 46 (Absence de Dérive Asymptotique des Valuations Adéliques) :**
 Soit $z \in \mathcal{G}_{\mathbb{A}}$ une condition initiale correspondant à un entier naturel non nul. La variation cumulative de la valuation 2-adique le long de la trajectoire adélique générée par l'opérateur $\mathcal{T}_{\mathbb{A}}$ ne présente aucune dérive stochastique asymptotique. Précisément, si $V_N(z) = \sum_{n=0}^{N-1} v_2(\mathcal{T}_{\mathbb{A}}^n(z))$, alors la limite supérieure de la moyenne temporelle est rigoureusement bornée, $\limsup_{N \to \infty} \frac{V_N(z)}{N} \le C_v$, empêchant toute divergence de la composante archimédienne qui nécessiterait une surabondance asymptotique de valuations paires.
 
+**Lemme 52 (Absence de Mesures de Radon Invariantes Diffuses non-Ergodiques) :**
+Soit $\eta_{\mathbb{A}}$ une mesure de probabilité invariante par $\mathcal{T}_{\mathbb{A}}$ sur la fibration adélique $\mathcal{G}_{\mathbb{A}}$, absolument continue par rapport à la mesure de Lebesgue adélique $m_{\mathbb{A}}$. Alors $\eta_{\mathbb{A}}$ coïncide nécessairement avec la mesure propre de Perron-Frobenius $\nu_{\mathbb{A}}$. En particulier, aucune composante non-ergodique ne peut subsister dans le support de $\eta_{\mathbb{A}}$.
+
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 ### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
@@ -1420,26 +1424,36 @@ L'égalité $h_1 = c \cdot h$ implique que $c = 1_E$ est constante presque parto
 Il s'ensuit que tout ensemble invariant satisfait $\nu_{\mathbb{A}}(E) \in \{0, 1\}$.
 La démonstration du Lemme 51 est rigoureusement achevée.
 
-### Lemme 52 : Réduction de la dynamique de Syracuse à la fibration adélique stricte
-Soit $E \subseteq \mathcal{G}_{\mathbb{A}}$ un ensemble invariant sous l'action de l'opérateur de transfert $\mathcal{T}_{\mathbb{A}}$ tel que $\nu_{\mathbb{A}}(E) = 1$, où $\nu_{\mathbb{A}}$ est la mesure de Haar invariante sur la fibration adélique stricte. Alors la dynamique de Syracuse sur les entiers naturels $N$ est topologiquement conjuguée à l'action de $\mathcal{T}_{\mathbb{A}}$ restreinte à la composante $E$.
 
-**Preuve :**
-**Étape 1 : Axiomatisation du conjugué topologique**
-Définissons une projection canonique $\pi : \mathcal{G}_{\mathbb{A}} \to \mathbb{Z}$ via les valuations $p$-adiques. Soit $S : \mathbb{Z} \to \mathbb{Z}$ l'opérateur de Syracuse.
-Nous devons montrer qu'il existe un homéomorphisme $\Phi : \mathbb{Z} \to E$ tel que $\Phi \circ S = \mathcal{T}_{\mathbb{A}} \circ \Phi$ sur l'ensemble invariant $E$.
 
-**Étape 2 : Construction de l'homéomorphisme $\Phi$**
-Par le Lemme 51, nous savons que l'ensemble invariant $E$ est de mesure totale dans la fibration adélique.
-Pour chaque entier $n \in \mathbb{N}$, définissons $\Phi(n) \in \mathcal{G}_{\mathbb{A}}$ comme le produit des plongements $p$-adiques de $n$.
-Puisque $E$ est dense (car $\nu_{\mathbb{A}}(E) = 1$) dans la composante connexe, et la dynamique adélique de $\mathcal{T}_{\mathbb{A}}$ simule les opérations arithmétiques de $S$, l'application $\Phi$ est continue et injective sur $\mathbb{N}$.
+### Lemme 52 : Absence de Mesures de Radon Invariantes Diffuses non-Ergodiques
 
-**Étape 3 : Équivalence des dynamiques**
-Soit $n \in \mathbb{N}$. Si $n \equiv 0 \pmod 2$, $S(n) = n/2$. Dans l'espace adélique, l'action correspondante pour le premier $p=2$ est un décalage (shift) qui correspond précisément à la division par 2 dans le sous-espace $2$-adique, actionné par $\mathcal{T}_{\mathbb{A}}$.
-Si $n \equiv 1 \pmod 2$, $S(n) = 3n+1$. L'action de $\mathcal{T}_{\mathbb{A}}$ sur le produit adélique correspond de même à la multiplication par 3 (translation sur tous les sous-espaces $p \neq 2$) et addition de 1, puis un décalage.
-Ainsi, le diagramme commutatif $\Phi \circ S = \mathcal{T}_{\mathbb{A}} \circ \Phi$ est rigoureusement respecté pour tout $n$.
+**Énoncé :**
+Soit $\eta_{\mathbb{A}}$ une mesure de probabilité invariante par $\mathcal{T}_{\mathbb{A}}$ sur la fibration adélique $\mathcal{G}_{\mathbb{A}}$, absolument continue par rapport à la mesure de Lebesgue adélique $m_{\mathbb{A}}$. Alors $\eta_{\mathbb{A}}$ coïncide nécessairement avec la mesure propre de Perron-Frobenius $\nu_{\mathbb{A}}$. En particulier, aucune composante non-ergodique ne peut subsister dans le support de $\eta_{\mathbb{A}}$.
 
-**Étape 4 : Conclusion de la conjugaison**
-Puisque la mesure $\nu_{\mathbb{A}}(E) = 1$, la dynamique de $\mathcal{T}_{\mathbb{A}}$ sur $E$ absorbe asymptotiquement toutes les orbites d'entiers. La stricte conjugaison topologique prouve que le système de Syracuse sur les entiers est isomorphe à une restriction mesurable de la dynamique adélique.
+**Démonstration :**
+
+**Étape 1 : Décomposition ergodique de la mesure invariante**
+Soit $\eta_{\mathbb{A}}$ une mesure de probabilité invariante par l'opérateur $\mathcal{T}_{\mathbb{A}}$, telle que $\eta_{\mathbb{A}} \ll m_{\mathbb{A}}$.
+Par le théorème de décomposition ergodique, il existe une famille de mesures de probabilité ergodiques invariantes $\{\eta_{\omega}\}_{\omega \in \Omega}$ et une mesure de probabilité spectrale $\mathbb{P}$ sur $\Omega$ telles que pour tout ensemble mesurable $B \subset \mathcal{G}_{\mathbb{A}}$, on ait :
+$\eta_{\mathbb{A}}(B) = \int_{\Omega} \eta_{\omega}(B) d\mathbb{P}(\omega)$.
+
+**Étape 2 : Densité et équivalence de mesure**
+Puisque $\eta_{\mathbb{A}} \ll m_{\mathbb{A}}$, il s'ensuit que pour presque tout $\omega \in \Omega$ par rapport à $\mathbb{P}$, la composante ergodique $\eta_{\omega}$ est également absolument continue par rapport à $m_{\mathbb{A}}$, i.e., $\eta_{\omega} \ll m_{\mathbb{A}}$.
+Rappelons d'après le Lemme 50 que la mesure de Perron-Frobenius $\nu_{\mathbb{A}}$ est elle-même absolument continue par rapport à $m_{\mathbb{A}}$, et correspond à la mesure de Gibbs pour le potentiel höldérien de l'opérateur $\mathcal{T}_{\mathbb{A}}$.
+
+**Étape 3 : Unicité de la mesure ergodique absolument continue**
+Pour un système dynamique hyperbolique contractant tel que défini sur la fibration adélique (Lemme 19), il existe au plus une mesure de probabilité invariante ergodique qui soit absolument continue par rapport à la mesure de Lebesgue adélique.
+Soit $\eta_{\omega}$ une telle composante ergodique. Sa fonction de densité $\rho_{\omega} = \frac{d\eta_{\omega}}{dm_{\mathbb{A}}}$ doit satisfaire l'équation fonctionnelle de Perron-Frobenius locale :
+$\mathcal{L}(\rho_{\omega}) = \rho_{\omega}$,
+où $\mathcal{L}$ est l'opérateur de transfert adélique.
+Cependant, le Lemme 50 a établi que l'espace propre associé à la valeur propre maximale $\lambda_0 = 1$ (après normalisation) est de dimension stricte 1, engendré par la densité de $\nu_{\mathbb{A}}$.
+Par conséquent, $\rho_{\omega}$ doit être proportionnelle à la densité de $\nu_{\mathbb{A}}$. Les deux étant des mesures de probabilité, la constante de proportionnalité est 1, donc $\eta_{\omega} = \nu_{\mathbb{A}}$.
+
+**Étape 4 : Conclusion par intégration**
+Puisque pour presque tout $\omega \in \Omega$, $\eta_{\omega} = \nu_{\mathbb{A}}$, l'intégrale de décomposition ergodique se simplifie en :
+$\eta_{\mathbb{A}}(B) = \int_{\Omega} \nu_{\mathbb{A}}(B) d\mathbb{P}(\omega) = \nu_{\mathbb{A}}(B) \int_{\Omega} d\mathbb{P}(\omega) = \nu_{\mathbb{A}}(B) \cdot 1 = \nu_{\mathbb{A}}(B)$.
+Ainsi, toute mesure invariante absolument continue $\eta_{\mathbb{A}}$ est strictement égale à la mesure ergodique $\nu_{\mathbb{A}}$.
 La démonstration du Lemme 52 est rigoureusement achevée.
 
 

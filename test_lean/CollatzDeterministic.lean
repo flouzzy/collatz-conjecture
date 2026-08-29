@@ -28,9 +28,11 @@ theorem collatz_average_drift :
 theorem haar_gain_gt_multiplication :
     (2 : ℝ) * Real.log 2 > Real.log 3 := by
   have h2 : (2 : ℝ) * Real.log 2 = Real.log (2 ^ 2) := by
-    have hl := Real.log_pow (2 : ℝ) 2
-    push_cast at hl
-    exact hl.symm
+    -- In mathlib4, Real.log_pow takes a Nat n. `(2:ℝ) ^ (2:ℕ)` is used.
+    -- Wait, let's just do:
+    have h : Real.log ((2 : ℝ) ^ (2 : ℕ)) = (2 : ℕ) * Real.log (2 : ℝ) := Real.log_pow (2 : ℝ) 2
+    push_cast at h
+    exact h.symm
   rw [h2]
   have h4 : (2 : ℝ) ^ 2 = 4 := by norm_num
   rw [h4]
