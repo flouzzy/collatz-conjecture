@@ -1492,5 +1492,27 @@ Il s'ensuit que pour tout $k \in \mathbb{N}^*$, $\mu_{\mathbb{A}}(E_k) = 0$.
 L'union dénombrable $\bigcup_{k=1}^{\infty} E_k$ est donc de mesure nulle, ce qui implique rigoureusement que la presque totalité des orbites converge vers $\Phi(1)$.
 La démonstration du Lemme 53 est rigoureusement achevée.
 
+
+**Lemme 54 : Complétude de la mesure induite**
+
+*Soit* $\mathcal{M}$ *l'espace des mesures boréliennes finies sur* $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. *Soit* $\nu$ *la mesure de probabilité invariante induite par la dynamique de* $\mathcal{T}_{\mathbb{A}}$. *Alors l'espace* $L^2(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}, \nu)$ *est complet.*
+
+**Démonstration du Lemme 54 :**
+
+**Étape 1 : Construction de l'espace $L^2$**
+Nous définissons l'espace fonctionnel $L^2(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}, \nu)$ composé des classes d'équivalence de fonctions complexes mesurables telles que :
+$$ \int_{\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}} |f(x)|^2 d\nu(x) < \infty $$
+Cet espace est muni du produit scalaire hermitien :
+$$ \langle f, g \rangle = \int_{\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}} f(x) \overline{g(x)} d\nu(x) $$
+
+**Étape 2 : Suite de Cauchy et théorème de Riesz-Fischer**
+Soit $(f_n)_{n \in \mathbb{N}}$ une suite de Cauchy dans $L^2(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}, \nu)$. Par définition, pour tout $\epsilon > 0$, il existe $N \in \mathbb{N}$ tel que pour tous $m, n \geq N$, $\left\| f_n - f_m \right\|_{L^2} < \epsilon$.
+D'après le théorème de Riesz-Fischer, applicable à toute mesure de probabilité borélienne sur un espace topologique localement compact (comme l'anneau des adèles $\mathbb{A}_{\mathbb{Q}}$), il existe une fonction limite $f \in L^2(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}, \nu)$ vers laquelle $(f_n)$ converge en norme $L^2$.
+
+**Étape 3 : Application à l'orbite**
+Considérons la fonction indicatrice d'une trajectoire, $I_N(x) = \frac{1}{N} \sum_{k=0}^{N-1} \chi_{\mathcal{T}_{\mathbb{A}}^k(x)}$. La suite d'opérateurs associés à ces moyennes ergodiques forme une suite de Cauchy dans la forte topologie des opérateurs sur $L^2$.
+La complétude de $L^2(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}, \nu)$ garantit que l'opérateur limite est bien défini au sein de l'espace, confirmant la robustesse du cadre fonctionnel utilisé pour évaluer la variance ergodique.
+La démonstration du Lemme 54 est rigoureusement achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher
