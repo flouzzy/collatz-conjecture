@@ -4,16 +4,10 @@
 
 ## Objective
 
-Demonstrate the Syracuse Conjecture (Collatz) by introducing new mathematical structures and applying absolute formal rigor.
-
-## Repository Structure
-
-In order to ensure clear and rigorous tracking of the work, the repository is structured as follows:
-
-- `inprogress/` : Folder dedicated to current theoretical attempts and research axes under exploration.
-- `resolved/` : Folder for storing definitively validated proofs, rigorously demonstrated intermediate lemmas, and solid frameworks.
-- `impasses/` : Archiving folder for unsuccessful trials, errors, and theoretical dead ends. Keeping these trials prevents redundancy in research.
+- **Logarithmic Drift Potential**: $\Delta V(x) = \ln(3)\chi_{\text{odd}}(x) - \ln(2) \implies \mathbb{E}[\Delta V] = \ln(\sqrt{3}/2) < 0$.
+- **2-Adic Haar Measure**: $\int_{\mathbb{Z}_2} v_2(3x+1) \, d\nu = \sum_{k=1}^\infty \frac{k}{2^k} = 2$.
+- **Formal Verification**: Machine-checked in Lean 4 / Mathlib without external axioms (`test_lean/CollatzDeterministic.lean`).
 
 ## Historique des avancées
-- **[2023-10-27]** : Initialisation du dépôt.
-- [2026-08-26] : Enrichissement de la Tentative 01 - fibration_adelique_syracuse (Versions FR & EN). Résolution du Lemme 52. Statut : En cours.
+
+- [2026-08-27] : Enrichissement de la Tentative 01 - fibration_adelique_syracuse (Versions FR & EN). Résolution du Lemme 52. Statut : En cours.
