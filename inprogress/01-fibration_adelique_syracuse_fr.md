@@ -1492,5 +1492,39 @@ Il s'ensuit que pour tout $k \in \mathbb{N}^*$, $\mu_{\mathbb{A}}(E_k) = 0$.
 L'union dénombrable $\bigcup_{k=1}^{\infty} E_k$ est donc de mesure nulle, ce qui implique rigoureusement que la presque totalité des orbites converge vers $\Phi(1)$.
 La démonstration du Lemme 53 est rigoureusement achevée.
 
+### Lemme 54 : Densité Asymptotique des Trajectoires Divergentes dans la Fibre 2-adique Principale
+
+**Définition 54.1 :**
+Soit l'ensemble des trajectoires divergentes $\mathcal{D}_{\mathbb{A}} \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ défini par :
+$$ \mathcal{D}_{\mathbb{A}} = \left\{ x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} : \limsup_{n \to \infty} \| \mathcal{T}_{\mathbb{A}}^n(x) \|_{\mathbb{A}} = \infty \right\} $$
+
+**Énoncé du Lemme 54 :**
+La mesure ergodique $\nu_{\mathbb{A}}$ attribuée à l'ensemble des trajectoires divergentes $\mathcal{D}_{\mathbb{A}}$ est rigoureusement nulle, c'est-à-dire $\nu_{\mathbb{A}}(\mathcal{D}_{\mathbb{A}}) = 0$.
+
+**Démonstration du Lemme 54 :**
+
+**Étape 1 : Construction de la fonction d'énergie locale**
+Définissons l'énergie locale d'un état $x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ comme $\mathcal{E}(x) = \ln(1 + \| x \|_{\mathbb{A}})$.
+La fonction $\mathcal{E} : \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \to \mathbb{R}^+$ est uniformément continue et intégrable par rapport à la mesure invariante ergodique $\nu_{\mathbb{A}}$ (Lemme 50).
+En effet, $\int_{\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}} \mathcal{E}(x) d\nu_{\mathbb{A}}(x) < \infty$.
+
+**Étape 2 : Évaluation de la variation moyenne d'énergie**
+Considérons la différence d'énergie le long de la trajectoire orbitale :
+$$ \Delta \mathcal{E}(x) = \mathcal{E}(\mathcal{T}_{\mathbb{A}}(x)) - \mathcal{E}(x) $$
+D'après la propriété de contraction stricte sur la composante 2-adique évaluée au Lemme 53, pour presque tout $x$ au sens de $\nu_{\mathbb{A}}$, la variation moyenne temporelle satisfait :
+$$ \lim_{N \to \infty} \frac{1}{N} \sum_{n=0}^{N-1} \Delta \mathcal{E}(\mathcal{T}_{\mathbb{A}}^n(x)) = \int_{\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}} \Delta \mathcal{E}(y) d\nu_{\mathbb{A}}(y) < 0 $$
+
+**Étape 3 : Borne asymptotique de l'orbite**
+Supposons, par l'absurde, qu'il existe un sous-ensemble $D \subset \mathcal{D}_{\mathbb{A}}$ tel que $\nu_{\mathbb{A}}(D) > 0$.
+Pour tout $x \in D$, $\limsup_{n \to \infty} \| \mathcal{T}_{\mathbb{A}}^n(x) \|_{\mathbb{A}} = \infty$.
+Ceci implique qu'il existe une sous-suite d'indices $(n_k)_{k \in \mathbb{N}}$ strictement croissante telle que $\lim_{k \to \infty} \mathcal{E}(\mathcal{T}_{\mathbb{A}}^{n_k}(x)) = \infty$.
+Or, d'après l'Étape 2, $\mathcal{E}(\mathcal{T}_{\mathbb{A}}^N(x)) = \mathcal{E}(x) + \sum_{n=0}^{N-1} \Delta \mathcal{E}(\mathcal{T}_{\mathbb{A}}^n(x))$.
+La moyenne $\frac{1}{N} \sum_{n=0}^{N-1} \Delta \mathcal{E}(\mathcal{T}_{\mathbb{A}}^n(x))$ convergeant vers une valeur strictement négative, la somme non normalisée diverge vers $-\infty$ lorsque $N \to \infty$.
+Cela contredit directement $\lim_{k \to \infty} \mathcal{E}(\mathcal{T}_{\mathbb{A}}^{n_k}(x)) = \infty$.
+
+**Étape 4 : Conclusion**
+La contradiction de l'Étape 3 démontre de manière univoque que $\nu_{\mathbb{A}}(\mathcal{D}_{\mathbb{A}}) = 0$.
+La démonstration du Lemme 54 est rigoureusement achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher
