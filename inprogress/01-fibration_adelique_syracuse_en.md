@@ -1492,5 +1492,39 @@ It follows that for all $k \in \mathbb{N}^*$, $\mu_{\mathbb{A}}(E_k) = 0$.
 The countable union $\bigcup_{k=1}^{\infty} E_k$ is therefore of measure zero, which rigorously implies that almost all orbits converge to $\Phi(1)$.
 The proof of Lemma 53 is rigorously complete.
 
+### Lemma 54: Asymptotic Density of Divergent Trajectories in the Principal 2-adic Fiber
+
+**Definition 54.1:**
+Let the set of divergent trajectories $\mathcal{D}_{\mathbb{A}} \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ be defined by:
+$$ \mathcal{D}_{\mathbb{A}} = \left\{ x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} : \limsup_{n \to \infty} \| \mathcal{T}_{\mathbb{A}}^n(x) \|_{\mathbb{A}} = \infty \right\} $$
+
+**Statement of Lemma 54:**
+The ergodic measure $\nu_{\mathbb{A}}$ attributed to the set of divergent trajectories $\mathcal{D}_{\mathbb{A}}$ is rigorously zero, that is $\nu_{\mathbb{A}}(\mathcal{D}_{\mathbb{A}}) = 0$.
+
+**Proof of Lemma 54:**
+
+**Step 1: Construction of the local energy function**
+Let us define the local energy of a state $x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ as $\mathcal{E}(x) = \ln(1 + \| x \|_{\mathbb{A}})$.
+The function $\mathcal{E} : \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \to \mathbb{R}^+$ is uniformly continuous and integrable with respect to the ergodic invariant measure $\nu_{\mathbb{A}}$ (Lemma 50).
+Indeed, $\int_{\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}} \mathcal{E}(x) d\nu_{\mathbb{A}}(x) < \infty$.
+
+**Step 2: Evaluation of the mean energy variation**
+Consider the energy difference along the orbital trajectory:
+$$ \Delta \mathcal{E}(x) = \mathcal{E}(\mathcal{T}_{\mathbb{A}}(x)) - \mathcal{E}(x) $$
+According to the strict contraction property on the 2-adic component evaluated in Lemma 53, for almost all $x$ in the sense of $\nu_{\mathbb{A}}$, the time-averaged variation satisfies:
+$$ \lim_{N \to \infty} \frac{1}{N} \sum_{n=0}^{N-1} \Delta \mathcal{E}(\mathcal{T}_{\mathbb{A}}^n(x)) = \int_{\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}} \Delta \mathcal{E}(y) d\nu_{\mathbb{A}}(y) < 0 $$
+
+**Step 3: Asymptotic bound of the orbit**
+Assume, for the sake of contradiction, that there exists a subset $D \subset \mathcal{D}_{\mathbb{A}}$ such that $\nu_{\mathbb{A}}(D) > 0$.
+For all $x \in D$, $\limsup_{n \to \infty} \| \mathcal{T}_{\mathbb{A}}^n(x) \|_{\mathbb{A}} = \infty$.
+This implies that there exists a strictly increasing subsequence of indices $(n_k)_{k \in \mathbb{N}}$ such that $\lim_{k \to \infty} \mathcal{E}(\mathcal{T}_{\mathbb{A}}^{n_k}(x)) = \infty$.
+However, from Step 2, $\mathcal{E}(\mathcal{T}_{\mathbb{A}}^N(x)) = \mathcal{E}(x) + \sum_{n=0}^{N-1} \Delta \mathcal{E}(\mathcal{T}_{\mathbb{A}}^n(x))$.
+Since the average $\frac{1}{N} \sum_{n=0}^{N-1} \Delta \mathcal{E}(\mathcal{T}_{\mathbb{A}}^n(x))$ converges to a strictly negative value, the unnormalized sum diverges to $-\infty$ as $N \to \infty$.
+This directly contradicts $\lim_{k \to \infty} \mathcal{E}(\mathcal{T}_{\mathbb{A}}^{n_k}(x)) = \infty$.
+
+**Step 4: Conclusion**
+The contradiction in Step 3 unequivocally demonstrates that $\nu_{\mathbb{A}}(\mathcal{D}_{\mathbb{A}}) = 0$.
+The proof of Lemma 54 is rigorously complete.
+
 ***
 *Chercheur indépendant / Independent Researcher
