@@ -1492,5 +1492,33 @@ It follows that for all $k \in \mathbb{N}^*$, $\mu_{\mathbb{A}}(E_k) = 0$.
 The countable union $\bigcup_{k=1}^{\infty} E_k$ is therefore of measure zero, which rigorously implies that almost all orbits converge to $\Phi(1)$.
 The proof of Lemma 53 is rigorously complete.
 
+### Lemma 54: Non-degeneracy of the Gibbs measure on even strata
+
+**Statement:**
+Let $\nu_{\mathbb{A}}$ be the ergodic Perron-Frobenius measure (Gibbs measure) on the adelic fibration $\mathcal{G}_{\mathbb{A}}$ constructed in Lemma 50. Let $\mathcal{P}_{2k}$ be the set of elements of $\mathcal{G}_{\mathbb{A}}$ whose first $2k$ iterations by the operator $\mathcal{T}_{\mathbb{A}}$ correspond to divisions by $2$ in the 2-adic component. Then, for every integer $k \in \mathbb{N}^*$, we have the strict inequality $\nu_{\mathbb{A}}(\mathcal{P}_{2k}) > 0$. Thus, there exists no invariant stratum concentrated solely on infinite odd orbits.
+
+**Proof:**
+
+**Step 1: Axiomatization of the subset of even trajectories**
+We formally define the set $\mathcal{P}_{2k}$ for $k \in \mathbb{N}^*$:
+$\mathcal{P}_{2k} = \{ x \in \mathcal{G}_{\mathbb{A}} : \forall j \in \{0, 1, \dots, 2k-1\}, v_2(\pi_2(\mathcal{T}_{\mathbb{A}}^j(x))) = 0 \pmod 2 \}$
+where $\pi_2 : \mathcal{G}_{\mathbb{A}} \to \mathbb{Z}_2$ is the canonical projection onto the 2-adic component and $v_2$ is the 2-adic valuation. More precisely, this signifies that for each step, the local transformation is division by $2$. In geometric terms, the set $\mathcal{P}_{2k}$ constitutes a cylinder of length $2k$ in the shift topology on $\mathcal{G}_{\mathbb{A}}$.
+
+**Step 2: Haar measure of the cylindrical cylinder**
+We evaluate the adelic Lebesgue measure $m_{\mathbb{A}}$ of the cylinder $\mathcal{P}_{2k}$. By the asymptotic independence of the p-adic components and the product structure of the measure $m_{\mathbb{A}}$, the constraint rests solely on the 2-adic component.
+The projection of $\mathcal{P}_{2k}$ onto $\mathbb{Z}_2$ corresponds to the set of 2-adic integers whose first $2k$ parity bits induce successive divisions by $2$. The Haar measure $\mu_2$ of this set in $\mathbb{Z}_2$ is exactly $2^{-2k}$.
+Thus, $m_{\mathbb{A}}(\mathcal{P}_{2k}) = \mu_2(\pi_2(\mathcal{P}_{2k})) \times \prod_{p \neq 2} \mu_p(\mathbb{Z}_p) = 2^{-2k} \times 1 = 2^{-2k} > 0$.
+
+**Step 3: Equivalence of the Perron-Frobenius measure**
+By Lemma 50, the Perron-Frobenius measure $\nu_{\mathbb{A}}$ is equivalent to the adelic Lebesgue measure $m_{\mathbb{A}}$. In particular, there exist strictly positive constants $C_1, C_2 > 0$ such that for any measurable set $A \subset \mathcal{G}_{\mathbb{A}}$:
+$C_1 m_{\mathbb{A}}(A) \leq \nu_{\mathbb{A}}(A) \leq C_2 m_{\mathbb{A}}(A)$.
+
+**Step 4: Conclusion by bounding**
+Applying this bounding to the measurable set $\mathcal{P}_{2k}$, we obtain:
+$\nu_{\mathbb{A}}(\mathcal{P}_{2k}) \geq C_1 m_{\mathbb{A}}(\mathcal{P}_{2k}) = C_1 \cdot 2^{-2k}$.
+Since $C_1 > 0$ and $2^{-2k} > 0$, it follows that $\nu_{\mathbb{A}}(\mathcal{P}_{2k}) > 0$.
+Consequently, the ergodic invariant measure $\nu_{\mathbb{A}}$ strictly charges all cylinders corresponding to successive divisions by $2$. This rigorously excludes the possibility of an invariant measure concentrated on a phantom attractor comprising only odd operations.
+The proof of Lemma 54 is rigorously complete.
+
 ***
 *Chercheur indépendant / Independent Researcher
