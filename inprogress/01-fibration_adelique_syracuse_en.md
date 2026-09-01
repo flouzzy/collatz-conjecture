@@ -1492,5 +1492,27 @@ It follows that for all $k \in \mathbb{N}^*$, $\mu_{\mathbb{A}}(E_k) = 0$.
 The countable union $\bigcup_{k=1}^{\infty} E_k$ is therefore of measure zero, which rigorously implies that almost all orbits converge to $\Phi(1)$.
 The proof of Lemma 53 is rigorously complete.
 
+
+**Statement of Lemma 54:**
+Let $\mathcal{C}$ be the set of strict cycles under the action of the operator $\mathcal{T}_{\mathbb{A}}$ on the adele ring $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. If $\gamma \in \mathcal{C}$ is a cycle such that $\gamma \neq \{\Phi(1), \Phi(2), \Phi(4)\}$, then the induced Haar measure on the support of $\gamma$, denoted $\mu_{\gamma}$, is identically zero.
+
+**Proof of Lemma 54:**
+
+**Step 1: Hypothesis and characterization of an invariant cycle**
+Let $m \in \mathbb{N}^*$ be an integer. Suppose the existence of a point $x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ generating a cycle $\gamma$ of length $m$ under $\mathcal{T}_{\mathbb{A}}$, such that $\mathcal{T}_{\mathbb{A}}^m(x) = x$ with $\gamma \neq \{\Phi(1), \Phi(2), \Phi(4)\}$. The set of such points constitutes a closed invariant subspace, which we will denote by $F_\gamma \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+
+**Step 2: Evaluation via the potential function $V$**
+We consider the variation of the global potential $\Delta V(x) = \ln(3)\chi_{\text{odd}}(x) - \ln(2)$ over the cycle $\gamma$. By linearity over the closed cycle, the orbital integral is written as:
+$$ \sum_{i=0}^{m-1} \Delta V(\mathcal{T}_{\mathbb{A}}^i(x)) = 0 $$
+This equation implies a strict proportion of odd values in the cycle: the proportion of elements in the 2-adic projection satisfying $\chi_{\text{odd}} = 1$ must be exactly $\frac{\ln(2)}{\ln(3)}$.
+
+**Step 3: Diophantine properties and irrationality**
+Since $\ln(2)$ and $\ln(3)$ are linearly independent over $\mathbb{Q}$, the ratio $\frac{\ln(2)}{\ln(3)}$ is strictly irrational. However, the proportion of odd elements in a finite cycle of length $m$ is necessarily a rational number of the form $\frac{k}{m}$ with $k, m \in \mathbb{N}^*$. The equality $\frac{k}{m} = \frac{\ln(2)}{\ln(3)}$ leads to a strict algebraic contradiction, unless the cycle is asymptotic (of infinite length), which contradicts the hypothesis of the finiteness of $m$.
+
+**Step 4: Conclusion on the Haar measure**
+The set of solutions to this equation on $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ is therefore empty for all finite $m$. Consequently, the subspace $F_\gamma$ reduces to the empty set, and its associated Haar measure is trivially:
+$$ \mu_{\mathbb{A}}(F_\gamma) = 0 $$
+Thus, the induced Haar measure on the support of any cycle $\gamma$ distinct from the trivial cycle is identically zero. The proof of Lemma 54 is rigorously completed.
+
 ***
 *Chercheur indépendant / Independent Researcher

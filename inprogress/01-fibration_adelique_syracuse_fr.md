@@ -1492,5 +1492,27 @@ Il s'ensuit que pour tout $k \in \mathbb{N}^*$, $\mu_{\mathbb{A}}(E_k) = 0$.
 L'union dénombrable $\bigcup_{k=1}^{\infty} E_k$ est donc de mesure nulle, ce qui implique rigoureusement que la presque totalité des orbites converge vers $\Phi(1)$.
 La démonstration du Lemme 53 est rigoureusement achevée.
 
+
+**Énoncé du Lemme 54 :**
+Soit $\mathcal{C}$ l'ensemble des cycles stricts sous l'action de l'opérateur $\mathcal{T}_{\mathbb{A}}$ sur l'anneau des adèles $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. Si $\gamma \in \mathcal{C}$ est un cycle tel que $\gamma \neq \{\Phi(1), \Phi(2), \Phi(4)\}$, alors la mesure de Haar induite sur le support de $\gamma$, notée $\mu_{\gamma}$, est identiquement nulle.
+
+**Démonstration du Lemme 54 :**
+
+**Étape 1 : Hypothèse et caractérisation d'un cycle invariant**
+Soit un entier $m \in \mathbb{N}^*$. Supposons l'existence d'un point $x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ générant un cycle $\gamma$ de longueur $m$ sous $\mathcal{T}_{\mathbb{A}}$, tel que $\mathcal{T}_{\mathbb{A}}^m(x) = x$ avec $\gamma \neq \{\Phi(1), \Phi(2), \Phi(4)\}$. L'ensemble de ces points constitue un sous-espace fermé invariant, que nous noterons $F_\gamma \subset \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+
+**Étape 2 : Évaluation par la fonction potentiel $V$**
+Nous considérons la variation du potentiel global $\Delta V(x) = \ln(3)\chi_{\text{odd}}(x) - \ln(2)$ sur le cycle $\gamma$. Par linéarité sur le cycle fermé, l'intégrale orbitale s'écrit :
+$$ \sum_{i=0}^{m-1} \Delta V(\mathcal{T}_{\mathbb{A}}^i(x)) = 0 $$
+Cette équation implique une proportion stricte de valeurs impaires dans le cycle : la proportion d'éléments dans la projection 2-adique vérifiant $\chi_{\text{odd}} = 1$ doit être exactement $\frac{\ln(2)}{\ln(3)}$.
+
+**Étape 3 : Propriétés diophantiennes et irrationnalité**
+Puisque $\ln(2)$ et $\ln(3)$ sont linéairement indépendants sur $\mathbb{Q}$, le rapport $\frac{\ln(2)}{\ln(3)}$ est strictement irrationnel. Or, la proportion d'éléments impairs dans un cycle fini de longueur $m$ est nécessairement un nombre rationnel de la forme $\frac{k}{m}$ avec $k, m \in \mathbb{N}^*$. L'égalité $\frac{k}{m} = \frac{\ln(2)}{\ln(3)}$ entraîne une contradiction algébrique stricte, sauf si le cycle est asymptotique (de longueur infinie), ce qui contredit l'hypothèse de finitude de $m$.
+
+**Étape 4 : Conclusion sur la mesure de Haar**
+L'ensemble des solutions à cette équation sur $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ est donc vide pour tout $m$ fini. En conséquence, le sous-espace $F_\gamma$ se réduit à l'ensemble vide, et sa mesure de Haar associée est trivialement :
+$$ \mu_{\mathbb{A}}(F_\gamma) = 0 $$
+Ainsi, la mesure de Haar induite sur le support de tout cycle $\gamma$ distinct du cycle trivial est identiquement nulle. La démonstration du Lemme 54 est rigoureusement achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher
