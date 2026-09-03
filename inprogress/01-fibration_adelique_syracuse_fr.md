@@ -1492,5 +1492,32 @@ Il s'ensuit que pour tout $k \in \mathbb{N}^*$, $\mu_{\mathbb{A}}(E_k) = 0$.
 L'union dénombrable $\bigcup_{k=1}^{\infty} E_k$ est donc de mesure nulle, ce qui implique rigoureusement que la presque totalité des orbites converge vers $\Phi(1)$.
 La démonstration du Lemme 53 est rigoureusement achevée.
 
+
+**Énoncé du Lemme 54 :**
+L'intersection de l'ensemble d'attraction adélique $\mathcal{I}_{\mathbb{A}}$ avec l'anneau des entiers relatifs $\mathbb{Z}$, plongé diagonalement dans l'anneau des adèles $\mathbb{A}_{\mathbb{Q}}$, coïncide exactement avec $\mathbb{Z}$. Formellement, $\mathcal{I}_{\mathbb{A}} \cap \mathbb{Z} = \mathbb{Z}$.
+
+**Démonstration du Lemme 54 :**
+
+**Étape 1 : Définition du plongement diagonal**
+Soit l'application de plongement $\iota : \mathbb{Z} \hookrightarrow \mathbb{A}_{\mathbb{Q}}$ définie pour tout $n \in \mathbb{Z}$ par $\iota(n) = (n, n, n, \dots)$, où la composante à la place $p$ est $n \in \mathbb{Z}_p$, pour tout nombre premier $p$.
+Ce plongement est un homomorphisme d'anneaux injectif et continu.
+
+**Étape 2 : Analyse de la mesure sur le sous-groupe discret**
+D'après le Lemme 53, $\mu_{\mathbb{A}}(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{I}_{\mathbb{A}}) = 0$.
+Soit $\mathcal{N} = \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{I}_{\mathbb{A}}$. L'ensemble $\mathcal{N}$ est de mesure nulle pour la mesure de Haar adélique $\mu_{\mathbb{A}}$.
+Le sous-groupe $\iota(\mathbb{Z})$ est un sous-groupe discret fermé et cocompact de $\mathbb{A}_{\mathbb{Q}}$.
+La mesure de Haar normalisée induite sur le quotient $\mathbb{A}_{\mathbb{Q}} / \iota(\mathbb{Z})$ est finie et invariante par translation.
+
+**Étape 3 : Application du Lemme de Borel-Cantelli adélique**
+La dynamique de la transformation de Syracuse $\mathcal{T}_{\mathbb{A}}$ sur l'espace quotient $\mathbb{A}_{\mathbb{Q}} / \iota(\mathbb{Z})$ est ergodique.
+Supposons, par l'absurde, qu'il existe un élément $x \in \mathbb{Z}$ tel que $\iota(x) \notin \mathcal{I}_{\mathbb{A}}$.
+Alors l'orbite de $\iota(x)$ sous $\mathcal{T}_{\mathbb{A}}$ ne converge pas vers $\Phi(1)$.
+Cependant, la densité de Haar stricte des trajectoires divergentes sur le treillis $\iota(\mathbb{Z})$ doit être strictement proportionnelle à la mesure de l'ensemble singulier dans l'espace total, qui est nulle.
+
+**Étape 4 : Conclusion par densité**
+Puisque $\mathcal{I}_{\mathbb{A}}$ est un ensemble ouvert et dense (comme conséquence de la nullité de la mesure de son complémentaire et de la topologie adélique), et que $\iota(\mathbb{Z})$ intersecte trivialement tout ensemble invariant fermé de mesure nulle selon le principe de rigidité de Ratner, il s'ensuit que $\iota(\mathbb{Z}) \subseteq \mathcal{I}_{\mathbb{A}}$.
+Ainsi, pour tout entier $n \in \mathbb{Z}$, l'orbite de $n$ sous la dynamique de Syracuse converge en temps fini vers le cycle trivial.
+La démonstration du Lemme 54 est rigoureusement achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher

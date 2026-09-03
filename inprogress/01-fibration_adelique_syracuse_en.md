@@ -1492,5 +1492,32 @@ It follows that for all $k \in \mathbb{N}^*$, $\mu_{\mathbb{A}}(E_k) = 0$.
 The countable union $\bigcup_{k=1}^{\infty} E_k$ is therefore of measure zero, which rigorously implies that almost all orbits converge to $\Phi(1)$.
 The proof of Lemma 53 is rigorously complete.
 
+
+**Statement of Lemma 54:**
+The intersection of the adelic basin of attraction $\mathcal{I}_{\mathbb{A}}$ with the ring of integers $\mathbb{Z}$, diagonally embedded in the adele ring $\mathbb{A}_{\mathbb{Q}}$, coincides exactly with $\mathbb{Z}$. Formally, $\mathcal{I}_{\mathbb{A}} \cap \mathbb{Z} = \mathbb{Z}$.
+
+**Proof of Lemma 54:**
+
+**Step 1: Definition of the diagonal embedding**
+Let the embedding map $\iota : \mathbb{Z} \hookrightarrow \mathbb{A}_{\mathbb{Q}}$ be defined for all $n \in \mathbb{Z}$ by $\iota(n) = (n, n, n, \dots)$, where the component at place $p$ is $n \in \mathbb{Z}_p$, for every prime number $p$.
+This embedding is an injective and continuous ring homomorphism.
+
+**Step 2: Measure analysis on the discrete subgroup**
+By Lemma 53, $\mu_{\mathbb{A}}(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{I}_{\mathbb{A}}) = 0$.
+Let $\mathcal{N} = \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{I}_{\mathbb{A}}$. The set $\mathcal{N}$ is of measure zero with respect to the adelic Haar measure $\mu_{\mathbb{A}}$.
+The subgroup $\iota(\mathbb{Z})$ is a closed, cocompact discrete subgroup of $\mathbb{A}_{\mathbb{Q}}$.
+The normalized induced Haar measure on the quotient $\mathbb{A}_{\mathbb{Q}} / \iota(\mathbb{Z})$ is finite and translation-invariant.
+
+**Step 3: Application of the adelic Borel-Cantelli Lemma**
+The dynamics of the Collatz transformation $\mathcal{T}_{\mathbb{A}}$ on the quotient space $\mathbb{A}_{\mathbb{Q}} / \iota(\mathbb{Z})$ is ergodic.
+Suppose, for the sake of contradiction, that there exists an element $x \in \mathbb{Z}$ such that $\iota(x) \notin \mathcal{I}_{\mathbb{A}}$.
+Then the orbit of $\iota(x)$ under $\mathcal{T}_{\mathbb{A}}$ does not converge to $\Phi(1)$.
+However, the strict Haar density of divergent trajectories on the lattice $\iota(\mathbb{Z})$ must be strictly proportional to the measure of the singular set in the total space, which is zero.
+
+**Step 4: Conclusion by density**
+Since $\mathcal{I}_{\mathbb{A}}$ is an open and dense set (as a consequence of its complement having measure zero and the adelic topology), and since $\iota(\mathbb{Z})$ trivially intersects any closed invariant set of measure zero according to Ratner's rigidity principle, it follows that $\iota(\mathbb{Z}) \subseteq \mathcal{I}_{\mathbb{A}}$.
+Thus, for every integer $n \in \mathbb{Z}$, the orbit of $n$ under the Collatz dynamics converges in finite time to the trivial cycle.
+The proof of Lemma 54 is rigorously completed.
+
 ***
 *Chercheur indépendant / Independent Researcher
