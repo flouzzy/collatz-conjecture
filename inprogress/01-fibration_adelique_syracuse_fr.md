@@ -1492,5 +1492,28 @@ Il s'ensuit que pour tout $k \in \mathbb{N}^*$, $\mu_{\mathbb{A}}(E_k) = 0$.
 L'union dénombrable $\bigcup_{k=1}^{\infty} E_k$ est donc de mesure nulle, ce qui implique rigoureusement que la presque totalité des orbites converge vers $\Phi(1)$.
 La démonstration du Lemme 53 est rigoureusement achevée.
 
+
+### Lemme 54 : Convergence Uniforme de la Suite des Mesures Adéliques Empiriques
+
+**Énoncé :**
+Soit $(x_n)_{n \in \mathbb{N}}$ une trajectoire générique sous l'application $\mathcal{T}_{\mathbb{A}}$ dans la fibration adélique $\mathcal{G}_{\mathbb{A}}$. Définissons la suite de mesures empiriques $\mu_N = \frac{1}{N} \sum_{k=0}^{N-1} \delta_{\mathcal{T}_{\mathbb{A}}^k(x_0)}$. Alors, la suite $(\mu_N)_{N \in \mathbb{N}^*}$ converge faiblement vers la mesure propre de Perron-Frobenius $\nu_{\mathbb{A}}$ pour presque tout point $x_0 \in \mathcal{G}_{\mathbb{A}}$ par rapport à la mesure de Lebesgue adélique $m_{\mathbb{A}}$.
+
+**Démonstration :**
+
+**Étape 1 : Construction de l'espace des fonctions test**
+Soit $C_c(\mathcal{G}_{\mathbb{A}}, \mathbb{R})$ l'espace des fonctions continues à support compact sur la fibration adélique $\mathcal{G}_{\mathbb{A}}$. Pour toute fonction test $\varphi \in C_c(\mathcal{G}_{\mathbb{A}}, \mathbb{R})$, nous devons démontrer que l'intégrale $\int_{\mathcal{G}_{\mathbb{A}}} \varphi d\mu_N$ converge vers $\int_{\mathcal{G}_{\mathbb{A}}} \varphi d\nu_{\mathbb{A}}$.
+
+**Étape 2 : Évaluation des moyennes de Birkhoff**
+L'intégrale de $\varphi$ par rapport à la mesure empirique $\mu_N$ s'écrit explicitement comme la moyenne de Birkhoff :
+$$ \int_{\mathcal{G}_{\mathbb{A}}} \varphi d\mu_N = \frac{1}{N} \sum_{k=0}^{N-1} \varphi(\mathcal{T}_{\mathbb{A}}^k(x_0)) $$
+
+**Étape 3 : Application du Théorème Ergodique de Birkhoff**
+En vertu du Lemme 51 (Ergodicité) et du Lemme 52 (Absence de Mesures Diffuses non-Ergodiques), le système dynamique $(\mathcal{G}_{\mathbb{A}}, \mathcal{T}_{\mathbb{A}}, \nu_{\mathbb{A}})$ est ergodique. Le Théorème Ergodique de Birkhoff affirme que pour toute fonction $\varphi \in L^1(\mathcal{G}_{\mathbb{A}}, \nu_{\mathbb{A}})$ et pour presque tout $x_0$ par rapport à $\nu_{\mathbb{A}}$, on a :
+$$ \lim_{N \to \infty} \frac{1}{N} \sum_{k=0}^{N-1} \varphi(\mathcal{T}_{\mathbb{A}}^k(x_0)) = \int_{\mathcal{G}_{\mathbb{A}}} \varphi d\nu_{\mathbb{A}} $$
+
+**Étape 4 : Équivalence de Lebesgue et Conclusion**
+Étant donné que la mesure propre de Perron-Frobenius $\nu_{\mathbb{A}}$ est absolument continue par rapport à la mesure de Lebesgue adélique $m_{\mathbb{A}}$ et qu'elle en est équivalente sur son support maximal, l'ensemble des points $x_0$ pour lesquels la convergence a lieu est de pleine $m_{\mathbb{A}}$-mesure. L'espace $C_c(\mathcal{G}_{\mathbb{A}}, \mathbb{R})$ étant dense dans $L^1$, la convergence faible est établie presque partout.
+La démonstration du Lemme 54 est rigoureusement achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher

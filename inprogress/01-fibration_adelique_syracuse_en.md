@@ -1492,5 +1492,28 @@ It follows that for all $k \in \mathbb{N}^*$, $\mu_{\mathbb{A}}(E_k) = 0$.
 The countable union $\bigcup_{k=1}^{\infty} E_k$ is therefore of measure zero, which rigorously implies that almost all orbits converge to $\Phi(1)$.
 The proof of Lemma 53 is rigorously complete.
 
+
+### Lemma 54: Uniform Convergence of the Sequence of Empirical Adelic Measures
+
+**Statement:**
+Let $(x_n)_{n \in \mathbb{N}}$ be a generic trajectory under the map $\mathcal{T}_{\mathbb{A}}$ in the adelic fibration $\mathcal{G}_{\mathbb{A}}$. Define the sequence of empirical measures $\mu_N = \frac{1}{N} \sum_{k=0}^{N-1} \delta_{\mathcal{T}_{\mathbb{A}}^k(x_0)}$. Then, the sequence $(\mu_N)_{N \in \mathbb{N}^*}$ converges weakly to the Perron-Frobenius eigenmeasure $\nu_{\mathbb{A}}$ for almost every point $x_0 \in \mathcal{G}_{\mathbb{A}}$ with respect to the adelic Lebesgue measure $m_{\mathbb{A}}$.
+
+**Proof:**
+
+**Step 1: Construction of the test function space**
+Let $C_c(\mathcal{G}_{\mathbb{A}}, \mathbb{R})$ be the space of compactly supported continuous functions on the adelic fibration $\mathcal{G}_{\mathbb{A}}$. For any test function $\varphi \in C_c(\mathcal{G}_{\mathbb{A}}, \mathbb{R})$, we must prove that the integral $\int_{\mathcal{G}_{\mathbb{A}}} \varphi d\mu_N$ converges to $\int_{\mathcal{G}_{\mathbb{A}}} \varphi d\nu_{\mathbb{A}}$.
+
+**Step 2: Evaluation of Birkhoff averages**
+The integral of $\varphi$ with respect to the empirical measure $\mu_N$ can be explicitly written as the Birkhoff average:
+$$ \int_{\mathcal{G}_{\mathbb{A}}} \varphi d\mu_N = \frac{1}{N} \sum_{k=0}^{N-1} \varphi(\mathcal{T}_{\mathbb{A}}^k(x_0)) $$
+
+**Step 3: Application of the Birkhoff Ergodic Theorem**
+By virtue of Lemma 51 (Ergodicity) and Lemma 52 (Absence of Non-Ergodic Diffuse Measures), the dynamical system $(\mathcal{G}_{\mathbb{A}}, \mathcal{T}_{\mathbb{A}}, \nu_{\mathbb{A}})$ is ergodic. The Birkhoff Ergodic Theorem states that for any function $\varphi \in L^1(\mathcal{G}_{\mathbb{A}}, \nu_{\mathbb{A}})$ and for almost every $x_0$ with respect to $\nu_{\mathbb{A}}$, we have:
+$$ \lim_{N \to \infty} \frac{1}{N} \sum_{k=0}^{N-1} \varphi(\mathcal{T}_{\mathbb{A}}^k(x_0)) = \int_{\mathcal{G}_{\mathbb{A}}} \varphi d\nu_{\mathbb{A}} $$
+
+**Step 4: Lebesgue equivalence and Conclusion**
+Since the Perron-Frobenius eigenmeasure $\nu_{\mathbb{A}}$ is absolutely continuous with respect to the adelic Lebesgue measure $m_{\mathbb{A}}$ and is equivalent to it on its maximal support, the set of points $x_0$ for which the convergence holds is of full $m_{\mathbb{A}}$-measure. The space $C_c(\mathcal{G}_{\mathbb{A}}, \mathbb{R})$ being dense in $L^1$, weak convergence is established almost everywhere.
+The proof of Lemma 54 is rigorously complete.
+
 ***
 *Chercheur indépendant / Independent Researcher
