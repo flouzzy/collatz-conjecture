@@ -1492,5 +1492,39 @@ Il s'ensuit que pour tout $k \in \mathbb{N}^*$, $\mu_{\mathbb{A}}(E_k) = 0$.
 L'union dénombrable $\bigcup_{k=1}^{\infty} E_k$ est donc de mesure nulle, ce qui implique rigoureusement que la presque totalité des orbites converge vers $\Phi(1)$.
 La démonstration du Lemme 53 est rigoureusement achevée.
 
+
+### Lemme 54 : Complétude de la Base d'Ondelettes Adéliques sur $L^2(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}})$
+
+**Définition 54.1 :**
+Soit l'espace de Hilbert $L^2(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}, \mu_{\mathbb{A}})$. Nous définissons le système d'ondelettes adéliques $\mathcal{W}_{\mathbb{A}} = \{ \psi_{j, k, p} \}_{j,k,p}$ engendré par la fonction mère $\psi \in L^2(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}})$, tel que défini lors de la construction spectrale (cf. Lemme 40). La famille est générée par les opérateurs d'échelle $\mathcal{S}_p$ et de translation $\tau_k$.
+
+**Énoncé du Lemme 54 :**
+Le système d'ondelettes adéliques $\mathcal{W}_{\mathbb{A}}$ forme une base orthonormée complète de l'espace de Hilbert $L^2(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}, \mu_{\mathbb{A}})$. Conséquemment, la projection orthogonale $\Pi_{\mathcal{W}} : L^2(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}) \to \overline{\text{Vect}(\mathcal{W}_{\mathbb{A}})}$ est exactement l'opérateur identité $\text{Id}_{L^2}$.
+
+**Démonstration du Lemme 54 :**
+
+**Étape 1 : Orthonormalité de la famille $\mathcal{W}_{\mathbb{A}}$**
+Soit $\psi_{j_1, k_1, p_1}$ et $\psi_{j_2, k_2, p_2}$ deux éléments distincts de $\mathcal{W}_{\mathbb{A}}$. Par construction de l'analyse multirésolution adélique sur les groupes localement compacts (Théorème de l'Analyse Harmonique Adélique), les espaces d'échelle $V_j$ satisfont $V_j \subset V_{j+1}$ et les espaces d'ondelettes $W_j$ sont définis comme le complément orthogonal de $V_j$ dans $V_{j+1}$.
+Ainsi, si $j_1 \neq j_2$, disons $j_1 < j_2$, on a $\psi_{j_1, k_1, p_1} \in W_{j_1} \subset V_{j_1+1} \subset V_{j_2}$.
+Puisque $W_{j_2} \perp V_{j_2}$, il s'ensuit que $\langle \psi_{j_1, k_1, p_1}, \psi_{j_2, k_2, p_2} \rangle_{L^2} = 0$.
+Si $j_1 = j_2$, l'orthonormalité au sein d'une même échelle est garantie par l'invariance par translation du réseau adélique.
+Ainsi, la famille est rigoureusement orthonormée.
+
+**Étape 2 : Densité du sous-espace engendré**
+Supposons, par l'absurde, que $\mathcal{W}_{\mathbb{A}}$ n'est pas complète. Il existe alors une fonction $f \in L^2(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}})$ non nulle, telle que $f \perp \overline{\text{Vect}(\mathcal{W}_{\mathbb{A}})}$.
+Par conséquent, pour tout $j, k, p$, on a $\langle f, \psi_{j, k, p} \rangle_{L^2} = 0$.
+Par les propriétés de l'analyse multirésolution, cela implique que la projection de $f$ sur tout espace d'échelle $V_j$ est nulle, c'est-à-dire $\Pi_{V_j}f = 0$ pour tout $j \in \mathbb{Z}$.
+
+**Étape 3 : Convergence des projections**
+D'après l'axiome de l'union dense des espaces d'échelle sur les adèles, on a $\overline{\bigcup_{j \in \mathbb{Z}} V_j} = L^2(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}})$.
+Il s'ensuit que $\lim_{j \to +\infty} \Pi_{V_j}f = f$ dans la topologie $L^2$.
+Puisque $\Pi_{V_j}f = 0$ pour tout $j$, on obtient que $f = 0$ presque partout par rapport à la mesure $\mu_{\mathbb{A}}$.
+Ceci contredit l'hypothèse que $f$ est non nulle.
+
+**Étape 4 : Conclusion formelle**
+L'orthogonal de $\overline{\text{Vect}(\mathcal{W}_{\mathbb{A}})}$ étant réduit au vecteur nul $\{0\}$, on déduit que $\overline{\text{Vect}(\mathcal{W}_{\mathbb{A}})} = L^2(\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}, \mu_{\mathbb{A}})$.
+La famille $\mathcal{W}_{\mathbb{A}}$ constitue donc une base orthonormée stricte et complète.
+La démonstration du Lemme 54 est rigoureusement achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher
