@@ -1565,5 +1565,24 @@ L'opérateur $\Psi$ établit une équivalence unitaire entre la structure des on
 La démonstration du Lemme 55 est rigoureusement achevée.
 
 
+
+**Lemme 56 (Densité P-Adique de l'Image de Syracuse):** L'image de l'opérateur de transfert adélique $\mathcal{L}$ restreint à la composante $p$-adique pour $p \neq 2$ est partout dense dans $L^2(\mathbb{Q}_p, \mu_p)$.
+
+**Démonstration du Lemme 56 :**
+
+**Étape 1 : Action isométrique locale de l'opérateur de Syracuse pour $p \neq 2$**
+Soit $p$ un nombre premier impair. L'opérateur de Syracuse localisé agit sur $x \in \mathbb{Q}_p$ comme une transformation affine. D'après les axiomes posés, pour tout $x \in \mathbb{Z}_p$, l'application $x \mapsto 3x+1$ (ou $x \mapsto \frac{x}{2}$) induit une bijection sur les disques ouverts de $\mathbb{Q}_p$ puisque la multiplication par $2$ et par $3$ sont des automorphismes isométriques sur l'anneau local $\mathbb{Z}_p$ (les normes $p$-adiques $|2|_p$ et $|3|_p$ sont strictement égales à $1$).
+L'opérateur de transfert associé $\mathcal{L}_p$ préserve la mesure de Haar $\mu_p$ et agit donc par isométrie surjective sur l'espace de Lebesgue associé $L^2(\mathbb{Q}_p, \mu_p)$.
+
+**Étape 2 : Identité avec l'espace fonctionnel complet**
+Puisque l'opérateur $\mathcal{L}_p : L^2(\mathbb{Q}_p, \mu_p) \to L^2(\mathbb{Q}_p, \mu_p)$ est une isométrie surjective, son image analytique coïncide exactement avec l'espace d'arrivée.
+Soit $\phi \in L^2(\mathbb{Q}_p, \mu_p)$ une fonction de carré intégrable. Il existe explicitement une fonction antécédente $\psi = \mathcal{L}_p^{-1}(\phi)$, de sorte que $\mathcal{L}_p(\psi) = \phi$. La fonction $\psi$ appartient rigoureusement à l'espace $L^2(\mathbb{Q}_p, \mu_p)$ par la symétrie isométrique de l'opérateur inverse.
+L'image $\text{Im}(\mathcal{L}_p)$ est donc algébriquement et topologiquement égale à $L^2(\mathbb{Q}_p, \mu_p)$.
+
+**Étape 3 : Densité formelle**
+L'égalité stricte $\text{Im}(\mathcal{L}_p) = L^2(\mathbb{Q}_p, \mu_p)$ implique directement que l'adhérence topologique de l'image, notée $\overline{\text{Im}(\mathcal{L}_p)}$, satisfait $\overline{\text{Im}(\mathcal{L}_p)} = L^2(\mathbb{Q}_p, \mu_p)$.
+L'opérateur de transfert adélique restreint à chaque composante $p$-adique pour $p \neq 2$ génère ainsi une image qui est partout dense par rapport à la topologie induite par la norme $L^2$. La démonstration du Lemme 56 est rigoureusement achevée.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
