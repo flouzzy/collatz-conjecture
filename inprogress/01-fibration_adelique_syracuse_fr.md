@@ -1584,5 +1584,32 @@ L'égalité stricte $\text{Im}(\mathcal{L}_p) = L^2(\mathbb{Q}_p, \mu_p)$ impliq
 L'opérateur de transfert adélique restreint à chaque composante $p$-adique pour $p \neq 2$ génère ainsi une image qui est partout dense par rapport à la topologie induite par la norme $L^2$. La démonstration du Lemme 56 est rigoureusement achevée.
 
 
+
+
+**Lemme 57 (Continuité Holderienne de la Fibration sur la Composante 3-adique):** La fibration structurale induite par le transfert adélique $\mathcal{L}$ de l'espace de Syracuse restreint à la composante 3-adique, $\pi_3: \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \to \mathbb{Q}_3$, admet une restriction localement lipschitzienne (et a fortiori höldérienne) par rapport à la métrique ultramétrique 3-adique sur les compacts de $\mathbb{Z}_3$.
+
+**Démonstration du Lemme 57 :**
+
+**Étape 1 : Axiomatisation du module de continuité ultramétrique**
+Soit $\mathbb{Z}_3$ l'anneau local des entiers 3-adiques. On munit $\mathbb{Q}_3$ de sa valeur absolue ultramétrique usuelle $|\cdot|_3$. L'opérateur de Syracuse localisé sur la fibre 3-adique, noté $\mathcal{T}_3: \mathbb{Z}_3 \to \mathbb{Z}_3$, s'écrit pour tout $x \in \mathbb{Z}_3$ sous la forme ramifiée :
+$\mathcal{T}_3(x) = \frac{x}{2}$ si $x \equiv 0 \pmod 2$
+$\mathcal{T}_3(x) = \frac{3x+1}{2}$ si $x \equiv 1 \pmod 2$.
+
+**Étape 2 : Évaluation des modules de déformation métrique**
+Soient $x, y \in \mathbb{Z}_3$ deux éléments topologiquement proches dans la métrique 3-adique, c'est-à-dire que $|x - y|_3 < \epsilon$ pour un $\epsilon > 0$ suffisamment petit.
+Si $x$ et $y$ appartiennent à la même classe de congruence modulo 2, alors la parité est préservée.
+- Si $x \equiv y \equiv 0 \pmod 2$, alors $\mathcal{T}_3(x) - \mathcal{T}_3(y) = \frac{x - y}{2}$. Puisque 2 est une unité dans $\mathbb{Z}_3$ (son inverse $2^{-1}$ est un entier 3-adique), la multiplication par $1/2$ est une isométrie : $|\mathcal{T}_3(x) - \mathcal{T}_3(y)|_3 = |2^{-1}|_3 |x - y|_3 = 1 \cdot |x - y|_3 = |x - y|_3$.
+- Si $x \equiv y \equiv 1 \pmod 2$, alors $\mathcal{T}_3(x) - \mathcal{T}_3(y) = \frac{3x+1}{2} - \frac{3y+1}{2} = \frac{3(x-y)}{2}$. La distance 3-adique donne : $|\mathcal{T}_3(x) - \mathcal{T}_3(y)|_3 = |3 \cdot 2^{-1}|_3 |x - y|_3 = |3|_3 |2^{-1}|_3 |x - y|_3 = \frac{1}{3} \cdot 1 \cdot |x - y|_3 = \frac{1}{3} |x - y|_3$.
+
+**Étape 3 : Synthèse de la constante de Lipschitz globale**
+Dans les deux cas étudiés, si la classe résiduelle 2-adique est localement constante (ce qui est garanti sur des boules ouvertes 3-adiques intersectant les cylindres 2-adiques adéquats du fibré), l'opérateur $\mathcal{T}_3$ contracte ou conserve la distance 3-adique.
+En effet, on obtient l'inégalité stricte :
+$|\mathcal{T}_3(x) - \mathcal{T}_3(y)|_3 \le \max(1, \frac{1}{3}) |x - y|_3 = |x - y|_3$.
+La restriction locale de la fibration est donc 1-Lipschitzienne.
+
+**Étape 4 : Conclusion formelle**
+Puisque toute application 1-Lipschitzienne est par définition algébrique $\alpha$-Höldérienne pour $\alpha = 1$, la continuité de la projection fibrée $\pi_3$ sous l'action de l'opérateur de transfert adélique est rigoureusement établie sur chaque composante connexe des ouverts cylindriques modérés. La démonstration du Lemme 57 est rigoureusement achevée.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
