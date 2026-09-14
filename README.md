@@ -10,5 +10,4 @@
 
 ## Historique des avancées
 - **[2023-10-27]** : Initialisation du dépôt.
-- [2026-09-11] : Enrichissement de la Tentative 01 - fibration_adelique_syracuse (Versions FR & EN). Statut : Impasse.
-- [2026-09-11] : Création de la Tentative 03 - operade_topologique_syracuse (Versions FR & EN). Résolution du Lemme 1. Statut : En cours.
+- [2026-09-13] : Enrichissement de la Tentative 01 - fibration_adelique_syracuse (Versions FR & EN). Résolution du Lemme 57. Statut : En cours.
