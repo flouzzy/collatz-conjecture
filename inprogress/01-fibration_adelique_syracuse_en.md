@@ -224,6 +224,10 @@ Let $\mathcal{W}_{\mathbb{A}}$ be the adelic wavelet system defined on $L^2(\mat
 ### Lemma 59 (Absence of Rational Cycles via the Non-Triviality of Adelic Cohomology)
 Let $H^1(\mathbb{A}_{\mathbb{Q}}, \mathcal{F}_S)$ be the first adelic cohomology group associated with the Collatz bundle $\mathcal{F}_S$. If the orbit of an integer $x_0 \in \mathbb{N}^*$ forms a cycle (non-trivial), then the corresponding cohomology class $[c_{x_0}] \in H^1(\mathbb{A}_{\mathbb{Q}}, \mathcal{F}_S)$ is identically zero. However, for any $x_0 > 4$, $[c_{x_0}] \neq 0$. Thus, there are no rational cycles for $x_0 > 4$.
 
+
+**Lemma 60 (Invariance of Adelic Entropy on Extended Orbits) :**
+Let $\mathcal{H}_{\mathbb{A}} : \mathcal{G}_{\mathbb{A}} \to \mathbb{R}_{+}$ be the dyadic fibration entropic density defined in Axiom 5. For any vertex $v \in \mathcal{G}_{\mathbb{A}}$ belonging to an infinite connected component under the action of $\mathcal{T}_{\mathbb{A}}$, the asymptotic limit of the entropy $\lim_{N \to \infty} \mathcal{H}_{\mathbb{A}}(\mathcal{T}_{\mathbb{A}}^N(v))$ converges strictly to $0$.
+
 ## 3. Rigorous Proofs (Step-by-Step)
 
 ### Proof of Lemma 1 (Adelic Continuity of the Operator)

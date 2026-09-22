@@ -225,6 +225,10 @@ Soit $\mathcal{W}_{\mathbb{A}}$ le système d'ondelettes adéliques défini sur 
 ### Lemme 59 (Absence de Cycles Rationnels via la Non-Trivialité de la Cohomologie Adélique)
 Soit $H^1(\mathbb{A}_{\mathbb{Q}}, \mathcal{F}_S)$ le premier groupe de cohomologie adélique associé au fibré de Syracuse $\mathcal{F}_S$. Si l'orbite d'un entier $x_0 \in \mathbb{N}^*$ forme un cycle (non trivial), alors la classe de cohomologie correspondante $[c_{x_0}] \in H^1(\mathbb{A}_{\mathbb{Q}}, \mathcal{F}_S)$ est identiquement nulle. Or, pour tout $x_0 > 4$, $[c_{x_0}] \neq 0$. Ainsi, il n'existe pas de cycle rationnel pour $x_0 > 4$.
 
+
+**Lemme 60 (Invariance de l'Entropie Adélique sur les Orbites Étendues) :**
+Soit $\mathcal{H}_{\mathbb{A}} : \mathcal{G}_{\mathbb{A}} \to \mathbb{R}_{+}$ la densité entropique de fibration dyadique définie dans l'Axiome 5. Pour tout sommet $v \in \mathcal{G}_{\mathbb{A}}$ appartenant à une composante connexe infinie sous l'action de $\mathcal{T}_{\mathbb{A}}$, la limite asymptotique de l'entropie $\lim_{N \to \infty} \mathcal{H}_{\mathbb{A}}(\mathcal{T}_{\mathbb{A}}^N(v))$ converge strictement vers $0$.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 ### Démonstration du Lemme 1 (Continuité Adélique de l'Opérateur)
