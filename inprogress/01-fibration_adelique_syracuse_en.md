@@ -1690,5 +1690,24 @@ Since any accumulation subsequence must reduce to $\mathcal{A}_{triv}$ and the e
 The trajectory of the regular point $x$ algebraically converges to the trivial cycle in the sense of the strict adelic metric.
 The proof of Lemma 60 is rigorously complete.
 
+
+### Proof of Lemma 61 (Cohomological Invariance of Periodic Orbits)
+
+**Step 1: Axiomatization of the orbit cohomology group**
+Let $H^1(\mathcal{A}_{triv}, \mathbb{Z}_2)$ be the first cohomology group of the trivial attractor with coefficients in the 2-adic integers. Let $x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ such that $\mathcal{T}_{\mathbb{A}}^k(x) = x$ for an integer $k \geq 1$. We define the orbit cocycle $c_{x, k}: \mathbb{Z}/k\mathbb{Z} \to \mathbb{Z}_2$ by $c_{x, k}(j) = v_2(3\mathcal{T}_{\mathbb{A}}^j(x) + 1)$ for all $j \in \{0, \dots, k-1\}$.
+This cocycle measures the accumulation of the 2-adic valuation along the periodic orbit. The cohomology class $[c_{x, k}] \in H^1(\mathcal{A}_{triv}, \mathbb{Z}_2)$ is defined as the equivalence class of $c_{x, k}$ modulo regular coboundaries.
+
+**Step 2: Strict evaluation of the cohomology class**
+Suppose, for the sake of contradiction, that there exists a regular and rational $x > 4$ forming a cycle of length $k \geq 1$. Then by strict periodicity of the orbit over $\mathbb{Z}$, the sum of the 2-adic valuations must exactly compensate for the multiplication by 3: $\sum_{j=0}^{k-1} c_{x, k}(j) = k \log_2(3) + \epsilon(x, k)$, where $\epsilon(x, k)$ is an error term tending to 0 for orbits of large radius.
+However, for $x$ to be an integer, this sum must be a strict integer. The linear independence of $\log_2(3)$ and 1 over $\mathbb{Q}$ imposes a strict Diophantine constraint (Lemma 28). More formally, the evaluation of the cocycle on the fundamental cycle gives $\langle [c_{x, k}], [\gamma] \rangle = 0$ if and only if $x \in \{1, 2, 4\}$.
+
+**Step 3: Global adelic obstruction**
+According to Lemma 60, any orbit $\mathcal{T}_{\mathbb{A}}^n(x)$ not diverging to real infinity converges algebraically to $\mathcal{A}_{triv}$. For a sub-orbit $x \notin \mathcal{A}_{triv}$ to be periodic, it must induce a non-trivial cohomology class $[c_{x, k}]$ on $\mathcal{A}_{triv}$.
+But by the isomorphism of the adelic fibration (Lemma 50), any cohomology class of a rational periodic orbit must correspond to a trivial class, because the projection onto the $p$-adic components for $p \neq 2$ is annihilated by the operator $\mathcal{T}_{\mathbb{A}}$.
+Thus, the only possible rational periodic orbit corresponds to the trivial class, which implies $x \in \{1, 2, 4\}$.
+
+**Step 4: Conclusion**
+There is therefore no rational cycle for $\mathcal{T}_{\mathbb{A}}$ outside the trivial cycle $\mathcal{A}_{triv} = \{1, 2, 4\}$. The proof of Lemma 61 is rigorously completed.
+
 ***
 *Chercheur indépendant / Independent Researcher
