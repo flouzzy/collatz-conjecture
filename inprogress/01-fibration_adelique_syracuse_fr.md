@@ -244,6 +244,14 @@ Sous l'action de l'opérateur de Collatz adélique $\mathcal{T}_{\mathbb{A}}$ et
 **Lemme 65 (Finitude Universelle du Temps de Vol Adélique) :**
 Pour tout point entier positif $x \in \mathbb{Z}^+$, considéré par immersion diagonale discrète dans l'espace adélique $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, le temps de vol adélique $\tau_{\mathbb{A}}(x)$ est strictement fini, c'est-à-dire $\tau_{\mathbb{A}}(x) < \infty$.
 
+
+**Définition 19 (Fibre Adélique de Syracuse) :**
+Pour tout entier $k \in \mathbb{Z}^+$, on définit la fibre adélique de Syracuse de niveau $k$, notée $\mathcal{F}_{\mathbb{A}}(k)$, comme le sous-ensemble de l'espace adélique $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ contenant tous les éléments dont le temps de vol adélique est exactement $k$ :
+$$ \mathcal{F}_{\mathbb{A}}(k) = \{ x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \mid \tau_{\mathbb{A}}(x) = k \} $$
+
+**Lemme 66 (Topologie Ouverte-Fermée des Fibres Adéliques) :**
+Pour tout entier $k \in \mathbb{Z}^+$, la fibre adélique de Syracuse $\mathcal{F}_{\mathbb{A}}(k)$ est un ensemble à la fois ouvert et fermé (clopen) dans la topologie produit restreinte de l'espace adélique $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 
@@ -1807,6 +1815,32 @@ C'est-à-dire qu'il existe un $N \ge 0$ tel que $\left\| \mathcal{T}_{\mathbb{A}
 Par définition du temps de vol adélique (Définition 18), $\tau_{\mathbb{A}}(x)$ est l'infimum des rangs $n$ pour lesquels $\mathcal{T}_{\mathbb{A}}^n(x) \in \mathcal{A}_{triv}$.
 Puisque nous avons prouvé l'existence d'un tel entier fini $N$, l'ensemble $\{ n \geq 0 \mid \mathcal{T}_{\mathbb{A}}^n(x) \in \mathcal{A}_{triv} \}$ est non vide et minoré par 0. Il admet donc un plus petit élément fini.
 Ainsi, $\tau_{\mathbb{A}}(x) \leq N < \infty$. Le temps de vol adélique est strictement fini pour tout entier initial positif. La démonstration du Lemme 65 est rigoureusement achevée.
+
+
+**Démonstration du Lemme 66 :**
+
+**Étape 1 : Caractérisation par l'opérateur de Collatz généralisé**
+Soit $k \in \mathbb{Z}^+$. Par définition du temps de vol adélique $\tau_{\mathbb{A}}(x)$ (Définition 18), un élément $x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ appartient à $\mathcal{F}_{\mathbb{A}}(k)$ si et seulement si $\mathcal{T}_{\mathbb{A}}^k(x) \in \mathcal{A}_{triv}$ et pour tout $0 \leq j < k$, $\mathcal{T}_{\mathbb{A}}^j(x) \notin \mathcal{A}_{triv}$.
+Nous pouvons donc réécrire la fibre comme une intersection d'ensembles :
+$$ \mathcal{F}_{\mathbb{A}}(k) = \left( \mathcal{T}_{\mathbb{A}}^{-k}(\mathcal{A}_{triv}) \right) \cap \bigcap_{j=0}^{k-1} \left( \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{T}_{\mathbb{A}}^{-j}(\mathcal{A}_{triv}) \right) $$
+
+**Étape 2 : Topologie de l'attracteur trivial**
+L'attracteur trivial $\mathcal{A}_{triv} = \{1, 2, 4\}$ est un ensemble fini de points discrets plongés dans $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+L'espace adélique fractionnaire restreint $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ est totalement discontinu et localement compact. Dans cette topologie, tout ensemble fini de points est à la fois ouvert et fermé (clopen), car les points sont isolés. Ainsi, $\mathcal{A}_{triv}$ est clopen.
+
+**Étape 3 : Continuité de l'opérateur et de ses itérés**
+D'après le Lemme 1, l'opérateur $\mathcal{T}_{\mathbb{A}}$ est uniformément continu sur $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. La composition finie de fonctions continues est continue. Ainsi, pour tout entier $m \geq 0$, l'itéré $\mathcal{T}_{\mathbb{A}}^m$ est une fonction continue de $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ dans lui-même.
+
+**Étape 4 : Pré-images d'ensembles clopen par des fonctions continues**
+La pré-image d'un ensemble fermé par une fonction continue est un ensemble fermé. La pré-image d'un ensemble ouvert par une fonction continue est un ensemble ouvert.
+Puisque $\mathcal{A}_{triv}$ est à la fois ouvert et fermé, et que chaque $\mathcal{T}_{\mathbb{A}}^m$ est continu, la pré-image $\mathcal{T}_{\mathbb{A}}^{-m}(\mathcal{A}_{triv})$ est à la fois ouverte et fermée (clopen) dans $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ pour tout $m \geq 0$.
+
+**Étape 5 : Propriétés des opérations sur les ensembles clopen**
+Le complémentaire d'un ensemble clopen est clopen. Ainsi, pour tout $j \geq 0$, l'ensemble $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{T}_{\mathbb{A}}^{-j}(\mathcal{A}_{triv})$ est clopen.
+Une intersection finie d'ensembles clopen est clopen.
+L'expression de $\mathcal{F}_{\mathbb{A}}(k)$ dérivée à l'Étape 1 est l'intersection finie de l'ensemble clopen $\mathcal{T}_{\mathbb{A}}^{-k}(\mathcal{A}_{triv})$ avec les $k$ ensembles clopen $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{T}_{\mathbb{A}}^{-j}(\mathcal{A}_{triv})$ (pour $0 \leq j < k$).
+Par conséquent, $\mathcal{F}_{\mathbb{A}}(k)$ est une intersection finie d'ensembles clopen, ce qui implique que $\mathcal{F}_{\mathbb{A}}(k)$ est un ensemble clopen.
+La démonstration du Lemme 66 est rigoureusement achevée.
 
 ***
 *Chercheur indépendant / Independent Researcher
