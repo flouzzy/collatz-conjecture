@@ -1808,5 +1808,35 @@ Par définition du temps de vol adélique (Définition 18), $\tau_{\mathbb{A}}(x
 Puisque nous avons prouvé l'existence d'un tel entier fini $N$, l'ensemble $\{ n \geq 0 \mid \mathcal{T}_{\mathbb{A}}^n(x) \in \mathcal{A}_{triv} \}$ est non vide et minoré par 0. Il admet donc un plus petit élément fini.
 Ainsi, $\tau_{\mathbb{A}}(x) \leq N < \infty$. Le temps de vol adélique est strictement fini pour tout entier initial positif. La démonstration du Lemme 65 est rigoureusement achevée.
 
+
+### Démonstration du Lemme 66 (Invariance de la Mesure 2-Adique sous Itération Adélique)
+
+**Étape 1 : Définition de la mesure induite**
+Soit $\mu_{\mathbb{A}}$ la mesure de Haar normalisée sur l'anneau des adèles $\mathbb{A}_{\mathbb{Q}}$. Considérons la restriction de cette mesure, notée $\mu_2$, sur la composante 2-adique $\mathbb{Z}_2$, telle que $\mu_2(\mathbb{Z}_2) = 1$.
+L'opérateur adélique $\mathcal{T}_{\mathbb{A}}$ induit une application de transfert, notée $\mathcal{T}_2$, sur le compact $\mathbb{Z}_2$.
+
+**Étape 2 : Analyse des pré-images par l'opérateur de transfert**
+Pour démontrer l'invariance de la mesure, nous devons prouver que pour tout sous-ensemble mesurable $E \subset \mathbb{Z}_2$, la mesure de sa pré-image $\mathcal{T}_2^{-1}(E)$ est égale à la mesure de $E$ : $\mu_2(\mathcal{T}_2^{-1}(E)) = \mu_2(E)$.
+L'application de transfert $\mathcal{T}_2$ est définie par morceaux :
+$\mathcal{T}_2(x) = \frac{x}{2}$ si $x \in 2\mathbb{Z}_2$
+$\mathcal{T}_2(x) = \frac{3x+1}{2}$ si $x \in 1 + 2\mathbb{Z}_2$
+
+**Étape 3 : Calcul des mesures des composantes de la pré-image**
+Considérons un sous-ensemble $E \subset \mathbb{Z}_2$. La pré-image $\mathcal{T}_2^{-1}(E)$ se décompose en l'union disjointe de deux sous-ensembles :
+$E_{pair} = \{ x \in 2\mathbb{Z}_2 \mid \frac{x}{2} \in E \} = 2E$
+$E_{impair} = \{ x \in 1 + 2\mathbb{Z}_2 \mid \frac{3x+1}{2} \in E \} = \frac{2E - 1}{3}$
+
+Puisque la multiplication par 2 divise la mesure par 2 dans $\mathbb{Z}_2$, nous avons :
+$\mu_2(E_{pair}) = \mu_2(2E) = \frac{1}{2}\mu_2(E)$
+
+Pour la composante impaire, l'application affine $x \mapsto \frac{2x - 1}{3}$ est une isométrie bijective sur $\mathbb{Z}_2$ (puisque 3 est inversible dans $\mathbb{Z}_2$), elle préserve donc la mesure à un facteur multiplicatif près correspondant à la valuation 2-adique de 2 (qui est $1/2$) :
+$\mu_2(E_{impair}) = \mu_2(\frac{2E - 1}{3}) = \frac{1}{2}\mu_2(E)$
+
+**Étape 4 : Sommation et conclusion de l'invariance**
+La mesure de la pré-image totale est la somme des mesures des composantes disjointes :
+$\mu_2(\mathcal{T}_2^{-1}(E)) = \mu_2(E_{pair}) + \mu_2(E_{impair}) = \frac{1}{2}\mu_2(E) + \frac{1}{2}\mu_2(E) = \mu_2(E)$
+
+Cette égalité, vérifiée pour tout sous-ensemble mesurable $E \subset \mathbb{Z}_2$, démontre que la mesure 2-adique $\mu_2$ est invariante sous l'action de l'opérateur de transfert $\mathcal{T}_2$ induit par l'itération adélique $\mathcal{T}_{\mathbb{A}}$. La démonstration du Lemme 66 est rigoureusement achevée.
+
 ***
 *Chercheur indépendant / Independent Researcher

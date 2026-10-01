@@ -1808,5 +1808,35 @@ By definition of the adelic flight time (Definition 18), $\tau_{\mathbb{A}}(x)$ 
 Since we have proven the existence of such a finite integer $N$, the set $\{ n \geq 0 \mid \mathcal{T}_{\mathbb{A}}^n(x) \in \mathcal{A}_{triv} \}$ is non-empty and bounded below by 0. It therefore admits a smallest finite element.
 Thus, $\tau_{\mathbb{A}}(x) \leq N < \infty$. The adelic flight time is strictly finite for any initial positive integer. The proof of Lemma 65 is rigorously completed.
 
+
+### Proof of Lemma 66 (Invariance of the 2-Adic Measure under Adelic Iteration)
+
+**Step 1: Definition of the induced measure**
+Let $\mu_{\mathbb{A}}$ be the normalized Haar measure on the ring of adeles $\mathbb{A}_{\mathbb{Q}}$. We consider the restriction of this measure, denoted $\mu_2$, to the 2-adic component $\mathbb{Z}_2$, such that $\mu_2(\mathbb{Z}_2) = 1$.
+The adelic operator $\mathcal{T}_{\mathbb{A}}$ induces a transfer map, denoted $\mathcal{T}_2$, on the compact space $\mathbb{Z}_2$.
+
+**Step 2: Analysis of preimages under the transfer operator**
+To prove the invariance of the measure, we must prove that for any measurable subset $E \subset \mathbb{Z}_2$, the measure of its preimage $\mathcal{T}_2^{-1}(E)$ is equal to the measure of $E$: $\mu_2(\mathcal{T}_2^{-1}(E)) = \mu_2(E)$.
+The transfer map $\mathcal{T}_2$ is defined piecewise:
+$\mathcal{T}_2(x) = \frac{x}{2}$ if $x \in 2\mathbb{Z}_2$
+$\mathcal{T}_2(x) = \frac{3x+1}{2}$ if $x \in 1 + 2\mathbb{Z}_2$
+
+**Step 3: Calculation of the measures of the preimage components**
+Consider a subset $E \subset \mathbb{Z}_2$. The preimage $\mathcal{T}_2^{-1}(E)$ decomposes into the disjoint union of two subsets:
+$E_{even} = \{ x \in 2\mathbb{Z}_2 \mid \frac{x}{2} \in E \} = 2E$
+$E_{odd} = \{ x \in 1 + 2\mathbb{Z}_2 \mid \frac{3x+1}{2} \in E \} = \frac{2E - 1}{3}$
+
+Since multiplication by 2 divides the measure by 2 in $\mathbb{Z}_2$, we have:
+$\mu_2(E_{even}) = \mu_2(2E) = \frac{1}{2}\mu_2(E)$
+
+For the odd component, the affine map $x \mapsto \frac{2x - 1}{3}$ is a bijective isometry on $\mathbb{Z}_2$ (since 3 is invertible in $\mathbb{Z}_2$), it therefore preserves the measure up to a multiplicative factor corresponding to the 2-adic valuation of 2 (which is $1/2$):
+$\mu_2(E_{odd}) = \mu_2(\frac{2E - 1}{3}) = \frac{1}{2}\mu_2(E)$
+
+**Step 4: Summation and conclusion of invariance**
+The measure of the total preimage is the sum of the measures of the disjoint components:
+$\mu_2(\mathcal{T}_2^{-1}(E)) = \mu_2(E_{even}) + \mu_2(E_{odd}) = \frac{1}{2}\mu_2(E) + \frac{1}{2}\mu_2(E) = \mu_2(E)$
+
+This equality, verified for all measurable subsets $E \subset \mathbb{Z}_2$, demonstrates that the 2-adic measure $\mu_2$ is invariant under the action of the transfer operator $\mathcal{T}_2$ induced by the adelic iteration $\mathcal{T}_{\mathbb{A}}$. The proof of Lemma 66 is rigorously completed.
+
 ***
 *Chercheur indépendant / Independent Researcher
