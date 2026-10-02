@@ -243,6 +243,14 @@ Under the action of the adelic Collatz operator $\mathcal{T}_{\mathbb{A}}$ and t
 **Lemma 65 (Universal Finiteness of the Adelic Flight Time):**
 For any positive integer point $x \in \mathbb{Z}^+$, considered by discrete diagonal immersion into the adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, the adelic flight time $\tau_{\mathbb{A}}(x)$ is strictly finite, meaning $\tau_{\mathbb{A}}(x) < \infty$.
 
+
+**Definition 19 (Adelic Collatz Fiber):**
+For any integer $k \in \mathbb{Z}^+$, we define the adelic Collatz fiber of level $k$, denoted $\mathcal{F}_{\mathbb{A}}(k)$, as the subset of the adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ containing all elements whose adelic flight time is exactly $k$:
+$$ \mathcal{F}_{\mathbb{A}}(k) = \{ x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \mid \tau_{\mathbb{A}}(x) = k \} $$
+
+**Lemma 66 (Clopen Topology of Adelic Fibers):**
+For any integer $k \in \mathbb{Z}^+$, the adelic Collatz fiber $\mathcal{F}_{\mathbb{A}}(k)$ is both an open and closed (clopen) set in the restricted product topology of the adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+
 ## 3. Rigorous Proofs (Step-by-Step)
 
 
@@ -1807,6 +1815,32 @@ That is to say, there exists an $N \ge 0$ such that $\left\| \mathcal{T}_{\mathb
 By definition of the adelic flight time (Definition 18), $\tau_{\mathbb{A}}(x)$ is the infimum of the ranks $n$ for which $\mathcal{T}_{\mathbb{A}}^n(x) \in \mathcal{A}_{triv}$.
 Since we have proven the existence of such a finite integer $N$, the set $\{ n \geq 0 \mid \mathcal{T}_{\mathbb{A}}^n(x) \in \mathcal{A}_{triv} \}$ is non-empty and bounded below by 0. It therefore admits a smallest finite element.
 Thus, $\tau_{\mathbb{A}}(x) \leq N < \infty$. The adelic flight time is strictly finite for any initial positive integer. The proof of Lemma 65 is rigorously completed.
+
+
+**Proof of Lemma 66:**
+
+**Step 1: Characterization via the generalized Collatz operator**
+Let $k \in \mathbb{Z}^+$. By the definition of the adelic flight time $\tau_{\mathbb{A}}(x)$ (Definition 18), an element $x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ belongs to $\mathcal{F}_{\mathbb{A}}(k)$ if and only if $\mathcal{T}_{\mathbb{A}}^k(x) \in \mathcal{A}_{triv}$ and for all $0 \leq j < k$, $\mathcal{T}_{\mathbb{A}}^j(x) \notin \mathcal{A}_{triv}$.
+We can therefore rewrite the fiber as an intersection of sets:
+$$ \mathcal{F}_{\mathbb{A}}(k) = \left( \mathcal{T}_{\mathbb{A}}^{-k}(\mathcal{A}_{triv}) \right) \cap \bigcap_{j=0}^{k-1} \left( \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{T}_{\mathbb{A}}^{-j}(\mathcal{A}_{triv}) \right) $$
+
+**Step 2: Topology of the trivial attractor**
+The trivial attractor $\mathcal{A}_{triv} = \{1, 2, 4\}$ is a finite set of discrete points embedded in $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+The restricted fractional adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ is totally disconnected and locally compact. In this topology, any finite set of points is both open and closed (clopen), because the points are isolated. Thus, $\mathcal{A}_{triv}$ is clopen.
+
+**Step 3: Continuity of the operator and its iterates**
+By Lemma 1, the operator $\mathcal{T}_{\mathbb{A}}$ is uniformly continuous on $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. The finite composition of continuous functions is continuous. Thus, for any integer $m \geq 0$, the iterate $\mathcal{T}_{\mathbb{A}}^m$ is a continuous function from $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ to itself.
+
+**Step 4: Preimages of clopen sets under continuous functions**
+The preimage of a closed set under a continuous function is a closed set. The preimage of an open set under a continuous function is an open set.
+Since $\mathcal{A}_{triv}$ is both open and closed, and each $\mathcal{T}_{\mathbb{A}}^m$ is continuous, the preimage $\mathcal{T}_{\mathbb{A}}^{-m}(\mathcal{A}_{triv})$ is both open and closed (clopen) in $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ for all $m \geq 0$.
+
+**Step 5: Properties of operations on clopen sets**
+The complement of a clopen set is clopen. Thus, for all $j \geq 0$, the set $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{T}_{\mathbb{A}}^{-j}(\mathcal{A}_{triv})$ is clopen.
+A finite intersection of clopen sets is clopen.
+The expression for $\mathcal{F}_{\mathbb{A}}(k)$ derived in Step 1 is the finite intersection of the clopen set $\mathcal{T}_{\mathbb{A}}^{-k}(\mathcal{A}_{triv})$ with the $k$ clopen sets $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{T}_{\mathbb{A}}^{-j}(\mathcal{A}_{triv})$ (for $0 \leq j < k$).
+Consequently, $\mathcal{F}_{\mathbb{A}}(k)$ is a finite intersection of clopen sets, which implies that $\mathcal{F}_{\mathbb{A}}(k)$ is a clopen set.
+The proof of Lemma 66 is rigorously complete.
 
 ***
 *Chercheur indépendant / Independent Researcher
