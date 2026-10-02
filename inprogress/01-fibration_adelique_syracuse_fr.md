@@ -1817,30 +1817,34 @@ Puisque nous avons prouvé l'existence d'un tel entier fini $N$, l'ensemble $\{ 
 Ainsi, $\tau_{\mathbb{A}}(x) \leq N < \infty$. Le temps de vol adélique est strictement fini pour tout entier initial positif. La démonstration du Lemme 65 est rigoureusement achevée.
 
 
-**Démonstration du Lemme 66 :**
+### Démonstration du Lemme 66 (Invariance de la Mesure 2-Adique sous Itération Adélique)
 
-**Étape 1 : Caractérisation par l'opérateur de Collatz généralisé**
-Soit $k \in \mathbb{Z}^+$. Par définition du temps de vol adélique $\tau_{\mathbb{A}}(x)$ (Définition 18), un élément $x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ appartient à $\mathcal{F}_{\mathbb{A}}(k)$ si et seulement si $\mathcal{T}_{\mathbb{A}}^k(x) \in \mathcal{A}_{triv}$ et pour tout $0 \leq j < k$, $\mathcal{T}_{\mathbb{A}}^j(x) \notin \mathcal{A}_{triv}$.
-Nous pouvons donc réécrire la fibre comme une intersection d'ensembles :
-$$ \mathcal{F}_{\mathbb{A}}(k) = \left( \mathcal{T}_{\mathbb{A}}^{-k}(\mathcal{A}_{triv}) \right) \cap \bigcap_{j=0}^{k-1} \left( \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{T}_{\mathbb{A}}^{-j}(\mathcal{A}_{triv}) \right) $$
+**Étape 1 : Définition de la mesure induite**
+Soit $\mu_{\mathbb{A}}$ la mesure de Haar normalisée sur l'anneau des adèles $\mathbb{A}_{\mathbb{Q}}$. Considérons la restriction de cette mesure, notée $\mu_2$, sur la composante 2-adique $\mathbb{Z}_2$, telle que $\mu_2(\mathbb{Z}_2) = 1$.
+L'opérateur adélique $\mathcal{T}_{\mathbb{A}}$ induit une application de transfert, notée $\mathcal{T}_2$, sur le compact $\mathbb{Z}_2$.
 
-**Étape 2 : Topologie de l'attracteur trivial**
-L'attracteur trivial $\mathcal{A}_{triv} = \{1, 2, 4\}$ est un ensemble fini de points discrets plongés dans $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
-L'espace adélique fractionnaire restreint $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ est totalement discontinu et localement compact. Dans cette topologie, tout ensemble fini de points est à la fois ouvert et fermé (clopen), car les points sont isolés. Ainsi, $\mathcal{A}_{triv}$ est clopen.
+**Étape 2 : Analyse des pré-images par l'opérateur de transfert**
+Pour démontrer l'invariance de la mesure, nous devons prouver que pour tout sous-ensemble mesurable $E \subset \mathbb{Z}_2$, la mesure de sa pré-image $\mathcal{T}_2^{-1}(E)$ est égale à la mesure de $E$ : $\mu_2(\mathcal{T}_2^{-1}(E)) = \mu_2(E)$.
+L'application de transfert $\mathcal{T}_2$ est définie par morceaux :
+$\mathcal{T}_2(x) = \frac{x}{2}$ si $x \in 2\mathbb{Z}_2$
+$\mathcal{T}_2(x) = \frac{3x+1}{2}$ si $x \in 1 + 2\mathbb{Z}_2$
 
-**Étape 3 : Continuité de l'opérateur et de ses itérés**
-D'après le Lemme 1, l'opérateur $\mathcal{T}_{\mathbb{A}}$ est uniformément continu sur $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. La composition finie de fonctions continues est continue. Ainsi, pour tout entier $m \geq 0$, l'itéré $\mathcal{T}_{\mathbb{A}}^m$ est une fonction continue de $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ dans lui-même.
+**Étape 3 : Calcul des mesures des composantes de la pré-image**
+Considérons un sous-ensemble $E \subset \mathbb{Z}_2$. La pré-image $\mathcal{T}_2^{-1}(E)$ se décompose en l'union disjointe de deux sous-ensembles :
+$E_{pair} = \{ x \in 2\mathbb{Z}_2 \mid \frac{x}{2} \in E \} = 2E$
+$E_{impair} = \{ x \in 1 + 2\mathbb{Z}_2 \mid \frac{3x+1}{2} \in E \} = \frac{2E - 1}{3}$
 
-**Étape 4 : Pré-images d'ensembles clopen par des fonctions continues**
-La pré-image d'un ensemble fermé par une fonction continue est un ensemble fermé. La pré-image d'un ensemble ouvert par une fonction continue est un ensemble ouvert.
-Puisque $\mathcal{A}_{triv}$ est à la fois ouvert et fermé, et que chaque $\mathcal{T}_{\mathbb{A}}^m$ est continu, la pré-image $\mathcal{T}_{\mathbb{A}}^{-m}(\mathcal{A}_{triv})$ est à la fois ouverte et fermée (clopen) dans $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ pour tout $m \geq 0$.
+Puisque la multiplication par 2 divise la mesure par 2 dans $\mathbb{Z}_2$, nous avons :
+$\mu_2(E_{pair}) = \mu_2(2E) = \frac{1}{2}\mu_2(E)$
 
-**Étape 5 : Propriétés des opérations sur les ensembles clopen**
-Le complémentaire d'un ensemble clopen est clopen. Ainsi, pour tout $j \geq 0$, l'ensemble $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{T}_{\mathbb{A}}^{-j}(\mathcal{A}_{triv})$ est clopen.
-Une intersection finie d'ensembles clopen est clopen.
-L'expression de $\mathcal{F}_{\mathbb{A}}(k)$ dérivée à l'Étape 1 est l'intersection finie de l'ensemble clopen $\mathcal{T}_{\mathbb{A}}^{-k}(\mathcal{A}_{triv})$ avec les $k$ ensembles clopen $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{T}_{\mathbb{A}}^{-j}(\mathcal{A}_{triv})$ (pour $0 \leq j < k$).
-Par conséquent, $\mathcal{F}_{\mathbb{A}}(k)$ est une intersection finie d'ensembles clopen, ce qui implique que $\mathcal{F}_{\mathbb{A}}(k)$ est un ensemble clopen.
-La démonstration du Lemme 66 est rigoureusement achevée.
+Pour la composante impaire, l'application affine $x \mapsto \frac{2x - 1}{3}$ est une isométrie bijective sur $\mathbb{Z}_2$ (puisque 3 est inversible dans $\mathbb{Z}_2$), elle préserve donc la mesure à un facteur multiplicatif près correspondant à la valuation 2-adique de 2 (qui est $1/2$) :
+$\mu_2(E_{impair}) = \mu_2(\frac{2E - 1}{3}) = \frac{1}{2}\mu_2(E)$
+
+**Étape 4 : Sommation et conclusion de l'invariance**
+La mesure de la pré-image totale est la somme des mesures des composantes disjointes :
+$\mu_2(\mathcal{T}_2^{-1}(E)) = \mu_2(E_{pair}) + \mu_2(E_{impair}) = \frac{1}{2}\mu_2(E) + \frac{1}{2}\mu_2(E) = \mu_2(E)$
+
+Cette égalité, vérifiée pour tout sous-ensemble mesurable $E \subset \mathbb{Z}_2$, démontre que la mesure 2-adique $\mu_2$ est invariante sous l'action de l'opérateur de transfert $\mathcal{T}_2$ induit par l'itération adélique $\mathcal{T}_{\mathbb{A}}$. La démonstration du Lemme 66 est rigoureusement achevée.
 
 ***
 *Chercheur indépendant / Independent Researcher

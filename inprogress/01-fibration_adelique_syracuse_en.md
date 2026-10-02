@@ -1817,30 +1817,34 @@ Since we have proven the existence of such a finite integer $N$, the set $\{ n \
 Thus, $\tau_{\mathbb{A}}(x) \leq N < \infty$. The adelic flight time is strictly finite for any initial positive integer. The proof of Lemma 65 is rigorously completed.
 
 
-**Proof of Lemma 66:**
+### Proof of Lemma 66 (Invariance of the 2-Adic Measure under Adelic Iteration)
 
-**Step 1: Characterization via the generalized Collatz operator**
-Let $k \in \mathbb{Z}^+$. By the definition of the adelic flight time $\tau_{\mathbb{A}}(x)$ (Definition 18), an element $x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ belongs to $\mathcal{F}_{\mathbb{A}}(k)$ if and only if $\mathcal{T}_{\mathbb{A}}^k(x) \in \mathcal{A}_{triv}$ and for all $0 \leq j < k$, $\mathcal{T}_{\mathbb{A}}^j(x) \notin \mathcal{A}_{triv}$.
-We can therefore rewrite the fiber as an intersection of sets:
-$$ \mathcal{F}_{\mathbb{A}}(k) = \left( \mathcal{T}_{\mathbb{A}}^{-k}(\mathcal{A}_{triv}) \right) \cap \bigcap_{j=0}^{k-1} \left( \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{T}_{\mathbb{A}}^{-j}(\mathcal{A}_{triv}) \right) $$
+**Step 1: Definition of the induced measure**
+Let $\mu_{\mathbb{A}}$ be the normalized Haar measure on the ring of adeles $\mathbb{A}_{\mathbb{Q}}$. We consider the restriction of this measure, denoted $\mu_2$, to the 2-adic component $\mathbb{Z}_2$, such that $\mu_2(\mathbb{Z}_2) = 1$.
+The adelic operator $\mathcal{T}_{\mathbb{A}}$ induces a transfer map, denoted $\mathcal{T}_2$, on the compact space $\mathbb{Z}_2$.
 
-**Step 2: Topology of the trivial attractor**
-The trivial attractor $\mathcal{A}_{triv} = \{1, 2, 4\}$ is a finite set of discrete points embedded in $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
-The restricted fractional adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ is totally disconnected and locally compact. In this topology, any finite set of points is both open and closed (clopen), because the points are isolated. Thus, $\mathcal{A}_{triv}$ is clopen.
+**Step 2: Analysis of preimages under the transfer operator**
+To prove the invariance of the measure, we must prove that for any measurable subset $E \subset \mathbb{Z}_2$, the measure of its preimage $\mathcal{T}_2^{-1}(E)$ is equal to the measure of $E$: $\mu_2(\mathcal{T}_2^{-1}(E)) = \mu_2(E)$.
+The transfer map $\mathcal{T}_2$ is defined piecewise:
+$\mathcal{T}_2(x) = \frac{x}{2}$ if $x \in 2\mathbb{Z}_2$
+$\mathcal{T}_2(x) = \frac{3x+1}{2}$ if $x \in 1 + 2\mathbb{Z}_2$
 
-**Step 3: Continuity of the operator and its iterates**
-By Lemma 1, the operator $\mathcal{T}_{\mathbb{A}}$ is uniformly continuous on $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. The finite composition of continuous functions is continuous. Thus, for any integer $m \geq 0$, the iterate $\mathcal{T}_{\mathbb{A}}^m$ is a continuous function from $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ to itself.
+**Step 3: Calculation of the measures of the preimage components**
+Consider a subset $E \subset \mathbb{Z}_2$. The preimage $\mathcal{T}_2^{-1}(E)$ decomposes into the disjoint union of two subsets:
+$E_{even} = \{ x \in 2\mathbb{Z}_2 \mid \frac{x}{2} \in E \} = 2E$
+$E_{odd} = \{ x \in 1 + 2\mathbb{Z}_2 \mid \frac{3x+1}{2} \in E \} = \frac{2E - 1}{3}$
 
-**Step 4: Preimages of clopen sets under continuous functions**
-The preimage of a closed set under a continuous function is a closed set. The preimage of an open set under a continuous function is an open set.
-Since $\mathcal{A}_{triv}$ is both open and closed, and each $\mathcal{T}_{\mathbb{A}}^m$ is continuous, the preimage $\mathcal{T}_{\mathbb{A}}^{-m}(\mathcal{A}_{triv})$ is both open and closed (clopen) in $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ for all $m \geq 0$.
+Since multiplication by 2 divides the measure by 2 in $\mathbb{Z}_2$, we have:
+$\mu_2(E_{even}) = \mu_2(2E) = \frac{1}{2}\mu_2(E)$
 
-**Step 5: Properties of operations on clopen sets**
-The complement of a clopen set is clopen. Thus, for all $j \geq 0$, the set $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{T}_{\mathbb{A}}^{-j}(\mathcal{A}_{triv})$ is clopen.
-A finite intersection of clopen sets is clopen.
-The expression for $\mathcal{F}_{\mathbb{A}}(k)$ derived in Step 1 is the finite intersection of the clopen set $\mathcal{T}_{\mathbb{A}}^{-k}(\mathcal{A}_{triv})$ with the $k$ clopen sets $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \setminus \mathcal{T}_{\mathbb{A}}^{-j}(\mathcal{A}_{triv})$ (for $0 \leq j < k$).
-Consequently, $\mathcal{F}_{\mathbb{A}}(k)$ is a finite intersection of clopen sets, which implies that $\mathcal{F}_{\mathbb{A}}(k)$ is a clopen set.
-The proof of Lemma 66 is rigorously complete.
+For the odd component, the affine map $x \mapsto \frac{2x - 1}{3}$ is a bijective isometry on $\mathbb{Z}_2$ (since 3 is invertible in $\mathbb{Z}_2$), it therefore preserves the measure up to a multiplicative factor corresponding to the 2-adic valuation of 2 (which is $1/2$):
+$\mu_2(E_{odd}) = \mu_2(\frac{2E - 1}{3}) = \frac{1}{2}\mu_2(E)$
+
+**Step 4: Summation and conclusion of invariance**
+The measure of the total preimage is the sum of the measures of the disjoint components:
+$\mu_2(\mathcal{T}_2^{-1}(E)) = \mu_2(E_{even}) + \mu_2(E_{odd}) = \frac{1}{2}\mu_2(E) + \frac{1}{2}\mu_2(E) = \mu_2(E)$
+
+This equality, verified for all measurable subsets $E \subset \mathbb{Z}_2$, demonstrates that the 2-adic measure $\mu_2$ is invariant under the action of the transfer operator $\mathcal{T}_2$ induced by the adelic iteration $\mathcal{T}_{\mathbb{A}}$. The proof of Lemma 66 is rigorously completed.
 
 ***
 *Chercheur indépendant / Independent Researcher
