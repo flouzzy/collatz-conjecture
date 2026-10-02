@@ -244,6 +244,14 @@ Sous l'action de l'opérateur de Collatz adélique $\mathcal{T}_{\mathbb{A}}$ et
 **Lemme 65 (Finitude Universelle du Temps de Vol Adélique) :**
 Pour tout point entier positif $x \in \mathbb{Z}^+$, considéré par immersion diagonale discrète dans l'espace adélique $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, le temps de vol adélique $\tau_{\mathbb{A}}(x)$ est strictement fini, c'est-à-dire $\tau_{\mathbb{A}}(x) < \infty$.
 
+
+**Définition 19 (Fibre Adélique de Syracuse) :**
+Pour tout entier $k \in \mathbb{Z}^+$, on définit la fibre adélique de Syracuse de niveau $k$, notée $\mathcal{F}_{\mathbb{A}}(k)$, comme le sous-ensemble de l'espace adélique $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ contenant tous les éléments dont le temps de vol adélique est exactement $k$ :
+$$ \mathcal{F}_{\mathbb{A}}(k) = \{ x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \mid \tau_{\mathbb{A}}(x) = k \} $$
+
+**Lemme 66 (Topologie Ouverte-Fermée des Fibres Adéliques) :**
+Pour tout entier $k \in \mathbb{Z}^+$, la fibre adélique de Syracuse $\mathcal{F}_{\mathbb{A}}(k)$ est un ensemble à la fois ouvert et fermé (clopen) dans la topologie produit restreinte de l'espace adélique $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 

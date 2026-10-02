@@ -243,6 +243,14 @@ Under the action of the adelic Collatz operator $\mathcal{T}_{\mathbb{A}}$ and t
 **Lemma 65 (Universal Finiteness of the Adelic Flight Time):**
 For any positive integer point $x \in \mathbb{Z}^+$, considered by discrete diagonal immersion into the adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, the adelic flight time $\tau_{\mathbb{A}}(x)$ is strictly finite, meaning $\tau_{\mathbb{A}}(x) < \infty$.
 
+
+**Definition 19 (Adelic Collatz Fiber):**
+For any integer $k \in \mathbb{Z}^+$, we define the adelic Collatz fiber of level $k$, denoted $\mathcal{F}_{\mathbb{A}}(k)$, as the subset of the adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ containing all elements whose adelic flight time is exactly $k$:
+$$ \mathcal{F}_{\mathbb{A}}(k) = \{ x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \mid \tau_{\mathbb{A}}(x) = k \} $$
+
+**Lemma 66 (Clopen Topology of Adelic Fibers):**
+For any integer $k \in \mathbb{Z}^+$, the adelic Collatz fiber $\mathcal{F}_{\mathbb{A}}(k)$ is both an open and closed (clopen) set in the restricted product topology of the adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+
 ## 3. Rigorous Proofs (Step-by-Step)
 
 
