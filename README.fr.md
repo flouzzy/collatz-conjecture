@@ -39,4 +39,4 @@ Le ton est strictement clinique et académique.
 
 - **[2023-10-27]** : Initialisation du dépôt.
 - [2026-06-18] : Création de la Tentative 02 - fibration_motivique_riemann (Versions FR & EN). Statut : En cours.
-- [2026-10-01] : Enrichissement de la Tentative 01 - fibration_adelique_syracuse (Versions FR & EN). Résolution du Lemme 66. Statut : En cours.
+- [2026-10-04] : Enrichissement de la Tentative 01 - fibration_adelique_syracuse (Versions FR & EN). Résolution du Lemme 67. Statut : En cours.

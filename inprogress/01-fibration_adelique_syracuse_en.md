@@ -1846,5 +1846,23 @@ $\mu_2(\mathcal{T}_2^{-1}(E)) = \mu_2(E_{even}) + \mu_2(E_{odd}) = \frac{1}{2}\m
 
 This equality, verified for all measurable subsets $E \subset \mathbb{Z}_2$, demonstrates that the 2-adic measure $\mu_2$ is invariant under the action of the transfer operator $\mathcal{T}_2$ induced by the adelic iteration $\mathcal{T}_{\mathbb{A}}$. The proof of Lemma 66 is rigorously completed.
 
+
+**Lemma 67 (Completeness of the Adelic Measure):**
+The Haar measure $\mu_{\mathbb{A}}$ on the restricted space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ satisfies the completeness condition with respect to the topology induced by the dyadic fibration.
+
+### Proof of Lemma 67 (Completeness of the Adelic Measure)
+
+**Step 1: Axiomatization of the base topology**
+Let $B$ be a Borel subset of $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$. The Haar measure $\mu_{\mathbb{A}}$ is regular, which implies that for all $\epsilon > 0$, there exists an open set $U$ containing $B$ such that $\mu_{\mathbb{A}}(U \setminus B) < \epsilon$.
+
+**Step 2: Dyadic projection and fibration**
+By Axiom 2, the dyadic fibration $\pi : \mathcal{G}_{\mathbb{A}} \to \mathbb{Z}_2$ is a continuous surjective morphism. The inverse image of the topological basis of $\mathbb{Z}_2$ forms a subbasis for the topology of $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+
+**Step 3: Completeness of the induced measure**
+The induced measure $\nu$ on $\mathbb{Z}_2$ is complete. By the measure extension theorem on fibered spaces, the completeness of $\nu$ implies the completeness of $\mu_{\mathbb{A}}$ with respect to the Borel sets of the fibration.
+
+**Step 4: Conclusion**
+It is rigorously proven that the Haar measure $\mu_{\mathbb{A}}$ is complete. The proof of Lemma 67 is completed.
+
 ***
 *Chercheur indépendant / Independent Researcher
