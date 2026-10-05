@@ -259,6 +259,10 @@ $$ \mathcal{F}_{\mathbb{A}}(k) = \{ x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} 
 **Lemme 66 (Topologie Ouverte-Fermée des Fibres Adéliques) :**
 Pour tout entier $k \in \mathbb{Z}^+$, la fibre adélique de Syracuse $\mathcal{F}_{\mathbb{A}}(k)$ est un ensemble à la fois ouvert et fermé (clopen) dans la topologie produit restreinte de l'espace adélique $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
 
+**Lemme 68 (Unicité de la Continuité Ergodique sur la Composante Adélique Restreinte) :**
+Soit $\mathcal{T}_{\mathbb{A}}$ l'opérateur de transfert adélique. Sur l'espace fibré dyadique $\mathcal{G}_{\mathbb{A}} \to \mathbb{Z}_2$, toute mesure de probabilité borélienne $\eta$ invariante sous l'action projetée $\pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1}$ et absolument continue par rapport à la mesure de Haar induite $\nu$ est unique et coïncide presque partout avec $\nu$.
+
+
 ## 3. Démonstrations Rigoureuses (Pas-à-Pas)
 
 
@@ -1870,6 +1874,21 @@ La mesure induite $\nu$ sur $\mathbb{Z}_2$ est complète. Par le théorème d'ex
 
 **Étape 4 : Conclusion**
 Il est rigoureusement prouvé que la mesure de Haar $\mu_{\mathbb{A}}$ est complète. La démonstration du Lemme 67 est achevée.
+
+### Démonstration du Lemme 68 (Unicité de la Continuité Ergodique sur la Composante Adélique Restreinte)
+
+**Étape 1 : Hypothèse d'absolue continuité et dérivée de Radon-Nikodym**
+Soit $\eta$ une mesure de probabilité borélienne sur $\mathbb{Z}_2$, invariante sous $\pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1}$, telle que $\eta \ll \nu$. Par le théorème de Radon-Nikodym, il existe une fonction intégrable $g \in L^1(\mathbb{Z}_2, \nu)$ telle que $d\eta = g d\nu$, avec $g(x) \geq 0$ pour $\nu$-presque tout $x \in \mathbb{Z}_2$.
+
+**Étape 2 : Invariance de la mesure et opérateur de transfert de Perron-Frobenius**
+L'invariance de $\eta$ implique que pour tout borélien $B \subset \mathbb{Z}_2$, $\eta( (\pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1})^{-1}(B) ) = \eta(B)$. En termes de dérivée de Radon-Nikodym, cela signifie que la fonction de densité $g$ est un point fixe de l'opérateur de Perron-Frobenius-Ruelle $\mathcal{L}_{\mathbb{A}}$ associé à la dynamique projetée sur la mesure de Haar $\nu$. Ainsi, $\mathcal{L}_{\mathbb{A}}g = g$ presque partout.
+
+**Étape 3 : Application du Lemme d'Ergodicité Dyadique**
+Par le Lemme 3 (Ergodicité Dyadique et Mesure de Haar), la mesure $\nu$ est ergodique pour l'endomorphisme $\pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1}$. Une propriété fondamentale des transformations ergodiques préservant une mesure (ici $\nu$) est que toute fonction intégrable invariante est constante presque partout. Puisque $g$ est invariante (point fixe de $\mathcal{L}_{\mathbb{A}}$ dans un cadre ergodique), $g$ doit être constante $\nu$-presque partout.
+
+**Étape 4 : Normalisation et conclusion**
+Puisque $\eta$ est une mesure de probabilité, l'intégrale de sa densité par rapport à $\nu$ vaut 1 : $\int_{\mathbb{Z}_2} g d\nu = \eta(\mathbb{Z}_2) = 1$. Comme $\nu(\mathbb{Z}_2) = 1$ et $g$ est constante presque partout (soit $g(x) = C$), nous obtenons $\int_{\mathbb{Z}_2} C d\nu = C \cdot 1 = 1$, d'où $C = 1$. Par conséquent, $g = 1$ $\nu$-presque partout, ce qui implique rigoureusement que $\eta = \nu$. La démonstration du Lemme 68 est achevée.
+
 
 ***
 *Chercheur indépendant / Independent Researcher
