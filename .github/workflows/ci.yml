@@ -10,7 +10,7 @@ on:
 jobs:
   verify-lean4:
     name: Verify Collatz Lean 4 Proofs (0 sorry)
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -40,7 +40,7 @@ jobs:
     name: Auto-merge Verified PR
     needs: verify-lean4
     if: github.event_name == 'pull_request' && (github.actor == 'charlesen' || github.actor == 'flouzzy' || endsWith(github.actor, '[bot]'))
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-22.04
     permissions:
       contents: write
       pull-requests: write
