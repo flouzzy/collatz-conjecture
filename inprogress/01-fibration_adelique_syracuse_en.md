@@ -61,6 +61,13 @@ where $\mathcal{A}_{triv} = \{1, 2, 4\}$ is the trivial attractor. If the orbit 
 
 ## 2. Statement of Intermediate Lemmas
 
+**Definition 20 (Compactness of the 2-Adic Component) :**
+The 2-adic component $\mathbb{Z}_2$ of the adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ is a compact, totally disconnected topological space with finite Haar measure $\mu_2(\mathbb{Z}_2) = 1$. The transfer operator $\mathcal{T}_2 : \mathbb{Z}_2 \to \mathbb{Z}_2$ induces an internal dynamics preserving local compactness.
+
+**Lemma 67 (Finiteness of the 2-Adic Attractor) :**
+The limit set of the adelic transfer operator $\mathcal{T}_{\mathbb{A}}$ restricted to the 2-adic component $\mathbb{Z}_2$ (the 2-adic attractor) is a finite set, isomorphic to the trivial cycle $\mathcal{A}_{triv} = \{1, 2, 4\}$.
+
+
 **Lemma 1 (Adelic Continuity of the Operator):**
 The generalized Collatz operator $\mathcal{T}_{\mathbb{A}}$ is uniformly continuous on the restricted fractional adelic topological space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ endowed with its usual restricted product topology.
 

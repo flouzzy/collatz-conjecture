@@ -62,6 +62,13 @@ où $\mathcal{A}_{triv} = \{1, 2, 4\}$ est l'attracteur trivial. Si l'orbite n'a
 
 ## 2. Énoncé des Lemmes Intermédiaires
 
+**Définition 20 (Compacité de la Composante 2-Adique) :**
+La composante 2-adique $\mathbb{Z}_2$ de l'espace adélique $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ est un espace topologique compact, totalement discontinu, et de mesure de Haar finie $\mu_2(\mathbb{Z}_2) = 1$. L'opérateur de transfert $\mathcal{T}_2 : \mathbb{Z}_2 \to \mathbb{Z}_2$ induit une dynamique interne préservant la compacité locale.
+
+**Lemme 67 (Finitude de l'Attracteur 2-Adique) :**
+L'ensemble limite de l'opérateur de transfert adélique $\mathcal{T}_{\mathbb{A}}$ restreint à la composante 2-adique $\mathbb{Z}_2$ (l'attracteur 2-adique) est un ensemble fini, isomorphe au cycle trivial $\mathcal{A}_{triv} = \{1, 2, 4\}$.
+
+
 **Lemme 1 (Continuité Adélique de l'Opérateur) :**
 L'opérateur de Collatz généralisé $\mathcal{T}_{\mathbb{A}}$ est uniformément continu sur l'espace topologique adélique fractionnaire restreint $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ muni de sa topologie produit restreinte usuelle.
 
