@@ -258,6 +258,10 @@ $$ \mathcal{F}_{\mathbb{A}}(k) = \{ x \in \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} 
 **Lemma 66 (Clopen Topology of Adelic Fibers):**
 For any integer $k \in \mathbb{Z}^+$, the adelic Collatz fiber $\mathcal{F}_{\mathbb{A}}(k)$ is both an open and closed (clopen) set in the restricted product topology of the adelic space $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
 
+**Lemma 68 (Uniqueness of Ergodic Continuity on the Restricted Adelic Component):**
+Let $\mathcal{T}_{\mathbb{A}}$ be the adelic transfer operator. On the dyadic fibered space $\mathcal{G}_{\mathbb{A}} \to \mathbb{Z}_2$, any Borel probability measure $\eta$ invariant under the projected action $\pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1}$ and absolutely continuous with respect to the induced Haar measure $\nu$ is unique and coincides almost everywhere with $\nu$.
+
+
 ## 3. Rigorous Proofs (Step-by-Step)
 
 
@@ -1870,6 +1874,21 @@ The induced measure $\nu$ on $\mathbb{Z}_2$ is complete. By the measure extensio
 
 **Step 4: Conclusion**
 It is rigorously proven that the Haar measure $\mu_{\mathbb{A}}$ is complete. The proof of Lemma 67 is completed.
+
+### Proof of Lemma 68 (Uniqueness of Ergodic Continuity on the Restricted Adelic Component)
+
+**Step 1: Hypothesis of absolute continuity and Radon-Nikodym derivative**
+Let $\eta$ be a Borel probability measure on $\mathbb{Z}_2$, invariant under $\pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1}$, such that $\eta \ll \nu$. By the Radon-Nikodym theorem, there exists an integrable function $g \in L^1(\mathbb{Z}_2, \nu)$ such that $d\eta = g d\nu$, with $g(x) \geq 0$ for $\nu$-almost every $x \in \mathbb{Z}_2$.
+
+**Step 2: Measure invariance and Perron-Frobenius transfer operator**
+The invariance of $\eta$ implies that for any Borel set $B \subset \mathbb{Z}_2$, $\eta( (\pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1})^{-1}(B) ) = \eta(B)$. In terms of the Radon-Nikodym derivative, this means the density function $g$ is a fixed point of the Perron-Frobenius-Ruelle operator $\mathcal{L}_{\mathbb{A}}$ associated with the projected dynamics on the Haar measure $\nu$. Thus, $\mathcal{L}_{\mathbb{A}}g = g$ almost everywhere.
+
+**Step 3: Application of the Dyadic Ergodicity Lemma**
+By Lemma 3 (Dyadic Ergodicity and Haar Measure), the measure $\nu$ is ergodic for the endomorphism $\pi \circ \mathcal{T}_{\mathbb{A}} \circ \pi^{-1}$. A fundamental property of measure-preserving ergodic transformations (here $\nu$) is that any invariant integrable function is constant almost everywhere. Since $g$ is invariant (a fixed point of $\mathcal{L}_{\mathbb{A}}$ in an ergodic framework), $g$ must be constant $\nu$-almost everywhere.
+
+**Step 4: Normalization and conclusion**
+Since $\eta$ is a probability measure, the integral of its density with respect to $\nu$ is 1: $\int_{\mathbb{Z}_2} g d\nu = \eta(\mathbb{Z}_2) = 1$. As $\nu(\mathbb{Z}_2) = 1$ and $g$ is constant almost everywhere (say $g(x) = C$), we obtain $\int_{\mathbb{Z}_2} C d\nu = C \cdot 1 = 1$, hence $C = 1$. Consequently, $g = 1$ $\nu$-almost everywhere, which rigorously implies that $\eta = \nu$. The proof of Lemma 68 is completed.
+
 
 ***
 *Chercheur indépendant / Independent Researcher
