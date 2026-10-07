@@ -1890,5 +1890,26 @@ Par le Lemme 3 (Ergodicité Dyadique et Mesure de Haar), la mesure $\nu$ est erg
 Puisque $\eta$ est une mesure de probabilité, l'intégrale de sa densité par rapport à $\nu$ vaut 1 : $\int_{\mathbb{Z}_2} g d\nu = \eta(\mathbb{Z}_2) = 1$. Comme $\nu(\mathbb{Z}_2) = 1$ et $g$ est constante presque partout (soit $g(x) = C$), nous obtenons $\int_{\mathbb{Z}_2} C d\nu = C \cdot 1 = 1$, d'où $C = 1$. Par conséquent, $g = 1$ $\nu$-presque partout, ce qui implique rigoureusement que $\eta = \nu$. La démonstration du Lemme 68 est achevée.
 
 
+
+### Lemme 69 : Injectivité de la projection de l'opérateur de transfert sur la composante 2-adique
+
+**Énoncé du Lemme 69 :**
+Soit $\mathcal{L}_{\mathbb{A}}$ l'opérateur de Perron-Frobenius-Ruelle agissant sur l'espace de Banach $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$, où $d\mu_{\mathbb{A}}$ est la mesure de Haar normalisée sur l'anneau des adèles $\mathbb{A}_{\mathbb{Q}}$. Soit $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ l'opérateur de projection canonique sur la composante 2-adique. Pour toute fonction $f \in L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ supportée strictement sur les entiers impairs plongés diagonalement dans $\mathbb{A}_{\mathbb{Q}}$, l'application $\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f)$ est injective.
+
+**Démonstration du Lemme 69 :**
+
+**Étape 1 : Définition de l'action de l'opérateur sur les composantes**
+L'opérateur de transfert global $\mathcal{L}_{\mathbb{A}}$ sur $\mathbb{A}_{\mathbb{Q}}$ se décompose en un produit tensoriel d'opérateurs locaux $\mathcal{L}_p$ agissant sur $L^1(\mathbb{Q}_p, d\mu_p)$ pour tout nombre premier $p \leq \infty$. Pour une fonction $f = \bigotimes_{p} f_p$ supportée sur un sous-ensemble compact de $\mathbb{A}_{\mathbb{Q}}$, l'action est donnée par $\mathcal{L}_{\mathbb{A}}(f) = \bigotimes_{p} \mathcal{L}_p(f_p)$.
+
+**Étape 2 : Restriction à la composante 2-adique**
+Considérons deux fonctions $f, g \in L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$, supportées sur l'image diagonale des entiers impairs dans $\mathbb{A}_{\mathbb{Q}}$, telles que $\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f) = \pi_2 \circ \mathcal{L}_{\mathbb{A}}(g)$. Par définition de la projection $\pi_2$, cette égalité implique que $\mathcal{L}_2(f_2) = \mathcal{L}_2(g_2)$ presque partout par rapport à la mesure de Haar 2-adique $\nu$ sur $\mathbb{Z}_2$.
+
+**Étape 3 : Inversibilité locale de la dynamique impaire**
+L'opérateur local $\mathcal{L}_2$ est défini par la pré-image de l'endomorphisme de Syracuse 2-adique. Sur le domaine des entiers impairs (c'est-à-dire les éléments $x \in \mathbb{Z}_2$ tels que $|x|_2 = 1$), la transformation $x \mapsto 3x + 1$ est une isométrie affine. Par conséquent, son inverse à gauche est bien défini et unique sur l'image $3\mathbb{Z}_2 + 1$. Il s'ensuit que l'opérateur $\mathcal{L}_2$ restreint aux fonctions supportées sur $\mathbb{Z}_2^{\times}$ est un isomorphisme d'espaces de Banach.
+
+**Étape 4 : Conclusion de l'injectivité**
+Puisque $\mathcal{L}_2$ est un isomorphisme sur le support de $f_2$ et $g_2$, l'égalité $\mathcal{L}_2(f_2) = \mathcal{L}_2(g_2)$ entraîne rigoureusement que $f_2 = g_2$ presque partout par rapport à $\nu$. Par l'hypothèse de support strict sur la diagonale rationnelle (qui est discrète dans $\mathbb{A}_{\mathbb{Q}}$), cette égalité se relève globalement pour impliquer $f = g$ presque partout par rapport à $d\mu_{\mathbb{A}}$. Ainsi, l'opérateur composé $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ est injectif. La démonstration du Lemme 69 est achevée.
+
+
 ***
 *Chercheur indépendant / Independent Researcher

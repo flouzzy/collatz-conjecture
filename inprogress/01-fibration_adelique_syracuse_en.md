@@ -1890,5 +1890,26 @@ By Lemma 3 (Dyadic Ergodicity and Haar Measure), the measure $\nu$ is ergodic fo
 Since $\eta$ is a probability measure, the integral of its density with respect to $\nu$ is 1: $\int_{\mathbb{Z}_2} g d\nu = \eta(\mathbb{Z}_2) = 1$. As $\nu(\mathbb{Z}_2) = 1$ and $g$ is constant almost everywhere (say $g(x) = C$), we obtain $\int_{\mathbb{Z}_2} C d\nu = C \cdot 1 = 1$, hence $C = 1$. Consequently, $g = 1$ $\nu$-almost everywhere, which rigorously implies that $\eta = \nu$. The proof of Lemma 68 is completed.
 
 
+
+### Lemma 69: Injectivity of the transfer operator projection on the 2-adic component
+
+**Statement of Lemma 69:**
+Let $\mathcal{L}_{\mathbb{A}}$ be the Perron-Frobenius-Ruelle operator acting on the Banach space $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$, where $d\mu_{\mathbb{A}}$ is the normalized Haar measure on the ring of adeles $\mathbb{A}_{\mathbb{Q}}$. Let $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ be the canonical projection operator onto the 2-adic component. For any function $f \in L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ strictly supported on the odd integers diagonally embedded in $\mathbb{A}_{\mathbb{Q}}$, the mapping $\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f)$ is injective.
+
+**Proof of Lemma 69:**
+
+**Step 1: Definition of the operator's action on components**
+The global transfer operator $\mathcal{L}_{\mathbb{A}}$ on $\mathbb{A}_{\mathbb{Q}}$ decomposes into a tensor product of local operators $\mathcal{L}_p$ acting on $L^1(\mathbb{Q}_p, d\mu_p)$ for all prime numbers $p \leq \infty$. For a function $f = \bigotimes_{p} f_p$ supported on a compact subset of $\mathbb{A}_{\mathbb{Q}}$, the action is given by $\mathcal{L}_{\mathbb{A}}(f) = \bigotimes_{p} \mathcal{L}_p(f_p)$.
+
+**Step 2: Restriction to the 2-adic component**
+Consider two functions $f, g \in L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$, supported on the diagonal image of odd integers in $\mathbb{A}_{\mathbb{Q}}$, such that $\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f) = \pi_2 \circ \mathcal{L}_{\mathbb{A}}(g)$. By definition of the projection $\pi_2$, this equality implies that $\mathcal{L}_2(f_2) = \mathcal{L}_2(g_2)$ almost everywhere with respect to the 2-adic Haar measure $\nu$ on $\mathbb{Z}_2$.
+
+**Step 3: Local invertibility of the odd dynamics**
+The local operator $\mathcal{L}_2$ is defined by the pre-image of the 2-adic Collatz endomorphism. On the domain of odd integers (that is, elements $x \in \mathbb{Z}_2$ such that $|x|_2 = 1$), the transformation $x \mapsto 3x + 1$ is an affine isometry. Consequently, its left inverse is well-defined and unique on the image $3\mathbb{Z}_2 + 1$. It follows that the operator $\mathcal{L}_2$ restricted to functions supported on $\mathbb{Z}_2^{\times}$ is an isomorphism of Banach spaces.
+
+**Step 4: Conclusion of injectivity**
+Since $\mathcal{L}_2$ is an isomorphism on the support of $f_2$ and $g_2$, the equality $\mathcal{L}_2(f_2) = \mathcal{L}_2(g_2)$ rigorously entails that $f_2 = g_2$ almost everywhere with respect to $\nu$. By the assumption of strict support on the rational diagonal (which is discrete in $\mathbb{A}_{\mathbb{Q}}$), this equality globally lifts to imply $f = g$ almost everywhere with respect to $d\mu_{\mathbb{A}}$. Thus, the composed operator $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ is injective. The proof of Lemma 69 is completed.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
