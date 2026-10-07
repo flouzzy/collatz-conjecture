@@ -1911,5 +1911,26 @@ L'opérateur local $\mathcal{L}_2$ est défini par la pré-image de l'endomorphi
 Puisque $\mathcal{L}_2$ est un isomorphisme sur le support de $f_2$ et $g_2$, l'égalité $\mathcal{L}_2(f_2) = \mathcal{L}_2(g_2)$ entraîne rigoureusement que $f_2 = g_2$ presque partout par rapport à $\nu$. Par l'hypothèse de support strict sur la diagonale rationnelle (qui est discrète dans $\mathbb{A}_{\mathbb{Q}}$), cette égalité se relève globalement pour impliquer $f = g$ presque partout par rapport à $d\mu_{\mathbb{A}}$. Ainsi, l'opérateur composé $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ est injectif. La démonstration du Lemme 69 est achevée.
 
 
+
+### Lemme 70 : Continuité de l'opérateur de transfert projeté sur la composante 2-adique
+
+**Énoncé du Lemme 70 :**
+Soit $\mathcal{L}_{\mathbb{A}}$ l'opérateur de Perron-Frobenius-Ruelle sur l'espace de Banach $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ et soit $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ la projection continue sur la composante 2-adique. Soit $\mathcal{V}$ le sous-espace fermé de $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ constitué des fonctions supportées sur l'image diagonale des entiers impairs. Alors, l'opérateur composé $\pi_2 \circ \mathcal{L}_{\mathbb{A}} : \mathcal{V} \to L^1(\mathbb{Z}_2, d\nu)$ est un opérateur linéaire continu par rapport aux normes $L^1$ respectives.
+
+**Démonstration du Lemme 70 :**
+
+**Étape 1 : Linéarité de l'opérateur composé**
+L'opérateur global $\mathcal{L}_{\mathbb{A}}$ est défini comme un opérateur de transfert (pull-back pondéré) associé à un endomorphisme mesurable sur $\mathbb{A}_{\mathbb{Q}}$. Par construction de l'intégrale de Bochner sur l'espace de Banach $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$, $\mathcal{L}_{\mathbb{A}}$ est un opérateur linéaire. De plus, la projection canonique $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ induit par composition à droite un opérateur de restriction sur les espaces de fonctions, qui est trivialement linéaire. La composition $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ est donc la composée de deux opérateurs linéaires, et est par suite un opérateur linéaire sur $\mathcal{V}$.
+
+**Étape 2 : Majoration de la norme sur la composante 2-adique**
+Pour établir la continuité, nous devons borner la norme de l'opérateur. Soit $f \in \mathcal{V}$. Par définition de l'action décomposée sur les adèles, pour une fonction sous la forme d'un produit tensoriel $f = \bigotimes_{p} f_p$, l'action de $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ correspond à l'application de l'opérateur local $\mathcal{L}_2$ sur la composante 2-adique $f_2 \in L^1(\mathbb{Z}_2, d\nu)$. Sur le domaine des entiers impairs (support de $f_2$), l'endomorphisme de Syracuse 2-adique $T_2(x) = 3x+1$ est une application affine, dont la dérivée de Radon-Nikodym par rapport à la mesure de Haar 2-adique $\nu$ est constante et égale à $|3|_2 = 1$. L'opérateur de transfert $\mathcal{L}_2$ est défini formelnellement par $\mathcal{L}_2(f_2)(x) = \sum_{y \in T_2^{-1}(x)} f_2(y) |T_2'(y)|_2^{-1}$.
+
+**Étape 3 : Évaluation de la norme locale $L^1$**
+Puisque le déterminant jacobien $|T_2'(y)|_2 = 1$ est constant et que l'endomorphisme est injectif sur le domaine des impairs, l'opérateur $\mathcal{L}_2$ préserve exactement la norme $L^1$ : $\|\mathcal{L}_2(f_2)\|_{L^1(\mathbb{Z}_2)} = \int_{\mathbb{Z}_2} |\mathcal{L}_2(f_2)(x)| d\nu(x) = \int_{\mathbb{Z}_2} |f_2(x)| d\nu(x) = \|f_2\|_{L^1(\mathbb{Z}_2)}$.
+
+**Étape 4 : Conclusion de la continuité globale**
+Pour une fonction arbitraire $f \in \mathcal{V}$, sa norme globale se factorise sur les composantes de $\mathbb{A}_{\mathbb{Q}}$. Puisque la composante 2-adique de l'opérateur $\mathcal{L}_2$ est une isométrie sur son sous-domaine de définition (norme d'opérateur égale à 1) et que l'opérateur de projection de l'espace de Banach global vers l'espace de Banach local $L^1(\mathbb{Z}_2, d\nu)$ est de norme inférieure ou égale à 1, nous avons la majoration globale : $\|\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f)\|_{L^1(\mathbb{Z}_2)} \leq C \|f\|_{L^1(\mathbb{A}_{\mathbb{Q}})}$ pour une constante $C \leq 1$. L'opérateur linéaire $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ est donc borné. Un opérateur linéaire borné entre deux espaces de Banach étant continu, la démonstration du Lemme 70 est achevée.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
