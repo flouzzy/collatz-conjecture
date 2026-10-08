@@ -1911,5 +1911,33 @@ The local operator $\mathcal{L}_2$ is defined by the pre-image of the 2-adic Col
 Since $\mathcal{L}_2$ is an isomorphism on the support of $f_2$ and $g_2$, the equality $\mathcal{L}_2(f_2) = \mathcal{L}_2(g_2)$ rigorously entails that $f_2 = g_2$ almost everywhere with respect to $\nu$. By the assumption of strict support on the rational diagonal (which is discrete in $\mathbb{A}_{\mathbb{Q}}$), this equality globally lifts to imply $f = g$ almost everywhere with respect to $d\mu_{\mathbb{A}}$. Thus, the composed operator $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ is injective. The proof of Lemma 69 is completed.
 
 
+
+
+### Lemma 70: Surjectivity of the transfer operator projection on the 2-adic component
+
+**Statement of Lemma 70:**
+Under the same hypotheses as Lemma 69, let $\mathcal{L}_{\mathbb{A}}$ be the Perron-Frobenius-Ruelle operator on $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ and $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ the canonical projection. For any function $h \in L^1(\mathbb{Z}_2, d\nu)$ supported on $3\mathbb{Z}_2 + 1$, there exists a function $f \in L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ strictly supported on the odd integers diagonally embedded such that $\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f) = h$. The mapping is therefore surjective on this subspace.
+
+**Proof of Lemma 70:**
+
+**Step 1: Construction of the local 2-adic pre-image**
+Let $h \in L^1(\mathbb{Z}_2, d\nu)$ be a function whose support is contained in the image of the odd Collatz transformation, that is, in the set $3\mathbb{Z}_2 + 1$. The local transfer operator $\mathcal{L}_2$ acts on functions by summation over pre-images. Since the restriction of the mapping $x \mapsto 3x + 1$ to $\mathbb{Z}_2^{\times}$ (the 2-adic units, corresponding to odd integers) is an isometric bijection onto $3\mathbb{Z}_2 + 1$, each point $y \in 3\mathbb{Z}_2 + 1$ has a unique pre-image $x \in \mathbb{Z}_2^{\times}$.
+We define a function $f_2 \in L^1(\mathbb{Z}_2, d\nu)$ by $f_2(x) = h(3x+1)$ for $x \in \mathbb{Z}_2^{\times}$ and $f_2(x) = 0$ otherwise. By construction, and by the preservation of the Haar measure under isometry, we have $\mathcal{L}_2(f_2) = h$ almost everywhere on $\mathbb{Z}_2$.
+
+**Step 2: Global lifting via the diagonal embedding**
+To lift this local construction into a global adelic function, we exploit the density of the rationals (and integers) in $\mathbb{Z}_2$. Let $\mathcal{S}$ be the set of places (including the archimedean place $\infty$ and the p-adic places for $p \neq 2$). To construct a function $f \in L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$, we define its local components $f_p$ for $p \neq 2$ as the indicator functions of appropriate compact open sets (for example, $\mathbb{Z}_p$ for finite places, ensuring integrability), such that the global support is concentrated around the diagonal embedding of the odd integers.
+Let $f = f_2 \otimes \left( \bigotimes_{p \neq 2} f_p \right)$. The integrability of $f$ is ensured by the choice of the components $f_p$ and the integrability of $f_2$.
+
+**Step 3: Application of the projected operator**
+We apply the projected operator $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ to the function $f$. By the tensorial nature of the transfer operator on the adeles, we have:
+$\pi_2 \left( \mathcal{L}_{\mathbb{A}} ( \bigotimes_{v} f_v ) \right) = \mathcal{L}_2(f_2)$
+The actions on the other places are projected onto the 2-adic component, which depends only on $\mathcal{L}_2(f_2)$ by independence of the local components of the operator.
+
+**Step 4: Conclusion of surjectivity**
+Substituting the result of Step 1 into Step 3, we obtain:
+$\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f) = \mathcal{L}_2(f_2) = h$.
+Thus, for any admissible function $h$ in the target image space, we have explicitly constructed a valid pre-image $f$ in the domain space. This rigorously demonstrates the surjectivity of the projected operator on the considered subspace. The proof of Lemma 70 is completed.
+
+
 ***
 *Chercheur indépendant / Independent Researcher

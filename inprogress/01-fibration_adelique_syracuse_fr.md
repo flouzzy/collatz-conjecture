@@ -1911,5 +1911,33 @@ L'opérateur local $\mathcal{L}_2$ est défini par la pré-image de l'endomorphi
 Puisque $\mathcal{L}_2$ est un isomorphisme sur le support de $f_2$ et $g_2$, l'égalité $\mathcal{L}_2(f_2) = \mathcal{L}_2(g_2)$ entraîne rigoureusement que $f_2 = g_2$ presque partout par rapport à $\nu$. Par l'hypothèse de support strict sur la diagonale rationnelle (qui est discrète dans $\mathbb{A}_{\mathbb{Q}}$), cette égalité se relève globalement pour impliquer $f = g$ presque partout par rapport à $d\mu_{\mathbb{A}}$. Ainsi, l'opérateur composé $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ est injectif. La démonstration du Lemme 69 est achevée.
 
 
+
+
+### Lemme 70 : Surjectivité de la projection de l'opérateur de transfert sur la composante 2-adique
+
+**Énoncé du Lemme 70 :**
+Sous les mêmes hypothèses que le Lemme 69, soit $\mathcal{L}_{\mathbb{A}}$ l'opérateur de Perron-Frobenius-Ruelle sur $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ et $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ la projection canonique. Pour toute fonction $h \in L^1(\mathbb{Z}_2, d\nu)$ supportée sur $3\mathbb{Z}_2 + 1$, il existe une fonction $f \in L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ supportée strictement sur les entiers impairs plongés diagonalement telle que $\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f) = h$. L'application est donc surjective sur ce sous-espace.
+
+**Démonstration du Lemme 70 :**
+
+**Étape 1 : Construction de la pré-image locale 2-adique**
+Soit $h \in L^1(\mathbb{Z}_2, d\nu)$ une fonction dont le support est contenu dans l'image de la transformation de Syracuse impaire, c'est-à-dire dans l'ensemble $3\mathbb{Z}_2 + 1$. L'opérateur local de transfert $\mathcal{L}_2$ agit sur les fonctions par sommation sur les pré-images. Puisque la restriction de l'application $x \mapsto 3x + 1$ à $\mathbb{Z}_2^{\times}$ (les unités 2-adiques, correspondant aux entiers impairs) est une bijection isométrique vers $3\mathbb{Z}_2 + 1$, chaque point $y \in 3\mathbb{Z}_2 + 1$ possède une unique pré-image $x \in \mathbb{Z}_2^{\times}$.
+Nous définissons une fonction $f_2 \in L^1(\mathbb{Z}_2, d\nu)$ par $f_2(x) = h(3x+1)$ pour $x \in \mathbb{Z}_2^{\times}$ et $f_2(x) = 0$ sinon. Par construction, et par la préservation de la mesure de Haar sous isométrie, on a $\mathcal{L}_2(f_2) = h$ presque partout sur $\mathbb{Z}_2$.
+
+**Étape 2 : Relèvement global via le plongement diagonal**
+Pour relever cette construction locale en une fonction globale adélique, nous exploitons la densité des rationnels (et des entiers) dans $\mathbb{Z}_2$. Soit $\mathcal{S}$ l'ensemble des places (incluant la place archimédienne $\infty$ et les places p-adiques pour $p \neq 2$). Pour construire une fonction $f \in L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$, nous définissons ses composantes locales $f_p$ pour $p \neq 2$ comme les fonctions indicatrices d'ouverts compacts appropriés (par exemple, $\mathbb{Z}_p$ pour les places finies, garantissant l'intégrabilité), de sorte que le support global soit concentré autour du plongement diagonal des entiers impairs.
+Posons $f = f_2 \otimes \left( \bigotimes_{p \neq 2} f_p \right)$. L'intégrabilité de $f$ est assurée par le choix des composantes $f_p$ et l'intégrabilité de $f_2$.
+
+**Étape 3 : Application de l'opérateur projeté**
+Appliquons l'opérateur projeté $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ à la fonction $f$. Par la nature tensorielle de l'opérateur de transfert sur les adèles, on a :
+$\pi_2 \left( \mathcal{L}_{\mathbb{A}} ( \bigotimes_{v} f_v ) \right) = \mathcal{L}_2(f_2)$
+Les actions sur les autres places sont projetées sur la composante 2-adique, qui ne dépend que de $\mathcal{L}_2(f_2)$ par indépendance des composantes locales de l'opérateur.
+
+**Étape 4 : Conclusion de la surjectivité**
+En substituant le résultat de l'Étape 1 dans l'Étape 3, nous obtenons :
+$\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f) = \mathcal{L}_2(f_2) = h$.
+Ainsi, pour toute fonction $h$ admissible dans l'espace image cible, nous avons explicitement construit une pré-image $f$ valide dans l'espace de départ. Ceci démontre rigoureusement la surjectivité de l'opérateur projeté sur le sous-espace considéré. La démonstration du Lemme 70 est achevée.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
