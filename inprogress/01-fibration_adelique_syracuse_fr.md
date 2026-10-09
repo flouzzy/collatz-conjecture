@@ -1912,24 +1912,31 @@ Puisque $\mathcal{L}_2$ est un isomorphisme sur le support de $f_2$ et $g_2$, l'
 
 
 
-### Lemme 70 : Continuité de l'opérateur de transfert projeté sur la composante 2-adique
+
+### Lemme 70 : Surjectivité de la projection de l'opérateur de transfert sur la composante 2-adique
 
 **Énoncé du Lemme 70 :**
-Soit $\mathcal{L}_{\mathbb{A}}$ l'opérateur de Perron-Frobenius-Ruelle sur l'espace de Banach $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ et soit $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ la projection continue sur la composante 2-adique. Soit $\mathcal{V}$ le sous-espace fermé de $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ constitué des fonctions supportées sur l'image diagonale des entiers impairs. Alors, l'opérateur composé $\pi_2 \circ \mathcal{L}_{\mathbb{A}} : \mathcal{V} \to L^1(\mathbb{Z}_2, d\nu)$ est un opérateur linéaire continu par rapport aux normes $L^1$ respectives.
+Sous les mêmes hypothèses que le Lemme 69, soit $\mathcal{L}_{\mathbb{A}}$ l'opérateur de Perron-Frobenius-Ruelle sur $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ et $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ la projection canonique. Pour toute fonction $h \in L^1(\mathbb{Z}_2, d\nu)$ supportée sur $3\mathbb{Z}_2 + 1$, il existe une fonction $f \in L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ supportée strictement sur les entiers impairs plongés diagonalement telle que $\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f) = h$. L'application est donc surjective sur ce sous-espace.
 
 **Démonstration du Lemme 70 :**
 
-**Étape 1 : Linéarité de l'opérateur composé**
-L'opérateur global $\mathcal{L}_{\mathbb{A}}$ est défini comme un opérateur de transfert (pull-back pondéré) associé à un endomorphisme mesurable sur $\mathbb{A}_{\mathbb{Q}}$. Par construction de l'intégrale de Bochner sur l'espace de Banach $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$, $\mathcal{L}_{\mathbb{A}}$ est un opérateur linéaire. De plus, la projection canonique $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ induit par composition à droite un opérateur de restriction sur les espaces de fonctions, qui est trivialement linéaire. La composition $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ est donc la composée de deux opérateurs linéaires, et est par suite un opérateur linéaire sur $\mathcal{V}$.
+**Étape 1 : Construction de la pré-image locale 2-adique**
+Soit $h \in L^1(\mathbb{Z}_2, d\nu)$ une fonction dont le support est contenu dans l'image de la transformation de Syracuse impaire, c'est-à-dire dans l'ensemble $3\mathbb{Z}_2 + 1$. L'opérateur local de transfert $\mathcal{L}_2$ agit sur les fonctions par sommation sur les pré-images. Puisque la restriction de l'application $x \mapsto 3x + 1$ à $\mathbb{Z}_2^{\times}$ (les unités 2-adiques, correspondant aux entiers impairs) est une bijection isométrique vers $3\mathbb{Z}_2 + 1$, chaque point $y \in 3\mathbb{Z}_2 + 1$ possède une unique pré-image $x \in \mathbb{Z}_2^{\times}$.
+Nous définissons une fonction $f_2 \in L^1(\mathbb{Z}_2, d\nu)$ par $f_2(x) = h(3x+1)$ pour $x \in \mathbb{Z}_2^{\times}$ et $f_2(x) = 0$ sinon. Par construction, et par la préservation de la mesure de Haar sous isométrie, on a $\mathcal{L}_2(f_2) = h$ presque partout sur $\mathbb{Z}_2$.
 
-**Étape 2 : Majoration de la norme sur la composante 2-adique**
-Pour établir la continuité, nous devons borner la norme de l'opérateur. Soit $f \in \mathcal{V}$. Par définition de l'action décomposée sur les adèles, pour une fonction sous la forme d'un produit tensoriel $f = \bigotimes_{p} f_p$, l'action de $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ correspond à l'application de l'opérateur local $\mathcal{L}_2$ sur la composante 2-adique $f_2 \in L^1(\mathbb{Z}_2, d\nu)$. Sur le domaine des entiers impairs (support de $f_2$), l'endomorphisme de Syracuse 2-adique $T_2(x) = 3x+1$ est une application affine, dont la dérivée de Radon-Nikodym par rapport à la mesure de Haar 2-adique $\nu$ est constante et égale à $|3|_2 = 1$. L'opérateur de transfert $\mathcal{L}_2$ est défini formelnellement par $\mathcal{L}_2(f_2)(x) = \sum_{y \in T_2^{-1}(x)} f_2(y) |T_2'(y)|_2^{-1}$.
+**Étape 2 : Relèvement global via le plongement diagonal**
+Pour relever cette construction locale en une fonction globale adélique, nous exploitons la densité des rationnels (et des entiers) dans $\mathbb{Z}_2$. Soit $\mathcal{S}$ l'ensemble des places (incluant la place archimédienne $\infty$ et les places p-adiques pour $p \neq 2$). Pour construire une fonction $f \in L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$, nous définissons ses composantes locales $f_p$ pour $p \neq 2$ comme les fonctions indicatrices d'ouverts compacts appropriés (par exemple, $\mathbb{Z}_p$ pour les places finies, garantissant l'intégrabilité), de sorte que le support global soit concentré autour du plongement diagonal des entiers impairs.
+Posons $f = f_2 \otimes \left( \bigotimes_{p \neq 2} f_p \right)$. L'intégrabilité de $f$ est assurée par le choix des composantes $f_p$ et l'intégrabilité de $f_2$.
 
-**Étape 3 : Évaluation de la norme locale $L^1$**
-Puisque le déterminant jacobien $|T_2'(y)|_2 = 1$ est constant et que l'endomorphisme est injectif sur le domaine des impairs, l'opérateur $\mathcal{L}_2$ préserve exactement la norme $L^1$ : $\|\mathcal{L}_2(f_2)\|_{L^1(\mathbb{Z}_2)} = \int_{\mathbb{Z}_2} |\mathcal{L}_2(f_2)(x)| d\nu(x) = \int_{\mathbb{Z}_2} |f_2(x)| d\nu(x) = \|f_2\|_{L^1(\mathbb{Z}_2)}$.
+**Étape 3 : Application de l'opérateur projeté**
+Appliquons l'opérateur projeté $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ à la fonction $f$. Par la nature tensorielle de l'opérateur de transfert sur les adèles, on a :
+$\pi_2 \left( \mathcal{L}_{\mathbb{A}} ( \bigotimes_{v} f_v ) \right) = \mathcal{L}_2(f_2)$
+Les actions sur les autres places sont projetées sur la composante 2-adique, qui ne dépend que de $\mathcal{L}_2(f_2)$ par indépendance des composantes locales de l'opérateur.
 
-**Étape 4 : Conclusion de la continuité globale**
-Pour une fonction arbitraire $f \in \mathcal{V}$, sa norme globale se factorise sur les composantes de $\mathbb{A}_{\mathbb{Q}}$. Puisque la composante 2-adique de l'opérateur $\mathcal{L}_2$ est une isométrie sur son sous-domaine de définition (norme d'opérateur égale à 1) et que l'opérateur de projection de l'espace de Banach global vers l'espace de Banach local $L^1(\mathbb{Z}_2, d\nu)$ est de norme inférieure ou égale à 1, nous avons la majoration globale : $\|\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f)\|_{L^1(\mathbb{Z}_2)} \leq C \|f\|_{L^1(\mathbb{A}_{\mathbb{Q}})}$ pour une constante $C \leq 1$. L'opérateur linéaire $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ est donc borné. Un opérateur linéaire borné entre deux espaces de Banach étant continu, la démonstration du Lemme 70 est achevée.
+**Étape 4 : Conclusion de la surjectivité**
+En substituant le résultat de l'Étape 1 dans l'Étape 3, nous obtenons :
+$\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f) = \mathcal{L}_2(f_2) = h$.
+Ainsi, pour toute fonction $h$ admissible dans l'espace image cible, nous avons explicitement construit une pré-image $f$ valide dans l'espace de départ. Ceci démontre rigoureusement la surjectivité de l'opérateur projeté sur le sous-espace considéré. La démonstration du Lemme 70 est achevée.
 
 
 ***

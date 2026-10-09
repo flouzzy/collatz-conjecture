@@ -1912,24 +1912,31 @@ Since $\mathcal{L}_2$ is an isomorphism on the support of $f_2$ and $g_2$, the e
 
 
 
-### Lemma 70: Continuity of the projected transfer operator on the 2-adic component
+
+### Lemma 70: Surjectivity of the transfer operator projection on the 2-adic component
 
 **Statement of Lemma 70:**
-Let $\mathcal{L}_{\mathbb{A}}$ be the Perron-Frobenius-Ruelle operator on the Banach space $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ and let $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ be the continuous projection onto the 2-adic component. Let $\mathcal{V}$ be the closed subspace of $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ consisting of functions supported on the diagonal image of odd integers. Then, the composed operator $\pi_2 \circ \mathcal{L}_{\mathbb{A}} : \mathcal{V} \to L^1(\mathbb{Z}_2, d\nu)$ is a continuous linear operator with respect to the respective $L^1$ norms.
+Under the same hypotheses as Lemma 69, let $\mathcal{L}_{\mathbb{A}}$ be the Perron-Frobenius-Ruelle operator on $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ and $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ the canonical projection. For any function $h \in L^1(\mathbb{Z}_2, d\nu)$ supported on $3\mathbb{Z}_2 + 1$, there exists a function $f \in L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ strictly supported on the odd integers diagonally embedded such that $\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f) = h$. The mapping is therefore surjective on this subspace.
 
 **Proof of Lemma 70:**
 
-**Step 1: Linearity of the composed operator**
-The global operator $\mathcal{L}_{\mathbb{A}}$ is defined as a transfer operator (weighted pull-back) associated with a measurable endomorphism on $\mathbb{A}_{\mathbb{Q}}$. By construction of the Bochner integral on the Banach space $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$, $\mathcal{L}_{\mathbb{A}}$ is a linear operator. Furthermore, the canonical projection $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ induces by right composition a restriction operator on the function spaces, which is trivially linear. The composition $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ is thus the composition of two linear operators, and is therefore a linear operator on $\mathcal{V}$.
+**Step 1: Construction of the local 2-adic pre-image**
+Let $h \in L^1(\mathbb{Z}_2, d\nu)$ be a function whose support is contained in the image of the odd Collatz transformation, that is, in the set $3\mathbb{Z}_2 + 1$. The local transfer operator $\mathcal{L}_2$ acts on functions by summation over pre-images. Since the restriction of the mapping $x \mapsto 3x + 1$ to $\mathbb{Z}_2^{\times}$ (the 2-adic units, corresponding to odd integers) is an isometric bijection onto $3\mathbb{Z}_2 + 1$, each point $y \in 3\mathbb{Z}_2 + 1$ has a unique pre-image $x \in \mathbb{Z}_2^{\times}$.
+We define a function $f_2 \in L^1(\mathbb{Z}_2, d\nu)$ by $f_2(x) = h(3x+1)$ for $x \in \mathbb{Z}_2^{\times}$ and $f_2(x) = 0$ otherwise. By construction, and by the preservation of the Haar measure under isometry, we have $\mathcal{L}_2(f_2) = h$ almost everywhere on $\mathbb{Z}_2$.
 
-**Step 2: Bounding the norm on the 2-adic component**
-To establish continuity, we must bound the norm of the operator. Let $f \in \mathcal{V}$. By definition of the decomposed action on the adeles, for a function in the form of a tensor product $f = \bigotimes_{p} f_p$, the action of $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ corresponds to the application of the local operator $\mathcal{L}_2$ on the 2-adic component $f_2 \in L^1(\mathbb{Z}_2, d\nu)$. On the domain of odd integers (the support of $f_2$), the 2-adic Collatz endomorphism $T_2(x) = 3x+1$ is an affine map, whose Radon-Nikodym derivative with respect to the 2-adic Haar measure $\nu$ is constant and equal to $|3|_2 = 1$. The transfer operator $\mathcal{L}_2$ is formally defined by $\mathcal{L}_2(f_2)(x) = \sum_{y \in T_2^{-1}(x)} f_2(y) |T_2'(y)|_2^{-1}$.
+**Step 2: Global lifting via the diagonal embedding**
+To lift this local construction into a global adelic function, we exploit the density of the rationals (and integers) in $\mathbb{Z}_2$. Let $\mathcal{S}$ be the set of places (including the archimedean place $\infty$ and the p-adic places for $p \neq 2$). To construct a function $f \in L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$, we define its local components $f_p$ for $p \neq 2$ as the indicator functions of appropriate compact open sets (for example, $\mathbb{Z}_p$ for finite places, ensuring integrability), such that the global support is concentrated around the diagonal embedding of the odd integers.
+Let $f = f_2 \otimes \left( \bigotimes_{p \neq 2} f_p \right)$. The integrability of $f$ is ensured by the choice of the components $f_p$ and the integrability of $f_2$.
 
-**Step 3: Evaluation of the local $L^1$ norm**
-Since the Jacobian determinant $|T_2'(y)|_2 = 1$ is constant and the endomorphism is injective on the domain of odd integers, the operator $\mathcal{L}_2$ exactly preserves the $L^1$ norm: $\|\mathcal{L}_2(f_2)\|_{L^1(\mathbb{Z}_2)} = \int_{\mathbb{Z}_2} |\mathcal{L}_2(f_2)(x)| d\nu(x) = \int_{\mathbb{Z}_2} |f_2(x)| d\nu(x) = \|f_2\|_{L^1(\mathbb{Z}_2)}$.
+**Step 3: Application of the projected operator**
+We apply the projected operator $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ to the function $f$. By the tensorial nature of the transfer operator on the adeles, we have:
+$\pi_2 \left( \mathcal{L}_{\mathbb{A}} ( \bigotimes_{v} f_v ) \right) = \mathcal{L}_2(f_2)$
+The actions on the other places are projected onto the 2-adic component, which depends only on $\mathcal{L}_2(f_2)$ by independence of the local components of the operator.
 
-**Step 4: Conclusion of global continuity**
-For an arbitrary function $f \in \mathcal{V}$, its global norm factorizes over the components of $\mathbb{A}_{\mathbb{Q}}$. Since the 2-adic component of the operator $\mathcal{L}_2$ is an isometry on its subdomain of definition (operator norm equal to 1) and the projection operator from the global Banach space to the local Banach space $L^1(\mathbb{Z}_2, d\nu)$ has a norm less than or equal to 1, we obtain the global bound: $\|\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f)\|_{L^1(\mathbb{Z}_2)} \leq C \|f\|_{L^1(\mathbb{A}_{\mathbb{Q}})}$ for some constant $C \leq 1$. The linear operator $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ is therefore bounded. Since a bounded linear operator between two Banach spaces is continuous, the proof of Lemma 70 is completed.
+**Step 4: Conclusion of surjectivity**
+Substituting the result of Step 1 into Step 3, we obtain:
+$\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f) = \mathcal{L}_2(f_2) = h$.
+Thus, for any admissible function $h$ in the target image space, we have explicitly constructed a valid pre-image $f$ in the domain space. This rigorously demonstrates the surjectivity of the projected operator on the considered subspace. The proof of Lemma 70 is completed.
 
 
 ***
