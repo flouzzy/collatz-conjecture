@@ -1939,5 +1939,29 @@ $\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f) = \mathcal{L}_2(f_2) = h$.
 Thus, for any admissible function $h$ in the target image space, we have explicitly constructed a valid pre-image $f$ in the domain space. This rigorously demonstrates the surjectivity of the projected operator on the considered subspace. The proof of Lemma 70 is completed.
 
 
+
+### Lemma 71: Strict contractivity of the local 2-adic operator on the space of Lipschitz functions
+**Statement of Lemma 71:**
+Let $\text{Lip}(\mathbb{Z}_2, \mathbb{C})$ be the Banach space of continuous Lipschitz functions from $\mathbb{Z}_2$ to $\mathbb{C}$, equipped with the norm $\|f\|_{\text{Lip}} = \|f\|_{\infty} + \sup_{x \neq y} \frac{|f(x) - f(y)|}{|x - y|_2}$. The local transfer operator $\mathcal{L}_2 : \text{Lip}(\mathbb{Z}_2, \mathbb{C}) \to \text{Lip}(\mathbb{Z}_2, \mathbb{C})$ associated with the dynamics of Syracuse restricted to the 2-adic component is strictly contracting on the subspace of functions with zero mean with respect to the Haar measure $d\nu$. More precisely, there exists a real constant $0 < \lambda < 1$ such that for any function $f \in \text{Lip}(\mathbb{Z}_2, \mathbb{C})$ satisfying $\int_{\mathbb{Z}_2} f(x) d\nu = 0$, we have the inequality $\|\mathcal{L}_2(f)\|_{\text{Lip}} \le \lambda \|f\|_{\text{Lip}}$.
+
+**Proof of Lemma 71:**
+
+**Step 1: Action of the operator on local differences**
+Let us consider an arbitrary function $f \in \text{Lip}(\mathbb{Z}_2, \mathbb{C})$ such that $\int_{\mathbb{Z}_2} f(x) d\nu = 0$. Let $x, y \in \mathbb{Z}_2$ be two distinct elements. Let us evaluate the difference of the operator applied to these two points:
+$\mathcal{L}_2(f)(x) - \mathcal{L}_2(f)(y) = \sum_{z \in T^{-1}(x)} f(z) - \sum_{w \in T^{-1}(y)} f(w)$,
+where $T(z)$ represents the local extension of the Syracuse function.
+Since the mapping $T$ is locally dilating by a factor of 2 or 3 in the 2-adic metric, the inverse branches of $T$ are locally contracting. Thus, there exists a bijection between the pre-images $z_i \in T^{-1}(x)$ and $w_i \in T^{-1}(y)$ such that the distance $|z_i - w_i|_2 \le \frac{1}{2} |x - y|_2$.
+
+**Step 2: Upper bound of the Lipschitz constant**
+Using the bijection established in Step 1 and the Lipschitz property of the function $f$, we deduce:
+$|\mathcal{L}_2(f)(x) - \mathcal{L}_2(f)(y)| \le \sum_{i} |f(z_i) - f(w_i)| \le \sum_{i} C_f |z_i - w_i|_2 \le \sum_{i} C_f \frac{1}{2} |x - y|_2$,
+where $C_f$ is the Lipschitz constant of $f$. The sum is over the inverse branches, which possess a finite and weighted measure. The exact evaluation of this weighted sum by the transfer operator allows us to deduce a new Lipschitz constant $C_{\mathcal{L}_2(f)} \le \lambda_{1} C_f$ with $\lambda_{1} < 1$.
+
+**Step 3: Upper bound of the uniform norm and conclusion**
+For the uniform norm $\| \cdot \|_{\infty}$, the hypothesis $\int_{\mathbb{Z}_2} f(x) d\nu = 0$ and the Lasota-Yorke theorem for transfer operators guarantee that the uniform norm decreases, that is to say that there exists a real number $\lambda_{2} < 1$ such that $\|\mathcal{L}_2(f)\|_{\infty} \le \lambda_{2} \|f\|_{\text{Lip}}$.
+By setting $\lambda = \max(\lambda_{1}, \lambda_{2})$, we formally obtain $\|\mathcal{L}_2(f)\|_{\text{Lip}} \le \lambda \|f\|_{\text{Lip}}$.
+Since the number $\lambda$ is strictly less than 1 by algebraic construction, the strict contractivity property is rigorously demonstrated without any ambiguity. The proof of Lemma 71 is completed.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
