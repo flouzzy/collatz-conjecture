@@ -1911,5 +1911,26 @@ The local operator $\mathcal{L}_2$ is defined by the pre-image of the 2-adic Col
 Since $\mathcal{L}_2$ is an isomorphism on the support of $f_2$ and $g_2$, the equality $\mathcal{L}_2(f_2) = \mathcal{L}_2(g_2)$ rigorously entails that $f_2 = g_2$ almost everywhere with respect to $\nu$. By the assumption of strict support on the rational diagonal (which is discrete in $\mathbb{A}_{\mathbb{Q}}$), this equality globally lifts to imply $f = g$ almost everywhere with respect to $d\mu_{\mathbb{A}}$. Thus, the composed operator $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ is injective. The proof of Lemma 69 is completed.
 
 
+
+### Lemma 70: Continuity of the projected transfer operator on the 2-adic component
+
+**Statement of Lemma 70:**
+Let $\mathcal{L}_{\mathbb{A}}$ be the Perron-Frobenius-Ruelle operator on the Banach space $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ and let $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ be the continuous projection onto the 2-adic component. Let $\mathcal{V}$ be the closed subspace of $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$ consisting of functions supported on the diagonal image of odd integers. Then, the composed operator $\pi_2 \circ \mathcal{L}_{\mathbb{A}} : \mathcal{V} \to L^1(\mathbb{Z}_2, d\nu)$ is a continuous linear operator with respect to the respective $L^1$ norms.
+
+**Proof of Lemma 70:**
+
+**Step 1: Linearity of the composed operator**
+The global operator $\mathcal{L}_{\mathbb{A}}$ is defined as a transfer operator (weighted pull-back) associated with a measurable endomorphism on $\mathbb{A}_{\mathbb{Q}}$. By construction of the Bochner integral on the Banach space $L^1(\mathbb{A}_{\mathbb{Q}}, d\mu_{\mathbb{A}})$, $\mathcal{L}_{\mathbb{A}}$ is a linear operator. Furthermore, the canonical projection $\pi_2 : \mathbb{A}_{\mathbb{Q}} \to \mathbb{Z}_2$ induces by right composition a restriction operator on the function spaces, which is trivially linear. The composition $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ is thus the composition of two linear operators, and is therefore a linear operator on $\mathcal{V}$.
+
+**Step 2: Bounding the norm on the 2-adic component**
+To establish continuity, we must bound the norm of the operator. Let $f \in \mathcal{V}$. By definition of the decomposed action on the adeles, for a function in the form of a tensor product $f = \bigotimes_{p} f_p$, the action of $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ corresponds to the application of the local operator $\mathcal{L}_2$ on the 2-adic component $f_2 \in L^1(\mathbb{Z}_2, d\nu)$. On the domain of odd integers (the support of $f_2$), the 2-adic Collatz endomorphism $T_2(x) = 3x+1$ is an affine map, whose Radon-Nikodym derivative with respect to the 2-adic Haar measure $\nu$ is constant and equal to $|3|_2 = 1$. The transfer operator $\mathcal{L}_2$ is formally defined by $\mathcal{L}_2(f_2)(x) = \sum_{y \in T_2^{-1}(x)} f_2(y) |T_2'(y)|_2^{-1}$.
+
+**Step 3: Evaluation of the local $L^1$ norm**
+Since the Jacobian determinant $|T_2'(y)|_2 = 1$ is constant and the endomorphism is injective on the domain of odd integers, the operator $\mathcal{L}_2$ exactly preserves the $L^1$ norm: $\|\mathcal{L}_2(f_2)\|_{L^1(\mathbb{Z}_2)} = \int_{\mathbb{Z}_2} |\mathcal{L}_2(f_2)(x)| d\nu(x) = \int_{\mathbb{Z}_2} |f_2(x)| d\nu(x) = \|f_2\|_{L^1(\mathbb{Z}_2)}$.
+
+**Step 4: Conclusion of global continuity**
+For an arbitrary function $f \in \mathcal{V}$, its global norm factorizes over the components of $\mathbb{A}_{\mathbb{Q}}$. Since the 2-adic component of the operator $\mathcal{L}_2$ is an isometry on its subdomain of definition (operator norm equal to 1) and the projection operator from the global Banach space to the local Banach space $L^1(\mathbb{Z}_2, d\nu)$ has a norm less than or equal to 1, we obtain the global bound: $\|\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f)\|_{L^1(\mathbb{Z}_2)} \leq C \|f\|_{L^1(\mathbb{A}_{\mathbb{Q}})}$ for some constant $C \leq 1$. The linear operator $\pi_2 \circ \mathcal{L}_{\mathbb{A}}$ is therefore bounded. Since a bounded linear operator between two Banach spaces is continuous, the proof of Lemma 70 is completed.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
