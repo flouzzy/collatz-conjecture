@@ -1939,5 +1939,39 @@ $\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f) = \mathcal{L}_2(f_2) = h$.
 Thus, for any admissible function $h$ in the target image space, we have explicitly constructed a valid pre-image $f$ in the domain space. This rigorously demonstrates the surjectivity of the projected operator on the considered subspace. The proof of Lemma 70 is completed.
 
 
+
+### Lemma 71: Global Finiteness of Pre-Image Fibers in $\mathcal{G}_{\mathbb{A}}$
+
+**Statement of Lemma 71:**
+Let the restricted fractional adelic space be $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ and $\mathcal{G}_{\mathbb{A}}$ be the Dyadic Operator Flow Graph Algebra. For any regular point $y \in \mathcal{G}_{\mathbb{A}}$, the fiber of pre-images $\mathcal{T}_{\mathbb{A}}^{-1}(\{y\})$ under the action of the adelic Collatz operator $\mathcal{T}_{\mathbb{A}}$ is a strictly finite set.
+
+**Proof of Lemma 71:**
+
+**Step 1: Decomposition of the inverse operator**
+The generalized Collatz operator $\mathcal{T}_{\mathbb{A}} : \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \to \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ is defined piecewise according to the 2-adic valuation. For a target point $y \in \mathcal{G}_{\mathbb{A}}$, finding the pre-images $x \in \mathcal{T}_{\mathbb{A}}^{-1}(\{y\})$ reduces to solving two local affine equations:
+1. Even branch: $y = \frac{x}{2} \implies x = 2y$ with the constraint $v_2(x_2) \ge 1$.
+2. Odd branch: $y = \frac{3x+1}{2} \implies x = \frac{2y-1}{3}$ with the constraint $v_2(x_2) = 0$.
+
+**Step 2: Uniqueness on the even branch**
+Consider the first equation: $x = 2y$. Since the ring of adeles $\mathbb{A}_{\mathbb{Q}}$ is a topological group under addition and possesses a module structure over $\mathbb{Q}$, multiplication by the scalar $2$ is a globally well-defined and bijective operation.
+For any $y \in \mathcal{G}_{\mathbb{A}}$, the element $x = 2y$ is unique in $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+Furthermore, multiplication by $2$ shifts the 2-adic valuation: $v_2((2y)_2) = v_2(y_2) + 1$. For this point to be a valid pre-image according to the definition of $\mathcal{T}_{\mathbb{A}}$, it must satisfy $v_2((2y)_2) \ge 1$, which is equivalent to $v_2(y_2) \ge 0$. If this condition is met, $x = 2y$ is a unique pre-image originating from the even branch. Otherwise, this branch provides no pre-image.
+
+**Step 3: Finiteness on the odd branch**
+Consider the second equation: $3x = 2y - 1$.
+Solving this equation requires the inversion of the element $3$ in the adelic space. In the restricted ring of adeles $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, division by $3$ is unitary on all $p$-adic places for $p \neq 3$.
+On the 3-adic component $\mathbb{Q}_3$, the multiplication by $3$ operator is a valuation shift (non-invertible on the ring of integers $\mathbb{Z}_3$). However, since we operate on the field of fractions $\mathbb{Q}_3$, the element $x_3 = \frac{2y_3 - 1}{3}$ is well-defined and unique.
+The validity constraint for this pre-image is $v_2(x_2) = 0$. Since $x_2 = \frac{2y_2 - 1}{3}$ in $\mathbb{Q}_2$, and $3$ is a 2-adic unit ($v_2(3) = 0$), we have $v_2(x_2) = v_2(2y_2 - 1)$.
+For $v_2(x_2) = 0$, it is necessary and sufficient that $2y_2 - 1$ is a 2-adic unit (an odd integer in $\mathbb{Z}_2$), which is satisfied if and only if $v_2(y_2) \ge 0$.
+If this condition is verified, the equation provides at most one unique valid pre-image $x = \frac{2y-1}{3}$.
+
+**Step 4: Synthesis of fiber cardinality**
+For any point $y \in \mathcal{G}_{\mathbb{A}}$, the even and odd branches each generate at most one unique pre-image.
+Consequently, the cardinality of the set $\mathcal{T}_{\mathbb{A}}^{-1}(\{y\})$ is bounded by $2$:
+$$ |\mathcal{T}_{\mathbb{A}}^{-1}(\{y\})| \le 2 $$
+Since $2 < \infty$, the pre-image fiber is strictly finite for every point in the adelic phase space.
+The proof of Lemma 71 is rigorously completed.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
