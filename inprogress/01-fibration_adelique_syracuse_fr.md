@@ -1939,5 +1939,39 @@ $\pi_2 \circ \mathcal{L}_{\mathbb{A}}(f) = \mathcal{L}_2(f_2) = h$.
 Ainsi, pour toute fonction $h$ admissible dans l'espace image cible, nous avons explicitement construit une pré-image $f$ valide dans l'espace de départ. Ceci démontre rigoureusement la surjectivité de l'opérateur projeté sur le sous-espace considéré. La démonstration du Lemme 70 est achevée.
 
 
+
+### Lemme 71 : Finitude Globale des Fibres de Pré-Images dans $\mathcal{G}_{\mathbb{A}}$
+
+**Énoncé du Lemme 71 :**
+Soit l'espace adélique fractionnaire restreint $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ et $\mathcal{G}_{\mathbb{A}}$ l'Algèbre de Graphes de Flux d'Opérateurs Dyadiques. Pour tout point régulier $y \in \mathcal{G}_{\mathbb{A}}$, la fibre des pré-images $\mathcal{T}_{\mathbb{A}}^{-1}(\{y\})$ sous l'action de l'opérateur de Collatz adélique $\mathcal{T}_{\mathbb{A}}$ est un ensemble strictement fini.
+
+**Démonstration du Lemme 71 :**
+
+**Étape 1 : Décomposition de l'opérateur inverse**
+L'opérateur de Collatz généralisé $\mathcal{T}_{\mathbb{A}} : \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \to \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$ est défini par morceaux selon la valuation 2-adique. Pour un point cible $y \in \mathcal{G}_{\mathbb{A}}$, la recherche des pré-images $x \in \mathcal{T}_{\mathbb{A}}^{-1}(\{y\})$ se réduit à la résolution de deux équations affines locales :
+1. Branche paire : $y = \frac{x}{2} \implies x = 2y$ avec la contrainte $v_2(x_2) \ge 1$.
+2. Branche impaire : $y = \frac{3x+1}{2} \implies x = \frac{2y-1}{3}$ avec la contrainte $v_2(x_2) = 0$.
+
+**Étape 2 : Unicité sur la branche paire**
+Considérons la première équation : $x = 2y$. Puisque l'anneau des adèles $\mathbb{A}_{\mathbb{Q}}$ est un groupe topologique sous l'addition et possède une structure de module sur $\mathbb{Q}$, la multiplication par le scalaire $2$ est une opération globale bien définie et bijective.
+Pour tout $y \in \mathcal{G}_{\mathbb{A}}$, l'élément $x = 2y$ est unique dans $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$.
+De plus, la multiplication par $2$ décale la valuation 2-adique : $v_2((2y)_2) = v_2(y_2) + 1$. Pour que ce point soit une pré-image valide selon la définition de $\mathcal{T}_{\mathbb{A}}$, il doit satisfaire $v_2((2y)_2) \ge 1$, ce qui équivaut à $v_2(y_2) \ge 0$. Si cette condition est remplie, $x = 2y$ est une pré-image unique issue de la branche paire. Sinon, cette branche ne fournit aucune pré-image.
+
+**Étape 3 : Finitude sur la branche impaire**
+Considérons la seconde équation : $3x = 2y - 1$.
+La résolution de cette équation nécessite l'inversion de l'élément $3$ dans l'espace adélique. Dans l'anneau des adèles restreint $\mathbb{A}_{\mathbb{Q}}^{\mathcal{S}}$, la division par $3$ est unitaire sur toutes les places $p$-adiques pour $p \neq 3$.
+Sur la composante 3-adique $\mathbb{Q}_3$, l'opérateur de multiplication par $3$ est un décalage de valuation (non-inversible sur l'anneau des entiers $\mathbb{Z}_3$). Cependant, puisque nous opérons sur le corps des fractions $\mathbb{Q}_3$, l'élément $x_3 = \frac{2y_3 - 1}{3}$ est bien défini et unique.
+La contrainte de validité pour cette pré-image est $v_2(x_2) = 0$. Puisque $x_2 = \frac{2y_2 - 1}{3}$ dans $\mathbb{Q}_2$, et que $3$ est une unité 2-adique ($v_2(3) = 0$), nous avons $v_2(x_2) = v_2(2y_2 - 1)$.
+Pour que $v_2(x_2) = 0$, il est nécessaire et suffisant que $2y_2 - 1$ soit une unité 2-adique (un entier impair dans $\mathbb{Z}_2$), ce qui est satisfait si et seulement si $v_2(y_2) \ge 0$.
+Si cette condition est vérifiée, l'équation fournit au plus une unique pré-image valide $x = \frac{2y-1}{3}$.
+
+**Étape 4 : Synthèse de la cardinalité des fibres**
+Pour tout point $y \in \mathcal{G}_{\mathbb{A}}$, les branches paire et impaire génèrent chacune au plus une pré-image unique.
+Par conséquent, la cardinalité de l'ensemble $\mathcal{T}_{\mathbb{A}}^{-1}(\{y\})$ est majorée par $2$ :
+$$ |\mathcal{T}_{\mathbb{A}}^{-1}(\{y\})| \le 2 $$
+Puisque $2 < \infty$, la fibre des pré-images est strictement finie pour tout point de l'espace des phases adélique.
+La démonstration du Lemme 71 est rigoureusement achevée.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
