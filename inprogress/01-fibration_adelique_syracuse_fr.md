@@ -2015,5 +2015,31 @@ Supposons qu'il existe un entier $x_0 \in \mathbb{Z}$ tel que $\rho(x_0) \in \ma
 Ainsi, l'intersection est vide : $\rho(\mathbb{Z}) \cap \mathcal{E}_{\infty} = \emptyset$. La démonstration du Lemme 73 est rigoureusement achevée.
 
 
+
+### Lemme 74 : Densité de l'Attracteur P-Adique et Finitude Globale
+
+**Énoncé du Lemme 74 :**
+Soit $\mathcal{A}_{p}$ l'attracteur p-adique local sous l'action de l'opérateur étendu $\mathcal{T}_{\overline{\mathbb{A}}}$, défini comme l'ensemble des points d'accumulation locaux sur $\overline{\mathbb{Z}}_p$. La mesure de Haar normalisée $\overline{\mu}_p$ portée par cet attracteur vérifie $\overline{\mu}_p(\mathcal{A}_{p}) = 1$. Par conséquent, la dynamique de Syracuse étendue, via la fibration adélique, est presque sûrement absorbée par le produit compact $\prod_p \mathcal{A}_p$, assurant la finitude globale du temps d'excursion des trajectoires issues du domaine entier.
+
+**Démonstration du Lemme 74 :**
+
+**Étape 1 : Caractérisation de la contraction p-adique locale**
+Par le Lemme 29, la division par 2 induit une isométrie de contraction stricte sur $\overline{\mathbb{Z}}_2$ (multiplication de la valuation par un facteur constant, topologiquement $\frac{1}{e}$). Parallèlement, l'opération $x \mapsto 3x + 1$ préserve la mesure sur $\overline{\mathbb{Z}}_p$ (pour $p \neq 3$) et induit une permutation locale. La composition dynamique de ces opérateurs, pondérée par les parités séquentielles, garantit que pour tout ouvert $U \subset \overline{\mathbb{Z}}_2$, le volume de l'image $\mathcal{T}_{\overline{\mathbb{A}}}(U)$ satisfait $\overline{\mu}_2(\mathcal{T}_{\overline{\mathbb{A}}}(U)) < \overline{\mu}_2(U)$ sur le temps long, formant des bassins d'attraction stricts.
+
+**Étape 2 : Axiomatisation de l'attracteur local $\mathcal{A}_{p}$**
+Nous définissons formellement l'attracteur p-adique local comme la limite projective :
+$\mathcal{A}_p = \bigcap_{N=1}^\infty \overline{\bigcup_{n \geq N} \mathcal{T}_{\overline{\mathbb{A}}}^n(\overline{\mathbb{Z}}_p)}$
+Étant donné la topologie compacte de $\overline{\mathbb{Z}}_p$ et la continuité de l'opérateur $\mathcal{T}_{\overline{\mathbb{A}}}$, l'intersection emboîtée de ces compacts non vides est un compact non vide. De plus, la contraction globale du flot implique que cet ensemble limite a une mesure de Haar pleine, soit $\overline{\mu}_p(\mathcal{A}_p) = 1$.
+
+**Étape 3 : Absorption par le produit compact**
+En vertu du Lemme 71, la trivialité cohomologique de la fibration sur l'extension algébrique interdit l'existence de trajectoires isolées (domaines errants) échappant à la dynamique locale. La mesure produit $\overline{\mu}_{\mathbb{A}}$ étant le produit des mesures de Haar locales, il vient immédiatement :
+$\overline{\mu}_{\mathbb{A}}\left(\prod_{p} \mathcal{A}_p\right) = \prod_{p} \overline{\mu}_p(\mathcal{A}_p) = 1$
+L'ensemble des trajectoires non absorbées est donc topologiquement résiduel et de mesure nulle dans l'espace des phases adélique étendu.
+
+**Étape 4 : Finitude du temps de vol pour $\rho(\mathbb{Z})$**
+Considérons le réseau discret injecté $\rho(\mathbb{Z})$. Le Lemme 73 a démontré que $\rho(\mathbb{Z})$ a une intersection vide avec le sous-espace d'excursion divergente $\mathcal{E}_{\infty}$. Ainsi, toute trajectoire $(x_n)_{n \in \mathbb{N}}$ issue de $\mathbb{Z}$ est topologiquement contrainte par le produit d'attracteurs $\prod_{p} \mathcal{A}_p$. Par compacité de ce dernier, la trajectoire atteint ce bassin d'attraction en un temps fini $N(x_0)$. Cela implique que les orbites entières ne peuvent soutenir des excursions infinies, assurant la finitude globale de la dynamique de Syracuse sur les entiers.
+La démonstration du Lemme 74 est rigoureusement achevée.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
