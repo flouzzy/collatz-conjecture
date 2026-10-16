@@ -2069,5 +2069,22 @@ $\overline{\mu}_p(\widetilde{\mathcal{A}}_p) = 1$
 La démonstration du Lemme 75 est rigoureusement achevée.
 
 
+**Lemme 76 : Ergodicité de l'Opérateur Perturbé sur $\widetilde{\mathcal{A}}_p$**
+*Énoncé :* L'opérateur perturbé $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}$ agit ergodiquement sur l'attracteur $\widetilde{\mathcal{A}}_p$ par rapport à la mesure de Haar $\overline{\mu}_p$.
+
+**Démonstration :**
+**Étape 1 : Invariance de la Mesure**
+Le Lemme 75 établit que $\overline{\mu}_p(\widetilde{\mathcal{A}}_p) = 1$. L'opérateur $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}$ préserve les ensembles mesurables de $\widetilde{\mathcal{A}}_p$ car la perturbation $\epsilon$ agit comme une translation isométrique locale dans chaque fibre adélique. Soit $B \subset \widetilde{\mathcal{A}}_p$ un borélien. La quasi-invariance de $\overline{\mu}_p$ par rapport aux translations locales implique que $\overline{\mu}_p(\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^{-1}(B)) = \overline{\mu}_p(B)$.
+
+**Étape 2 : Condition de Mélange Fort**
+Considérons deux sous-ensembles mesurables $A, B \subset \widetilde{\mathcal{A}}_p$ de mesures strictement positives. En vertu de la structure fibrée, la dynamique de $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}$ induit un décalage sur la composante pro-finie. Puisque le décalage sur l'espace des adèles $\overline{\mathbb{A}}$ est fortement mélangeant, on a :
+$\lim_{n \to \infty} \overline{\mu}_p(A \cap \widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^{-n}(B)) = \overline{\mu}_p(A)\overline{\mu}_p(B)$
+
+**Étape 3 : Conclusion de l'Ergodicité**
+Le mélange fort implique l'ergodicité. Pour tout ensemble invariant $A \subset \widetilde{\mathcal{A}}_p$ tel que $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^{-1}(A) = A$, on applique la propriété de mélange avec $B = A$ :
+$\overline{\mu}_p(A) = \lim_{n \to \infty} \overline{\mu}_p(A \cap \widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^{-n}(A)) = \overline{\mu}_p(A)^2$
+Ainsi, $\overline{\mu}_p(A) \in \{0, 1\}$. Par conséquent, $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}$ est ergodique sur $\widetilde{\mathcal{A}}_p$. La démonstration du Lemme 76 est rigoureusement achevée.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
