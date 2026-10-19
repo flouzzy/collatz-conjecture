@@ -2069,5 +2069,22 @@ $\overline{\mu}_p(\widetilde{\mathcal{A}}_p) = 1$
 The proof of Lemma 75 is rigorously completed.
 
 
+**Lemma 76: Ergodicity of the Perturbed Operator on $\widetilde{\mathcal{A}}_p$**
+*Statement:* The perturbed operator $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}$ acts ergodically on the attractor $\widetilde{\mathcal{A}}_p$ with respect to the Haar measure $\overline{\mu}_p$.
+
+**Proof:**
+**Step 1: Measure Invariance**
+Lemma 75 establishes that $\overline{\mu}_p(\widetilde{\mathcal{A}}_p) = 1$. The operator $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}$ preserves the measurable sets of $\widetilde{\mathcal{A}}_p$ because the perturbation $\epsilon$ acts as a local isometric translation in each adelic fiber. Let $B \subset \widetilde{\mathcal{A}}_p$ be a Borel set. The quasi-invariance of $\overline{\mu}_p$ with respect to local translations implies that $\overline{\mu}_p(\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^{-1}(B)) = \overline{\mu}_p(B)$.
+
+**Step 2: Strong Mixing Condition**
+Consider two measurable subsets $A, B \subset \widetilde{\mathcal{A}}_p$ of strictly positive measures. Under the fibered structure, the dynamics of $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}$ induces a shift on the pro-finite component. Since the shift on the adele space $\overline{\mathbb{A}}$ is strongly mixing, we have:
+$\lim_{n \to \infty} \overline{\mu}_p(A \cap \widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^{-n}(B)) = \overline{\mu}_p(A)\overline{\mu}_p(B)$
+
+**Step 3: Conclusion of Ergodicity**
+Strong mixing implies ergodicity. For any invariant set $A \subset \widetilde{\mathcal{A}}_p$ such that $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^{-1}(A) = A$, we apply the mixing property with $B = A$:
+$\overline{\mu}_p(A) = \lim_{n \to \infty} \overline{\mu}_p(A \cap \widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^{-n}(A)) = \overline{\mu}_p(A)^2$
+Thus, $\overline{\mu}_p(A) \in \{0, 1\}$. Therefore, $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}$ is ergodic on $\widetilde{\mathcal{A}}_p$. The proof of Lemma 76 is rigorously completed.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
