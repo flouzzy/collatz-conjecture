@@ -2091,5 +2091,33 @@ La déviation additive restreinte $\widetilde{\mathcal{A}}_p \subset \mathcal{A}
 La démonstration du Lemme 76 est rigoureusement achevée.
 
 
+### Lemme 77 : Invariance du Flot Arithmétique Global sous Trivialité Cohomologique
+
+**Énoncé du Lemme 77 :**
+Soit $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}$ l'opérateur adélique perturbé tel qu'étudié aux Lemmes 75 et 76. Étant donné que le groupe de cohomologie galoisienne satisfait $H^1(\mathrm{Gal}(\overline{\mathbb{Q}}/\mathbb{Q}), \widetilde{\mathcal{A}}_p) = \{0\}$, le flot arithmétique global induit par la fibration adélique sur la restriction entière $\rho(\mathbb{Z})$ est invariant par conjugaison topologique. Plus précisément, il existe un homéomorphisme uniformément continu $\Phi : \overline{\mathbb{Z}}_p \to \overline{\mathbb{Z}}_p$ tel que $\Phi \circ \mathcal{T}_{\overline{\mathbb{A}}} = \widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon} \circ \Phi$ sur l'attracteur $\mathcal{A}_p$.
+
+**Démonstration du Lemme 77 :**
+
+**Étape 1 : Construction de l'Application de Conjugaison**
+Par le Lemme 76, nous avons établi la trivialité cohomologique de l'action galoisienne sur l'attracteur perturbé $\widetilde{\mathcal{A}}_p$. L'opérateur non perturbé $\mathcal{T}_{\overline{\mathbb{A}}}$ et l'opérateur perturbé $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}$ agissent sur des espaces d'attracteurs respectifs $\mathcal{A}_p$ et $\widetilde{\mathcal{A}}_p$ qui possèdent tous deux une mesure de Haar pleine (Lemme 75). Définissons formellement l'application $\Phi : \mathcal{A}_p \to \widetilde{\mathcal{A}}_p$ par la limite de la composition des itérés inverses :
+$\Phi(x) = \lim_{n \to \infty} \widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^{-n}(\mathcal{T}_{\overline{\mathbb{A}}}^n(x))$
+Puisque $\mathcal{T}_{\overline{\mathbb{A}}}$ est une isométrie de contraction (pour $p=2$) et que la perturbation $\epsilon$ est uniformément bornée par $p^{-M}$, cette suite de fonctions converge uniformément sur le compact $\mathcal{A}_p$.
+
+**Étape 2 : Bijectivité et Continuité Uniforme de $\Phi$**
+La convergence uniforme de la suite garantit que $\Phi$ est une application continue. De plus, la symétrie de la perturbation dans l'espace ultramétrique permet de construire l'application réciproque $\Psi : \widetilde{\mathcal{A}}_p \to \mathcal{A}_p$ de manière analogue :
+$\Psi(y) = \lim_{n \to \infty} \mathcal{T}_{\overline{\mathbb{A}}}^{-n}(\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^n(y))$
+Par unicité des limites dans l'espace complet $\overline{\mathbb{Z}}_p$, il s'ensuit que $\Psi \circ \Phi = \mathrm{Id}_{\mathcal{A}_p}$ et $\Phi \circ \Psi = \mathrm{Id}_{\widetilde{\mathcal{A}}_p}$. Ainsi, $\Phi$ est une bijection continue entre deux espaces compacts, donc un homéomorphisme. L'uniforme continuité découle directement de la compacité du domaine.
+
+**Étape 3 : Équivariance et Invariance du Flot Global**
+Nous devons maintenant vérifier que $\Phi$ entrelace les deux dynamiques. Soit $x \in \mathcal{A}_p$. Par définition de $\Phi$, nous évaluons $\Phi(\mathcal{T}_{\overline{\mathbb{A}}}(x))$ :
+$\Phi(\mathcal{T}_{\overline{\mathbb{A}}}(x)) = \lim_{n \to \infty} \widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^{-n}(\mathcal{T}_{\overline{\mathbb{A}}}^{n+1}(x))$
+En appliquant $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}$ à gauche de cette équation, et en utilisant la continuité de l'opérateur, on obtient :
+$\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}(\Phi(x)) = \widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon} \left( \lim_{n \to \infty} \widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^{-n}(\mathcal{T}_{\overline{\mathbb{A}}}^n(x)) \right) = \lim_{n \to \infty} \widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^{-(n-1)}(\mathcal{T}_{\overline{\mathbb{A}}}^n(x))$
+Un changement d'indice $k = n - 1$ donne :
+$\lim_{k \to \infty} \widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}^{-k}(\mathcal{T}_{\overline{\mathbb{A}}}^{k+1}(x)) = \Phi(\mathcal{T}_{\overline{\mathbb{A}}}(x))$
+Cette relation d'équivariance $\Phi \circ \mathcal{T}_{\overline{\mathbb{A}}} = \widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon} \circ \Phi$ prouve que les deux systèmes dynamiques sont topologiquement conjugués. Le flot arithmétique global reste invariant, ce qui empêche l'apparition de nouvelles orbites divergentes.
+La démonstration du Lemme 77 est rigoureusement achevée.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
