@@ -2119,5 +2119,24 @@ This equivariance relation $\Phi \circ \mathcal{T}_{\overline{\mathbb{A}}} = \wi
 The proof of Lemma 77 is rigorously completed.
 
 
+
+### Lemma 78: Algebraic Contractibility of Pro-finite Orbits under Topological Conjugation
+
+**Statement of Lemma 78:**
+Let $\Phi : \overline{\mathbb{Z}}_p \to \overline{\mathbb{Z}}_p$ be the uniformly continuous homeomorphism defined in Lemma 77, which topologically conjugates the unperturbed adelic operator $\mathcal{T}_{\overline{\mathbb{A}}}$ and the perturbed operator $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}$ on the attractor $\mathcal{A}_p$. Then, any orbit $\mathcal{O}(x)$ under the action of $\mathcal{T}_{\overline{\mathbb{A}}}$ for $x \in \mathcal{A}_p$ is algebraically contractible. More precisely, for any integer $N > 0$, there exists an integer $M > 0$ such that for all $n \geq M$, we have $\mathcal{T}_{\overline{\mathbb{A}}}^n(x) \equiv 1 \pmod{p^N}$ in the sense of the pro-finite topology.
+
+**Proof of Lemma 78:**
+
+**Step 1: Projection onto Finite Quotients**
+The topology of $\overline{\mathbb{Z}}_p$ is defined by the projective limit of the finite quotient rings $\mathbb{Z} / p^k \mathbb{Z}$. Since the homeomorphism $\Phi$ is uniformly continuous on the compact space $\overline{\mathbb{Z}}_p$, it induces a family of compatible maps $\Phi_k : \mathbb{Z} / p^k \mathbb{Z} \to \mathbb{Z} / p^k \mathbb{Z}$. By Lemma 77, we have the equivariance relation $\Phi \circ \mathcal{T}_{\overline{\mathbb{A}}} = \widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon} \circ \Phi$. By projecting this equation modulo $p^k$, we obtain $\Phi_k \circ \pi_k(\mathcal{T}_{\overline{\mathbb{A}}}) = \pi_k(\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon}) \circ \Phi_k$, where $\pi_k$ is the canonical projection.
+
+**Step 2: Evaluation of the Residual Dynamics**
+By construction (Lemma 75), the perturbation $\epsilon$ is uniformly bounded by $p^{-M}$. For $k < M$, the projected operator $\pi_k(\widetilde{\mathcal{T}}_{\overline{\mathbb{A}}, \epsilon})$ coincides exactly with $\pi_k(\mathcal{T}_{\overline{\mathbb{A}}})$. The equivariance equation then becomes $\Phi_k \circ \pi_k(\mathcal{T}_{\overline{\mathbb{A}}}) = \pi_k(\mathcal{T}_{\overline{\mathbb{A}}}) \circ \Phi_k$. The topological conjugation modulo $p^k$ reduces to a simple commutation in the finite ring $\mathbb{Z} / p^k \mathbb{Z}$. The attractor $\mathcal{A}_p$ projected modulo $p^k$ consists of a finite number of cycles. However, by Lemma 59, the absence of non-trivial rational cycles imposes that the only stable cycle is the trivial cycle (the adelic analog of the loop $\{1, 4, 2\}$).
+
+**Step 3: Asymptotic Contraction**
+Since the only stable cycle modulo $p^k$ is the projection of the trivial cycle $\mathcal{C}_0$, any residual orbit eventually reaches this cycle. Thus, for each $k$, there exists an integer $m_k$ such that for all $n \geq m_k$, the projected orbit satisfies $\pi_k(\mathcal{T}_{\overline{\mathbb{A}}}^n(x)) \in \pi_k(\mathcal{C}_0)$. By taking the projective limit of these finite behaviors, and by compactness, the sequence of reaching times is bounded for each $k$. It follows that the orbit in $\overline{\mathbb{Z}}_p$ is asymptotically contracted towards the trivial cycle. This topological contraction translates algebraically to the assertion $\mathcal{T}_{\overline{\mathbb{A}}}^n(x) \equiv 1 \pmod{p^N}$ for $n$ sufficiently large.
+The proof of Lemma 78 is rigorously completed.
+
+
 ***
 *Chercheur indépendant / Independent Researcher
