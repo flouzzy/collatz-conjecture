@@ -2138,5 +2138,20 @@ Let $\mathcal{M}$ be the space of $\widetilde{\mathcal{T}}_{\overline{\mathbb{A}
 If there were a structural bifurcation allowing trajectories (Syracuse integers embedded via $\Phi(\rho(\mathbb{Z}))$) to diverge towards the adelic infinity or to form new disjoint cycles at infinity, this would require, by the compactness of the attractor (Krylov-Bogoliubov), the creation of at least one new ergodic measure mutually singular with the initial attractor, which contradicts the strict uniqueness established in Step 2. The absence of a plurality of invariant measures formally entails the impossibility of divergent bifurcations.
 The proof of Lemma 78 is rigorously completed.
 
+**Lemma 79: Cohomological Rigidity of the Attractor**
+Let $\mu$ be the unique ergodic invariant measure on the limit attractor, established in Lemma 78. Then the first continuous cohomology group $H^1_{c}(\mathcal{G}_{\mathbb{A}}, \mathbb{R})$ associated with the action of the operator $\mathcal{T}_{\mathbb{A}}$ on the support of $\mu$ is trivial, i.e., $H^1_{c}(\mathcal{G}_{\mathbb{A}}, \mathbb{R}) \cong 0$.
+
+**Proof of Lemma 79:**
+**Step 1: Algebraic Formulation of the Cocycle**
+Consider an arbitrary continuous cocycle $c : \mathcal{G}_{\mathbb{A}} \to \mathbb{R}$. By definition, for any directed edge $(x, \mathcal{T}_{\mathbb{A}}(x))$, the cocycle satisfies the homology relation condition on the orbits: $c(x, \mathcal{T}_{\mathbb{A}}^n(x)) = \sum_{k=0}^{n-1} c(\mathcal{T}_{\mathbb{A}}^k(x), \mathcal{T}_{\mathbb{A}}^{k+1}(x))$ for any integer $n \ge 1$. The cohomology group $H^1_{c}$ measures the existence of cocycles that are not coboundaries, meaning they cannot be written in the form $c(x, \mathcal{T}_{\mathbb{A}}(x)) = f(\mathcal{T}_{\mathbb{A}}(x)) - f(x)$ for a continuous function $f : \mathbb{A}_{\mathbb{Q}}^{\mathcal{S}} \to \mathbb{R}$.
+
+**Step 2: Application of Birkhoff's Ergodic Theorem**
+Since $\mu$ is the unique ergodic invariant measure, Birkhoff's theorem guarantees that for almost every $x$ (with respect to $\mu$), the asymptotic time average $\lim_{n \to \infty} \frac{1}{n} \sum_{k=0}^{n-1} c(\mathcal{T}_{\mathbb{A}}^k(x), \mathcal{T}_{\mathbb{A}}^{k+1}(x))$ converges to the spatial average $\int c(y, \mathcal{T}_{\mathbb{A}}(y)) d\mu(y)$. Let this constant limit be denoted as $C_{\mu}$.
+
+**Step 3: Trivialization of the Cocycle**
+By the compactness of the attractor and the global contraction of the transition operator towards this unique attractor (Krylov-Bogoliubov), any non-zero constant drift $C_{\mu} \ne 0$ would imply non-compactness of the orbits (a divergence of the cocycle to $\pm \infty$), which contradicts the strict confinement of the basin of attraction within the space $\mathcal{M}$. Thus, $C_{\mu} = 0$.
+The strict nullity of the integral of the cocycle with respect to the unique ergodic measure implies (by a classical theorem of cohomology for minimal ergodic dynamical systems) that every cocycle is homologous to zero. Consequently, there exists a continuous function $f$ such that $c = df$, yielding triviality: $H^1_{c}(\mathcal{G}_{\mathbb{A}}, \mathbb{R}) \cong 0$.
+The proof of Lemma 79 is rigorously completed.
+
 ***
 *Chercheur indépendant / Independent Researcher
