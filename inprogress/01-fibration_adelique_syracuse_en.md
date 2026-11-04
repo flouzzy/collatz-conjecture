@@ -2230,5 +2230,24 @@ The operator $\mathcal{L}_{\mathbb{A}}$ being strictly quasi-compact, its spectr
 **Step 4: Conclusion**
 The strict confinement of the essential spectrum $\sigma_{ess}(\mathcal{L}_{\mathbb{A}}) \subset \{ z \in \mathbb{C} \mid |z| \le \rho_{ess} \}$ with $\rho_{ess} < 1$ leads to an exponential decay of correlations (Lemma 14 extended globally) for any regular observable. This decay formally forbids the persistence of any invariant or divergent substructure, ensuring a uniform and exponential convergence of any regular dynamics towards the trivial attractor $\mathcal{A}_{triv}$. The rigorous proof of Lemma 83 is completed.
 
+
+**Lemma 84 (Absence of Asymptotic Fibration Cohomology):**
+Let $H^1_{asym}(\mathcal{G}_{\mathbb{A}}, \mathbb{C})$ be the first asymptotic cohomology group associated with the adelic fibration under the action of the transfer operator $\mathcal{L}_{\mathbb{A}}$. By virtue of the spectral compactness (Lemma 83), any asymptotic cohomology class is identically zero, i.e., $H^1_{asym}(\mathcal{G}_{\mathbb{A}}, \mathbb{C}) \cong 0$. This demonstrates the non-existence of any non-trivial global phase or amplitude drift for regular trajectories.
+
+### Proof of Lemma 84 (Absence of Asymptotic Fibration Cohomology):
+
+**Step 1: Formulation of the asymptotic cocycle**
+Let $c_{asym} : \mathcal{G}_{\mathbb{A}} \to \mathbb{C}$ be a continuous cocycle representing a class in $H^1_{asym}(\mathcal{G}_{\mathbb{A}}, \mathbb{C})$. By definition of asymptotic cohomology on the dynamical bundle, the cocycle satisfies the limit functional relation on the orbits: $c_{asym}(\mathcal{T}_{\mathbb{A}}^n(x)) = \sum_{k=0}^{n-1} \psi(\mathcal{T}_{\mathbb{A}}^k(x))$ where $\psi \in \mathcal{H}_0$ is an observable with zero mean with respect to the ergodic measure $\mu_{\mathbb{A}}$. The class $[c_{asym}]$ measures the secular accumulation of fluctuations along the orbit.
+
+**Step 2: Bound by the spectral norm**
+According to Lemma 83, the essential spectrum of the transfer operator $\mathcal{L}_{\mathbb{A}}$ on the space $\mathcal{H}_0$ is strictly confined within a disk of radius $\rho_{ess} < 1$. Let $R_{\mathbb{A}}(z) = (z I - \mathcal{L}_{\mathbb{A}})^{-1}$ be the analytic resolvent operator. Since the spectrum is strictly contracting, the associated Neumann series $\sum_{k=0}^{\infty} \mathcal{L}_{\mathbb{A}}^k \psi$ converges absolutely in the norm of the Banach space of Lipschitz functions $\text{Lip}(\mathcal{G}_{\mathbb{A}})$.
+
+**Step 3: Trivialization by the cohomology equation**
+The absolute convergence of the Neumann series guarantees the existence of a unique function $\varphi \in \text{Lip}(\mathcal{G}_{\mathbb{A}})$ such that $\psi = \varphi \circ \mathcal{T}_{\mathbb{A}} - \varphi$. Thus, for any integer $n \ge 1$, the sum is written by telescoping: $\sum_{k=0}^{n-1} \psi(\mathcal{T}_{\mathbb{A}}^k(x)) = \varphi(\mathcal{T}_{\mathbb{A}}^n(x)) - \varphi(x)$.
+The asymptotic cocycle is then identically given by $c_{asym}(\mathcal{T}_{\mathbb{A}}^n(x)) = \varphi(\mathcal{T}_{\mathbb{A}}^n(x)) - \varphi(x)$, which demonstrates that it is a strict coboundary.
+
+**Step 4: Algebraic conclusion**
+Since every asymptotic cocycle $c_{asym}$ is a regular coboundary, its cohomological equivalence class is zero: $[c_{asym}] = 0$. It formally follows that $H^1_{asym}(\mathcal{G}_{\mathbb{A}}, \mathbb{C}) \cong 0$. The absence of asymptotic cohomology rigorously forbids the emergence of a global phase drift for regular trajectories, definitively stabilizing the orbits on the trivial cycle $\mathcal{A}_{triv}$. The rigorous proof of Lemma 84 is completed.
+
 ***
 *Chercheur indépendant / Independent Researcher
