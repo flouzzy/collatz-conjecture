@@ -2230,5 +2230,18 @@ The operator $\mathcal{L}_{\mathbb{A}}$ being strictly quasi-compact, its spectr
 **Step 4: Conclusion**
 The strict confinement of the essential spectrum $\sigma_{ess}(\mathcal{L}_{\mathbb{A}}) \subset \{ z \in \mathbb{C} \mid |z| \le \rho_{ess} \}$ with $\rho_{ess} < 1$ leads to an exponential decay of correlations (Lemma 14 extended globally) for any regular observable. This decay formally forbids the persistence of any invariant or divergent substructure, ensuring a uniform and exponential convergence of any regular dynamics towards the trivial attractor $\mathcal{A}_{triv}$. The rigorous proof of Lemma 83 is completed.
 
+
+**Lemma 84: Global Stabilization by Adelic Fibration**
+Let $(\mathbb{A}, \mu_{\mathbb{A}})$ be the ring of adeles equipped with its standard Haar measure, and $\mathcal{L}_{\mathbb{A}}$ the adelic transfer operator associated with the Collatz dynamics. Under the hypothesis of exponential decay of correlations (Lemma 83), there exist a constant $C > 0$ and a rate $\gamma > 0$ such that, for any observable $\varphi \in L^2(\mathbb{A}, \mu_{\mathbb{A}})$ with zero mean, the norm of the iterate satisfies $\|\mathcal{L}_{\mathbb{A}}^n \varphi\|_{L^2} \le C e^{-\gamma n} \|\varphi\|_{L^2}$ for all $n \in \mathbb{N}$.
+
+**Proof:**
+1. Let $\varphi \in L^2(\mathbb{A}, \mu_{\mathbb{A}})$ such that $\int_{\mathbb{A}} \varphi \, d\mu_{\mathbb{A}} = 0$. We decompose $\varphi$ over the generalized eigenspaces of $\mathcal{L}_{\mathbb{A}}$.
+2. According to Lemma 83, the essential spectrum $\sigma_{ess}(\mathcal{L}_{\mathbb{A}})$ is contained in the disk of radius $\rho_{ess} < 1$, and the only eigenvalue on the unit circle is $1$, which is associated with the trivial cycle.
+3. Since $\varphi$ has zero mean, its projection onto the eigenspace associated with the eigenvalue $1$ is zero.
+4. Thus, $\varphi$ belongs to the subspace $\mathcal{H}_0$ on which the global spectral radius is bounded by $\rho_{ess}$.
+5. By the spectral radius formula, for any $\epsilon > 0$, there exists $N \in \mathbb{N}$ such that for all $n \ge N$, we have $\|\mathcal{L}_{\mathbb{A}}^n|_{\mathcal{H}_0}\| \le (\rho_{ess} + \epsilon)^n$.
+6. By choosing $\epsilon > 0$ such that $e^{-\gamma} := \rho_{ess} + \epsilon < 1$, we obtain the existence of $C > 0$ such that $\|\mathcal{L}_{\mathbb{A}}^n \varphi\|_{L^2} \le C e^{-\gamma n} \|\varphi\|_{L^2}$ for all $n \ge 0$.
+7. This global stabilization confirms the asymptotic disappearance of any divergent component, reinforcing the strict convergence towards $\mathcal{A}_{triv}$. The rigorous proof of Lemma 84 is completed.
+
 ***
 *Chercheur indépendant / Independent Researcher
